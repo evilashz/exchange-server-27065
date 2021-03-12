@@ -1,0 +1,17 @@
+﻿using System;
+
+namespace Microsoft.Exchange.BITS
+{
+	// Token: 0x02000662 RID: 1634
+	internal enum BG_JOB_PRIORITY
+	{
+		// Token: 0x04001DCC RID: 7628
+		BG_JOB_PRIORITY_FOREGROUND,
+		// Token: 0x04001DCD RID: 7629
+		BG_JOB_PRIORITY_HIGH,
+		// Token: 0x04001DCE RID: 7630
+		BG_JOB_PRIORITY_NORMAL,
+		// Token: 0x04001DCF RID: 7631
+		BG_JOB_PRIORITY_LOW
+	}
+}

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E00F5D04-C156-4BAD-86F2-C9D7907D8241}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Exchange.Cluster.ReplayService</RootNamespace>
+    <AssemblyName>msexchangerepl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>Microsoft.Exchange.Cluster.ReplayService.ReplayService</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Unity" />
+    <Reference Include="ReplayCrimsonMsg" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExceptionInjectionCallback.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepairDatabaseAmState.cs" />
+    <Compile Include="ReplayComponentManager.cs" />
+    <Compile Include="ReplayRpcServer.cs" />
+    <Compile Include="ReplayRpcServerWrapper.cs" />
+    <Compile Include="ReplayService.cs" />
+    <Compile Include="StopHintSender.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Exchange.Cluster.Replay\Microsoft.Exchange.Cluster.Replay.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D811A}</Project>
+      <Name>Microsoft.Exchange.Cluster.Replay</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Cluster.ReplicaVSSWriter\Microsoft.Exchange.Cluster.ReplicaVSSWriter.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D811C}</Project>
+      <Name>Microsoft.Exchange.Cluster.ReplicaVSSWriter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Cluster.Shared\Microsoft.Exchange.Cluster.Shared.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D811D}</Project>
+      <Name>Microsoft.Exchange.Cluster.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Common\Microsoft.Exchange.Data.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D80FD}</Project>
+      <Name>Microsoft.Exchange.Data.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Directory\Microsoft.Exchange.Data.Directory.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8134}</Project>
+      <Name>Microsoft.Exchange.Data.Directory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.HA\Microsoft.Exchange.Data.HA.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8137}</Project>
+      <Name>Microsoft.Exchange.Data.HA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Storage\Microsoft.Exchange.Data.Storage.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D813E}</Project>
+      <Name>Microsoft.Exchange.Data.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data\Microsoft.Exchange.Data.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8135}</Project>
+      <Name>Microsoft.Exchange.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Diagnostics\Microsoft.Exchange.Diagnostics.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8142}</Project>
+      <Name>Microsoft.Exchange.Diagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Net\Microsoft.Exchange.Net.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81B1}</Project>
+      <Name>Microsoft.Exchange.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Rpc\Microsoft.Exchange.Rpc.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81C8}</Project>
+      <Name>Microsoft.Exchange.Rpc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Isam.Esent.Interop\Microsoft.Isam.Esent.Interop.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8231}</Project>
+      <Name>Microsoft.Isam.Esent.Interop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D824B}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,60 @@
+﻿using System;
+using System.Linq;
+using System.Management.Automation;
+using System.Security.Permissions;
+using System.ServiceModel.Activation;
+using Microsoft.Exchange.Management.SystemConfigurationTasks;
+
+namespace Microsoft.Exchange.Management.ControlPanel
+{
+	// Token: 0x020003BF RID: 959
+	[AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
+	public sealed class DiscoverySearchChangeDetails : DataSourceService, IDiscoverySearchChangeDetails, IGetObjectService<AdminAuditLogDetailRow>
+	{
+		// Token: 0x06003206 RID: 12806 RVA: 0x0009B48C File Offset: 0x0009968C
+		[PrincipalPermission(SecurityAction.Demand, Role = "Search-AdminAuditLog?StartDate&EndDate&ObjectIds&Cmdlets@R:Organization")]
+		public PowerShellResults<AdminAuditLogDetailRow> GetObject(Identity identity)
+		{
+			PowerShellResults<AdminAuditLogDetailRow> powerShellResults = new PowerShellResults<AdminAuditLogDetailRow>();
+			if (identity != null && identity.RawIdentity != null)
+			{
+				AuditLogDetailsId changeId = new AuditLogDetailsId(identity);
+				AdminAuditLogSearchFilter adminAuditLogSearchFilter = new AdminAuditLogSearchFilter();
+				adminAuditLogSearchFilter.Cmdlets = "New-MailboxSearch, Start-MailboxSearch, Get-MailboxSearch, Stop-MailboxSearch, Remove-MailboxSearch, Set-MailboxSearch";
+				adminAuditLogSearchFilter.Parameters = "*";
+				if (changeId.StartDate != "NoStart")
+				{
+					adminAuditLogSearchFilter.StartDate = changeId.StartDate;
+				}
+				if (changeId.EndDate != "NoEnd")
+				{
+					adminAuditLogSearchFilter.EndDate = changeId.EndDate;
+				}
+				PSCommand pscommand = new PSCommand().AddCommand("Search-AdminAuditLog").AddParameters(adminAuditLogSearchFilter);
+				pscommand.AddParameter("resultSize", 501);
+				PowerShellResults<AdminAuditLogEvent> powerShellResults2 = base.Invoke<AdminAuditLogEvent>(pscommand);
+				if (powerShellResults2.Succeeded)
+				{
+					if (powerShellResults2.Output.Length == 501)
+					{
+						powerShellResults.Warnings = new string[]
+						{
+							Strings.TooManyAuditLogsInDetailsPane
+						};
+					}
+					powerShellResults.MergeOutput((from x in powerShellResults2.Output
+					where x.SearchObject == changeId.Object
+					select new AdminAuditLogDetailRow(identity, x)).ToArray<AdminAuditLogDetailRow>());
+				}
+				powerShellResults.MergeErrors<AdminAuditLogEvent>(powerShellResults2);
+			}
+			return powerShellResults;
+		}
+
+		// Token: 0x04002468 RID: 9320
+		internal const string ReadScope = "@R:Organization";
+
+		// Token: 0x04002469 RID: 9321
+		private const string GetObjectRole = "Search-AdminAuditLog?StartDate&EndDate&ObjectIds&Cmdlets@R:Organization";
+	}
+}

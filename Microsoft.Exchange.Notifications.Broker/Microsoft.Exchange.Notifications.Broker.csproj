@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E00F5D04-C156-4BAD-86F2-C9D7907D81B2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Exchange.Notifications.Broker</RootNamespace>
+    <AssemblyName>Microsoft.Exchange.Notifications.Broker</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>Microsoft.Exchange.Notifications.Broker.NotificationsBrokerService</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrokerAsyncResult.cs" />
+    <Compile Include="BrokerConfiguration.cs" />
+    <Compile Include="BrokerDatabaseData.cs" />
+    <Compile Include="BrokerDiagnostics.cs" />
+    <Compile Include="BrokerLogConfiguration.cs" />
+    <Compile Include="BrokerLogger.cs" />
+    <Compile Include="BrokerMailboxData.cs" />
+    <Compile Include="BrokerMailboxNotFoundException.cs" />
+    <Compile Include="BrokerSubscriptionDiagnosticsHandler.cs" />
+    <Compile Include="BrokerSubscriptionFlags.cs" />
+    <Compile Include="BrokerSubscriptionStore.cs" />
+    <Compile Include="CancelableAsyncResultWrapper.cs" />
+    <Compile Include="ConnectionDroppedNotificationHandler.cs" />
+    <Compile Include="ConversationNotificationHandler.cs" />
+    <Compile Include="DatabaseSnapshot.cs" />
+    <Compile Include="DatabasesSnapshot.cs" />
+    <Compile Include="Generator.cs" />
+    <Compile Include="IGenerator.cs" />
+    <Compile Include="IMailboxChangeHandler.cs" />
+    <Compile Include="InterbrokerMessage.cs" />
+    <Compile Include="InvalidBrokerSubscriptionException.cs" />
+    <Compile Include="IRemoteConduit.cs" />
+    <Compile Include="LocalMultiQueue.cs" />
+    <Compile Include="LocalQueue.cs" />
+    <Compile Include="LocDescriptionAttribute.cs" />
+    <Compile Include="LogField.cs" />
+    <Compile Include="MailboxChangeAssistant.cs" />
+    <Compile Include="MailboxChangeAssistantType.cs" />
+    <Compile Include="MailboxNotificationManager.cs" />
+    <Compile Include="MailboxSessionContext.cs" />
+    <Compile Include="MailboxSnapshot.cs" />
+    <Compile Include="MapiNotificationHandlerBase.cs" />
+    <Compile Include="NewMailNotificationHandler.cs" />
+    <Compile Include="NotificationBatch.cs" />
+    <Compile Include="NotificationMessage.cs" />
+    <Compile Include="NotificationsBrokerAsyncDispatch.cs" />
+    <Compile Include="NotificationsBrokerEventLogConstants.cs" />
+    <Compile Include="NotificationsBrokerRpcServer.cs" />
+    <Compile Include="NotificationsBrokerService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueueExtensions.cs" />
+    <Compile Include="QueueState.cs" />
+    <Compile Include="RemoteCommandStatus.cs" />
+    <Compile Include="RemoteConduit.cs" />
+    <Compile Include="RemoteMessenger.cs" />
+    <Compile Include="RemoteMessengerFactory.cs" />
+    <Compile Include="RemoteMultiQueue.cs" />
+    <Compile Include="RemoteQueue.cs" />
+    <Compile Include="RowNotificationHandler.cs" />
+    <Compile Include="ServiceStrings.cs" />
+    <Compile Include="SessionLockTimeoutException.cs" />
+    <Compile Include="SubscriptionMessage.cs" />
+    <Compile Include="SubscriptionsForHandlerDiagnosticsHandler.cs" />
+    <Compile Include="SubscriptionsForHandlersSnapshot.cs" />
+    <Compile Include="TaskExtensions.cs" />
+    <Compile Include="TestHooks.cs" />
+    <Compile Include="UnseenCountNotificationHandler.cs" />
+    <Compile Include="VersionExtensions.cs" />
+    <Compile Include="WrongMailboxForSubscriptionException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Strings.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Exchange.Assistants\Microsoft.Exchange.Assistants.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D810C}</Project>
+      <Name>Microsoft.Exchange.Assistants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Common\Microsoft.Exchange.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D811F}</Project>
+      <Name>Microsoft.Exchange.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.ApplicationLogic\Microsoft.Exchange.Data.ApplicationLogic.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8133}</Project>
+      <Name>Microsoft.Exchange.Data.ApplicationLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Common\Microsoft.Exchange.Data.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D80FD}</Project>
+      <Name>Microsoft.Exchange.Data.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Directory\Microsoft.Exchange.Data.Directory.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8134}</Project>
+      <Name>Microsoft.Exchange.Data.Directory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Storage\Microsoft.Exchange.Data.Storage.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D813E}</Project>
+      <Name>Microsoft.Exchange.Data.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data\Microsoft.Exchange.Data.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8135}</Project>
+      <Name>Microsoft.Exchange.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Diagnostics\Microsoft.Exchange.Diagnostics.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8142}</Project>
+      <Name>Microsoft.Exchange.Diagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Net\Microsoft.Exchange.Net.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81B1}</Project>
+      <Name>Microsoft.Exchange.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Notifications.BrokerAPI\Microsoft.Exchange.Notifications.BrokerAPI.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81B3}</Project>
+      <Name>Microsoft.Exchange.Notifications.BrokerAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Rpc\Microsoft.Exchange.Rpc.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81C8}</Project>
+      <Name>Microsoft.Exchange.Rpc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Security\Microsoft.Exchange.Security.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81DA}</Project>
+      <Name>Microsoft.Exchange.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Services\Microsoft.Exchange.Services.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81F0}</Project>
+      <Name>Microsoft.Exchange.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.StoreProvider\Microsoft.Exchange.StoreProvider.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8200}</Project>
+      <Name>Microsoft.Exchange.StoreProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.VariantConfiguration\Microsoft.Exchange.VariantConfiguration.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8229}</Project>
+      <Name>Microsoft.Exchange.VariantConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D824B}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

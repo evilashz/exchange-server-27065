@@ -1,0 +1,61 @@
+﻿using System;
+
+namespace Microsoft.Exchange.Protocols.Smtp
+{
+	// Token: 0x02000437 RID: 1079
+	internal enum SmtpInCommand
+	{
+		// Token: 0x04001822 RID: 6178
+		UNKNOWN,
+		// Token: 0x04001823 RID: 6179
+		AUTH,
+		// Token: 0x04001824 RID: 6180
+		BDAT,
+		// Token: 0x04001825 RID: 6181
+		DATA,
+		// Token: 0x04001826 RID: 6182
+		EHLO,
+		// Token: 0x04001827 RID: 6183
+		EXPN,
+		// Token: 0x04001828 RID: 6184
+		HELO,
+		// Token: 0x04001829 RID: 6185
+		HELP,
+		// Token: 0x0400182A RID: 6186
+		MAIL,
+		// Token: 0x0400182B RID: 6187
+		NOOP,
+		// Token: 0x0400182C RID: 6188
+		QUIT,
+		// Token: 0x0400182D RID: 6189
+		RCPT,
+		// Token: 0x0400182E RID: 6190
+		RSET,
+		// Token: 0x0400182F RID: 6191
+		STARTTLS,
+		// Token: 0x04001830 RID: 6192
+		VRFY,
+		// Token: 0x04001831 RID: 6193
+		XANONYMOUSTLS,
+		// Token: 0x04001832 RID: 6194
+		XEXCH50,
+		// Token: 0x04001833 RID: 6195
+		XEXPS,
+		// Token: 0x04001834 RID: 6196
+		XPROXY,
+		// Token: 0x04001835 RID: 6197
+		XPROXYFROM,
+		// Token: 0x04001836 RID: 6198
+		XPROXYTO,
+		// Token: 0x04001837 RID: 6199
+		XQDISCARD,
+		// Token: 0x04001838 RID: 6200
+		XSESSIONPARAMS,
+		// Token: 0x04001839 RID: 6201
+		XSHADOW,
+		// Token: 0x0400183A RID: 6202
+		XSHADOWREQUEST,
+		// Token: 0x0400183B RID: 6203
+		RCPT2
+	}
+}

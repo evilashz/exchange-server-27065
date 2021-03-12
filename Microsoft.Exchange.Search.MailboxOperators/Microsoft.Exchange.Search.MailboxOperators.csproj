@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E00F5D04-C156-4BAD-86F2-C9D7907D80F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Exchange.Search</RootNamespace>
+    <AssemblyName>Microsoft.Exchange.Search.MailboxOperators</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Ceres.ContentEngine.Processing" />
+    <Reference Include="Microsoft.Ceres.CoreServices.Services" />
+    <Reference Include="Microsoft.Ceres.Evaluation.DataModel" />
+    <Reference Include="Microsoft.Ceres.Evaluation.DataModel.Types" />
+    <Reference Include="Microsoft.Ceres.Evaluation.Operators" />
+    <Reference Include="Microsoft.Ceres.Evaluation.Processing" />
+    <Reference Include="Microsoft.Ceres.NlpBase.DictionaryInterface" />
+    <Reference Include="Microsoft.Ceres.SearchCore.Admin" />
+    <Reference Include="Microsoft.Exchange.Search.OperatorSchema" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MailboxOperators\DictionaryStoreWriterEvaluator.cs" />
+    <Compile Include="MailboxOperators\DictionaryStoreWriterProducer.cs" />
+    <Compile Include="MailboxOperators\DictionaryTrackerEvaluator.cs" />
+    <Compile Include="MailboxOperators\DictionaryTrackerProducer.cs" />
+    <Compile Include="MailboxOperators\DocumentTrackerEvaluator.cs" />
+    <Compile Include="MailboxOperators\DocumentTrackerProducer.cs" />
+    <Compile Include="MailboxOperators\ErrorBypassEvaluator.cs" />
+    <Compile Include="MailboxOperators\ErrorBypassProducer.cs" />
+    <Compile Include="MailboxOperators\ErrorEvaluator.cs" />
+    <Compile Include="MailboxOperators\ErrorProducer.cs" />
+    <Compile Include="MailboxOperators\FastDocumentSchema.cs" />
+    <Compile Include="MailboxOperators\FastPropertyDefinition.cs" />
+    <Compile Include="MailboxOperators\FolderUpdateRetrieverEvaluator.cs" />
+    <Compile Include="MailboxOperators\FolderUpdateRetrieverProducer.cs" />
+    <Compile Include="MailboxOperators\LocDescriptionAttribute.cs" />
+    <Compile Include="MailboxOperators\MailboxEvaluatorBinder.cs" />
+    <Compile Include="MailboxOperators\MailboxEvaluatorBinderSource.cs" />
+    <Compile Include="MailboxOperators\MailboxFlowPerformanceCounters.cs" />
+    <Compile Include="MailboxOperators\MailboxProducerBase.cs" />
+    <Compile Include="MailboxOperators\OrgIdNotFoundException.cs" />
+    <Compile Include="MailboxOperators\PostDocParserEvaluator.cs" />
+    <Compile Include="MailboxOperators\PostDocParserProducer.cs" />
+    <Compile Include="MailboxOperators\RetrieverEvaluator.cs" />
+    <Compile Include="MailboxOperators\RetrieverProducer.cs" />
+    <Compile Include="MailboxOperators\RightsManagement.cs" />
+    <Compile Include="MailboxOperators\RightsManagementProcessingResult.cs" />
+    <Compile Include="MailboxOperators\Strings.cs" />
+    <Compile Include="MailboxOperators\XSOItemHandlerAdaptor.cs" />
+    <Compile Include="MailboxOperators\XSOProducerBase.cs" />
+    <Compile Include="Performance\MailboxOperators.cs" />
+    <Compile Include="Performance\MailboxOperatorsInstance.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MailboxOperators\Strings.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Common\Microsoft.Exchange.Data.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D80FD}</Project>
+      <Name>Microsoft.Exchange.Data.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Directory\Microsoft.Exchange.Data.Directory.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8134}</Project>
+      <Name>Microsoft.Exchange.Data.Directory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Storage\Microsoft.Exchange.Data.Storage.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D813E}</Project>
+      <Name>Microsoft.Exchange.Data.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data\Microsoft.Exchange.Data.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8135}</Project>
+      <Name>Microsoft.Exchange.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Diagnostics\Microsoft.Exchange.Diagnostics.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8142}</Project>
+      <Name>Microsoft.Exchange.Diagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Net\Microsoft.Exchange.Net.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81B1}</Project>
+      <Name>Microsoft.Exchange.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Rpc\Microsoft.Exchange.Rpc.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81C8}</Project>
+      <Name>Microsoft.Exchange.Rpc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Search.Core\Microsoft.Exchange.Search.Core.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81D4}</Project>
+      <Name>Microsoft.Exchange.Search.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Search.Mdb\Microsoft.Exchange.Search.Mdb.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81D7}</Project>
+      <Name>Microsoft.Exchange.Search.Mdb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Search.Query\Microsoft.Exchange.Search.Query.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81D8}</Project>
+      <Name>Microsoft.Exchange.Search.Query</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Search.TokenOperators\Microsoft.Exchange.Search.TokenOperators.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D80F8}</Project>
+      <Name>Microsoft.Exchange.Search.TokenOperators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.StoreProvider\Microsoft.Exchange.StoreProvider.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8200}</Project>
+      <Name>Microsoft.Exchange.StoreProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Office.Datacenter.ActiveMonitoringLocal\Microsoft.Office.Datacenter.ActiveMonitoringLocal.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8236}</Project>
+      <Name>Microsoft.Office.Datacenter.ActiveMonitoringLocal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D824B}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

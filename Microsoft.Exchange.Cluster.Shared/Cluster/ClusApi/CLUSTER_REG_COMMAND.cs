@@ -1,0 +1,25 @@
+﻿using System;
+
+namespace Microsoft.Exchange.Cluster.ClusApi
+{
+	// Token: 0x0200005F RID: 95
+	internal enum CLUSTER_REG_COMMAND
+	{
+		// Token: 0x04000168 RID: 360
+		CLUSREG_COMMAND_NONE,
+		// Token: 0x04000169 RID: 361
+		CLUSREG_SET_VALUE,
+		// Token: 0x0400016A RID: 362
+		CLUSREG_CREATE_KEY,
+		// Token: 0x0400016B RID: 363
+		CLUSREG_DELETE_KEY,
+		// Token: 0x0400016C RID: 364
+		CLUSREG_DELETE_VALUE,
+		// Token: 0x0400016D RID: 365
+		CLUSREG_SET_KEY_SECURITY,
+		// Token: 0x0400016E RID: 366
+		CLUSREG_VALUE_DELETED,
+		// Token: 0x0400016F RID: 367
+		CLUSREG_LAST_COMMAND
+	}
+}

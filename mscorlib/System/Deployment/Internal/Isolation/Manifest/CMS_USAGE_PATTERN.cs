@@ -1,0 +1,17 @@
+﻿using System;
+
+namespace System.Deployment.Internal.Isolation.Manifest
+{
+	// Token: 0x02000693 RID: 1683
+	internal enum CMS_USAGE_PATTERN
+	{
+		// Token: 0x04002202 RID: 8706
+		CMS_USAGE_PATTERN_SCOPE_APPLICATION = 1,
+		// Token: 0x04002203 RID: 8707
+		CMS_USAGE_PATTERN_SCOPE_PROCESS,
+		// Token: 0x04002204 RID: 8708
+		CMS_USAGE_PATTERN_SCOPE_MACHINE,
+		// Token: 0x04002205 RID: 8709
+		CMS_USAGE_PATTERN_SCOPE_MASK = 7
+	}
+}

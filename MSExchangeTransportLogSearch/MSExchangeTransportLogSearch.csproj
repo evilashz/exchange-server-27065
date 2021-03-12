@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E00F5D04-C156-4BAD-86F2-C9D7907D8245}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Exchange</RootNamespace>
+    <AssemblyName>MSExchangeTransportLogSearch</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>Microsoft.Exchange.Transport.Logging.Search.LogSearchService</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HostedServices\Archive\MetaReplication\ByteArrayHelper.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\IConfirmableReplicationItem.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\IMetaConfirmation.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\IMetaReplicationKey.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\IReplicationService.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\MessageInsertedConfirmation.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\MessageInsertedKey.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\MetaConfirmation.2.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\MetaConfirmation.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\MetadataKey.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\MetaExtractMime.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\MimeContentAttribute.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\MimeContentDescriptions.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\MimeContentSerializerLoadException.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\ReplicationStatus.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\XmlSerializationHelper.cs" />
+    <Compile Include="HostedServices\Archive\MetaReplication\XmlStringSerializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transport\Logging\Search\EHALogSearchComponent.cs" />
+    <Compile Include="Transport\Logging\Search\Event.cs" />
+    <Compile Include="Transport\Logging\Search\EventDefinition.cs" />
+    <Compile Include="Transport\Logging\Search\HealthMonitoringLog.cs" />
+    <Compile Include="Transport\Logging\Search\IndexBufferPool.cs" />
+    <Compile Include="Transport\Logging\Search\IndexedSearch.cs" />
+    <Compile Include="Transport\Logging\Search\IOHelper.cs" />
+    <Compile Include="Transport\Logging\Search\LatencyDistribution.cs" />
+    <Compile Include="Transport\Logging\Search\LatencyDistributionRange.cs" />
+    <Compile Include="Transport\Logging\Search\Log.cs" />
+    <Compile Include="Transport\Logging\Search\LogAndEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogBackgroundReader.cs" />
+    <Compile Include="Transport\Logging\Search\LogBinaryOperatorEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogBinaryStringOperatorEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogComparisonEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogCompoundEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogConstantEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogCursor.cs" />
+    <Compile Include="Transport\Logging\Search\LogEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogFalseEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogFieldEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogFile.cs" />
+    <Compile Include="Transport\Logging\Search\LogFileInfo.cs" />
+    <Compile Include="Transport\Logging\Search\LogFilter.cs" />
+    <Compile Include="Transport\Logging\Search\LogForAnyEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogForEveryEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogIndex.cs" />
+    <Compile Include="Transport\Logging\Search\LogIsNullOrEmptyEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogMonitor.cs" />
+    <Compile Include="Transport\Logging\Search\LogNotEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogOperandEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogOrEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogQuantifierEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogSearchAppConfig.cs" />
+    <Compile Include="Transport\Logging\Search\LogSearchIndexingParameters.cs" />
+    <Compile Include="Transport\Logging\Search\LogSearchServer.cs" />
+    <Compile Include="Transport\Logging\Search\LogSearchService.cs" />
+    <Compile Include="Transport\Logging\Search\LogSession.cs" />
+    <Compile Include="Transport\Logging\Search\LogSessionManager.cs" />
+    <Compile Include="Transport\Logging\Search\LogStringComparisonEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogStringContainsEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogStringEndsWithEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogStringStartsWithEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogTrueEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogUnaryEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogUnaryOperatorEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\LogVariableEvaluator.cs" />
+    <Compile Include="Transport\Logging\Search\PerfCounters.cs" />
+    <Compile Include="Transport\Logging\Search\PolicyInducedSubscriptionDeletionEventHandler.cs" />
+    <Compile Include="Transport\Logging\Search\ProcessRowEventArgs.cs" />
+    <Compile Include="Transport\Logging\Search\ProcessRowEventHandler.cs" />
+    <Compile Include="Transport\Logging\Search\SearchContext.cs" />
+    <Compile Include="Transport\Logging\Search\Strings.cs" />
+    <Compile Include="Transport\Logging\Search\SubscriptionCompletionEventHandler.cs" />
+    <Compile Include="Transport\Logging\Search\SubscriptionCreationEventHandler.cs" />
+    <Compile Include="Transport\Logging\Search\SubscriptionDispatchEventHandler.cs" />
+    <Compile Include="Transport\Logging\Search\SubscriptionInfoEventHandler.cs" />
+    <Compile Include="Transport\Logging\Search\SyncEventHandler.cs" />
+    <Compile Include="Transport\Logging\Search\SyncHealthLogEventHandler.cs" />
+    <Compile Include="Transport\Logging\Search\SyncHealthLogEvents.cs" />
+    <Compile Include="Transport\Logging\Search\SyncHealthLogInvalidDataException.cs" />
+    <Compile Include="Transport\Logging\Search\TaskDefinition.cs" />
+    <Compile Include="Transport\Logging\Search\TaskStatisticsTracker.cs" />
+    <Compile Include="Transport\Logging\Search\TenantInfoEventHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Transport\Logging\Search\Strings.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Exchange.Common\Microsoft.Exchange.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D811F}</Project>
+      <Name>Microsoft.Exchange.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Compliance\Microsoft.Exchange.Compliance.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8121}</Project>
+      <Name>Microsoft.Exchange.Compliance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Configuration.ObjectModel\Microsoft.Exchange.Configuration.ObjectModel.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D812B}</Project>
+      <Name>Microsoft.Exchange.Configuration.ObjectModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Common\Microsoft.Exchange.Data.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D80FD}</Project>
+      <Name>Microsoft.Exchange.Data.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Directory\Microsoft.Exchange.Data.Directory.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8134}</Project>
+      <Name>Microsoft.Exchange.Data.Directory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Transport\Microsoft.Exchange.Data.Transport.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D80FF}</Project>
+      <Name>Microsoft.Exchange.Data.Transport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Diagnostics\Microsoft.Exchange.Diagnostics.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8142}</Project>
+      <Name>Microsoft.Exchange.Diagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Net\Microsoft.Exchange.Net.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81B1}</Project>
+      <Name>Microsoft.Exchange.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Rpc\Microsoft.Exchange.Rpc.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81C8}</Project>
+      <Name>Microsoft.Exchange.Rpc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Transport.Logging.Search\Microsoft.Exchange.Transport.Logging.Search.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8215}</Project>
+      <Name>Microsoft.Exchange.Transport.Logging.Search</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Transport.LoggingCommon\Microsoft.Exchange.Transport.LoggingCommon.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8216}</Project>
+      <Name>Microsoft.Exchange.Transport.LoggingCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Transport\Microsoft.Exchange.Transport.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8214}</Project>
+      <Name>Microsoft.Exchange.Transport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.VariantConfiguration\Microsoft.Exchange.VariantConfiguration.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8229}</Project>
+      <Name>Microsoft.Exchange.VariantConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Office.Datacenter.ActiveMonitoringLocal\Microsoft.Office.Datacenter.ActiveMonitoringLocal.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8236}</Project>
+      <Name>Microsoft.Office.Datacenter.ActiveMonitoringLocal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D824B}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,55 @@
+﻿using System;
+
+namespace Microsoft.Exchange.Diagnostics
+{
+	// Token: 0x020001B4 RID: 436
+	internal enum MessageTrackingSource
+	{
+		// Token: 0x040008F0 RID: 2288
+		SMTP,
+		// Token: 0x040008F1 RID: 2289
+		PICKUP,
+		// Token: 0x040008F2 RID: 2290
+		DSN,
+		// Token: 0x040008F3 RID: 2291
+		AGENT,
+		// Token: 0x040008F4 RID: 2292
+		ADMIN,
+		// Token: 0x040008F5 RID: 2293
+		STOREDRIVER,
+		// Token: 0x040008F6 RID: 2294
+		ROUTING,
+		// Token: 0x040008F7 RID: 2295
+		DNS,
+		// Token: 0x040008F8 RID: 2296
+		GATEWAY,
+		// Token: 0x040008F9 RID: 2297
+		POISONMESSAGE,
+		// Token: 0x040008FA RID: 2298
+		ORAR,
+		// Token: 0x040008FB RID: 2299
+		REDUNDANCY,
+		// Token: 0x040008FC RID: 2300
+		SAFETYNET,
+		// Token: 0x040008FD RID: 2301
+		MAILBOXRULE,
+		// Token: 0x040008FE RID: 2302
+		AGGREGATION,
+		// Token: 0x040008FF RID: 2303
+		APPROVAL,
+		// Token: 0x04000900 RID: 2304
+		MULTITENANCY,
+		// Token: 0x04000901 RID: 2305
+		QUEUE,
+		// Token: 0x04000902 RID: 2306
+		APPLICATION,
+		// Token: 0x04000903 RID: 2307
+		STOREDRIVERSUBMISSION,
+		// Token: 0x04000904 RID: 2308
+		PUBLICFOLDER,
+		// Token: 0x04000905 RID: 2309
+		BOOTLOADER,
+		// Token: 0x04000906 RID: 2310
+		MEETINGMESSAGEPROCESSOR
+	}
+}

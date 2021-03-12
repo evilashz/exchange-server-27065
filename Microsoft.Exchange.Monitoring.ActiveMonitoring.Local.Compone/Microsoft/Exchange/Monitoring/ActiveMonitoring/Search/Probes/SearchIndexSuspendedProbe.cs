@@ -1,0 +1,49 @@
+﻿using System;
+using System.Threading;
+using Microsoft.Exchange.Cluster.Replay;
+using Microsoft.Exchange.Monitoring.ActiveMonitoring.Local;
+using Microsoft.Exchange.Rpc.Cluster;
+using Microsoft.Exchange.Search.Core.Abstraction;
+
+namespace Microsoft.Exchange.Monitoring.ActiveMonitoring.Search.Probes
+{
+	// Token: 0x0200047B RID: 1147
+	public class SearchIndexSuspendedProbe : SearchProbeBase
+	{
+		// Token: 0x1700062C RID: 1580
+		// (get) Token: 0x06001CEA RID: 7402 RVA: 0x000A9F5C File Offset: 0x000A815C
+		protected override bool SkipOnAutoDagExcludeFromMonitoring
+		{
+			get
+			{
+				return true;
+			}
+		}
+
+		// Token: 0x06001CEB RID: 7403 RVA: 0x000A9F60 File Offset: 0x000A8160
+		protected override void InternalDoWork(CancellationToken cancellationToken)
+		{
+			string targetResource = base.Definition.TargetResource;
+			IndexStatus cachedLocalDatabaseIndexStatus = SearchMonitoringHelper.GetCachedLocalDatabaseIndexStatus(targetResource, false);
+			if (cachedLocalDatabaseIndexStatus == null)
+			{
+				return;
+			}
+			base.Result.StateAttribute1 = cachedLocalDatabaseIndexStatus.IndexingState.ToString();
+			if (cachedLocalDatabaseIndexStatus.IndexingState == ContentIndexStatusType.Suspended)
+			{
+				CopyStatusClientCachedEntry cachedLocalDatabaseCopyStatus = SearchMonitoringHelper.GetCachedLocalDatabaseCopyStatus(targetResource);
+				if (cachedLocalDatabaseCopyStatus == null || cachedLocalDatabaseCopyStatus.CopyStatus == null)
+				{
+					base.Result.StateAttribute2 = "CopyStatusNull";
+					return;
+				}
+				base.Result.StateAttribute2 = cachedLocalDatabaseCopyStatus.CopyStatus.CopyStatus.ToString();
+				if (cachedLocalDatabaseCopyStatus.CopyStatus.CopyStatus == CopyStatusEnum.Mounted || cachedLocalDatabaseCopyStatus.CopyStatus.CopyStatus == CopyStatusEnum.Healthy)
+				{
+					throw new SearchProbeFailureException(Strings.SearchCatalogSuspended(targetResource, cachedLocalDatabaseCopyStatus.CopyStatus.CopyStatus.ToString()));
+				}
+			}
+		}
+	}
+}

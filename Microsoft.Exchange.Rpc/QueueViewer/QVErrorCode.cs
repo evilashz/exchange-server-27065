@@ -1,0 +1,101 @@
+﻿using System;
+
+namespace Microsoft.Exchange.Rpc.QueueViewer
+{
+	// Token: 0x0200039E RID: 926
+	internal static class QVErrorCode
+	{
+		// Token: 0x0600103E RID: 4158 RVA: 0x0004B1C8 File Offset: 0x0004A5C8
+		// Note: this type is marked as 'beforefieldinit'.
+		static QVErrorCode()
+		{
+			QVErrorCode.QV_E_ENDPOINT_NOT_REGISTERED = 1753;
+			QVErrorCode.QV_E_RPC_SERVER_UNAVAILABLE = 1722;
+			QVErrorCode.QV_E_OBJECT_NOT_FOUND = -2147220991;
+			QVErrorCode.QV_E_MULTIPLE_IDENTITY_MATCH = -2147220990;
+			QVErrorCode.QV_E_AMBIGUOUS_PARAMETER_SET = -2147220989;
+			QVErrorCode.QV_E_FILTER_TYPE_NOT_SUPPORTED = -2147220988;
+			QVErrorCode.QV_E_INVALID_FIELD_NAME = -2147220987;
+			QVErrorCode.QV_E_INVALID_OPERATION = -2147220986;
+			QVErrorCode.QV_E_TEXT_MATCHING_NOT_SUPPORTED = -2147220985;
+			QVErrorCode.QV_E_INCOMPLETE_IDENTITY = -2147220984;
+			QVErrorCode.QV_E_INVALID_IDENTITY_FOR_EQUALITY = -2147220983;
+			QVErrorCode.QV_E_MESSAGE_NOT_SUSPENDED = -2147220982;
+			QVErrorCode.QV_E_TOO_MANY_RESULTS = -2147220981;
+			QVErrorCode.QV_E_INVALID_IDENTITY_STRING = -2147220980;
+			QVErrorCode.QV_E_COMPARISON_NOT_SUPPORTED = -2147220979;
+			QVErrorCode.QV_E_INVALID_CLIENT_DATA = -2147220978;
+			QVErrorCode.QV_E_INVALID_SERVER_DATA = -2147220977;
+			QVErrorCode.QV_E_INVALID_SERVER_VERSION = -2147220976;
+			QVErrorCode.QV_E_INVALID_SERVER_COLLECTION = -2147220975;
+			QVErrorCode.QV_E_QUEUE_RESUBMIT_IN_PROGRESS = -2147220974;
+			QVErrorCode.QV_E_REDIRECT_MESSAGE_IN_PROGRESS = -2147220973;
+		}
+
+		// Token: 0x04000F7B RID: 3963
+		public static int QV_E_OBJECT_NOT_FOUND;
+
+		// Token: 0x04000F7C RID: 3964
+		public static int QV_E_MULTIPLE_IDENTITY_MATCH;
+
+		// Token: 0x04000F7D RID: 3965
+		public static int QV_E_AMBIGUOUS_PARAMETER_SET;
+
+		// Token: 0x04000F7E RID: 3966
+		public static int QV_E_FILTER_TYPE_NOT_SUPPORTED;
+
+		// Token: 0x04000F7F RID: 3967
+		public static int QV_E_INVALID_FIELD_NAME;
+
+		// Token: 0x04000F80 RID: 3968
+		public static int QV_E_INVALID_OPERATION;
+
+		// Token: 0x04000F81 RID: 3969
+		public static int QV_E_TEXT_MATCHING_NOT_SUPPORTED;
+
+		// Token: 0x04000F82 RID: 3970
+		public static int QV_E_INCOMPLETE_IDENTITY;
+
+		// Token: 0x04000F83 RID: 3971
+		public static int QV_E_INVALID_IDENTITY_FOR_EQUALITY;
+
+		// Token: 0x04000F84 RID: 3972
+		public static int QV_E_MESSAGE_NOT_SUSPENDED;
+
+		// Token: 0x04000F85 RID: 3973
+		public static int QV_E_TOO_MANY_RESULTS;
+
+		// Token: 0x04000F86 RID: 3974
+		public static int QV_E_INVALID_IDENTITY_STRING;
+
+		// Token: 0x04000F87 RID: 3975
+		public static int QV_E_COMPARISON_NOT_SUPPORTED;
+
+		// Token: 0x04000F88 RID: 3976
+		public static int QV_E_INVALID_CLIENT_DATA;
+
+		// Token: 0x04000F89 RID: 3977
+		public static int QV_E_INVALID_SERVER_DATA;
+
+		// Token: 0x04000F8A RID: 3978
+		public static int QV_E_INVALID_SERVER_VERSION;
+
+		// Token: 0x04000F8B RID: 3979
+		public static int QV_E_INVALID_SERVER_COLLECTION;
+
+		// Token: 0x04000F8C RID: 3980
+		public static int QV_E_QUEUE_RESUBMIT_IN_PROGRESS;
+
+		// Token: 0x04000F8D RID: 3981
+		public static int QV_E_REDIRECT_MESSAGE_IN_PROGRESS;
+
+		// Token: 0x04000F8E RID: 3982
+		public static int QV_E_RPC_SERVER_UNAVAILABLE = 1722;
+
+		// Token: 0x04000F8F RID: 3983
+		public static int QV_E_ENDPOINT_NOT_REGISTERED = 1753;
+
+		// Token: 0x04000F90 RID: 3984
+		public static int QV_E_UNKNOWN_INTERFACE = 1717;
+	}
+}

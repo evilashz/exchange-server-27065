@@ -1,0 +1,33 @@
+﻿using System;
+
+namespace Microsoft.Mapi
+{
+	// Token: 0x020001FF RID: 511
+	internal enum ObjectType
+	{
+		// Token: 0x040009CC RID: 2508
+		MAPI_STORE = 1,
+		// Token: 0x040009CD RID: 2509
+		MAPI_ADDRBOOK,
+		// Token: 0x040009CE RID: 2510
+		MAPI_FOLDER,
+		// Token: 0x040009CF RID: 2511
+		MAPI_ABCONT,
+		// Token: 0x040009D0 RID: 2512
+		MAPI_MESSAGE,
+		// Token: 0x040009D1 RID: 2513
+		MAPI_MAILUSER,
+		// Token: 0x040009D2 RID: 2514
+		MAPI_ATTACH,
+		// Token: 0x040009D3 RID: 2515
+		MAPI_DISTLIST,
+		// Token: 0x040009D4 RID: 2516
+		MAPI_PROFSECT,
+		// Token: 0x040009D5 RID: 2517
+		MAPI_STATUS,
+		// Token: 0x040009D6 RID: 2518
+		MAPI_SESSION,
+		// Token: 0x040009D7 RID: 2519
+		MAPI_FORMINFO
+	}
+}

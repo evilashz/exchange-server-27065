@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E00F5D04-C156-4BAD-86F2-C9D7907D816C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Exchange.Imap4</RootNamespace>
+    <AssemblyName>Microsoft.Exchange.Imap4</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>Microsoft.Exchange.Imap4.Imap4Server</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Exchange.Common.IL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Imap4BufferBuilder.cs" />
+    <Compile Include="Imap4Counters.cs" />
+    <Compile Include="Imap4CountersInstance.cs" />
+    <Compile Include="Imap4DataAccessViewHandler.cs" />
+    <Compile Include="Imap4EventLogConstants.cs" />
+    <Compile Include="Imap4FastQueryViewHandler.cs" />
+    <Compile Include="Imap4FolderHierarchyHandler.cs" />
+    <Compile Include="Imap4Mailbox.cs" />
+    <Compile Include="Imap4Message.cs" />
+    <Compile Include="Imap4ProtocolUser.cs" />
+    <Compile Include="Imap4ProxySession.cs" />
+    <Compile Include="Imap4Request.cs" />
+    <Compile Include="Imap4RequestAppend.cs" />
+    <Compile Include="Imap4RequestAuthenticate.cs" />
+    <Compile Include="Imap4RequestCapability.cs" />
+    <Compile Include="Imap4RequestCheck.cs" />
+    <Compile Include="Imap4RequestClose.cs" />
+    <Compile Include="Imap4RequestCopy.cs" />
+    <Compile Include="Imap4RequestCreate.cs" />
+    <Compile Include="Imap4RequestDelete.cs" />
+    <Compile Include="Imap4RequestDone.cs" />
+    <Compile Include="Imap4RequestExamine.cs" />
+    <Compile Include="Imap4RequestExpunge.cs" />
+    <Compile Include="Imap4RequestFetch.cs" />
+    <Compile Include="Imap4RequestID.cs" />
+    <Compile Include="Imap4RequestIdle.cs" />
+    <Compile Include="Imap4RequestInvalid.cs" />
+    <Compile Include="Imap4RequestList.cs" />
+    <Compile Include="Imap4RequestLogin.cs" />
+    <Compile Include="Imap4RequestLogout.cs" />
+    <Compile Include="Imap4RequestLsub.cs" />
+    <Compile Include="Imap4RequestMove.cs" />
+    <Compile Include="Imap4RequestNamespace.cs" />
+    <Compile Include="Imap4RequestNoop.cs" />
+    <Compile Include="Imap4RequestRename.cs" />
+    <Compile Include="Imap4RequestSearch.cs" />
+    <Compile Include="Imap4RequestSelect.cs" />
+    <Compile Include="Imap4RequestStartTls.cs" />
+    <Compile Include="Imap4RequestStatus.cs" />
+    <Compile Include="Imap4RequestStore.cs" />
+    <Compile Include="Imap4RequestSubscribe.cs" />
+    <Compile Include="Imap4RequestUid.cs" />
+    <Compile Include="Imap4RequestUnsubscribe.cs" />
+    <Compile Include="Imap4RequestWithMessageSetSupport.cs" />
+    <Compile Include="Imap4RequestWithStringParameters.cs" />
+    <Compile Include="Imap4RequestXproxy.cs" />
+    <Compile Include="Imap4Response.cs" />
+    <Compile Include="Imap4ResponseFactory.cs" />
+    <Compile Include="Imap4Server.cs" />
+    <Compile Include="Imap4Session.cs" />
+    <Compile Include="Imap4State.cs" />
+    <Compile Include="Imap4VirtualServer.cs" />
+    <Compile Include="IMapiNotificationHandler.cs" />
+    <Compile Include="MapiNotificationManager.cs" />
+    <Compile Include="NonRenderableItemConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubscribeListHelper.cs" />
+    <Compile Include="SubStream.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Exchange.Compliance\Microsoft.Exchange.Compliance.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8121}</Project>
+      <Name>Microsoft.Exchange.Compliance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.ApplicationLogic\Microsoft.Exchange.Data.ApplicationLogic.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8133}</Project>
+      <Name>Microsoft.Exchange.Data.ApplicationLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Common\Microsoft.Exchange.Data.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D80FD}</Project>
+      <Name>Microsoft.Exchange.Data.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Directory\Microsoft.Exchange.Data.Directory.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8134}</Project>
+      <Name>Microsoft.Exchange.Data.Directory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Storage.ClientStrings\Microsoft.Exchange.Data.Storage.ClientStrings.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D813D}</Project>
+      <Name>Microsoft.Exchange.Data.Storage.ClientStrings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Storage\Microsoft.Exchange.Data.Storage.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D813E}</Project>
+      <Name>Microsoft.Exchange.Data.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Transport\Microsoft.Exchange.Data.Transport.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D80FF}</Project>
+      <Name>Microsoft.Exchange.Data.Transport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data\Microsoft.Exchange.Data.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8135}</Project>
+      <Name>Microsoft.Exchange.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Diagnostics\Microsoft.Exchange.Diagnostics.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8142}</Project>
+      <Name>Microsoft.Exchange.Diagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Extensibility.Internal\Microsoft.Exchange.Extensibility.Internal.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D815B}</Project>
+      <Name>Microsoft.Exchange.Extensibility.Internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Net\Microsoft.Exchange.Net.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81B1}</Project>
+      <Name>Microsoft.Exchange.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.PopImap.Core\Microsoft.Exchange.PopImap.Core.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81BB}</Project>
+      <Name>Microsoft.Exchange.PopImap.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Security\Microsoft.Exchange.Security.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81DA}</Project>
+      <Name>Microsoft.Exchange.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.VariantConfiguration\Microsoft.Exchange.VariantConfiguration.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8229}</Project>
+      <Name>Microsoft.Exchange.VariantConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.WorkloadManagement\Microsoft.Exchange.WorkloadManagement.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D822A}</Project>
+      <Name>Microsoft.Exchange.WorkloadManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D824B}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

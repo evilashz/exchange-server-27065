@@ -1,0 +1,65 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Microsoft.Office.CompliancePolicy.PolicySync
+{
+	// Token: 0x02000124 RID: 292
+	internal sealed class ObjectSyncSubWorkItem : SubWorkItemBase
+	{
+		// Token: 0x06000846 RID: 2118 RVA: 0x00019447 File Offset: 0x00017647
+		public ObjectSyncSubWorkItem(SyncJob syncJob, SyncChangeInfo changeInfo) : base(syncJob, changeInfo)
+		{
+		}
+
+		// Token: 0x06000847 RID: 2119 RVA: 0x00019480 File Offset: 0x00017680
+		public override void Execute()
+		{
+			base.SyncJob.LogProvider.LogOneEntry("UnifiedPolicySyncAgent", base.SyncJob.CurrentWorkItem.TenantContext.TenantId.ToString(), base.SyncJob.CurrentWorkItem.ExternalIdentity, ExecutionLog.EventType.Information, "Unified Policy Sync ObjectSync SubWorkItem Begin", string.Format("Unified Policy Sync ObjectSync SubWorkItem Begin for {0} object {1}", base.ChangeInfo.ObjectType, base.ChangeInfo.ObjectId.Value), null, new KeyValuePair<string, object>[0]);
+			Guid objectId = base.ChangeInfo.ObjectId.Value;
+			Guid tenantId = base.SyncJob.CurrentWorkItem.TenantContext.TenantId;
+			PolicyConfigurationBase deltaObject = base.SyncJob.SyncSvcClient.GetObject(SyncCallerContext.Create(base.SyncJob.SyncAgentContext.SyncAgentConfig.PartnerName), tenantId, base.ChangeInfo.ObjectType, objectId, true, base.SyncJob.MonitorEventTracker);
+			base.LogDeltaObjectFromMasterStore(deltaObject);
+			if (base.ShouldProcessDelta(deltaObject))
+			{
+				base.CommitObjectWrapper(delegate
+				{
+					this.ProcessDelta(deltaObject, objectId, this.ChangeInfo);
+				}, SubWorkItemBase.CreateErrorStatus(base.ChangeInfo.ObjectType, objectId, SubWorkItemBase.GetParentObjectId(deltaObject), (deltaObject == null) ? null : deltaObject.Version, SubWorkItemBase.GetObjectMode(deltaObject)));
+			}
+			base.SyncJob.LogProvider.LogOneEntry("UnifiedPolicySyncAgent", base.SyncJob.CurrentWorkItem.TenantContext.TenantId.ToString(), base.SyncJob.CurrentWorkItem.ExternalIdentity, ExecutionLog.EventType.Information, "Unified Policy Sync ObjectSync SubWorkItem End", string.Format("Unified Policy Sync ObjectSync SubWorkItem End for {0} object {1}", base.ChangeInfo.ObjectType, base.ChangeInfo.ObjectId.Value), null, new KeyValuePair<string, object>[0]);
+		}
+
+		// Token: 0x06000848 RID: 2120 RVA: 0x000196A0 File Offset: 0x000178A0
+		public override void BeginExecute(Action<SubWorkItemBase> callback)
+		{
+			base.SyncJob.LogProvider.LogOneEntry("UnifiedPolicySyncAgent", base.SyncJob.CurrentWorkItem.TenantContext.TenantId.ToString(), base.SyncJob.CurrentWorkItem.ExternalIdentity, ExecutionLog.EventType.Information, "Unified Policy Sync ObjectSync SubWorkItem Begin", string.Format("Unified Policy Sync ObjectSync SubWorkItem Begin for {0} object {1}", base.ChangeInfo.ObjectType, base.ChangeInfo.ObjectId.Value), null, new KeyValuePair<string, object>[0]);
+			base.ExternalCallback = callback;
+			Guid value = base.ChangeInfo.ObjectId.Value;
+			Guid tenantId = base.SyncJob.CurrentWorkItem.TenantContext.TenantId;
+			base.SyncJob.SyncSvcClient.BeginGetObject(SyncCallerContext.Create(base.SyncJob.SyncAgentContext.SyncAgentConfig.PartnerName), tenantId, base.ChangeInfo.ObjectType, value, true, new AsyncCallback(this.InternalCallback), null, base.SyncJob.MonitorEventTracker);
+		}
+
+		// Token: 0x06000849 RID: 2121 RVA: 0x00019804 File Offset: 0x00017A04
+		protected override void InternalCallback(IAsyncResult ar)
+		{
+			try
+			{
+				PolicyConfigurationBase deltaObject = base.SyncJob.SyncSvcClient.EndGetObject(ar, base.SyncJob.MonitorEventTracker, base.ChangeInfo.ObjectType);
+				base.LogDeltaObjectFromMasterStore(deltaObject);
+				if (base.ShouldProcessDelta(deltaObject))
+				{
+					base.CommitObjectWrapper(delegate
+					{
+						this.ProcessDelta(deltaObject, this.ChangeInfo.ObjectId.Value, this.ChangeInfo);
+					}, SubWorkItemBase.CreateErrorStatus(base.ChangeInfo.ObjectType, base.ChangeInfo.ObjectId.Value, SubWorkItemBase.GetParentObjectId(deltaObject), (deltaObject == null) ? null : deltaObject.Version, SubWorkItemBase.GetObjectMode(deltaObject)));
+				}
+			}
+			catch (Exception lastError)
+			{
+				base.LastError = lastError;
+			}
+			base.SyncJob.LogProvider.LogOneEntry("UnifiedPolicySyncAgent", base.SyncJob.CurrentWorkItem.TenantContext.TenantId.ToString(), base.SyncJob.CurrentWorkItem.ExternalIdentity, ExecutionLog.EventType.Information, "Unified Policy Sync ObjectSync SubWorkItem End", string.Format("Unified Policy Sync ObjectSync SubWorkItem End for {0} object {1}", base.ChangeInfo.ObjectType, base.ChangeInfo.ObjectId.Value), null, new KeyValuePair<string, object>[0]);
+			base.ExternalCallback(this);
+		}
+	}
+}

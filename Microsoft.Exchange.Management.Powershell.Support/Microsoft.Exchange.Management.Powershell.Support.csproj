@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E00F5D04-C156-4BAD-86F2-C9D7907D8198}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Exchange.Management.Powershell.Support</RootNamespace>
+    <AssemblyName>Microsoft.Exchange.Management.Powershell.Support</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.Services.Client" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management.Automation" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AADDirectoryObjectPresentationObject.cs" />
+    <Compile Include="AADDirectoryObjectPresentationObjectSchema.cs" />
+    <Compile Include="AADGroupPresentationObject.cs" />
+    <Compile Include="AADGroupPresentationObjectSchema.cs" />
+    <Compile Include="AADPresentationObjectFactory.cs" />
+    <Compile Include="AADUserPresentationObject.cs" />
+    <Compile Include="AADUserPresentationObjectSchema.cs" />
+    <Compile Include="ActivityLogEntryPresentationObject.cs" />
+    <Compile Include="ActivityLogEntryPresentationObjectSchema.cs" />
+    <Compile Include="CmdletConfiguration.cs" />
+    <Compile Include="DatabaseEvent.cs" />
+    <Compile Include="DatabaseEventNames.cs" />
+    <Compile Include="DatabaseEventWatermark.cs" />
+    <Compile Include="ExchangeDiagnosticInfoResult.cs" />
+    <Compile Include="FailureCategory.cs" />
+    <Compile Include="GetCalendarValidationResult.cs" />
+    <Compile Include="GetConstraint.cs" />
+    <Compile Include="GetDatabaseEvent.cs" />
+    <Compile Include="GetDatabaseEventWatermark.cs" />
+    <Compile Include="GetExchangeDiagnosticInfo.cs" />
+    <Compile Include="GetFolderObjectBase.cs" />
+    <Compile Include="GetFolderRestriction.cs" />
+    <Compile Include="GetGroupBlackout.cs" />
+    <Compile Include="GetGroupCapacity.cs" />
+    <Compile Include="GetMailboxActivityLog.cs" />
+    <Compile Include="GetMailboxFileStore.cs" />
+    <Compile Include="GetOABFile.cs" />
+    <Compile Include="GetSymphonyGroup.cs" />
+    <Compile Include="GetTenantReadiness.cs" />
+    <Compile Include="GetUnifiedGroup.cs" />
+    <Compile Include="GetUpgradeWorkItem.cs" />
+    <Compile Include="GetWebDnsRecord.cs" />
+    <Compile Include="GroupBlackoutDisplay.cs" />
+    <Compile Include="GroupCapacityDisplay.cs" />
+    <Compile Include="InMemoryObjectSchema.cs" />
+    <Compile Include="InvalidStatusDetailException.cs" />
+    <Compile Include="InvalidTenantGuidException.cs" />
+    <Compile Include="LocDescriptionAttribute.cs" />
+    <Compile Include="LocDisplayNameAttribute.cs" />
+    <Compile Include="MailboxFileStoreBase.cs" />
+    <Compile Include="MdbAdminTaskException.cs" />
+    <Compile Include="MeetingValidationResult.cs" />
+    <Compile Include="MeetingValidationResultSchema.cs" />
+    <Compile Include="NewUnifiedGroup.cs" />
+    <Compile Include="PostconditionAttribute.cs" />
+    <Compile Include="PreconditionAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveMailboxFileStore.cs" />
+    <Compile Include="RemoveUnifiedGroup.cs" />
+    <Compile Include="RepairMigration.cs" />
+    <Compile Include="RestrictionRow.cs" />
+    <Compile Include="ResultsPerAttendee.cs" />
+    <Compile Include="SetConstraint.cs" />
+    <Compile Include="SetGroupBlackout.cs" />
+    <Compile Include="SetGroupCapacity.cs" />
+    <Compile Include="SetSymphonyGroup.cs" />
+    <Compile Include="SetTenantReadiness.cs" />
+    <Compile Include="SetUnifiedGroup.cs" />
+    <Compile Include="SetUpgradeWorkItem.cs" />
+    <Compile Include="SimplePropertyBag.cs" />
+    <Compile Include="SimplePropertyDefinition.cs" />
+    <Compile Include="StoreCommon.cs" />
+    <Compile Include="Strings.cs" />
+    <Compile Include="SupportPSSnapIn.cs" />
+    <Compile Include="SymphonyTaskBase.cs" />
+    <Compile Include="TestMessage.cs" />
+    <Compile Include="UnifiedGroupTask.cs" />
+    <Compile Include="UpgradeWorkItem.cs" />
+    <Compile Include="WebDnsRecord.cs" />
+    <Compile Include="WebDnsRecordSchema.cs" />
+    <Compile Include="WorkItemNotFoundException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Strings.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Exchange.AnchorService\Microsoft.Exchange.AnchorService.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8109}</Project>
+      <Name>Microsoft.Exchange.AnchorService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Configuration.ObjectModel\Microsoft.Exchange.Configuration.ObjectModel.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D812B}</Project>
+      <Name>Microsoft.Exchange.Configuration.ObjectModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.ApplicationLogic\Microsoft.Exchange.Data.ApplicationLogic.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8133}</Project>
+      <Name>Microsoft.Exchange.Data.ApplicationLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Common\Microsoft.Exchange.Data.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D80FD}</Project>
+      <Name>Microsoft.Exchange.Data.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Directory\Microsoft.Exchange.Data.Directory.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8134}</Project>
+      <Name>Microsoft.Exchange.Data.Directory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.GroupMailboxAccessLayer\Microsoft.Exchange.Data.GroupMailboxAccessLayer.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8136}</Project>
+      <Name>Microsoft.Exchange.Data.GroupMailboxAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Mapi\Microsoft.Exchange.Data.Mapi.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8139}</Project>
+      <Name>Microsoft.Exchange.Data.Mapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Storage\Microsoft.Exchange.Data.Storage.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D813E}</Project>
+      <Name>Microsoft.Exchange.Data.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Transport\Microsoft.Exchange.Data.Transport.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D80FF}</Project>
+      <Name>Microsoft.Exchange.Data.Transport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data\Microsoft.Exchange.Data.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8135}</Project>
+      <Name>Microsoft.Exchange.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Diagnostics\Microsoft.Exchange.Diagnostics.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8142}</Project>
+      <Name>Microsoft.Exchange.Diagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.InfoWorker.MeetingValidator\Microsoft.Exchange.InfoWorker.MeetingValidator.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8176}</Project>
+      <Name>Microsoft.Exchange.InfoWorker.MeetingValidator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.MailboxReplicationService.Common\Microsoft.Exchange.MailboxReplicationService.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8180}</Project>
+      <Name>Microsoft.Exchange.MailboxReplicationService.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.MailboxReplicationService.Upgrade14to15\Microsoft.Exchange.MailboxReplicationService.Upgrade14to15.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D818B}</Project>
+      <Name>Microsoft.Exchange.MailboxReplicationService.Upgrade14to15</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Management.Recipient\Microsoft.Exchange.Management.Recipient.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D819B}</Project>
+      <Name>Microsoft.Exchange.Management.Recipient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Management\Microsoft.Exchange.Management.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8195}</Project>
+      <Name>Microsoft.Exchange.Management</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Migration\Microsoft.Exchange.Migration.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81AC}</Project>
+      <Name>Microsoft.Exchange.Migration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Net\Microsoft.Exchange.Net.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81B1}</Project>
+      <Name>Microsoft.Exchange.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Rpc\Microsoft.Exchange.Rpc.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81C8}</Project>
+      <Name>Microsoft.Exchange.Rpc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.StoreProvider\Microsoft.Exchange.StoreProvider.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8200}</Project>
+      <Name>Microsoft.Exchange.StoreProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Transport.Sync.Common\Microsoft.Exchange.Transport.Sync.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D821C}</Project>
+      <Name>Microsoft.Exchange.Transport.Sync.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Transport.Sync.MigrationRpc\Microsoft.Exchange.Transport.Sync.MigrationRpc.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D821E}</Project>
+      <Name>Microsoft.Exchange.Transport.Sync.MigrationRpc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Transport\Microsoft.Exchange.Transport.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8214}</Project>
+      <Name>Microsoft.Exchange.Transport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D824B}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

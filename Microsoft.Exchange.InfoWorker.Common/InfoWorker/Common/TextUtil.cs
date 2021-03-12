@@ -1,0 +1,89 @@
+﻿using System;
+using System.IO;
+using Microsoft.Exchange.Data.Globalization;
+using Microsoft.Exchange.Data.TextConverters;
+
+namespace Microsoft.Exchange.InfoWorker.Common
+{
+	// Token: 0x02000012 RID: 18
+	internal sealed class TextUtil
+	{
+		// Token: 0x06000035 RID: 53 RVA: 0x00002C2C File Offset: 0x00000E2C
+		public static string ConvertHtmlToPlainText(string message)
+		{
+			StringReader stringReader = null;
+			StringWriter stringWriter = null;
+			string result;
+			try
+			{
+				if (message == null)
+				{
+					result = null;
+				}
+				else
+				{
+					int codePage = 65001;
+					stringReader = new StringReader(message);
+					stringWriter = new StringWriter();
+					new HtmlToText
+					{
+						InputEncoding = Charset.GetEncoding(codePage),
+						OutputEncoding = Charset.GetEncoding(codePage)
+					}.Convert(stringReader, stringWriter);
+					result = stringWriter.ToString();
+				}
+			}
+			finally
+			{
+				if (stringReader != null)
+				{
+					stringReader.Dispose();
+				}
+				if (stringWriter != null)
+				{
+					stringWriter.Dispose();
+				}
+			}
+			return result;
+		}
+
+		// Token: 0x06000036 RID: 54 RVA: 0x00002CB0 File Offset: 0x00000EB0
+		public static string ConvertPlainTextToHtml(string message)
+		{
+			StringReader stringReader = null;
+			StringWriter stringWriter = null;
+			string result;
+			try
+			{
+				if (message == null)
+				{
+					result = null;
+				}
+				else
+				{
+					int codePage = 65001;
+					stringReader = new StringReader(message);
+					stringWriter = new StringWriter();
+					new TextToHtml
+					{
+						InputEncoding = Charset.GetEncoding(codePage),
+						OutputEncoding = Charset.GetEncoding(codePage)
+					}.Convert(stringReader, stringWriter);
+					result = stringWriter.ToString();
+				}
+			}
+			finally
+			{
+				if (stringReader != null)
+				{
+					stringReader.Dispose();
+				}
+				if (stringWriter != null)
+				{
+					stringWriter.Dispose();
+				}
+			}
+			return result;
+		}
+	}
+}

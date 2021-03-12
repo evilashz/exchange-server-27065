@@ -1,0 +1,26 @@
+﻿using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
+namespace Microsoft.Exchange.SoapWebClient.EWS
+{
+	// Token: 0x02000449 RID: 1097
+	[XmlType(Namespace = "http://schemas.microsoft.com/exchange/services/2006/messages")]
+	[GeneratedCode("wsdl", "4.0.30319.17627")]
+	[DebuggerStepThrough]
+	[DesignerCategory("code")]
+	[Serializable]
+	public class SyncFolderHierarchyType : BaseRequestType
+	{
+		// Token: 0x040016DD RID: 5853
+		public FolderResponseShapeType FolderShape;
+
+		// Token: 0x040016DE RID: 5854
+		public TargetFolderIdType SyncFolderId;
+
+		// Token: 0x040016DF RID: 5855
+		public string SyncState;
+	}
+}

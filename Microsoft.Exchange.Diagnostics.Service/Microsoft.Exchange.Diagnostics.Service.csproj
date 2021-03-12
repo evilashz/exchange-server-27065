@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E00F5D04-C156-4BAD-86F2-C9D7907D8146}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Exchange.Diagnostics.Service</RootNamespace>
+    <AssemblyName>Microsoft.Exchange.Diagnostics.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>Microsoft.Exchange.Diagnostics.Service.DiagnosticsService</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Exchange.LogAnalyzer.Analyzers.PerfLog" />
+    <Reference Include="Microsoft.Exchange.LogAnalyzer.Core" />
+    <Reference Include="Microsoft.Exchange.LogAnalyzer.Extensions.PerfLog" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CasDiskIopsTrigger.cs" />
+    <Compile Include="DiagnosticsService.cs" />
+    <Compile Include="DomainControllerDiskIopsTrigger.cs" />
+    <Compile Include="ExchangeProcessorTimeTrigger.cs" />
+    <Compile Include="FileChunkOutputStream.cs" />
+    <Compile Include="FileChunkSchema.cs" />
+    <Compile Include="HubDiskIopsTrigger.cs" />
+    <Compile Include="IMultipleOutputStream.cs" />
+    <Compile Include="JobConfiguration.cs" />
+    <Compile Include="JobManager.cs" />
+    <Compile Include="Jobs.cs" />
+    <Compile Include="LongRunningWatsonTrigger.cs" />
+    <Compile Include="LongRunningWerMgrTrigger.cs" />
+    <Compile Include="MachineInformationSource.cs" />
+    <Compile Include="MailboxDiskReadsTrigger.cs" />
+    <Compile Include="ManagedConnection.cs" />
+    <Compile Include="PoisonManager.cs" />
+    <Compile Include="PrivateWorkingSetTrigger.cs" />
+    <Compile Include="ProcessProcessorTimeTrigger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelogManager.cs" />
+    <Compile Include="RetentionAgent.cs" />
+    <Compile Include="SingleStreamJob.cs" />
+    <Compile Include="SqlConnectionLogger.cs" />
+    <Compile Include="SqlOutputStream.cs" />
+    <Compile Include="WatermarkedJob.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Exchange.Common\Microsoft.Exchange.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D811F}</Project>
+      <Name>Microsoft.Exchange.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Diagnostics.PerformanceLogger\Microsoft.Exchange.Diagnostics.PerformanceLogger.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8143}</Project>
+      <Name>Microsoft.Exchange.Diagnostics.PerformanceLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Diagnostics.Service.Common\Microsoft.Exchange.Diagnostics.Service.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8144}</Project>
+      <Name>Microsoft.Exchange.Diagnostics.Service.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Diagnostics\Microsoft.Exchange.Diagnostics.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8142}</Project>
+      <Name>Microsoft.Exchange.Diagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D824B}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

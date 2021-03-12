@@ -1,0 +1,211 @@
+﻿using System;
+using System.Runtime.InteropServices;
+using Microsoft.Exchange.Diagnostics;
+
+namespace Microsoft.Exchange.Security.RightsManagement.Protectors
+{
+	// Token: 0x020009B0 RID: 2480
+	[ClassAccessLevel(AccessLevel.Implementation)]
+	internal static class NativeMethods
+	{
+		// Token: 0x060035CB RID: 13771
+		[DllImport("RightsManagementWrapper.dll", ExactSpelling = true)]
+		public static extern int HrCreateIrmCrypt([In] SafeRightsManagementHandle encryptorHandle, [In] SafeRightsManagementHandle decryptorHandle, [MarshalAs(UnmanagedType.Interface)] out object irmCrypt);
+
+		// Token: 0x04002DE4 RID: 11748
+		public const int S_OK = 0;
+
+		// Token: 0x04002DE5 RID: 11749
+		public const int E_UNEXPECTED = -2147418113;
+
+		// Token: 0x04002DE6 RID: 11750
+		public const int E_FAIL = -2147467259;
+
+		// Token: 0x04002DE7 RID: 11751
+		public const int E_INVALIDARG = -2147024809;
+
+		// Token: 0x04002DE8 RID: 11752
+		public const int E_NOTIMPL = -2147467263;
+
+		// Token: 0x04002DE9 RID: 11753
+		public const int STG_E_FILENOTFOUND = -2147287038;
+
+		// Token: 0x04002DEA RID: 11754
+		private const string RightsManagementWrapper = "RightsManagementWrapper.dll";
+
+		// Token: 0x020009B1 RID: 2481
+		public enum XmlError : uint
+		{
+			// Token: 0x04002DEC RID: 11756
+			MX_E_MX = 3222072832U,
+			// Token: 0x04002DED RID: 11757
+			MX_E_INPUTEND,
+			// Token: 0x04002DEE RID: 11758
+			MX_E_ENCODING,
+			// Token: 0x04002DEF RID: 11759
+			MX_E_ENCODINGSWITCH,
+			// Token: 0x04002DF0 RID: 11760
+			MX_E_ENCODINGSIGNATURE,
+			// Token: 0x04002DF1 RID: 11761
+			WC_E_WC = 3222072864U,
+			// Token: 0x04002DF2 RID: 11762
+			WC_E_WHITESPACE,
+			// Token: 0x04002DF3 RID: 11763
+			WC_E_SEMICOLON,
+			// Token: 0x04002DF4 RID: 11764
+			WC_E_GREATERTHAN,
+			// Token: 0x04002DF5 RID: 11765
+			WC_E_QUOTE,
+			// Token: 0x04002DF6 RID: 11766
+			WC_E_EQUAL,
+			// Token: 0x04002DF7 RID: 11767
+			WC_E_LESSTHAN,
+			// Token: 0x04002DF8 RID: 11768
+			WC_E_HEXDIGIT,
+			// Token: 0x04002DF9 RID: 11769
+			WC_E_DIGIT,
+			// Token: 0x04002DFA RID: 11770
+			WC_E_LEFTBRACKET,
+			// Token: 0x04002DFB RID: 11771
+			WC_E_LEFTPAREN,
+			// Token: 0x04002DFC RID: 11772
+			WC_E_XMLCHARACTER,
+			// Token: 0x04002DFD RID: 11773
+			WC_E_NAMECHARACTER,
+			// Token: 0x04002DFE RID: 11774
+			WC_E_SYNTAX,
+			// Token: 0x04002DFF RID: 11775
+			WC_E_CDSECT,
+			// Token: 0x04002E00 RID: 11776
+			WC_E_COMMENT,
+			// Token: 0x04002E01 RID: 11777
+			WC_E_CONDSECT,
+			// Token: 0x04002E02 RID: 11778
+			WC_E_DECLATTLIST,
+			// Token: 0x04002E03 RID: 11779
+			WC_E_DECLDOCTYPE,
+			// Token: 0x04002E04 RID: 11780
+			WC_E_DECLELEMENT,
+			// Token: 0x04002E05 RID: 11781
+			WC_E_DECLENTITY,
+			// Token: 0x04002E06 RID: 11782
+			WC_E_DECLNOTATION,
+			// Token: 0x04002E07 RID: 11783
+			WC_E_NDATA,
+			// Token: 0x04002E08 RID: 11784
+			WC_E_PUBLIC,
+			// Token: 0x04002E09 RID: 11785
+			WC_E_SYSTEM,
+			// Token: 0x04002E0A RID: 11786
+			WC_E_NAME,
+			// Token: 0x04002E0B RID: 11787
+			WC_E_ROOTELEMENT,
+			// Token: 0x04002E0C RID: 11788
+			WC_E_ELEMENTMATCH,
+			// Token: 0x04002E0D RID: 11789
+			WC_E_UNIQUEATTRIBUTE,
+			// Token: 0x04002E0E RID: 11790
+			WC_E_TEXTXMLDECL,
+			// Token: 0x04002E0F RID: 11791
+			WC_E_LEADINGXML,
+			// Token: 0x04002E10 RID: 11792
+			WC_E_TEXTDECL,
+			// Token: 0x04002E11 RID: 11793
+			WC_E_XMLDECL,
+			// Token: 0x04002E12 RID: 11794
+			WC_E_ENCNAME,
+			// Token: 0x04002E13 RID: 11795
+			WC_E_PUBLICID,
+			// Token: 0x04002E14 RID: 11796
+			WC_E_PESINTERNALSUBSET,
+			// Token: 0x04002E15 RID: 11797
+			WC_E_PESBETWEENDECLS,
+			// Token: 0x04002E16 RID: 11798
+			WC_E_NORECURSION,
+			// Token: 0x04002E17 RID: 11799
+			WC_E_ENTITYCONTENT,
+			// Token: 0x04002E18 RID: 11800
+			WC_E_UNDECLAREDENTITY,
+			// Token: 0x04002E19 RID: 11801
+			WC_E_PARSEDENTITY,
+			// Token: 0x04002E1A RID: 11802
+			WC_E_NOEXTERNALENTITYREF,
+			// Token: 0x04002E1B RID: 11803
+			WC_E_PI,
+			// Token: 0x04002E1C RID: 11804
+			WC_E_SYSTEMID,
+			// Token: 0x04002E1D RID: 11805
+			WC_E_QUESTIONMARK,
+			// Token: 0x04002E1E RID: 11806
+			WC_E_CDSECTEND,
+			// Token: 0x04002E1F RID: 11807
+			WC_E_MOREDATA,
+			// Token: 0x04002E20 RID: 11808
+			WC_E_DTDPROHIBITED,
+			// Token: 0x04002E21 RID: 11809
+			WC_E_INVALIDXMLSPACE,
+			// Token: 0x04002E22 RID: 11810
+			NC_E_NC = 3222072928U,
+			// Token: 0x04002E23 RID: 11811
+			NC_E_QNAMECHARACTER,
+			// Token: 0x04002E24 RID: 11812
+			NC_E_QNAMECOLON,
+			// Token: 0x04002E25 RID: 11813
+			NC_E_NAMECOLON,
+			// Token: 0x04002E26 RID: 11814
+			NC_E_DECLAREDPREFIX,
+			// Token: 0x04002E27 RID: 11815
+			NC_E_UNDECLAREDPREFIX,
+			// Token: 0x04002E28 RID: 11816
+			NC_E_EMPTYURI,
+			// Token: 0x04002E29 RID: 11817
+			NC_E_XMLPREFIXRESERVED,
+			// Token: 0x04002E2A RID: 11818
+			NC_E_XMLNSPREFIXRESERVED,
+			// Token: 0x04002E2B RID: 11819
+			NC_E_XMLURIRESERVED,
+			// Token: 0x04002E2C RID: 11820
+			NC_E_XMLNSURIRESERVED,
+			// Token: 0x04002E2D RID: 11821
+			SC_E_SC = 3222072960U,
+			// Token: 0x04002E2E RID: 11822
+			SC_E_MAXELEMENTDEPTH,
+			// Token: 0x04002E2F RID: 11823
+			SC_E_MAXENTITYEXPANSION,
+			// Token: 0x04002E30 RID: 11824
+			WR_E_WR = 3222073088U,
+			// Token: 0x04002E31 RID: 11825
+			WR_E_NONWHITESPACE,
+			// Token: 0x04002E32 RID: 11826
+			WR_E_NSPREFIXDECLARED,
+			// Token: 0x04002E33 RID: 11827
+			WR_E_NSPREFIXWITHEMPTYNSURI,
+			// Token: 0x04002E34 RID: 11828
+			WR_E_DUPLICATEATTRIBUTE,
+			// Token: 0x04002E35 RID: 11829
+			WR_E_XMLNSPREFIXDECLARATION,
+			// Token: 0x04002E36 RID: 11830
+			WR_E_XMLPREFIXDECLARATION,
+			// Token: 0x04002E37 RID: 11831
+			WR_E_XMLURIDECLARATION,
+			// Token: 0x04002E38 RID: 11832
+			WR_E_XMLNSURIDECLARATION,
+			// Token: 0x04002E39 RID: 11833
+			WR_E_NAMESPACEUNDECLARED,
+			// Token: 0x04002E3A RID: 11834
+			WR_E_INVALIDXMLSPACE,
+			// Token: 0x04002E3B RID: 11835
+			WR_E_INVALIDACTION,
+			// Token: 0x04002E3C RID: 11836
+			WR_E_INVALIDSURROGATEPAIR,
+			// Token: 0x04002E3D RID: 11837
+			XML_E_INVALID_DECIMAL = 3222069277U,
+			// Token: 0x04002E3E RID: 11838
+			XML_E_INVALID_HEXIDECIMAL,
+			// Token: 0x04002E3F RID: 11839
+			XML_E_INVALID_UNICODE,
+			// Token: 0x04002E40 RID: 11840
+			XML_E_INVALIDENCODING = 3222069358U
+		}
+	}
+}

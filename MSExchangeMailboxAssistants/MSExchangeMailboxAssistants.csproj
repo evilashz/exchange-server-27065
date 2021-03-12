@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E00F5D04-C156-4BAD-86F2-C9D7907D823E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Exchange</RootNamespace>
+    <AssemblyName>MSExchangeMailboxAssistants</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>Microsoft.Exchange.MailboxAssistants.Assistants.AssistantsService</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Exchange.Common.IL" />
+    <Reference Include="Microsoft.Exchange.Inference.DataAnalysis" />
+    <Reference Include="Microsoft.Exchange.Inference.Learning" />
+    <Reference Include="Microsoft.Exchange.Inference.Mdb" />
+    <Reference Include="Microsoft.Exchange.PushNotifications.CrimsonEvents" />
+    <Reference Include="Microsoft.Exchange.Search.OperatorSchema" />
+    <Reference Include="Microsoft.Exchange.WebServices" />
+    <Reference Include="Microsoft.PowerShell.HostingTools" />
+    <Reference Include="Microsoft.Speech" />
+    <Reference Include="System" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management.Automation" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assistants\CalendarSyncMailboxInterestingLogEntry.cs" />
+    <Compile Include="MailboxAssistants\Assistants\AdminRpcAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Approval\ApprovalAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Approval\ApprovalAssistantPerformanceCounters.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Approval\ApprovalAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\AssistantConfiguration.cs" />
+    <Compile Include="MailboxAssistants\Assistants\AssistantId.cs" />
+    <Compile Include="MailboxAssistants\Assistants\AssistantIdentity.cs" />
+    <Compile Include="MailboxAssistants\Assistants\AssistantLogEntryBase.cs" />
+    <Compile Include="MailboxAssistants\Assistants\AssistantsService.cs" />
+    <Compile Include="MailboxAssistants\Assistants\BirthdayAssistant\BirthdayAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\BirthdayAssistant\BirthdayAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CachedState.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CachedStateDictionary.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarInterop\CalendarInteropAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarInterop\CalendarInteropAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarInterop\CalendarInteropProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\CalendarChangeProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\CalendarInfo.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\CalendarNotificationAction.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\CalendarNotificationAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\CalendarNotificationAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\CalendarNotificationInitiator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\CalNotifsCounters.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\ICalendarNotificationEmitter.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\InfoFromUserMailboxSession.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\Initiating.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\Interval.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\MailboxData.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\NotificationFactories.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\NotificationFactoryBase.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\OccurrenceLoader.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\ReminderEmitting.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\ReminderLoader.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\ReminderReloading.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\ScheduledAction.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\ScheduledActionBase.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\SettingsChangeEventHandler.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\SettingsChangeListener.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\SettingsChangeProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\SettingsItemBodyParser.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\SummaryGenerating.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\SummaryLoader.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\SynchronizationObject.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\SystemMailbox.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\TextMessageDeliveryStatusProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\TextNotificationFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\TextNotificationSettings.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\ThreadSafeCollection.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\UpdateEmitting.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\UserSettings.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\Utils.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\VoiceNotificationFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarNotification\VoiceNotificationSettings.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepairAssistantLogEntry.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CalendarReliabilityInsigntLogger.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CalendarReliabilityInsigntLogSettings.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CalendarRepairAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CalendarRepairAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CalendarRepairDuplicateMeetingLogEntry.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CalendarRepairLogAttendeeEntry.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CalendarRepairLogConsistencyCheckEntry.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CalendarRepairLogEntryBase.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CalendarRepairLogger.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CalendarRepairLogInconsistencyEntry.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CalendarRepairLogMeetingEntry.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CalendarRepairLogRootEntry.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CalendarRepairLogRumEntry.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CalendarRepairPerfmon.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CalendarRepair\CraReliabilityLogFields.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Calendar\CalendarAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Calendar\CalendarAssistantLog.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Calendar\CalendarAssistantPerformanceCounters.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Calendar\CalendarAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Calendar\CalendarProcessing.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Calendar\OldMessageDeletion.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Calendar\RUMOldMessageDeletion.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Conversations\ActionsProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Conversations\BodyTagProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Conversations\ConversationsAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Conversations\ConversationsAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Conversations\InferenceProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Conversations\LicensingProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Conversations\MailboxData.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Conversations\SentItemsProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\CouldNotAddExchangeSnapInTransientException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Dar\TaskStoreEventBasedAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Dar\TaskStoreEventBasedAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Dar\TaskStoreTimeBasedAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Dar\TaskStoreTimeBasedAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DataCache.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\ADCrawler.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\ADCrawlerTaskContext.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\DirectoryProcessorAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\DirectoryProcessorAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\DirectoryProcessorBaseTask.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\DirectoryProcessorBaseTaskContext.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\DirectoryProcessorMailboxData.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\DirectoryProcessorMetadata.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\DLADCrawler.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\GroupMetricsGenerator\GroupMetricsCookie.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\GroupMetricsGenerator\GroupMetricsFault.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\GroupMetricsGenerator\GroupMetricsGenerator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\GroupMetricsGenerator\GroupMetricsGeneratorTaskContext.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\GroupMetricsGenerator\GroupMetricsMailboxFileStore.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\GroupMetricsGenerator\GroupMetricsSyncType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\GroupMetricsGenerator\GroupMetricsTenantCache.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\GroupMetricsGenerator\GroupMetricsUtility.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\GroupMetricsGenerator\LazyWriter.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\GroupMetricsGenerator\LazyWriterException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\GroupMetricsGenerator\TypedHashSet.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\Logger.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\OrgMailboxScaleOutHelper.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\RunData.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\TaskQueueItem.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\TaskStatus.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\TestFlag.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\ThrowIfShuttingDown.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMDtmfMapGenerator\DtmfMapGenerationMetadata.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMDtmfMapGenerator\DtmfMapGenerator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMDtmfMapGenerator\DtmfMapGeneratorTaskContext.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\DatacenterUMGrammarTenantCache.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\DLGrammarGenerator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\EnterpriseUMGrammarTenantCache.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\GrammarGenerationLog.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\GrammarGenerator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\GrammarGeneratorADException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\GrammarGeneratorTaskContext.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\IGrammarGeneratorInterface.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\NameNormalizer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\NormalizationCache.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\NormalizationHelper.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\PartnerHostedUMGrammarTenantCache.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\SpeechRecognizerInfo.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\UMGrammarTenantCache.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\UMTracer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UMGrammarGenerator\UserGrammarGenerator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\UserADCrawler.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DirectoryProcessorAssistant\Utilities.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DiscoverySearch\DiscoverySearchEventBasedAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\DiscoverySearch\DiscoverySearchEventBasedAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ADChangeDetector.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\AdDataCache.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\AdminAuditFolderStrategy.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ArchiveNotAvailable.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ArchiveProcessorFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\AuditExpirationEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\AuditFolderStrategy.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\AuditQuotaEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\AutoCopyEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\AutocopyTagEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\CalendarLogExpirationEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ChangeType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\CloudArchiveProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\CrossServerArchiveProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\DatabaseConfig.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\DiscoveryHoldEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\DiscoveryHoldQueryCache.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\DiscoveryHoldSearchException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\DiscoveryHoldSynchronizer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\DumpsterExpirationEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\DumpsterQuotaEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\EHAHiddenFolderCleanupEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\EHAMigratedMessageDeletionEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\EHAMigratedMessageMoveEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\EHAQuotaWarningEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ELCAction.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ELCAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ELCAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcAuditLog.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcBaseServiceClient.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcConfigSchema.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcDataTaskContext.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcEventBasedAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcEventBasedAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcEventProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcEwsCallingContext.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcEwsClient.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcEwsClientHelper.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcEwsErrorType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcEwsException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcEwsItem.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcExceptionHelper.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcFolderSubAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcGlobals.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ELCHealthMonitor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ELCPerfCountersWrapper.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ELCPerfmon.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcReporting.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcSubAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcTagSubAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcUserFolderInformation.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcUserInformation.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ElcUserTagInformation.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\EnforcerBase.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\EnforcerManager.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ExpirationEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ExpirationExecutor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ExpirationTagEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\FolderArchiver.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\FolderAuditLogData.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\FolderExpirationExecutor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\FolderHelper.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\FolderProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\FolderPropertySynchronizer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\FolderProvisioner.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\FolderTagData.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\FolderTuple.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\FolderTupleCrossServerArchive.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\FolderTupleRemoteArchive.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\HoldCleanupEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\HoldCleanupExtensionMethods.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\IArchiveProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\IElcEwsClient.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\InPlaceHoldConfiguration.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\InvalidExpiryDestinationException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ItemAuditLogData.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ItemData.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ItemFinder.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ItemPropertySynchronizer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ItemStartDateCalculator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ItemUpdater.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\LocalArchiveProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\Logging\MrmQuickLog.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\Logging\StatisticsLogEntry.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\MailboxAuditFolderStrategy.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\MailboxData.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\MailboxDataForFolders.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\MailboxDataForTags.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\MailboxUpgrader.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\MigrateToArchiveEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\MovePolicyItems.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\OrganizationCache.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\PropertiesToBeUpdated.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\PropertyArrayProxy.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\PropertyDefinitionArray.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\PropertyIndexHolder.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\PropertySynchronizerBase.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\ProvisionedFolder.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\QueryResultsEnumerator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\RecipientEqualityComparer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\RemoteArchiveProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\RemoteArchiveProcessorBase.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\RetentionPolicyCheck.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\SkipFolderException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\SupplementExpirationEnforcer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\Synchronizer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\SysCleanupEnforcerBase.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\SysCleanupEnforcerManager.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\SysCleanupSubAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\TagAssistantHelper.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\TagChange.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\TagEnforcerBase.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\TagEnforcerManager.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\TagExpirationExecutor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\TagProvisioner.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\TagSource.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\TagType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ELC\UserRetentionPolicyCache.cs" />
+    <Compile Include="MailboxAssistants\Assistants\EventBasedAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ExchangeServer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\FilteredTracing\GuidTraceFilter.cs" />
+    <Compile Include="MailboxAssistants\Assistants\FilteredTracing\IWTraceConfiguration.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Globals.cs" />
+    <Compile Include="MailboxAssistants\Assistants\GroupMailbox\GroupMailboxAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\GroupMailbox\GroupMailboxAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\InferenceDataCollection\Configuration.cs" />
+    <Compile Include="MailboxAssistants\Assistants\InferenceDataCollection\InferenceDataCollectionAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\InferenceDataCollection\InferenceDataCollectionAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\InferenceDataCollection\InferenceDataCollectionTaskContext.cs" />
+    <Compile Include="MailboxAssistants\Assistants\InferenceTraining\InferenceTrainingAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\InferenceTraining\InferenceTrainingAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\InferenceTraining\InferenceTrainingTaskContext.cs" />
+    <Compile Include="MailboxAssistants\Assistants\InfoworkerAssistants.cs" />
+    <Compile Include="MailboxAssistants\Assistants\IssuePublicFolderMoveRequestFailedException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\JunkEmailOptions\Configuration.cs" />
+    <Compile Include="MailboxAssistants\Assistants\JunkEmailOptions\JunkEmailOptionsAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\JunkEmailOptions\JunkEmailOptionsAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\JunkEmailOptions\JunkEmailOptionsCommiterAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\JunkEmailOptions\JunkEmailOptionsCommiterAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\JunkEmailOptions\JunkEmailOptionsPerfCounters.cs" />
+    <Compile Include="MailboxAssistants\Assistants\JunkEmailOptions\MailboxTagging.cs" />
+    <Compile Include="MailboxAssistants\Assistants\JunkEmailOptions\MapiExceptionFilter.cs" />
+    <Compile Include="MailboxAssistants\Assistants\LogFieldAttribute.cs" />
+    <Compile Include="MailboxAssistants\Assistants\MailboxAssociation\MailboxAssociationReplicationAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\MailboxAssociation\MailboxAssociationReplicationAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\MailboxProcessor\FailedToReadProbeResultException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\MailboxProcessor\IMailboxProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\MailboxProcessor\MailboxIssueDetectors\IMailboxIssueDetector.cs" />
+    <Compile Include="MailboxAssistants\Assistants\MailboxProcessor\MailboxIssueDetectors\MailboxLockedDetector.cs" />
+    <Compile Include="MailboxAssistants\Assistants\MailboxProcessor\MailboxProcessorAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\MailboxProcessor\MailboxProcessorAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\MailboxProcessor\MailboxProcessorDefinitions\MailboxProcessorMailboxData.cs" />
+    <Compile Include="MailboxAssistants\Assistants\MailboxProcessor\MailboxProcessorDefinitions\MailboxProcessorNotificationEntry.cs" />
+    <Compile Include="MailboxAssistants\Assistants\MailboxProcessor\MailboxProcessorHelpers\ADHelper.cs" />
+    <Compile Include="MailboxAssistants\Assistants\MailboxProcessor\MailboxProcessorHelpers\MailboxTableQueryUtils.cs" />
+    <Compile Include="MailboxAssistants\Assistants\MemoryMonitor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Mwi\ExRpcMwiTarget.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Mwi\MailboxInfo.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Mwi\MwiAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Mwi\MwiAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Mwi\MwiDelayTable.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Mwi\ProcessMailboxDelegate.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Mwi\SmsMissedCallNotification.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Mwi\SmsNotification.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Mwi\SmsVoicemailNotification.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Mwi\UMServerMwiTargetPicker.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\ADAddressListEnumerator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\AddressListFileGenerator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\CRCScratchPad.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\DiffFileGenerator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\FileSet.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\GenerationStats.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\Globals.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\OABFile.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\OABGenerator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\OABGeneratorAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\OABGeneratorAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\OABGeneratorMailboxData.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\OABGeneratorPerfmon.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\OABGeneratorTaskContext.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\OABGenPerformanceMarkers.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\OABLogFileSettings.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\OABLogger.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\OABProperty.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\OABTimeBasedStoreDatabaseDriver.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\OABVersion.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\PropertyManager.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\ShutdownCalledException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\SymbolicLink.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\TempFileReader.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\TempFileReaderCollection.cs" />
+    <Compile Include="MailboxAssistants\Assistants\OABGenerator\TemplateFileGenerator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PartialStepsOverLimitException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PeopleCentricTriage\PeopleCentricTriageAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PeopleCentricTriage\PeopleCentricTriageAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PeopleRelevance\PeopleRelevanceAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PeopleRelevance\PeopleRelevanceAssistantLoggingHelper.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PeopleRelevance\PeopleRelevanceAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PeopleRelevance\PeopleRelevanceFeeder.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ProbeTimeBasedAssistant\ProbeTimeBasedAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ProbeTimeBasedAssistant\ProbeTimeBasedAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ProvisioningAssistant\ProvisioningAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ProvisioningAssistant\ProvisioningAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ProvisioningAssistant\UnableToGenerateValidPassword.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolderMoveFailedException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolderMoveInProgressException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolderMoveSuspendedException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\AssistantRunspaceFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\AssistantRunspaceProxy.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\IAssistantRunspaceFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\IAssistantRunspaceProxy.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\IdentifyTargetMailboxOperation.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\IPublicFolderSplitState.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\ISplitOperation.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\ISplitOperationFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\ISplitOperationState.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\ISplitQuotaVerifier.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\ISplitStateAdapter.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\MoveContentOperation.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\PrepareSplitPlanOperation.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\PrepareTargetMailboxOperation.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\PublicFolderAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\PublicFolderAssistantLogger.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\PublicFolderAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\PublicFolderHierarchySyncProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\PublicFolderItemProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\PublicFolderProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\PublicFolderSplitConfig.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\PublicFolderSplitHelper.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\PublicFolderSplitLogger.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\PublicFolderSplitProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\PublicFolderSplitState.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\SplitOperationBase.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\SplitOperationFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\SplitOperationState.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\SplitProcessorException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\SplitProgressState.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\SplitQuotaVerifier.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PublicFolder\SplitStateAdapter.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\FailedToResolveInMemoryCacheException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\InvalidStoreObjectInstanceException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\MailboxData.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationAssistantAdapter.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationAssistantConfig.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationAssistantConfigSchema.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationBaseException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationBatchManager.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationBatchManagerConfig.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationBatchManagerConfigSchema.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationContext.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationDataHandler.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationHelper.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationMapiEventAnalyzer.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationProxyConfigWatcher.cs" />
+    <Compile Include="MailboxAssistants\Assistants\PushNotifications\PushNotificationsAssistantPerfCounters.cs" />
+    <Compile Include="MailboxAssistants\Assistants\RecipientDLExpansion\RecipientDLExpansionCache.cs" />
+    <Compile Include="MailboxAssistants\Assistants\RecipientDLExpansion\RecipientDLExpansionEventBasedAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\RecipientDLExpansion\RecipientDLExpansionEventBasedAssistantHelper.cs" />
+    <Compile Include="MailboxAssistants\Assistants\RecipientDLExpansion\RecipientDLExpansionEventBasedAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\RecipientDLExpansion\RecipientDLExpansionPerfmon.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\CustomData.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\EmailModernReminderProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\EventTimeBasedInboxReminderProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\IEventProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\IReminderMessageManager.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\IRemindersAssistantLog.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\IReminderTimeCalculator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\IReminderTimeCalculatorContextFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\IReminderTimeCalculatorFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\MailboxMoveProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\ModernReminderProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\ReminderLogConfiguration.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\ReminderLogEvent.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\ReminderLogEventType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\ReminderLogger.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\ReminderMessageManager.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\ReminderProcessorBase.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\ReminderReceiveProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\RemindersAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\RemindersAssistantLog.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\RemindersAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\ReminderTimeCalculatorContext.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\ReminderTimeCalculatorContextFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\ReminderTimeCalculatorFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\ToDoModernReminderProcessor.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Reminders\WorkingHoursAwareReminderTimeCalculator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBookingAssistantLogEntry.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBooking\BookingPolicy.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBooking\BookingRoles.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBooking\CheckConflict.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBooking\ConflictType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBooking\EvaluationResults.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBooking\MeetingConflict.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBooking\RbaLog.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBooking\RecurringAcceptType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBooking\ResourceBookingAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBooking\ResourceBookingAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBooking\ResourceBookingPerfmon.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBooking\ResourceBookingProcessing.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBooking\ResourceCheck.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ResourceBooking\ResponseTextGenerator.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Search\AssistantException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Search\ErrorStatistics.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Search\ErrorStatisticsProvider.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Search\IndexRepairLogger.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Search\MailboxStatistics.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Search\MailboxType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Search\SearchIndexRepairAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Search\SearchIndexRepairAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Search\StoreStatistics.cs" />
+    <Compile Include="MailboxAssistants\Assistants\ServiceOutOfMemoryException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharePointSignalStore\ADSharePointUrl.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharePointSignalStore\ADWithDictFallbackSharePointUrl.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharePointSignalStore\DictSharePointUrl.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharePointSignalStore\ILoggerFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharePointSignalStore\ISharePointUrl.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharePointSignalStore\ISharePointUrlFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharePointSignalStore\RecipientCacheSignalSource.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharePointSignalStore\SharePointFlighted.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharePointSignalStore\SharePointSignalStoreAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharePointSignalStore\SharePointSignalStoreAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharePointSignalStore\SharePointSignalStoreException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharePointSignalStore\SharePointUrlFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharePointSignalStore\UserSessionLogger.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharePointSignalStore\UserSessionLoggerFactory.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharingFolderAssistant\SharingFolderAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SharingFolderAssistant\SharingFolderAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SiteMailbox\SiteMailboxAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SiteMailbox\SiteMailboxAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SplitPlanFoldersInvalidException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreIntegrityCheck\IntegrityCheckExecutionFlags.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreIntegrityCheck\IntegrityCheckQueryFlags.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreIntegrityCheck\JobOperation.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreIntegrityCheck\StoreIntegrityCheckAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreIntegrityCheck\StoreIntegrityCheckAssistantBase.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreIntegrityCheck\StoreIntegrityCheckAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreIntegrityCheck\StoreScheduledIntegrityCheckAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreIntegrityCheck\StoreScheduledIntegrityCheckAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreMaintenance\StoreDirectoryServiceMaintenanceAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreMaintenance\StoreDirectoryServiceMaintenanceAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreMaintenance\StoreMaintenanceAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreMaintenance\StoreMaintenanceAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreMaintenance\StoreUrgentMaintenanceAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\StoreMaintenance\StoreUrgentMaintenanceAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\Strings.cs" />
+    <Compile Include="MailboxAssistants\Assistants\SyncInProgressException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\TargetMailboxOutofQuotaException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\TimeBasedAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\TimeBasedAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\TopN\ItemSampler.cs" />
+    <Compile Include="MailboxAssistants\Assistants\TopN\ItemScanner.cs" />
+    <Compile Include="MailboxAssistants\Assistants\TopN\MailboxScanner.cs" />
+    <Compile Include="MailboxAssistants\Assistants\TopN\TopNAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\TopN\TopNAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\TopN\TopNPerf.cs" />
+    <Compile Include="MailboxAssistants\Assistants\UMReporting\UMReportingAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\UMReporting\UMReportingAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\UM\UMPartnerMessageAssistant.cs" />
+    <Compile Include="MailboxAssistants\Assistants\UM\UMPartnerMessageAssistantType.cs" />
+    <Compile Include="MailboxAssistants\Assistants\UnexpectedMoveStateException.cs" />
+    <Compile Include="MailboxAssistants\Assistants\UserDoesNotHaveRBACException.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\CalendarSyncAssistant.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\CalendarSyncAssistantHelper.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\CalendarSyncAssistantType.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\CalendarSyncFolderOperationLogEntry.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\CalendarSyncLogEntry.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\CalendarSyncPerformanceCounters.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\CalendarSyncPerformanceCountersInstance.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\ConsumerSharingCalendarType.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\ExternalSharingCalendarType.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\ExternalSharingContactsType.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\ExternalSharingType.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\FolderRow.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\InternetCalendarType.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\SharingSyncAssistantLog.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\SyncAssistantPastDeadlineException.cs" />
+    <Compile Include="MailboxAssistants\CalendarSync\SynchronizableFolderType.cs" />
+    <Compile Include="MailboxAssistants\SharingPolicyAssistant\FolderData.cs" />
+    <Compile Include="MailboxAssistants\SharingPolicyAssistant\MailboxData.cs" />
+    <Compile Include="MailboxAssistants\SharingPolicyAssistant\SharingPolicyAssistant.cs" />
+    <Compile Include="MailboxAssistants\SharingPolicyAssistant\SharingPolicyAssistantType.cs" />
+    <Compile Include="MailboxAssistants\SharingPolicyAssistant\SharingPolicyCache.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MailboxAssistants\Assistants\Strings.resources" />
+    <EmbeddedResource Include="SharePointTenantInfo.txt.gz" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Exchange.AddressBook.Service\Microsoft.Exchange.AddressBook.Service.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8106}</Project>
+      <Name>Microsoft.Exchange.AddressBook.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Approval.Applications\Microsoft.Exchange.Approval.Applications.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D810B}</Project>
+      <Name>Microsoft.Exchange.Approval.Applications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Assistants\Microsoft.Exchange.Assistants.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D810C}</Project>
+      <Name>Microsoft.Exchange.Assistants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Common.Inference\Microsoft.Exchange.Common.Inference.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8120}</Project>
+      <Name>Microsoft.Exchange.Common.Inference</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Common\Microsoft.Exchange.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D811F}</Project>
+      <Name>Microsoft.Exchange.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Compliance\Microsoft.Exchange.Compliance.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8121}</Project>
+      <Name>Microsoft.Exchange.Compliance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Configuration.ObjectModel\Microsoft.Exchange.Configuration.ObjectModel.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D812B}</Project>
+      <Name>Microsoft.Exchange.Configuration.ObjectModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.ApplicationLogic\Microsoft.Exchange.Data.ApplicationLogic.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8133}</Project>
+      <Name>Microsoft.Exchange.Data.ApplicationLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Common\Microsoft.Exchange.Data.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D80FD}</Project>
+      <Name>Microsoft.Exchange.Data.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Directory\Microsoft.Exchange.Data.Directory.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8134}</Project>
+      <Name>Microsoft.Exchange.Data.Directory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.GroupMailboxAccessLayer\Microsoft.Exchange.Data.GroupMailboxAccessLayer.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8136}</Project>
+      <Name>Microsoft.Exchange.Data.GroupMailboxAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Mapi\Microsoft.Exchange.Data.Mapi.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8139}</Project>
+      <Name>Microsoft.Exchange.Data.Mapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Storage\Microsoft.Exchange.Data.Storage.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D813E}</Project>
+      <Name>Microsoft.Exchange.Data.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Transport\Microsoft.Exchange.Data.Transport.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D80FF}</Project>
+      <Name>Microsoft.Exchange.Data.Transport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Data\Microsoft.Exchange.Data.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8135}</Project>
+      <Name>Microsoft.Exchange.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Diagnostics\Microsoft.Exchange.Diagnostics.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8142}</Project>
+      <Name>Microsoft.Exchange.Diagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.EDiscovery.Export\Microsoft.Exchange.EDiscovery.Export.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D814F}</Project>
+      <Name>Microsoft.Exchange.EDiscovery.Export</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.EDiscovery.MailboxSearch\Microsoft.Exchange.EDiscovery.MailboxSearch.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8151}</Project>
+      <Name>Microsoft.Exchange.EDiscovery.MailboxSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Entities.BirthdayCalendar\Microsoft.Exchange.Entities.BirthdayCalendar.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8152}</Project>
+      <Name>Microsoft.Exchange.Entities.BirthdayCalendar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Entities.Calendaring\Microsoft.Exchange.Entities.Calendaring.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8153}</Project>
+      <Name>Microsoft.Exchange.Entities.Calendaring</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Entities.Common\Microsoft.Exchange.Entities.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8154}</Project>
+      <Name>Microsoft.Exchange.Entities.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Entities.DataModel\Microsoft.Exchange.Entities.DataModel.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8155}</Project>
+      <Name>Microsoft.Exchange.Entities.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Entities.HolidayCalendars\Microsoft.Exchange.Entities.HolidayCalendars.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8156}</Project>
+      <Name>Microsoft.Exchange.Entities.HolidayCalendars</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Extensibility.Internal\Microsoft.Exchange.Extensibility.Internal.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D815B}</Project>
+      <Name>Microsoft.Exchange.Extensibility.Internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Inference.Common\Microsoft.Exchange.Inference.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D816F}</Project>
+      <Name>Microsoft.Exchange.Inference.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Inference.MdbCommon\Microsoft.Exchange.Inference.MdbCommon.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8170}</Project>
+      <Name>Microsoft.Exchange.Inference.MdbCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Inference.PeopleRelevance\Microsoft.Exchange.Inference.PeopleRelevance.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8171}</Project>
+      <Name>Microsoft.Exchange.Inference.PeopleRelevance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Inference.Pipeline\Microsoft.Exchange.Inference.Pipeline.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8172}</Project>
+      <Name>Microsoft.Exchange.Inference.Pipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.InfoWorker.AssistantsClientResources\Microsoft.Exchange.InfoWorker.AssistantsClientResources.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8174}</Project>
+      <Name>Microsoft.Exchange.InfoWorker.AssistantsClientResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.InfoWorker.Common\Microsoft.Exchange.InfoWorker.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8175}</Project>
+      <Name>Microsoft.Exchange.InfoWorker.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.InfoWorker.MeetingValidator\Microsoft.Exchange.InfoWorker.MeetingValidator.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8176}</Project>
+      <Name>Microsoft.Exchange.InfoWorker.MeetingValidator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.MailboxReplicationService.Common\Microsoft.Exchange.MailboxReplicationService.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8180}</Project>
+      <Name>Microsoft.Exchange.MailboxReplicationService.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Management.CompliancePolicy\Microsoft.Exchange.Management.CompliancePolicy.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D818F}</Project>
+      <Name>Microsoft.Exchange.Management.CompliancePolicy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Management\Microsoft.Exchange.Management.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8195}</Project>
+      <Name>Microsoft.Exchange.Management</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Net\Microsoft.Exchange.Net.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81B1}</Project>
+      <Name>Microsoft.Exchange.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.PushNotifications\Microsoft.Exchange.PushNotifications.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81C5}</Project>
+      <Name>Microsoft.Exchange.PushNotifications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Rpc\Microsoft.Exchange.Rpc.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81C8}</Project>
+      <Name>Microsoft.Exchange.Rpc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Search.Core\Microsoft.Exchange.Search.Core.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81D4}</Project>
+      <Name>Microsoft.Exchange.Search.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Search.Fast\Microsoft.Exchange.Search.Fast.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81D6}</Project>
+      <Name>Microsoft.Exchange.Search.Fast</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Security\Microsoft.Exchange.Security.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81DA}</Project>
+      <Name>Microsoft.Exchange.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.SharePointSignalStore\Microsoft.Exchange.SharePointSignalStore.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81FB}</Project>
+      <Name>Microsoft.Exchange.SharePointSignalStore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.StoreProvider\Microsoft.Exchange.StoreProvider.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8200}</Project>
+      <Name>Microsoft.Exchange.StoreProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.UM.UMCommon\Microsoft.Exchange.UM.UMCommon.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8224}</Project>
+      <Name>Microsoft.Exchange.UM.UMCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.VariantConfiguration\Microsoft.Exchange.VariantConfiguration.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8229}</Project>
+      <Name>Microsoft.Exchange.VariantConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.WorkloadManagement\Microsoft.Exchange.WorkloadManagement.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D822A}</Project>
+      <Name>Microsoft.Exchange.WorkloadManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Office.CompliancePolicy.Exchange.Dar\Microsoft.Office.CompliancePolicy.Exchange.Dar.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8232}</Project>
+      <Name>Microsoft.Office.CompliancePolicy.Exchange.Dar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Office.CompliancePolicy.Platform\Microsoft.Office.CompliancePolicy.Platform.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8233}</Project>
+      <Name>Microsoft.Office.CompliancePolicy.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Office.Datacenter.ActiveMonitoringLocal\Microsoft.Office.Datacenter.ActiveMonitoringLocal.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8236}</Project>
+      <Name>Microsoft.Office.Datacenter.ActiveMonitoringLocal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Office.Datacenter.WorkerTaskFrameworkInternalProvi\Microsoft.Office.Datacenter.WorkerTaskFrameworkInternalProvi.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8238}</Project>
+      <Name>Microsoft.Office.Datacenter.WorkerTaskFrameworkInternalProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D824B}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D824B}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

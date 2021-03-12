@@ -1,0 +1,38 @@
+﻿using System;
+
+namespace System.Runtime.InteropServices
+{
+	// Token: 0x02000976 RID: 2422
+	[Obsolete("Use System.Runtime.InteropServices.ComTypes.VARFLAGS instead. http://go.microsoft.com/fwlink/?linkid=14202", false)]
+	[Flags]
+	[Serializable]
+	public enum VARFLAGS : short
+	{
+		// Token: 0x04002BCE RID: 11214
+		VARFLAG_FREADONLY = 1,
+		// Token: 0x04002BCF RID: 11215
+		VARFLAG_FSOURCE = 2,
+		// Token: 0x04002BD0 RID: 11216
+		VARFLAG_FBINDABLE = 4,
+		// Token: 0x04002BD1 RID: 11217
+		VARFLAG_FREQUESTEDIT = 8,
+		// Token: 0x04002BD2 RID: 11218
+		VARFLAG_FDISPLAYBIND = 16,
+		// Token: 0x04002BD3 RID: 11219
+		VARFLAG_FDEFAULTBIND = 32,
+		// Token: 0x04002BD4 RID: 11220
+		VARFLAG_FHIDDEN = 64,
+		// Token: 0x04002BD5 RID: 11221
+		VARFLAG_FRESTRICTED = 128,
+		// Token: 0x04002BD6 RID: 11222
+		VARFLAG_FDEFAULTCOLLELEM = 256,
+		// Token: 0x04002BD7 RID: 11223
+		VARFLAG_FUIDEFAULT = 512,
+		// Token: 0x04002BD8 RID: 11224
+		VARFLAG_FNONBROWSABLE = 1024,
+		// Token: 0x04002BD9 RID: 11225
+		VARFLAG_FREPLACEABLE = 2048,
+		// Token: 0x04002BDA RID: 11226
+		VARFLAG_FIMMEDIATEBIND = 4096
+	}
+}

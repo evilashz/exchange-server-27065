@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E00F5D04-C156-4BAD-86F2-C9D7907D8102}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Exchange.Setup</RootNamespace>
+    <AssemblyName>ExSetupUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>ExSetupUI.ico</ApplicationIcon>
+    <StartupObject>Microsoft.Exchange.Setup.ExSetupUI.ExSetupUI</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Exchange.CabUtility" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExSetupUI\AssemblyLoadFileNotFoundException.cs" />
+    <Compile Include="ExSetupUI\CheckForUpdatesPage.cs" />
+    <Compile Include="ExSetupUI\CopyFilesPage.cs" />
+    <Compile Include="ExSetupUI\CustomCheckbox.cs" />
+    <Compile Include="ExSetupUI\CustomGlyph.cs" />
+    <Compile Include="ExSetupUI\CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExSetupUI\CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExSetupUI\CustomProgressBar.cs" />
+    <Compile Include="ExSetupUI\CustomProgressBarWithTitle.cs" />
+    <Compile Include="ExSetupUI\CustomRadiobutton.cs" />
+    <Compile Include="ExSetupUI\CustomRichTextBox.cs" />
+    <Compile Include="ExSetupUI\CustomScrollbar.cs" />
+    <Compile Include="ExSetupUI\ExSetupUI.cs" />
+    <Compile Include="ExSetupUI\FileCopier.cs" />
+    <Compile Include="ExSetupUI\FileCopierBeforeFileCopyHandler.cs" />
+    <Compile Include="ExSetupUI\FileCopierCanceledHandler.cs" />
+    <Compile Include="ExSetupUI\FileCopierCompletedHandler.cs" />
+    <Compile Include="ExSetupUI\FileCopierErrorHandler.cs" />
+    <Compile Include="ExSetupUI\FileCopierInsufficientDiskSpaceException.cs" />
+    <Compile Include="ExSetupUI\FileCopierProgressChangeHandler.cs" />
+    <Compile Include="ExSetupUI\FileCopierReadFileException.cs" />
+    <Compile Include="ExSetupUI\FontScalingLabel.cs" />
+    <Compile Include="ExSetupUI\HelpId.cs" />
+    <Compile Include="ExSetupUI\Icons.cs" />
+    <Compile Include="ExSetupUI\IHelpUrlGenerator.cs" />
+    <Compile Include="ExSetupUI\InitializingSetupPage.cs" />
+    <Compile Include="ExSetupUI\LayoutHelper.cs" />
+    <Compile Include="ExSetupUI\MessageBoxHelper.cs" />
+    <Compile Include="ExSetupUI\MsgBoxButtons.cs" />
+    <Compile Include="ExSetupUI\MsgBoxIcon.cs" />
+    <Compile Include="ExSetupUI\ProgressPageBase.cs" />
+    <Compile Include="ExSetupUI\ScrollbarControlDesigner.cs" />
+    <Compile Include="ExSetupUI\SetupFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExSetupUI\SetupFormBase.Designer.cs">
+      <DependentUpon>SetupFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExSetupUI\SetupWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExSetupUI\SetupWizard.Designer.cs">
+      <DependentUpon>SetupWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExSetupUI\SetupWizardEventArgs.cs" />
+    <Compile Include="ExSetupUI\SetupWizardPage.cs" />
+    <Compile Include="ExSetupUI\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExSetupUI\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExSetupUI\Strings.cs" />
+    <Compile Include="ExSetupUI\UpdatesDownloadsPage.cs" />
+    <Compile Include="ExSetupUI\WizardButtons.cs" />
+    <Compile Include="ExSetupUI\WizardPageEventArgs.cs" />
+    <Compile Include="ExSetupUI\WizardPageEventHandler.cs" />
+    <Compile Include="GUI\SecureTextBox.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExSetupUI\Icons\EXCHANGE.ico" />
+    <EmbeddedResource Include="ExSetupUI\Strings.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Exchange.Data.Common\Microsoft.Exchange.Data.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D80FD}</Project>
+      <Name>Microsoft.Exchange.Data.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Diagnostics\Microsoft.Exchange.Diagnostics.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8142}</Project>
+      <Name>Microsoft.Exchange.Diagnostics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.HelpProvider\Microsoft.Exchange.HelpProvider.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8160}</Project>
+      <Name>Microsoft.Exchange.HelpProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Management.Deployment\Microsoft.Exchange.Management.Deployment.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8193}</Project>
+      <Name>Microsoft.Exchange.Management.Deployment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Management\Microsoft.Exchange.Management.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D8195}</Project>
+      <Name>Microsoft.Exchange.Management</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Setup.AcquireLanguagePack\Microsoft.Exchange.Setup.AcquireLanguagePack.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81F2}</Project>
+      <Name>Microsoft.Exchange.Setup.AcquireLanguagePack</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Setup.Bootstrapper.Common\Microsoft.Exchange.Setup.Bootstrapper.Common.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81F3}</Project>
+      <Name>Microsoft.Exchange.Setup.Bootstrapper.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Setup.CommonBase\Microsoft.Exchange.Setup.CommonBase.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81F5}</Project>
+      <Name>Microsoft.Exchange.Setup.CommonBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Exchange.Setup.Parser\Microsoft.Exchange.Setup.Parser.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D81F8}</Project>
+      <Name>Microsoft.Exchange.Setup.Parser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{E00F5D04-C156-4BAD-86F2-C9D7907D824B}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

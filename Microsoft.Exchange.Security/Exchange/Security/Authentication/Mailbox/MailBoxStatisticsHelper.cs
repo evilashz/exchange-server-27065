@@ -1,0 +1,106 @@
+﻿using System;
+using System.Diagnostics;
+using Microsoft.Exchange.Collections;
+using Microsoft.Exchange.Data;
+using Microsoft.Exchange.Data.Directory;
+using Microsoft.Exchange.Data.Mapi;
+using Microsoft.Exchange.Data.Mapi.Common;
+using Microsoft.Exchange.Data.Storage;
+using Microsoft.Exchange.Data.Storage.ActiveManager;
+using Microsoft.Exchange.Diagnostics.Components.Security;
+using Microsoft.Exchange.Security.Authentication.FederatedAuthService;
+
+namespace Microsoft.Exchange.Security.Authentication.Mailbox
+{
+	// Token: 0x02000091 RID: 145
+	internal static class MailBoxStatisticsHelper
+	{
+		// Token: 0x060004DF RID: 1247 RVA: 0x00028348 File Offset: 0x00026548
+		public static DateTime? GetLastLogonTimestampFromCache(string upn)
+		{
+			if (MailBoxStatisticsHelper.cachedDateTime == null)
+			{
+				return null;
+			}
+			DateTime value;
+			if (MailBoxStatisticsHelper.cachedDateTime.TryGetValue(upn, out value))
+			{
+				return new DateTime?(value);
+			}
+			return null;
+		}
+
+		// Token: 0x060004E0 RID: 1248 RVA: 0x00028388 File Offset: 0x00026588
+		public static DateTime GetLastLogonTimestamp(string upn, Guid mailboxGuid, ADObjectId databaseId, string dbName, out int mailboxFound)
+		{
+			ExTraceGlobals.AuthenticationTracer.TraceFunction(0L, "Entering GetLastLogonTimestamp()");
+			mailboxFound = 0;
+			MailBoxStatisticsHelper.counters.NumberOfMailboxAccess.Increment();
+			ActiveManager activeManagerInstance = ActiveManager.GetActiveManagerInstance();
+			try
+			{
+				DatabaseLocationInfo serverForDatabase = activeManagerInstance.GetServerForDatabase(databaseId.ObjectGuid);
+				using (MapiAdministrationSession mapiAdministrationSession = new MapiAdministrationSession(serverForDatabase.ServerLegacyDN, Fqdn.Parse(serverForDatabase.ServerFqdn)))
+				{
+					QueryFilter filter = new MailboxContextFilter(mailboxGuid, 0UL, false);
+					DatabaseId rootId = new DatabaseId(null, null, dbName, databaseId.ObjectGuid);
+					try
+					{
+						MailboxStatistics[] array = (MailboxStatistics[])((IConfigDataProvider)mapiAdministrationSession).Find<MailboxStatistics>(filter, rootId, true, null);
+						mailboxFound = array.Length;
+						if (array.Length == 1)
+						{
+							if (array[0].LastLogonTime != null)
+							{
+								MailBoxStatisticsHelper.CreateCacheIfNecessary();
+								MailBoxStatisticsHelper.cachedDateTime.Add(upn, array[0].LastLogonTime.Value);
+								ExTraceGlobals.AuthenticationTracer.TraceFunction(0L, "Leaving GetLastLogonTimestamp 1");
+								return array[0].LastLogonTime.Value;
+							}
+							ExTraceGlobals.AuthenticationTracer.TraceFunction(0L, "Leaving GetLastLogonTimestamp 2");
+							return DateTime.UtcNow;
+						}
+					}
+					catch (MapiObjectNotFoundException ex)
+					{
+						ExTraceGlobals.AuthenticationTracer.TraceWarning<string, string>(0L, "GetLastLogonTimestamp for database {0} failed. Error: {1}", dbName, ex.ToString());
+					}
+				}
+			}
+			catch (DatabaseNotFoundException ex2)
+			{
+				ExTraceGlobals.AuthenticationTracer.TraceWarning<string, string>(0L, "GetLastLogonTimestamp for database {0} failed. Error: {1}", dbName, ex2.ToString());
+			}
+			catch (DatabaseUnavailableException ex3)
+			{
+				ExTraceGlobals.AuthenticationTracer.TraceWarning<string, string>(0L, "GetLastLogonTimestamp for database {0} failed. Error: {1}", dbName, ex3.ToString());
+			}
+			ExTraceGlobals.AuthenticationTracer.TraceFunction(0L, "Leaving GetLastLogonTimestamp 3");
+			return DateTime.MinValue;
+		}
+
+		// Token: 0x060004E1 RID: 1249 RVA: 0x0002857C File Offset: 0x0002677C
+		private static void CreateCacheIfNecessary()
+		{
+			if (MailBoxStatisticsHelper.cachedDateTime == null)
+			{
+				lock (MailBoxStatisticsHelper.lockObj)
+				{
+					if (MailBoxStatisticsHelper.cachedDateTime == null)
+					{
+						MailBoxStatisticsHelper.cachedDateTime = new MruDictionary<string, DateTime>(AuthServiceStaticConfig.Config.MaxCacheSizeOfLastLogonTime, StringComparer.OrdinalIgnoreCase, null);
+					}
+				}
+			}
+		}
+
+		// Token: 0x04000546 RID: 1350
+		private static MruDictionary<string, DateTime> cachedDateTime = null;
+
+		// Token: 0x04000547 RID: 1351
+		private static object lockObj = new object();
+
+		// Token: 0x04000548 RID: 1352
+		private static readonly LiveIdBasicAuthenticationCountersInstance counters = LiveIdBasicAuthenticationCounters.GetInstance(Process.GetCurrentProcess().ProcessName);
+	}
+}

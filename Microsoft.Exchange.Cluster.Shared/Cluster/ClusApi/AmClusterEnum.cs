@@ -1,0 +1,25 @@
+﻿using System;
+
+namespace Microsoft.Exchange.Cluster.ClusApi
+{
+	// Token: 0x0200004B RID: 75
+	internal enum AmClusterEnum : uint
+	{
+		// Token: 0x040000D8 RID: 216
+		CLUSTER_ENUM_NODE = 1U,
+		// Token: 0x040000D9 RID: 217
+		CLUSTER_ENUM_RESTYPE,
+		// Token: 0x040000DA RID: 218
+		CLUSTER_ENUM_RESOURCE = 4U,
+		// Token: 0x040000DB RID: 219
+		CLUSTER_ENUM_GROUP = 8U,
+		// Token: 0x040000DC RID: 220
+		CLUSTER_ENUM_NETWORK = 16U,
+		// Token: 0x040000DD RID: 221
+		CLUSTER_ENUM_NETINTERFACE = 32U,
+		// Token: 0x040000DE RID: 222
+		CLUSTER_ENUM_INTERNAL_NETWORK = 2147483648U,
+		// Token: 0x040000DF RID: 223
+		CLUSTER_ENUM_ALL = 63U
+	}
+}

@@ -1,0 +1,24 @@
+﻿using System;
+using System.Security.Principal;
+using System.Text;
+using Microsoft.Exchange.Server.Storage.Common;
+using Microsoft.Exchange.Server.Storage.StoreCommonServices;
+
+namespace Microsoft.Exchange.Server.Storage.LogicalDataModel
+{
+	// Token: 0x02000085 RID: 133
+	public class FolderCopiedNotificationEvent : ObjectMovedCopiedNotificationEvent
+	{
+		// Token: 0x060008DB RID: 2267 RVA: 0x0004C784 File Offset: 0x0004A984
+		public FolderCopiedNotificationEvent(StoreDatabase database, int mailboxNumber, WindowsIdentity userIdentity, ClientType clientType, EventFlags eventFlags, ExtendedEventFlags extendedEventFlags, ExchangeId fid, ExchangeId parentFid, ExchangeId oldFid, ExchangeId oldParentFid, string containerClass) : base(database, mailboxNumber, EventType.ObjectCopied, userIdentity, clientType, eventFlags, extendedEventFlags, fid, ExchangeId.Null, parentFid, null, null, oldFid, ExchangeId.Null, oldParentFid, null, containerClass)
+		{
+			Statistics.NotificationTypes.FolderCopied.Bump();
+		}
+
+		// Token: 0x060008DC RID: 2268 RVA: 0x0004C7DB File Offset: 0x0004A9DB
+		protected override void AppendClassName(StringBuilder sb)
+		{
+			sb.Append("FolderCopiedNotificationEvent");
+		}
+	}
+}

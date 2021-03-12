@@ -1,0 +1,9143 @@
+﻿using System;
+
+namespace Microsoft.Exchange.Management.FederationProvisioning
+{
+	// Token: 0x02000337 RID: 823
+	internal static class LiveIdErrorCodes
+	{
+		// Token: 0x04000C2B RID: 3115
+		public const int PP_E_INTERNAL_ERROR = -1879179263;
+
+		// Token: 0x04000C2C RID: 3116
+		public const int PP_E_NOT_PP_ERROR = -1879179262;
+
+		// Token: 0x04000C2D RID: 3117
+		public const int PP_S_TIMEZONE_OLD = 266240;
+
+		// Token: 0x04000C2E RID: 3118
+		public const int PP_S_REDIRECT_TO_PARTNER = 266241;
+
+		// Token: 0x04000C2F RID: 3119
+		public const int E_PPFAIL = -2147217409;
+
+		// Token: 0x04000C30 RID: 3120
+		public const int PP_E_COMFAIL = -2147217408;
+
+		// Token: 0x04000C31 RID: 3121
+		public const int PP_E_TOOMANYREQUESTS = -2147217406;
+
+		// Token: 0x04000C32 RID: 3122
+		public const int PP_E_SVC_NOT_CONFIGURED = -2147217405;
+
+		// Token: 0x04000C33 RID: 3123
+		public const int PP_E_PROFILENOTEXIST = -2147217401;
+
+		// Token: 0x04000C34 RID: 3124
+		public const int PP_E_TICKETEXPIRED = -2147217400;
+
+		// Token: 0x04000C35 RID: 3125
+		public const int PP_E_TICKETNOTEXIST = -2147217399;
+
+		// Token: 0x04000C36 RID: 3126
+		public const int PP_E_SECTICKETNOTEXIST = -2147217398;
+
+		// Token: 0x04000C37 RID: 3127
+		public const int PP_E_SECTICKETNOTMATCH = -2147217397;
+
+		// Token: 0x04000C38 RID: 3128
+		public const int PP_E_FORCESIGNIN = -2147217396;
+
+		// Token: 0x04000C39 RID: 3129
+		public const int PP_E_EXCLUDED = -2147217392;
+
+		// Token: 0x04000C3A RID: 3130
+		public const int PP_E_MEMBER_LOCKED = -2147217391;
+
+		// Token: 0x04000C3B RID: 3131
+		public const int PP_E_BAD_PASSWORD = -2147217390;
+
+		// Token: 0x04000C3C RID: 3132
+		public const int PP_E_NOT_OVER_SSL = -2147217386;
+
+		// Token: 0x04000C3D RID: 3133
+		public const int PP_E_INVALIDSITEID = -2147217384;
+
+		// Token: 0x04000C3E RID: 3134
+		public const int PP_E_INVALIDMEMBERNAME = -2147217383;
+
+		// Token: 0x04000C3F RID: 3135
+		public const int PP_E_INVALIDRETURNURL = -2147217382;
+
+		// Token: 0x04000C40 RID: 3136
+		public const int PP_E_INVALIDKEYVERSION = -2147217381;
+
+		// Token: 0x04000C41 RID: 3137
+		public const int PP_E_INVALIDREQUEST = -2147217380;
+
+		// Token: 0x04000C42 RID: 3138
+		public const int PP_E_INVALIDPARAMS = -2147217379;
+
+		// Token: 0x04000C43 RID: 3139
+		public const int PP_E_NOCREDENTIALS = -2147217378;
+
+		// Token: 0x04000C44 RID: 3140
+		public const int PP_E_NOAUTH = -2147217377;
+
+		// Token: 0x04000C45 RID: 3141
+		public const int PP_E_NO_SL = -2147217376;
+
+		// Token: 0x04000C46 RID: 3142
+		public const int PP_E_NO_ALIAS = -2147217374;
+
+		// Token: 0x04000C47 RID: 3143
+		public const int PP_E_NO_PASSWORD = -2147217373;
+
+		// Token: 0x04000C48 RID: 3144
+		public const int PP_E_NO_DOMAIN = -2147217372;
+
+		// Token: 0x04000C49 RID: 3145
+		public const int PP_E_INVALIDMODE = -2147217370;
+
+		// Token: 0x04000C4A RID: 3146
+		public const int PP_E_USER_BAD_LOGIN = -2147217369;
+
+		// Token: 0x04000C4B RID: 3147
+		public const int PP_E_DIFFERENT_USER = -2147217367;
+
+		// Token: 0x04000C4C RID: 3148
+		public const int PP_E_NOT_EMAIL_INPUT = -2147217361;
+
+		// Token: 0x04000C4D RID: 3149
+		public const int PP_E_MISSING_CREDS = -2147217360;
+
+		// Token: 0x04000C4E RID: 3150
+		public const int PP_E_MISSING_MEMBERNAME = -2147217359;
+
+		// Token: 0x04000C4F RID: 3151
+		public const int PP_E_MISSING_PASSWORD = -2147217358;
+
+		// Token: 0x04000C50 RID: 3152
+		public const int PP_E_INVALID_MEMBERNAME = -2147217356;
+
+		// Token: 0x04000C51 RID: 3153
+		public const int PP_E_WRONG_DA_DOMAIN = -2147217355;
+
+		// Token: 0x04000C52 RID: 3154
+		public const int PP_E_LOCATION_WRONG = -2147217352;
+
+		// Token: 0x04000C53 RID: 3155
+		public const int PP_E_SECRET_ANS_WRONG = -2147217351;
+
+		// Token: 0x04000C54 RID: 3156
+		public const int PP_E_KID_HAS_NO_CONSENT = -2147217350;
+
+		// Token: 0x04000C55 RID: 3157
+		public const int PP_E_NO_COUNTRY = -2147217349;
+
+		// Token: 0x04000C56 RID: 3158
+		public const int PP_E_NO_REGION = -2147217348;
+
+		// Token: 0x04000C57 RID: 3159
+		public const int PP_E_NO_POSTALCODE = -2147217347;
+
+		// Token: 0x04000C58 RID: 3160
+		public const int PP_E_NO_SECRET_ANSWER = -2147217346;
+
+		// Token: 0x04000C59 RID: 3161
+		public const int PP_E_NEED_STRONG_CREDENTIALS = -2147217344;
+
+		// Token: 0x04000C5A RID: 3162
+		public const int PP_E_BAD_PIN = -2147217343;
+
+		// Token: 0x04000C5B RID: 3163
+		public const int PP_E_EMAIL_TAKEN = -2147217342;
+
+		// Token: 0x04000C5C RID: 3164
+		public const int PP_E_BAD_PINSA = -2147217341;
+
+		// Token: 0x04000C5D RID: 3165
+		public const int PP_E_MISSING_PIN = -2147217340;
+
+		// Token: 0x04000C5E RID: 3166
+		public const int PP_E_MISSING_PINSA = -2147217339;
+
+		// Token: 0x04000C5F RID: 3167
+		public const int PP_E_PIN_MISMATCH = -2147217338;
+
+		// Token: 0x04000C60 RID: 3168
+		public const int PP_E_PIN_INVALID = -2147217337;
+
+		// Token: 0x04000C61 RID: 3169
+		public const int PP_E_PIN_BLANK = -2147217336;
+
+		// Token: 0x04000C62 RID: 3170
+		public const int PP_E_PIN_TOO_SHORT = -2147217335;
+
+		// Token: 0x04000C63 RID: 3171
+		public const int PP_E_PIN_TOO_LONG = -2147217334;
+
+		// Token: 0x04000C64 RID: 3172
+		public const int PP_E_PIN_CONTAINS_MEMBERNAME = -2147217333;
+
+		// Token: 0x04000C65 RID: 3173
+		public const int PP_E_FORCE_RENAME = -2147217332;
+
+		// Token: 0x04000C66 RID: 3174
+		public const int PP_E_MISSING_PHONENUM = -2147217331;
+
+		// Token: 0x04000C67 RID: 3175
+		public const int PP_E_MISSING_PHONEPIN = -2147217330;
+
+		// Token: 0x04000C68 RID: 3176
+		public const int PP_E_PPM_NOTCAPABLE = -2147217329;
+
+		// Token: 0x04000C69 RID: 3177
+		public const int PP_E_CREATECOOKIE_FAILED = -2147217328;
+
+		// Token: 0x04000C6A RID: 3178
+		public const int PP_E_BLANK_PASSWORD = -2147217325;
+
+		// Token: 0x04000C6B RID: 3179
+		public const int PP_E_LOADSTRING_NOT_HANDLED = -2147217324;
+
+		// Token: 0x04000C6C RID: 3180
+		public const int PP_E_INVALIDNAMESPACE = -2147217320;
+
+		// Token: 0x04000C6D RID: 3181
+		public const int PP_E_NOBROWSERINFO = -2147217319;
+
+		// Token: 0x04000C6E RID: 3182
+		public const int PP_E_NOSERVERNAME = -2147217312;
+
+		// Token: 0x04000C6F RID: 3183
+		public const int PP_E_NO_URL = -2147217311;
+
+		// Token: 0x04000C70 RID: 3184
+		public const int PP_E_NO_AUTHHEADER = -2147217310;
+
+		// Token: 0x04000C71 RID: 3185
+		public const int PP_E_DONT_EVER_RETURN_THIS = -2147217309;
+
+		// Token: 0x04000C72 RID: 3186
+		public const int PP_E_PCR_COUNTRY = -2147217307;
+
+		// Token: 0x04000C73 RID: 3187
+		public const int PP_E_PCR_BIRTHDATE = -2147217306;
+
+		// Token: 0x04000C74 RID: 3188
+		public const int PP_E_INVALID_TPF = -2147217304;
+
+		// Token: 0x04000C75 RID: 3189
+		public const int PP_E_URL_NOT_HANDLED = -2147217303;
+
+		// Token: 0x04000C76 RID: 3190
+		public const int PP_E_URL_NOT_INIT = -2147217296;
+
+		// Token: 0x04000C77 RID: 3191
+		public const int PP_E_REJECT_RESPONSE = -2147217294;
+
+		// Token: 0x04000C78 RID: 3192
+		public const int PP_E_GETPPHANDLER_FAILED = -2147217291;
+
+		// Token: 0x04000C79 RID: 3193
+		public const int PP_E_GETSTRINGTABLE_FAILED = -2147217290;
+
+		// Token: 0x04000C7A RID: 3194
+		public const int PP_E_LOGIN_CERT_NOTSUPPORTED = -2147217284;
+
+		// Token: 0x04000C7B RID: 3195
+		public const int PP_E_LOGIN_NEED_CERT_PROVISIONING = -2147217283;
+
+		// Token: 0x04000C7C RID: 3196
+		public const int PP_E_LOGIN_RESTRICTIONS = -2147217282;
+
+		// Token: 0x04000C7D RID: 3197
+		public const int PP_E_LOGIN_NEED_STRONGPW = -2147217281;
+
+		// Token: 0x04000C7E RID: 3198
+		public const int PP_E_LOGIN_NEED_EXPIRY = -2147217280;
+
+		// Token: 0x04000C7F RID: 3199
+		public const int PP_E_LOGIN_NEED_EXPIRY_WARINING = -2147217279;
+
+		// Token: 0x04000C80 RID: 3200
+		public const int PP_E_LOGIN_EXPIRED_PASSWORD = -2147217278;
+
+		// Token: 0x04000C81 RID: 3201
+		public const int PP_E_LOGIN_FORCECHANGE_SQSA = -2147217277;
+
+		// Token: 0x04000C82 RID: 3202
+		public const int PP_E_LOGIN_FORCECHANGE_PASSWORD = -2147217276;
+
+		// Token: 0x04000C83 RID: 3203
+		public const int PP_E_NO_VALID_LOGIN_KEYS = -2147217275;
+
+		// Token: 0x04000C84 RID: 3204
+		public const int PP_E_NO_VALID_SITE10_KEYS = -2147217274;
+
+		// Token: 0x04000C85 RID: 3205
+		public const int PP_E_INVALID_SITE_KEY = -2147217273;
+
+		// Token: 0x04000C86 RID: 3206
+		public const int PP_E_NO_ASYNC_SUPPORT = -2147217270;
+
+		// Token: 0x04000C87 RID: 3207
+		public const int PP_E_UNKNOWN_THIRDPARTY_DB_ERROR = -2147217269;
+
+		// Token: 0x04000C88 RID: 3208
+		public const int PP_E_INVALID_REALM_CERT = -2147217266;
+
+		// Token: 0x04000C89 RID: 3209
+		public const int PP_E_PPMGR_NOT_INITED = -2147217265;
+
+		// Token: 0x04000C8A RID: 3210
+		public const int PP_E_SECLEVEL_NOTSUPPORTED = -2147217264;
+
+		// Token: 0x04000C8B RID: 3211
+		public const int PP_E_TOU_NOTSUPPORTEDBYMOBILE = -2147217263;
+
+		// Token: 0x04000C8C RID: 3212
+		public const int PP_E_MOBILE_CANCEL_SIGNIN = -2147217261;
+
+		// Token: 0x04000C8D RID: 3213
+		public const int PP_E_NAME_BLANK = -2147217152;
+
+		// Token: 0x04000C8E RID: 3214
+		public const int PP_E_NAME_TOO_SHORT = -2147217151;
+
+		// Token: 0x04000C8F RID: 3215
+		public const int PP_E_NAME_TOO_LONG = -2147217150;
+
+		// Token: 0x04000C90 RID: 3216
+		public const int PP_E_NAME_INVALID = -2147217149;
+
+		// Token: 0x04000C91 RID: 3217
+		public const int PP_E_PASSWORD_BLANK = -2147217148;
+
+		// Token: 0x04000C92 RID: 3218
+		public const int PP_E_PASSWORD_TOO_SHORT = -2147217147;
+
+		// Token: 0x04000C93 RID: 3219
+		public const int PP_E_PASSWORD_TOO_LONG = -2147217146;
+
+		// Token: 0x04000C94 RID: 3220
+		public const int PP_E_PASSWORD_CONTAINS_MEMBERNAME = -2147217145;
+
+		// Token: 0x04000C95 RID: 3221
+		public const int PP_E_PASSWORD_INVALID = -2147217144;
+
+		// Token: 0x04000C96 RID: 3222
+		public const int PP_E_PASSWORD_MISMATCH = -2147217143;
+
+		// Token: 0x04000C97 RID: 3223
+		public const int PP_E_EMAIL_BLANK = -2147217142;
+
+		// Token: 0x04000C98 RID: 3224
+		public const int PP_E_EMAIL_INVALID = -2147217141;
+
+		// Token: 0x04000C99 RID: 3225
+		public const int PP_E_EMAIL_RIGHT_TOO_LONG = -2147217140;
+
+		// Token: 0x04000C9A RID: 3226
+		public const int PP_E_EMAIL_INCOMPLETE = -2147217139;
+
+		// Token: 0x04000C9B RID: 3227
+		public const int PP_E_EMAIL_INVALID_CHARS = -2147217138;
+
+		// Token: 0x04000C9C RID: 3228
+		public const int PP_E_BIRTHDATE_NOTENTERED = -2147217137;
+
+		// Token: 0x04000C9D RID: 3229
+		public const int PP_E_BIRTHYEAR_INVALID_CHARS = -2147217136;
+
+		// Token: 0x04000C9E RID: 3230
+		public const int PP_E_BIRTHYEAR_NOT_4DIGIT = -2147217135;
+
+		// Token: 0x04000C9F RID: 3231
+		public const int PP_E_BIRTHYEAR_TOO_LOW = -2147217134;
+
+		// Token: 0x04000CA0 RID: 3232
+		public const int PP_E_BIRTHYEAR_MISSING = -2147217133;
+
+		// Token: 0x04000CA1 RID: 3233
+		public const int PP_E_BIRTHMONTH_MISSING = -2147217132;
+
+		// Token: 0x04000CA2 RID: 3234
+		public const int PP_E_BIRTHMONTH_INVALID = -2147217131;
+
+		// Token: 0x04000CA3 RID: 3235
+		public const int PP_E_BIRTHDAY_MISSING = -2147217130;
+
+		// Token: 0x04000CA4 RID: 3236
+		public const int PP_E_BIRTHDAY_INVALID = -2147217129;
+
+		// Token: 0x04000CA5 RID: 3237
+		public const int PP_E_BADDAYFORMONTH = -2147217128;
+
+		// Token: 0x04000CA6 RID: 3238
+		public const int PP_E_BIRTHDATE_UNDER18 = -2147217127;
+
+		// Token: 0x04000CA7 RID: 3239
+		public const int PP_E_BIRTHDATE_IN_FUTURE = -2147217126;
+
+		// Token: 0x04000CA8 RID: 3240
+		public const int PP_E_PARENT_UNDER13 = -2147217125;
+
+		// Token: 0x04000CA9 RID: 3241
+		public const int PP_E_SECRETQA_NOQUESTION = -2147217124;
+
+		// Token: 0x04000CAA RID: 3242
+		public const int PP_E_SECRETQA_NOANSWER = -2147217123;
+
+		// Token: 0x04000CAB RID: 3243
+		public const int PP_E_SQ_INVALID = -2147217122;
+
+		// Token: 0x04000CAC RID: 3244
+		public const int PP_E_SA_INVALID = -2147217121;
+
+		// Token: 0x04000CAD RID: 3245
+		public const int PP_E_SA_TOOSHORT = -2147217120;
+
+		// Token: 0x04000CAE RID: 3246
+		public const int PP_E_SA_TOOLONG = -2147217119;
+
+		// Token: 0x04000CAF RID: 3247
+		public const int PP_E_SQ_TOOSHORT = -2147217118;
+
+		// Token: 0x04000CB0 RID: 3248
+		public const int PP_E_SQ_TOOLONG = -2147217117;
+
+		// Token: 0x04000CB1 RID: 3249
+		public const int PP_E_LOCATION_INVALID_REGION = -2147217116;
+
+		// Token: 0x04000CB2 RID: 3250
+		public const int PP_E_LOCATION_INVALID_POSTALCODE = -2147217115;
+
+		// Token: 0x04000CB3 RID: 3251
+		public const int PP_E_LOCATION_INVALID_POSTALCODECHARS = -2147217114;
+
+		// Token: 0x04000CB4 RID: 3252
+		public const int PP_E_LOCATION_INVALID_COUNTRY = -2147217113;
+
+		// Token: 0x04000CB5 RID: 3253
+		public const int PP_E_GENDER_BLANK = -2147217112;
+
+		// Token: 0x04000CB6 RID: 3254
+		public const int PP_E_GENDER_INVALID = -2147217111;
+
+		// Token: 0x04000CB7 RID: 3255
+		public const int PP_E_LANGUAGE_BLANK = -2147217110;
+
+		// Token: 0x04000CB8 RID: 3256
+		public const int PP_E_TIMEZONE_BLANK = -2147217109;
+
+		// Token: 0x04000CB9 RID: 3257
+		public const int PP_E_OCCUPATION_BLANK = -2147217108;
+
+		// Token: 0x04000CBA RID: 3258
+		public const int PP_E_SVC_BLANK = -2147217107;
+
+		// Token: 0x04000CBB RID: 3259
+		public const int PP_E_SAVEPASSWORD_BLANK = -2147217106;
+
+		// Token: 0x04000CBC RID: 3260
+		public const int PP_E_ACCESSIBILITY_BLANK = -2147217105;
+
+		// Token: 0x04000CBD RID: 3261
+		public const int PP_E_ALLOWEMAILINPROFILE_BLANK = -2147217104;
+
+		// Token: 0x04000CBE RID: 3262
+		public const int PP_E_ALLOWPASSPORTNETWORKEMAIL_BLANK = -2147217103;
+
+		// Token: 0x04000CBF RID: 3263
+		public const int PP_E_MEMBER_EXIST = -2147217102;
+
+		// Token: 0x04000CC0 RID: 3264
+		public const int PP_E_EMAIL_MEMBER_EXIST = -2147217101;
+
+		// Token: 0x04000CC1 RID: 3265
+		public const int PP_E_EMAIL_MANAGED = -2147217100;
+
+		// Token: 0x04000CC2 RID: 3266
+		public const int PP_E_SECRETQA_DUPLICATE_Q = -2147217099;
+
+		// Token: 0x04000CC3 RID: 3267
+		public const int PP_E_FIRSTNAME_BLANK = -2147217098;
+
+		// Token: 0x04000CC4 RID: 3268
+		public const int PP_E_LASTNAME_BLANK = -2147217097;
+
+		// Token: 0x04000CC5 RID: 3269
+		public const int PP_E_NICKNAME_BLANK = -2147217096;
+
+		// Token: 0x04000CC6 RID: 3270
+		public const int PP_E_EMAIL_RESERVED = -2147217095;
+
+		// Token: 0x04000CC7 RID: 3271
+		public const int PP_E_DOMAIN_INVALID = -2147217094;
+
+		// Token: 0x04000CC8 RID: 3272
+		public const int PP_E_SECRETQA_DUPLICATE_A = -2147217093;
+
+		// Token: 0x04000CC9 RID: 3273
+		public const int PP_E_SECRETQA_NOMATCH = -2147217092;
+
+		// Token: 0x04000CCA RID: 3274
+		public const int PP_E_EXTERNALFIELD_BLANK = -2147217091;
+
+		// Token: 0x04000CCB RID: 3275
+		public const int PP_E_PARENT_INVALID = -2147217090;
+
+		// Token: 0x04000CCC RID: 3276
+		public const int PP_E_INVALID_PHONENUMBER = -2147217089;
+
+		// Token: 0x04000CCD RID: 3277
+		public const int PP_E_PHONENUMBER_EXIST = -2147217088;
+
+		// Token: 0x04000CCE RID: 3278
+		public const int PP_E_TIMEZONE_INVALID = -2147217087;
+
+		// Token: 0x04000CCF RID: 3279
+		public const int PP_E_OCCUPATION_INVALID = -2147217086;
+
+		// Token: 0x04000CD0 RID: 3280
+		public const int PP_E_LANGUAGE_INVALID = -2147217085;
+
+		// Token: 0x04000CD1 RID: 3281
+		public const int PP_E_INVALID_PINNUMBER = -2147217084;
+
+		// Token: 0x04000CD2 RID: 3282
+		public const int PP_E_SECUREPIN_MISMATCH = -2147217083;
+
+		// Token: 0x04000CD3 RID: 3283
+		public const int PP_E_SECUREPIN_INVALID = -2147217082;
+
+		// Token: 0x04000CD4 RID: 3284
+		public const int PP_E_SECUREPIN_BLANK = -2147217081;
+
+		// Token: 0x04000CD5 RID: 3285
+		public const int PP_E_SECUREPIN_TOO_SHORT = -2147217080;
+
+		// Token: 0x04000CD6 RID: 3286
+		public const int PP_E_SECUREPIN_TOO_LONG = -2147217079;
+
+		// Token: 0x04000CD7 RID: 3287
+		public const int PP_E_SECUREPIN_CONTAINS_MEMBERNAME = -2147217078;
+
+		// Token: 0x04000CD8 RID: 3288
+		public const int PP_E_SECRETQA_VERIFY_NOANSWER = -2147217077;
+
+		// Token: 0x04000CD9 RID: 3289
+		public const int PP_E_FIELD_TOO_LONG = -2147217076;
+
+		// Token: 0x04000CDA RID: 3290
+		public const int PP_E_FIRSTNAME_TOO_LONG = -2147217075;
+
+		// Token: 0x04000CDB RID: 3291
+		public const int PP_E_LASTNAME_TOO_LONG = -2147217074;
+
+		// Token: 0x04000CDC RID: 3292
+		public const int PP_E_FORCERENAME_RESPONSE_INVALID = -2147217073;
+
+		// Token: 0x04000CDD RID: 3293
+		public const int PP_E_LOCATION_INVALID_POSTALCODEBLANK = -2147217072;
+
+		// Token: 0x04000CDE RID: 3294
+		public const int PP_E_EMAIL_TOO_LONG = -2147217071;
+
+		// Token: 0x04000CDF RID: 3295
+		public const int PP_E_NAME_FIRST_LAST_DOT = -2147217069;
+
+		// Token: 0x04000CE0 RID: 3296
+		public const int PP_E_NAME_DOT_AFTER_DOT = -2147217068;
+
+		// Token: 0x04000CE1 RID: 3297
+		public const int PP_E_DOMAIN_INVALID_CHAR = -2147217067;
+
+		// Token: 0x04000CE2 RID: 3298
+		public const int PP_E_NAME_INVALID_CHAR = -2147217066;
+
+		// Token: 0x04000CE3 RID: 3299
+		public const int PP_E_DOMAIN_FIRST_LAST_CHAR_INVALID = -2147217065;
+
+		// Token: 0x04000CE4 RID: 3300
+		public const int PP_E_DOMAIN_DOT_AFTER_DOT = -2147217064;
+
+		// Token: 0x04000CE5 RID: 3301
+		public const int PP_E_FIELD_STARTS_ENDS_WITH_WHITESPACE = -2147217063;
+
+		// Token: 0x04000CE6 RID: 3302
+		public const int PP_E_NAME_STARTS_ENDS_WITH_WHITESPACE = -2147217062;
+
+		// Token: 0x04000CE7 RID: 3303
+		public const int PP_E_SECRETA_STARTS_ENDS_WITH_WHITESPACE = -2147217061;
+
+		// Token: 0x04000CE8 RID: 3304
+		public const int PP_E_POSTALCODE_STARTS_ENDS_WITH_WHITESPACE = -2147217060;
+
+		// Token: 0x04000CE9 RID: 3305
+		public const int PP_E_TOUVERSION_INVALID = -2147217059;
+
+		// Token: 0x04000CEA RID: 3306
+		public const int PP_E_EMAIL_SAME = -2147217058;
+
+		// Token: 0x04000CEB RID: 3307
+		public const int PP_E_FIRSTNAME_FORBIDDEN = -2147217057;
+
+		// Token: 0x04000CEC RID: 3308
+		public const int PP_E_LASTNAME_FORBIDDEN = -2147217056;
+
+		// Token: 0x04000CED RID: 3309
+		public const int PP_E_PASSWORD_MISMATCH_WITH_DB = -2147217055;
+
+		// Token: 0x04000CEE RID: 3310
+		public const int PP_E_SECUREPIN_MISMATCH_WITH_DB = -2147217054;
+
+		// Token: 0x04000CEF RID: 3311
+		public const int PP_E_FIELD_CONTAINS_INVALID_CHARS = -2147217053;
+
+		// Token: 0x04000CF0 RID: 3312
+		public const int PP_E_PASSWORD_SAME_AS_SA = -2147217052;
+
+		// Token: 0x04000CF1 RID: 3313
+		public const int PP_E_SECRETQ_CONTAINS_SECRETA = -2147217051;
+
+		// Token: 0x04000CF2 RID: 3314
+		public const int PP_E_PASSWORD_CONTAINED_IN_SA = -2147217050;
+
+		// Token: 0x04000CF3 RID: 3315
+		public const int PP_E_PASSWORD_CONTAINED_IN_SQ = -2147217049;
+
+		// Token: 0x04000CF4 RID: 3316
+		public const int PP_E_PASSWORD_CONTAINS_FIRSTNAME = -2147217048;
+
+		// Token: 0x04000CF5 RID: 3317
+		public const int PP_E_PASSWORD_CONTAINS_LASTNAME = -2147217047;
+
+		// Token: 0x04000CF6 RID: 3318
+		public const int PP_E_SA_CONTAINS_MEMBERNAME = -2147217046;
+
+		// Token: 0x04000CF7 RID: 3319
+		public const int PP_E_PASSWORD_INVALID_MSN = -2147217045;
+
+		// Token: 0x04000CF8 RID: 3320
+		public const int PP_E_FIRSTNAME_FORBIDDEN_MSN = -2147217044;
+
+		// Token: 0x04000CF9 RID: 3321
+		public const int PP_E_NAME_FORBIDDEN_GENERIC = -2147217043;
+
+		// Token: 0x04000CFA RID: 3322
+		public const int PP_E_FIRSTNAME_TOO_SHORT = -2147217042;
+
+		// Token: 0x04000CFB RID: 3323
+		public const int PP_E_LASTNAME_TOO_SHORT = -2147217041;
+
+		// Token: 0x04000CFC RID: 3324
+		public const int PP_E_LASTNAME_FORBIDDEN_MSN = -2147217040;
+
+		// Token: 0x04000CFD RID: 3325
+		public const int PP_E_FIRSTNAME_FORBIDDEN_HOTMAIL = -2147217039;
+
+		// Token: 0x04000CFE RID: 3326
+		public const int PP_E_LASTNAME_FORBIDDEN_HOTMAIL = -2147217038;
+
+		// Token: 0x04000CFF RID: 3327
+		public const int PP_E_INVALID_DA_DOMAIN = -2147217037;
+
+		// Token: 0x04000D00 RID: 3328
+		public const int PP_E_EMAIL_CANT_BEGIN_WITH_HYPHEN = -2147217036;
+
+		// Token: 0x04000D01 RID: 3329
+		public const int PP_E_EMAIL_CANT_BEGIN_WITH_DOT = -2147217035;
+
+		// Token: 0x04000D02 RID: 3330
+		public const int PP_E_EMAIL_CANT_END_WITH_HYPHEN = -2147217034;
+
+		// Token: 0x04000D03 RID: 3331
+		public const int PP_E_EMAIL_CANT_END_WITH_DOT = -2147217033;
+
+		// Token: 0x04000D04 RID: 3332
+		public const int PP_E_EMAIL_CANT_END_WITH_DOTORHYPHEN = -2147217032;
+
+		// Token: 0x04000D05 RID: 3333
+		public const int PP_E_EMAIL_CANT_BEGIN_WITH_DOTORHYPHEN = -2147217031;
+
+		// Token: 0x04000D06 RID: 3334
+		public const int PP_E_DOMAIN_HYPHEN_AFTER_HYPHEN = -2147217030;
+
+		// Token: 0x04000D07 RID: 3335
+		public const int PP_E_DOMAIN_CANT_END_WITH_DOTORHYPHEN = -2147217029;
+
+		// Token: 0x04000D08 RID: 3336
+		public const int PP_E_DOMAIN_CANT_BEGIN_WITH_DOTORHYPHEN = -2147217028;
+
+		// Token: 0x04000D09 RID: 3337
+		public const int PP_E_SECRETA_CONTAINS_SECRETQ = -2147217027;
+
+		// Token: 0x04000D0A RID: 3338
+		public const int PP_E_PASSWORD_CONTAINS_SA = -2147217026;
+
+		// Token: 0x04000D0B RID: 3339
+		public const int PP_E_EMAIL_DOT_AFTER_DOT = -2147217024;
+
+		// Token: 0x04000D0C RID: 3340
+		public const int PP_E_REQUIRED_INPUTFIELD_MISSING = -2147217011;
+
+		// Token: 0x04000D0D RID: 3341
+		public const int PP_E_REQUIRED_DROPDOWNFIELD_MISSING = -2147217010;
+
+		// Token: 0x04000D0E RID: 3342
+		public const int PP_E_PARENT_NOT_OLD_ENOUGH = -2147217009;
+
+		// Token: 0x04000D0F RID: 3343
+		public const int PP_E_FRIENDLYNAME_BLANK = -2147216998;
+
+		// Token: 0x04000D10 RID: 3344
+		public const int PP_E_PASSWORD_SAME_AS_CURRENT = -2147216995;
+
+		// Token: 0x04000D11 RID: 3345
+		public const int PP_E_PASSWORD_SAME_AS_OLD = -2147216994;
+
+		// Token: 0x04000D12 RID: 3346
+		public const int PP_E_PASSWORD_TOO_SIMILAR_TO_CURRENT = -2147216993;
+
+		// Token: 0x04000D13 RID: 3347
+		public const int PP_E_TOUACCEPT_VALIDATION_WRONG = -2147216992;
+
+		// Token: 0x04000D14 RID: 3348
+		public const int PP_E_GLOBALINIT_MISSING_STRINGTABLE_SERVICE = -2147216381;
+
+		// Token: 0x04000D15 RID: 3349
+		public const int PP_E_GLOBALINIT_MISSING_MANAGER_SERVICE = -2147216376;
+
+		// Token: 0x04000D16 RID: 3350
+		public const int PP_E_GLOBALINIT_ADDSTRING_FAILED = -2147216375;
+
+		// Token: 0x04000D17 RID: 3351
+		public const int PP_E_GLOBALINIT_ADDNUMBER_FAILED = -2147216372;
+
+		// Token: 0x04000D18 RID: 3352
+		public const int PP_E_GLOBALINIT_BADPTR = -2147216368;
+
+		// Token: 0x04000D19 RID: 3353
+		public const int PP_E_GLOBALCOMMIT_BADPTR = -2147216367;
+
+		// Token: 0x04000D1A RID: 3354
+		public const int PP_E_GLOBALLOADDOMAIN_BADPTR = -2147216366;
+
+		// Token: 0x04000D1B RID: 3355
+		public const int PP_E_GLOBALLOADDOMAIN_STRINGTABLE_BADPTR = -2147216365;
+
+		// Token: 0x04000D1C RID: 3356
+		public const int PP_E_GLOBALLOADREG_STRINGTABLE_BADPTR = -2147216364;
+
+		// Token: 0x04000D1D RID: 3357
+		public const int PP_E_GLOBALLOADSTRING_STRINGTABLE_BADPTR = -2147216363;
+
+		// Token: 0x04000D1E RID: 3358
+		public const int PP_E_GLOBALLOADCONFIG_BADPTR = -2147216362;
+
+		// Token: 0x04000D1F RID: 3359
+		public const int PP_E_GLOBALGETDOMAIN_BADPTR = -2147216361;
+
+		// Token: 0x04000D20 RID: 3360
+		public const int PP_E_GLOBALGETDOMAIN_BADVARTYPE = -2147216360;
+
+		// Token: 0x04000D21 RID: 3361
+		public const int PP_E_GLOBALGETDOMAIN_BADACCESSPTR = -2147216359;
+
+		// Token: 0x04000D22 RID: 3362
+		public const int PP_E_GLOBALGETDOMAIN_TOOMANYDOMAINS = -2147216352;
+
+		// Token: 0x04000D23 RID: 3363
+		public const int PP_E_GLOBALGETDOMAIN_BADDOMAINVARTYPE = -2147216351;
+
+		// Token: 0x04000D24 RID: 3364
+		public const int PP_E_GLOBALGETDOMAIN_BADDOMAINPTR = -2147216350;
+
+		// Token: 0x04000D25 RID: 3365
+		public const int PP_E_MD5SILENT_SITEID_IS_ONE = -2147215872;
+
+		// Token: 0x04000D26 RID: 3366
+		public const int PP_E_MD5SILENT_INVALID_SITE = -2147215868;
+
+		// Token: 0x04000D27 RID: 3367
+		public const int PP_E_HASHSTRING_ADDRECORD_FAILED = -2147215104;
+
+		// Token: 0x04000D28 RID: 3368
+		public const int PP_E_MD5_HASH_FAILED = -2147215103;
+
+		// Token: 0x04000D29 RID: 3369
+		public const int PP_E_EMAILRESPONSE_INTERNALERROR = -2147214079;
+
+		// Token: 0x04000D2A RID: 3370
+		public const int PP_E_EMAIL_NOT_FOUND = -2147214078;
+
+		// Token: 0x04000D2B RID: 3371
+		public const int PP_E_EMAILRESPONSE_CHECKSECRET = -2147214076;
+
+		// Token: 0x04000D2C RID: 3372
+		public const int PP_E_EMAIL_ALREADY_PROCESSED = -2147214072;
+
+		// Token: 0x04000D2D RID: 3373
+		public const int PP_E_PSTUTIL_INVALID_EMAIL_STATUS = -2147213824;
+
+		// Token: 0x04000D2E RID: 3374
+		public const int PP_E_LOGIN_NEED_STRONGPW_EXPIRY = -2147213823;
+
+		// Token: 0x04000D2F RID: 3375
+		public const int PP_E_BROWSERINFO_INITFAIL = -2147213232;
+
+		// Token: 0x04000D30 RID: 3376
+		public const int PP_E_CBROWSERINFO_INITFAIL = -2147213231;
+
+		// Token: 0x04000D31 RID: 3377
+		public const int PP_E_URL_TOOLONG = -2147211520;
+
+		// Token: 0x04000D32 RID: 3378
+		public const int PP_E_NO_FIELD = -2147208191;
+
+		// Token: 0x04000D33 RID: 3379
+		public const int PP_E_INVALID_FIELD = -2147208190;
+
+		// Token: 0x04000D34 RID: 3380
+		public const int PP_E_CRITICAL = -2147208189;
+
+		// Token: 0x04000D35 RID: 3381
+		public const int PP_E_TRUSTED_REALM_NOT_FOUND = -2147208188;
+
+		// Token: 0x04000D36 RID: 3382
+		public const int PP_E_CERT_BLOB_UNDECODEABLE = -2147208187;
+
+		// Token: 0x04000D37 RID: 3383
+		public const int PP_E_NAME_DOMAINFIXED_BLANK = -2147208186;
+
+		// Token: 0x04000D38 RID: 3384
+		public const int PP_E_NAME_DOMAINFIXED_TOO_SHORT = -2147208185;
+
+		// Token: 0x04000D39 RID: 3385
+		public const int PP_E_NAME_DOMAINFIXED_TOO_LONG = -2147208184;
+
+		// Token: 0x04000D3A RID: 3386
+		public const int PP_E_NAME_DOMAINFIXED_INVALID = -2147208183;
+
+		// Token: 0x04000D3B RID: 3387
+		public const int PP_E_ALTEMAIL_SAMEASMEMNAME = -2147208182;
+
+		// Token: 0x04000D3C RID: 3388
+		public const int PP_E_MEMBER_EXISTHOTMAIL = -2147208181;
+
+		// Token: 0x04000D3D RID: 3389
+		public const int PP_E_BROWSER_NOT_SUPPORTED = -2147208180;
+
+		// Token: 0x04000D3E RID: 3390
+		public const int PP_E_TIMEZONE_NOTMATCHCOUNTRY = -2147208179;
+
+		// Token: 0x04000D3F RID: 3391
+		public const int PP_E_LOCATION_INVALID_CITY = -2147208178;
+
+		// Token: 0x04000D40 RID: 3392
+		public const int PP_E_LOCATION_INVALID_ADDRESS = -2147208177;
+
+		// Token: 0x04000D41 RID: 3393
+		public const int PP_E_RESETPWD_MEMBER_LOCKED = -2147208176;
+
+		// Token: 0x04000D42 RID: 3394
+		public const int PP_E_RESETPWDBYEMAIL_MEMBER_LOCKED = -2147208175;
+
+		// Token: 0x04000D43 RID: 3395
+		public const int PP_E_RESETPWD_CRED_BLANK = -2147208174;
+
+		// Token: 0x04000D44 RID: 3396
+		public const int PP_E_RESETPWD_CRED_INVALID_FORMAT = -2147208173;
+
+		// Token: 0x04000D45 RID: 3397
+		public const int PP_E_RESETPWD_HIP_BLANK = -2147208172;
+
+		// Token: 0x04000D46 RID: 3398
+		public const int PP_E_RESETPWD_CRED_HIP_MISMATCH = -2147208171;
+
+		// Token: 0x04000D47 RID: 3399
+		public const int PP_E_RESETPWD_HIP_MISMATCH = -2147208170;
+
+		// Token: 0x04000D48 RID: 3400
+		public const int PP_E_RESETPWD_PROFSA_BLANK = -2147208169;
+
+		// Token: 0x04000D49 RID: 3401
+		public const int PP_E_RESETPWD_PROFSA_MISMATCH = -2147208168;
+
+		// Token: 0x04000D4A RID: 3402
+		public const int PP_E_RESETPWD_CCINFO_MISMATCH = -2147208166;
+
+		// Token: 0x04000D4B RID: 3403
+		public const int PP_E_INVALID_REALM_AUTHURL = -2147208165;
+
+		// Token: 0x04000D4C RID: 3404
+		public const int PP_E_SA_CONTAINS_PASSWORD = -2147208164;
+
+		// Token: 0x04000D4D RID: 3405
+		public const int PP_E_SA_CONTAINED_IN_PASSWORD = -2147208163;
+
+		// Token: 0x04000D4E RID: 3406
+		public const int PP_E_SQ_CONTAINS_PASSWORD = -2147208162;
+
+		// Token: 0x04000D4F RID: 3407
+		public const int PP_E_RESETPWD_WRONG_EMAIL = -2147208161;
+
+		// Token: 0x04000D50 RID: 3408
+		public const int PP_E_RESETPWD_WRONG_SA = -2147208160;
+
+		// Token: 0x04000D51 RID: 3409
+		public const int PP_E_CUSTOMSTR_NOT_HANDLED = -2147208159;
+
+		// Token: 0x04000D52 RID: 3410
+		public const int PP_E_FLOWDISABLED = -2147208158;
+
+		// Token: 0x04000D53 RID: 3411
+		public const int PP_E_EMAIL_CHANGE_NOT_ALLOWED = -2147208157;
+
+		// Token: 0x04000D54 RID: 3412
+		public const int PP_E_EMAIL_CONTAINS_PASSWORD = -2147208156;
+
+		// Token: 0x04000D55 RID: 3413
+		public const int PP_E_EMAIL_LINK_INVALID = -2147208155;
+
+		// Token: 0x04000D56 RID: 3414
+		public const int PP_E_ZERO_CREDS = -2147208154;
+
+		// Token: 0x04000D57 RID: 3415
+		public const int PP_E_DATE_EMPTY = -2147208153;
+
+		// Token: 0x04000D58 RID: 3416
+		public const int PP_E_DATE_INVALID = -2147208152;
+
+		// Token: 0x04000D59 RID: 3417
+		public const int PP_E_FORMAT_HMMSPAUTH = -2147208151;
+
+		// Token: 0x04000D5A RID: 3418
+		public const int PP_E_WINLIVE_USER_DOWNGRADE_NOT_ALLOWED = -2147208150;
+
+		// Token: 0x04000D5B RID: 3419
+		public const int PP_E_WINLIVE_PROPERTY_INCORRECT = -2147208149;
+
+		// Token: 0x04000D5C RID: 3420
+		public const int PP_E_WLFORCEUPGRADE_USER_ALREADY_WL = -2147208148;
+
+		// Token: 0x04000D5D RID: 3421
+		public const int PP_E_GET_MSNDOMAIN_STRING = -2147208147;
+
+		// Token: 0x04000D5E RID: 3422
+		public const int PP_E_LOGIN_REDIRECT_NOT_ALLOWED = -2147208146;
+
+		// Token: 0x04000D5F RID: 3423
+		public const int PP_E_HIP_ON_FIRST_LOGIN = -2147208145;
+
+		// Token: 0x04000D60 RID: 3424
+		public const int PP_E_INVALID_REALM_LOGOUTURL = -2147208144;
+
+		// Token: 0x04000D61 RID: 3425
+		public const int PP_E_REALM_NOT_FEDERATED = -2147208143;
+
+		// Token: 0x04000D62 RID: 3426
+		public const int PP_E_NO_LINKACCOUNT_FEATURE = -2147208142;
+
+		// Token: 0x04000D63 RID: 3427
+		public const int PP_E_NO_LINKACCOUNT_CID = -2147208141;
+
+		// Token: 0x04000D64 RID: 3428
+		public const int PP_E_NOTMATCH_LOGINLINKID = -2147208140;
+
+		// Token: 0x04000D65 RID: 3429
+		public const int PP_E_LOGIN_PROFILE_INTERRUPT = -2147208139;
+
+		// Token: 0x04000D66 RID: 3430
+		public const int PP_E_INVALID_LINKID = -2147208138;
+
+		// Token: 0x04000D67 RID: 3431
+		public const int PP_E_INVALID_PROOFTYPE = -2147208137;
+
+		// Token: 0x04000D68 RID: 3432
+		public const int PP_E_DeLINK_HASERROR = -2147208136;
+
+		// Token: 0x04000D69 RID: 3433
+		public const int PP_E_CHANGE_PWD_NOT_ALLOWED = -2147208135;
+
+		// Token: 0x04000D6A RID: 3434
+		public const int PP_E_NOMATCH_TOKENENCRYPTION = -2147208134;
+
+		// Token: 0x04000D6B RID: 3435
+		public const int PP_E_NOMATCH_KEYENCRYPTION = -2147208133;
+
+		// Token: 0x04000D6C RID: 3436
+		public const int PP_E_NOMATCH_THUMBPRINTTYPE = -2147208132;
+
+		// Token: 0x04000D6D RID: 3437
+		public const int PP_E_LINK_NODATAINTEGRITY = -2147208128;
+
+		// Token: 0x04000D6E RID: 3438
+		public const int PP_E_MOBILE_INTERRUPTERROR = -2147208127;
+
+		// Token: 0x04000D6F RID: 3439
+		public const int PP_E_DEVICEID_CONFIGERROR = -2147208126;
+
+		// Token: 0x04000D70 RID: 3440
+		public const int PP_E_DEVICEID_PWDMISMATCH = -2147208125;
+
+		// Token: 0x04000D71 RID: 3441
+		public const int PP_E_DEVICEID_USERMALFORMEDPASSWORD = -2147208124;
+
+		// Token: 0x04000D72 RID: 3442
+		public const int PP_E_INFOCARD_BADUSERNAME = -2147208123;
+
+		// Token: 0x04000D73 RID: 3443
+		public const int PP_E_DEVICEID_MISSINGCERTIFICATE = -2147208122;
+
+		// Token: 0x04000D74 RID: 3444
+		public const int PP_E_DEVICEID_MISSING_USERNAMEORPASSWORD = -2147208121;
+
+		// Token: 0x04000D75 RID: 3445
+		public const int PP_E_INTERFACE_DISABLED = -2147208120;
+
+		// Token: 0x04000D76 RID: 3446
+		public const int PP_E_INTERFACE_NOT_POST = -2147208119;
+
+		// Token: 0x04000D77 RID: 3447
+		public const int PP_E_INTERFACE_INVALIDREQUESTFORMAT = -2147208112;
+
+		// Token: 0x04000D78 RID: 3448
+		public const int PP_E_INTERFACE_INTERNALERROR = -2147208111;
+
+		// Token: 0x04000D79 RID: 3449
+		public const int PP_E_INTERFACE_MEMBERNOTEXIST = -2147208110;
+
+		// Token: 0x04000D7A RID: 3450
+		public const int PP_E_INTERFACE_MEMBERNAMEORPASSWORDSAME = -2147208109;
+
+		// Token: 0x04000D7B RID: 3451
+		public const int PP_E_INTERFACE_INVALIDMEMBERNAME = -2147208108;
+
+		// Token: 0x04000D7C RID: 3452
+		public const int PP_E_INTERFACE_INVALIDPASSWORD = -2147208107;
+
+		// Token: 0x04000D7D RID: 3453
+		public const int PP_E_INTERFACE_INVALIDCERTIFICATE = -2147208106;
+
+		// Token: 0x04000D7E RID: 3454
+		public const int PP_E_INTERFACE_INVALIDPUID = -2147208105;
+
+		// Token: 0x04000D7F RID: 3455
+		public const int PP_E_LWA_CONSENT_NEEDED = -2147208104;
+
+		// Token: 0x04000D80 RID: 3456
+		public const int PP_E_INVALID_BRANDNAME = -2147208103;
+
+		// Token: 0x04000D81 RID: 3457
+		public const int PP_E_CERT_ALREADY_EXISTS = -2147208102;
+
+		// Token: 0x04000D82 RID: 3458
+		public const int PP_E_INTERFACE_NOT_SUPPORTED_ON_LEGACY_LOGIN = -2147208101;
+
+		// Token: 0x04000D83 RID: 3459
+		public const int PP_E_INTERRUPT = -2147208100;
+
+		// Token: 0x04000D84 RID: 3460
+		public const int PP_E_DB_DOMAINNOTSUPPORTED = -2147216858;
+
+		// Token: 0x04000D85 RID: 3461
+		public const int PP_E_DB_SERVERDOWNSTATE0 = -2147216857;
+
+		// Token: 0x04000D86 RID: 3462
+		public const int PP_E_DB_SERVERDOWNSTATE1 = -2147216856;
+
+		// Token: 0x04000D87 RID: 3463
+		public const int PP_E_DB_SERVERDOWNSTATE2 = -2147216855;
+
+		// Token: 0x04000D88 RID: 3464
+		public const int PP_E_DBSTATUS_ERROR = -2147216848;
+
+		// Token: 0x04000D89 RID: 3465
+		public const int PP_E_SRFCONTENTERROR = -2147216847;
+
+		// Token: 0x04000D8A RID: 3466
+		public const int PP_E_DBGLOBALNULL = -2147216846;
+
+		// Token: 0x04000D8B RID: 3467
+		public const int PP_E_NOOTHERCREDENTIAL = -2147216845;
+
+		// Token: 0x04000D8C RID: 3468
+		public const int PP_E_DB_CERTASSOCDOESNOTEXIST = -2147216844;
+
+		// Token: 0x04000D8D RID: 3469
+		public const int PP_E_MEMBER_IN_DELAYED_RECYCLE = -2147216840;
+
+		// Token: 0x04000D8E RID: 3470
+		public const int PP_E_OLDDB_STRINGTOOLONG = -2147216896;
+
+		// Token: 0x04000D8F RID: 3471
+		public const int PP_E_OLDDB_STRINGTOOSHORT = -2147216895;
+
+		// Token: 0x04000D90 RID: 3472
+		public const int PP_E_OLDDB_INVALIDPASSWORD = -2147216894;
+
+		// Token: 0x04000D91 RID: 3473
+		public const int PP_E_OLDDB_INVALIDEMAIL = -2147216893;
+
+		// Token: 0x04000D92 RID: 3474
+		public const int PP_E_OLDDB_INVALIDMEMBERNAME = -2147216892;
+
+		// Token: 0x04000D93 RID: 3475
+		public const int PP_E_OLDDB_MISSINGPARAMETERS = -2147216891;
+
+		// Token: 0x04000D94 RID: 3476
+		public const int PP_E_OLDDB_FORBIDDENWORD = -2147216890;
+
+		// Token: 0x04000D95 RID: 3477
+		public const int PP_E_OLDDB_INVALIDDOMAINNAME = -2147216889;
+
+		// Token: 0x04000D96 RID: 3478
+		public const int PP_E_OLDDB_CRITICALERROR = -2147216888;
+
+		// Token: 0x04000D97 RID: 3479
+		public const int PP_E_OLDDB_ERROR = -2147216887;
+
+		// Token: 0x04000D98 RID: 3480
+		public const int PP_E_OLDDB_MEMBEREXISTS = -2147216886;
+
+		// Token: 0x04000D99 RID: 3481
+		public const int PP_E_OLDDB_MEMBERDOESNOTEXIST = -2147216885;
+
+		// Token: 0x04000D9A RID: 3482
+		public const int PP_E_OLDDB_NODATA = -2147216884;
+
+		// Token: 0x04000D9B RID: 3483
+		public const int PP_E_OLDDB_DUPLICATEFRIENDLYNAME = -2147216883;
+
+		// Token: 0x04000D9C RID: 3484
+		public const int PP_E_OLDDB_ADDRESSDOESNOTEXIST = -2147216882;
+
+		// Token: 0x04000D9D RID: 3485
+		public const int PP_E_OLDDB_CARDDOESNOTEXIST = -2147216881;
+
+		// Token: 0x04000D9E RID: 3486
+		public const int PP_E_OLDDB_ADDRESSREFERENCEDBYCARD = -2147216880;
+
+		// Token: 0x04000D9F RID: 3487
+		public const int PP_E_OLDDB_KIDSSITENOTLISTED = -2147216879;
+
+		// Token: 0x04000DA0 RID: 3488
+		public const int PP_E_OLDDB_SITEALREADYREQUESTED = -2147216878;
+
+		// Token: 0x04000DA1 RID: 3489
+		public const int PP_E_OLDDB_CONNECTIONTIMEOUT = -2147216877;
+
+		// Token: 0x04000DA2 RID: 3490
+		public const int PP_E_OLDDB_NOCONNECTIONAVAILABLE = -2147216860;
+
+		// Token: 0x04000DA3 RID: 3491
+		public const int PP_E_OLDDB_TOOMANYUSERSWITHTHISNAME = -2147216859;
+
+		// Token: 0x04000DA4 RID: 3492
+		public const int PP_E_OLDDB_CERTSTOOMANY = -2147216843;
+
+		// Token: 0x04000DA5 RID: 3493
+		public const int PP_E_OLDDB_EMAILBITWRONGCREDTYPE = -2147216842;
+
+		// Token: 0x04000DA6 RID: 3494
+		public const int PP_E_XML_PARSE_ERROR = -2147216640;
+
+		// Token: 0x04000DA7 RID: 3495
+		public const int PP_E_XML_NO_CLIENTINFO = -2147216639;
+
+		// Token: 0x04000DA8 RID: 3496
+		public const int PP_E_XML_UNKNOWN_CLIENTVERSION = -2147216638;
+
+		// Token: 0x04000DA9 RID: 3497
+		public const int PP_E_XML_NAME_AND_PASSWORD_BLANK = -2147216637;
+
+		// Token: 0x04000DAA RID: 3498
+		public const int PP_E_XML_DOMAIN_BLANK = -2147216636;
+
+		// Token: 0x04000DAB RID: 3499
+		public const int PP_E_XML_INCOMPLETE_MEMBERNAME = -2147216635;
+
+		// Token: 0x04000DAC RID: 3500
+		public const int PP_E_XML_NO_SUCH_NODE = -2147216634;
+
+		// Token: 0x04000DAD RID: 3501
+		public const int PP_E_XML_NO_TEXT = -2147216633;
+
+		// Token: 0x04000DAE RID: 3502
+		public const int PP_E_XML_INVALID_ROOTTAG = -2147216632;
+
+		// Token: 0x04000DAF RID: 3503
+		public const int PP_E_XML_USER_ALREADY_LOGGEDIN = -2147216631;
+
+		// Token: 0x04000DB0 RID: 3504
+		public const int PP_E_XML_KEYVERSION_NOT_A_NUMBER = -2147216630;
+
+		// Token: 0x04000DB1 RID: 3505
+		public const int PP_E_XML_NO_USER_LOGGED_IN = -2147216629;
+
+		// Token: 0x04000DB2 RID: 3506
+		public const int PP_E_XML_NO_SUCH_ATTRIBUTE = -2147216628;
+
+		// Token: 0x04000DB3 RID: 3507
+		public const int PP_E_XML_PROXY_SITE_NOT_ALLOWED = -2147216627;
+
+		// Token: 0x04000DB4 RID: 3508
+		public const int PP_E_XML_PROXY_INVALID_LOGIN_SITE = -2147216626;
+
+		// Token: 0x04000DB5 RID: 3509
+		public const int PP_E_XML_PROXY_FAILED_TIMEWINDOW = -2147216625;
+
+		// Token: 0x04000DB6 RID: 3510
+		public const int PP_E_XML_PROXY_PUID_INVALID = -2147216624;
+
+		// Token: 0x04000DB7 RID: 3511
+		public const int PP_E_XML_PROXY_PROOF_INVALID = -2147216623;
+
+		// Token: 0x04000DB8 RID: 3512
+		public const int PP_E_XML_PROXY_NOT_NAMESPACE_OWNER = -2147216622;
+
+		// Token: 0x04000DB9 RID: 3513
+		public const int PP_E_XML_NO_SIGNATURE_ELEMENT = -2147216621;
+
+		// Token: 0x04000DBA RID: 3514
+		public const int PP_E_XML_INVALID_SIGNATURE = -2147216617;
+
+		// Token: 0x04000DBB RID: 3515
+		public const int PP_E_XML_LOADFAILED = -2147216616;
+
+		// Token: 0x04000DBC RID: 3516
+		public const int PP_E_XMLSIG_INCOMPLETE_INFO = -2147216615;
+
+		// Token: 0x04000DBD RID: 3517
+		public const int PP_E_XMLSIG_BAD_SIG_XML_TEXT = -2147216614;
+
+		// Token: 0x04000DBE RID: 3518
+		public const int PP_E_XML_FCP_USER_NOT_FCP_IN_DB = -2147216613;
+
+		// Token: 0x04000DBF RID: 3519
+		public const int PP_E_XML_REQUEST_DATA_TOO_LONG = -2147216612;
+
+		// Token: 0x04000DC0 RID: 3520
+		public const int PP_E_XML_MOBILE_INVALID_SITE_OR_IP = -2147216611;
+
+		// Token: 0x04000DC1 RID: 3521
+		public const int PP_E_XML_MOBILE_NO_PPAUTH = -2147216610;
+
+		// Token: 0x04000DC2 RID: 3522
+		public const int PP_E_XML_MOBILE_NO_MSPVis = -2147216609;
+
+		// Token: 0x04000DC3 RID: 3523
+		public const int PP_E_XML_MOBILE_NO_USER_TYPE = -2147216608;
+
+		// Token: 0x04000DC4 RID: 3524
+		public const int PP_E_XMLC14NCS_TOO_MANY_MAP_ELEM = -2147216607;
+
+		// Token: 0x04000DC5 RID: 3525
+		public const int PP_E_XML_INVALID_SAML_ASSERTION = -2147216606;
+
+		// Token: 0x04000DC6 RID: 3526
+		public const int PP_E_XML_INVALID_C14NNODE_LENGTH = -2147216605;
+
+		// Token: 0x04000DC7 RID: 3527
+		public const int PP_E_XML_ASSERTIONID_URI_NOTMATCH = -2147216604;
+
+		// Token: 0x04000DC8 RID: 3528
+		public const int PP_E_XML_MOBILE_INVALID_WEBAUTHTOKEN_TYPE = -2147216603;
+
+		// Token: 0x04000DC9 RID: 3529
+		public const int PP_E_XML_PROHIBIT_DTD = -2147216602;
+
+		// Token: 0x04000DCA RID: 3530
+		public const int PP_E_DIGEST_PARSE_AUTH_HEADER = -2147216128;
+
+		// Token: 0x04000DCB RID: 3531
+		public const int PP_E_DIGEST_OPAQUE_MISSMATCH = -2147216127;
+
+		// Token: 0x04000DCC RID: 3532
+		public const int PP_E_DIGEST_ALGORITHM_MISSMATCH = -2147216126;
+
+		// Token: 0x04000DCD RID: 3533
+		public const int PP_E_DIGEST_REALMS_MISSMATCH = -2147216125;
+
+		// Token: 0x04000DCE RID: 3534
+		public const int PP_E_DIGEST_URI_MISSMATCH = -2147216124;
+
+		// Token: 0x04000DCF RID: 3535
+		public const int PP_E_DIGEST_USERNAME_MISSING = -2147216123;
+
+		// Token: 0x04000DD0 RID: 3536
+		public const int PP_E_DIGEST_CNONCE_MISSING = -2147216122;
+
+		// Token: 0x04000DD1 RID: 3537
+		public const int PP_E_DIGEST_NONCE_COUNT_MISSING = -2147216121;
+
+		// Token: 0x04000DD2 RID: 3538
+		public const int PP_E_DIGEST_NONCE_MISSING = -2147216120;
+
+		// Token: 0x04000DD3 RID: 3539
+		public const int PP_E_DIGEST_UNSUPPORTED_KPP_MODE = -2147216119;
+
+		// Token: 0x04000DD4 RID: 3540
+		public const int PP_E_DIGEST_NONCE_MISSMATCH = -2147216118;
+
+		// Token: 0x04000DD5 RID: 3541
+		public const int PP_E_DIGEST_RESPONSE_TIMEOUT = -2147216117;
+
+		// Token: 0x04000DD6 RID: 3542
+		public const int PP_E_DIGEST_RESPONSE_MISSING = -2147216116;
+
+		// Token: 0x04000DD7 RID: 3543
+		public const int PP_E_DIGEST_QOP_MISSMATCH = -2147216115;
+
+		// Token: 0x04000DD8 RID: 3544
+		public const int PP_E_DIGEST_INVALID_NONCE_COUNT = -2147216114;
+
+		// Token: 0x04000DD9 RID: 3545
+		public const int PP_E_DIGEST_HOTMAIL_USERNAME_MISMATCH = -2147216113;
+
+		// Token: 0x04000DDA RID: 3546
+		public const int PP_E_NETPARTNERINFO_UNINITIALZED = -2147215360;
+
+		// Token: 0x04000DDB RID: 3547
+		public const int PP_E_NETPARTNERINFO_SITEID_NOT_FOUND = -2147215359;
+
+		// Token: 0x04000DDC RID: 3548
+		public const int PP_E_NETPARTNERINFO_DECRYPT_FAILED = -2147215358;
+
+		// Token: 0x04000DDD RID: 3549
+		public const int PP_E_NETPARTNERINFO_KEYSIZE_MISMATCH = -2147215357;
+
+		// Token: 0x04000DDE RID: 3550
+		public const int PP_E_NETPARTNERINFO_CREATEFILE = -2147215356;
+
+		// Token: 0x04000DDF RID: 3551
+		public const int PP_E_NETPARTNERINFO_WRITEFILE = -2147215355;
+
+		// Token: 0x04000DE0 RID: 3552
+		public const int PP_E_NETPARTNERINFO_READFILE = -2147215354;
+
+		// Token: 0x04000DE1 RID: 3553
+		public const int PP_E_NETPARTNERINFO_KEY_EXPIRED = -2147215353;
+
+		// Token: 0x04000DE2 RID: 3554
+		public const int PP_E_NSO_NOT_STARTED = -2147215352;
+
+		// Token: 0x04000DE3 RID: 3555
+		public const int PP_E_ASYMKEYVER_BADKEYGROUP = -2147215351;
+
+		// Token: 0x04000DE4 RID: 3556
+		public const int PP_E_ASYMKEYVER_NOTFOUND = -2147215350;
+
+		// Token: 0x04000DE5 RID: 3557
+		public const int PP_E_ASYMKEYSKI_NOTFOUND = -2147215349;
+
+		// Token: 0x04000DE6 RID: 3558
+		public const int PP_E_ASYMKEY_DB_BADTYPE = -2147215348;
+
+		// Token: 0x04000DE7 RID: 3559
+		public const int PP_E_ASYMKEY_NONE_VALID = -2147215347;
+
+		// Token: 0x04000DE8 RID: 3560
+		public const int PP_E_ASYMKEY_HEXENCODE_SKI = -2147215346;
+
+		// Token: 0x04000DE9 RID: 3561
+		public const int PP_E_ASYMKEY_NOCOLON_KEYGROUPKEYIDPAIR = -2147215345;
+
+		// Token: 0x04000DEA RID: 3562
+		public const int PP_E_ASYMKEY_KEYGROUP_INVALID = -2147215344;
+
+		// Token: 0x04000DEB RID: 3563
+		public const int PP_E_ASYMKEY_KEYID_MISSING = -2147215343;
+
+		// Token: 0x04000DEC RID: 3564
+		public const int PP_E_ASYMKEY_KEYID_INVALID = -2147215342;
+
+		// Token: 0x04000DED RID: 3565
+		public const int PP_E_ASYMKEY_INSUFFICIENT_BUFFER = -2147215341;
+
+		// Token: 0x04000DEE RID: 3566
+		public const int PP_E_ASYMKEY_NOT_INITIALIZED = -2147215340;
+
+		// Token: 0x04000DEF RID: 3567
+		public const int PP_E_ASYMKEYINFO_NOTINIT = -2147215339;
+
+		// Token: 0x04000DF0 RID: 3568
+		public const int PP_E_BAD_PERSONALDOMAINPROXYSITEID = -2147215338;
+
+		// Token: 0x04000DF1 RID: 3569
+		public const int PP_E_GLOBALIZATION_INVALID_COUNTRY_ID = -2147214848;
+
+		// Token: 0x04000DF2 RID: 3570
+		public const int PP_E_GLOBALIZATION_INVALID_GEO_ID = -2147214845;
+
+		// Token: 0x04000DF3 RID: 3571
+		public const int PP_E_GLOBALIZATION_INVALID_TIMEZONE_ID = -2147214844;
+
+		// Token: 0x04000DF4 RID: 3572
+		public const int PP_E_GLOBALIZATION_INVALID_TIMEZONE = -2147214842;
+
+		// Token: 0x04000DF5 RID: 3573
+		public const int PP_E_GLOBALIZATION_INVALID_INDEX = -2147214841;
+
+		// Token: 0x04000DF6 RID: 3574
+		public const int PP_E_GLOBALIZATION_INVALID_DATA = -2147214840;
+
+		// Token: 0x04000DF7 RID: 3575
+		public const int PP_E_GLOBALIZATION_INVALID_DATA_TYPE = -2147214839;
+
+		// Token: 0x04000DF8 RID: 3576
+		public const int PP_E_GLOBALIZATION_OBJ_IS_NULL = -2147214838;
+
+		// Token: 0x04000DF9 RID: 3577
+		public const int PP_E_GLOBALIZATION_PTR_IS_NULL = -2147214837;
+
+		// Token: 0x04000DFA RID: 3578
+		public const int PP_E_GLOBALIZATION_STREAM_IS_NULL = -2147214836;
+
+		// Token: 0x04000DFB RID: 3579
+		public const int PP_E_GLOBALIZATION_LCIDINFO_PARSE_ERROR = -2147214834;
+
+		// Token: 0x04000DFC RID: 3580
+		public const int PP_E_GLOBALIZATION_LCIDMAP_PARSE_ERR = -2147214833;
+
+		// Token: 0x04000DFD RID: 3581
+		public const int PP_E_GLOBALIZATION_ALREADY_LOADED = -2147214832;
+
+		// Token: 0x04000DFE RID: 3582
+		public const int PP_E_GLOBALIZATION_LCIDINFO_NOT_LOADED = -2147214831;
+
+		// Token: 0x04000DFF RID: 3583
+		public const int PP_E_GLOBALIZATION_LCIDINFO_NOT_PREPARED = -2147214830;
+
+		// Token: 0x04000E00 RID: 3584
+		public const int PP_E_GLOBALIZATION_REGION_LOAD_FAILED = -2147214829;
+
+		// Token: 0x04000E01 RID: 3585
+		public const int PP_E_GLOBALIZATION_TIMEZONE_LOAD_FAILED = -2147214828;
+
+		// Token: 0x04000E02 RID: 3586
+		public const int PP_E_GLOBALIZATION_LOOKUP_OBJ_FAILED = -2147214827;
+
+		// Token: 0x04000E03 RID: 3587
+		public const int PP_E_GLOBALIZATION_LOADVALUES_FAILED = -2147214826;
+
+		// Token: 0x04000E04 RID: 3588
+		public const int PP_E_GLOBALIZATION_GETLOCALEINFO_FAILED = -2147214825;
+
+		// Token: 0x04000E05 RID: 3589
+		public const int PP_E_GLOBALIZATION_STRING_RETURNED = -2147214824;
+
+		// Token: 0x04000E06 RID: 3590
+		public const int PP_E_GLOBALIZATION_W2A_FAILED = -2147214823;
+
+		// Token: 0x04000E07 RID: 3591
+		public const int PP_E_GLOBALIZATION_A2W_FAILED = -2147214822;
+
+		// Token: 0x04000E08 RID: 3592
+		public const int PP_E_GLOBALIZATION_INSTREAM_FAILED = -2147214821;
+
+		// Token: 0x04000E09 RID: 3593
+		public const int PP_E_GLOBALIZATION_GET_LCIDINFODIR_FAILED = -2147214820;
+
+		// Token: 0x04000E0A RID: 3594
+		public const int PP_E_GLOBALIZATION_STRING_TOO_LONG = -2147214819;
+
+		// Token: 0x04000E0B RID: 3595
+		public const int PP_E_GLOBALIZATION_IDTABLE_NOT_INIT = -2147214818;
+
+		// Token: 0x04000E0C RID: 3596
+		public const int PP_E_GLOBALIZATION_CS_INIT_FAILED = -2147214816;
+
+		// Token: 0x04000E0D RID: 3597
+		public const int PP_E_GLOBALIZATION_DICTIONARY_IS_NULL = -2147214815;
+
+		// Token: 0x04000E0E RID: 3598
+		public const int PP_E_GLOBALIZATION_GET_LIBRARYPATH_FAILED = -2147214814;
+
+		// Token: 0x04000E0F RID: 3599
+		public const int PP_E_GLOBALIZATION_EUCOUNTRYNEEDSOPTOUT = -2147214813;
+
+		// Token: 0x04000E10 RID: 3600
+		public const int PP_E_GLOBALIZATION_INVALID_LOCATION_ELEMENT_NAME = -2147214812;
+
+		// Token: 0x04000E11 RID: 3601
+		public const int PP_E_GLOBALIZATION_DUPLICATE_LOCATION_ELEMENT_NAME = -2147214811;
+
+		// Token: 0x04000E12 RID: 3602
+		public const int PP_E_DELEGADMIN_INVALID_ADMIN_ELE = -2147214592;
+
+		// Token: 0x04000E13 RID: 3603
+		public const int PP_E_DELEGADMIN_INVALID_ADMIN_TICKET = -2147214591;
+
+		// Token: 0x04000E14 RID: 3604
+		public const int PP_E_DELEGADMIN_DOMAIN_ALREADY_MANAGED = -2147214590;
+
+		// Token: 0x04000E15 RID: 3605
+		public const int PP_E_DELEGADMIN_DOMAIN_NOT_MANAGED = -2147214589;
+
+		// Token: 0x04000E16 RID: 3606
+		public const int PP_E_DELEGADMIN_DOMAIN_NOT_PARTNERS = -2147214588;
+
+		// Token: 0x04000E17 RID: 3607
+		public const int PP_E_DELEGADMIN_INVALID_NS_ADMIN = -2147214587;
+
+		// Token: 0x04000E18 RID: 3608
+		public const int PP_E_DELEGADMIN_INVALID_PARTNER_ADMIN = -2147214586;
+
+		// Token: 0x04000E19 RID: 3609
+		public const int PP_E_DELEGADMIN_ERROR_LOADING_XMLRQ = -2147214585;
+
+		// Token: 0x04000E1A RID: 3610
+		public const int PP_E_DELEGADMIN_INVALID_AUTH_ELE = -2147214584;
+
+		// Token: 0x04000E1B RID: 3611
+		public const int PP_E_DELEGADMIN_INVALID_DOMAIN = -2147214583;
+
+		// Token: 0x04000E1C RID: 3612
+		public const int PP_E_DELEGADMIN_INVALID_ACTION = -2147214582;
+
+		// Token: 0x04000E1D RID: 3613
+		public const int PP_E_DELEGADMIN_NOTALLOWED = -2147214580;
+
+		// Token: 0x04000E1E RID: 3614
+		public const int PP_E_DELEGADMIN_INVALID_CLIENTVERSION = -2147214581;
+
+		// Token: 0x04000E1F RID: 3615
+		public const int PP_E_DELEGADMIN_INVALID_USER = -2147214579;
+
+		// Token: 0x04000E20 RID: 3616
+		public const int PP_E_DELEGADMIN_INVALID_USER_ELE = -2147214578;
+
+		// Token: 0x04000E21 RID: 3617
+		public const int PP_E_DELEGADMIN_INVALID_PARAM = -2147214577;
+
+		// Token: 0x04000E22 RID: 3618
+		public const int PP_E_DELEGADMIN_NOT_NAMESPACE_PARTNER = -2147214576;
+
+		// Token: 0x04000E23 RID: 3619
+		public const int PP_E_DELEGADMIN_INVALID_SITEID = -2147214575;
+
+		// Token: 0x04000E24 RID: 3620
+		public const int PP_E_DELEGADMIN_TICKET_EXPIRED = -2147214574;
+
+		// Token: 0x04000E25 RID: 3621
+		public const int PP_E_DELEGADMIN_INVALID_ENUM_TYPE = -2147214572;
+
+		// Token: 0x04000E26 RID: 3622
+		public const int PP_E_DELEGADMIN_ALREADY_AN_ADMIN = -2147214571;
+
+		// Token: 0x04000E27 RID: 3623
+		public const int PP_E_DELEGADMIN_LAST_ADMIN = -2147214570;
+
+		// Token: 0x04000E28 RID: 3624
+		public const int PP_E_DELEGADMIN_INVALID_ADMIN = -2147214569;
+
+		// Token: 0x04000E29 RID: 3625
+		public const int PP_E_DELEGADMIN_INVALID_CRED_TYPE = -2147214568;
+
+		// Token: 0x04000E2A RID: 3626
+		public const int PP_E_DELEGADMIN_INVALID_PASSWORD = -2147214565;
+
+		// Token: 0x04000E2B RID: 3627
+		public const int PP_E_DELEGADMIN_INVALID_STATUS = -2147214560;
+
+		// Token: 0x04000E2C RID: 3628
+		public const int PP_E_DELEGADMIN_CANTRELEASEINTERNAL = -2147214559;
+
+		// Token: 0x04000E2D RID: 3629
+		public const int PP_E_DELEGADMIN_INVALID_OPTIONS_ELE = -2147214558;
+
+		// Token: 0x04000E2E RID: 3630
+		public const int PP_E_DELEGADMIN_INVALID_FIELDS_ELE = -2147214557;
+
+		// Token: 0x04000E2F RID: 3631
+		public const int PP_E_DELEGADMIN_INVALID_CATEGORY = -2147214556;
+
+		// Token: 0x04000E30 RID: 3632
+		public const int PP_E_DELEGADMIN_INVALID_START_TIME = -2147214555;
+
+		// Token: 0x04000E31 RID: 3633
+		public const int PP_E_DELEGADMIN_INVALID_END_TIME = -2147214554;
+
+		// Token: 0x04000E32 RID: 3634
+		public const int PP_E_DELEGADMIN_INVALID_DA = -2147214553;
+
+		// Token: 0x04000E33 RID: 3635
+		public const int PP_E_DELEGADMIN_INVALID_MAXRECORDS = -2147214552;
+
+		// Token: 0x04000E34 RID: 3636
+		public const int PP_E_UPDATE_UPDATES_NOT_ALLOWED = -2147214336;
+
+		// Token: 0x04000E35 RID: 3637
+		public const int PP_E_UPDATE_PARSER_NOTINITED = -2147214551;
+
+		// Token: 0x04000E36 RID: 3638
+		public const int PP_E_UPDATE_DECRYPT_FAILED = -2147214335;
+
+		// Token: 0x04000E37 RID: 3639
+		public const int PP_E_UPDATE_MULTIBYTECONVERSIONFAILED = -2147214334;
+
+		// Token: 0x04000E38 RID: 3640
+		public const int PP_E_UPDATE_UNABLETOGETPUID = -2147214333;
+
+		// Token: 0x04000E39 RID: 3641
+		public const int PP_E_KID_CANNOT_CHANGE_PROPERTY = -2147214071;
+
+		// Token: 0x04000E3A RID: 3642
+		public const int PP_E_CCVALIDATIONFAILED = -2147214070;
+
+		// Token: 0x04000E3B RID: 3643
+		public const int PP_E_PROFILEFLAGS_MISSING = -2147214550;
+
+		// Token: 0x04000E3C RID: 3644
+		public const int PP_E_XMLEDITPROF_FAILED = -2147214069;
+
+		// Token: 0x04000E3D RID: 3645
+		public const int PP_E_XMLREG_FAILED = -2147214549;
+
+		// Token: 0x04000E3E RID: 3646
+		public const int PP_E_EMAILRESPONSE_ERROR = -2147214548;
+
+		// Token: 0x04000E3F RID: 3647
+		public const int PP_E_IsSiteIDValid_RETURN_INVALID = -2147214547;
+
+		// Token: 0x04000E40 RID: 3648
+		public const int PP_E_dwAuxErr = -2147214546;
+
+		// Token: 0x04000E41 RID: 3649
+		public const int PP_E_PROFILEVERSION_IS_EMPTY = -2147214545;
+
+		// Token: 0x04000E42 RID: 3650
+		public const int PP_E_COUNTRY_IS_NOTBSTR = -2147214544;
+
+		// Token: 0x04000E43 RID: 3651
+		public const int PP_E_POSTALCODE_IS_NOTBSTR = -2147214543;
+
+		// Token: 0x04000E44 RID: 3652
+		public const int PP_E_FIRSTNAME_IS_NOTBSTR = -2147214542;
+
+		// Token: 0x04000E45 RID: 3653
+		public const int PP_E_LASTNAME_IS_NOTBSTR = -2147214541;
+
+		// Token: 0x04000E46 RID: 3654
+		public const int PP_E_OCCUPATION_IS_NOTBSTR = -2147214540;
+
+		// Token: 0x04000E47 RID: 3655
+		public const int PP_E_PROF_GETREQUESTLOCALE_FAILED = -2147214032;
+
+		// Token: 0x04000E48 RID: 3656
+		public const int PP_E_PROF_GETDICTIONARY_FAILED = -2147214031;
+
+		// Token: 0x04000E49 RID: 3657
+		public const int PP_E_PROF_UNABLE_TO_GET_VALIDATOROBJECT = -2147214030;
+
+		// Token: 0x04000E4A RID: 3658
+		public const int PP_E_PROF_PCR_RELATIONSHIPID_NULL = -2147214029;
+
+		// Token: 0x04000E4B RID: 3659
+		public const int PP_E_PROF_GLOBALIZATION_DICTIONARY_IS_NULL = -2147214028;
+
+		// Token: 0x04000E4C RID: 3660
+		public const int PP_E_PROF_XMLEDITPROF_FAILED = -2147214027;
+
+		// Token: 0x04000E4D RID: 3661
+		public const int PP_E_PROF_IsSiteIDValid_RETURN_INVALID = -2147214026;
+
+		// Token: 0x04000E4E RID: 3662
+		public const int PP_E_PROF_PROFILEFLAGS_MISSING = -2147214025;
+
+		// Token: 0x04000E4F RID: 3663
+		public const int PP_E_PROF_EMAILRESPONSE_ERROR = -2147214024;
+
+		// Token: 0x04000E50 RID: 3664
+		public const int PP_E_PROF_CCVALIDATIONFAILED = -2147214068;
+
+		// Token: 0x04000E51 RID: 3665
+		public const int PP_E_PROF_KID_CANNOT_CHANGE_PROPERTY = -2147214067;
+
+		// Token: 0x04000E52 RID: 3666
+		public const int PP_E_PROF_DELETEACCOUNTNOTALLOWED = -2147214023;
+
+		// Token: 0x04000E53 RID: 3667
+		public const int PP_E_PROF_HASPAIDMSNACCOUNT = -2147214022;
+
+		// Token: 0x04000E54 RID: 3668
+		public const int PP_E_PROF_HASHOTMAILINBOX = -2147214021;
+
+		// Token: 0x04000E55 RID: 3669
+		public const int PP_E_PROF_HASPAIDSUBSCRIPTION = -2147214020;
+
+		// Token: 0x04000E56 RID: 3670
+		public const int PP_E_PROF_HASMANAGEDNSRESTRICTION = -2147214019;
+
+		// Token: 0x04000E57 RID: 3671
+		public const int PP_E_PROF_ISSECONDARYACCOUNT = -2147214018;
+
+		// Token: 0x04000E58 RID: 3672
+		public const int PP_E_PROF_ANTISPAMCHECK_FAILED = -2147214017;
+
+		// Token: 0x04000E59 RID: 3673
+		public const int PP_E_REG_NO_STEPS_PRESENT = -2147191296;
+
+		// Token: 0x04000E5A RID: 3674
+		public const int PP_E_REG_dwAuxErr = -2147191295;
+
+		// Token: 0x04000E5B RID: 3675
+		public const int PP_E_REG_XMLREG_FAILED = -2147191294;
+
+		// Token: 0x04000E5C RID: 3676
+		public const int PP_E_UPDATE_INVALID_BAMDATE = -2147191293;
+
+		// Token: 0x04000E5D RID: 3677
+		public const int PP_E_MEMBERNAMEMALFORMED = -2147191292;
+
+		// Token: 0x04000E5E RID: 3678
+		public const int PP_E_MOBILEREGNOTPOST = -2147191291;
+
+		// Token: 0x04000E5F RID: 3679
+		public const int PP_E_PST_INVSEARCHTYPE = -2147191290;
+
+		// Token: 0x04000E60 RID: 3680
+		public const int PP_E_PST_INVSIGNIN = -2147191289;
+
+		// Token: 0x04000E61 RID: 3681
+		public const int PP_E_PST_INVPUID = -2147191288;
+
+		// Token: 0x04000E62 RID: 3682
+		public const int PP_E_PST_SEARCH_ERR = -2147191287;
+
+		// Token: 0x04000E63 RID: 3683
+		public const int PP_E_PST_SEARCH_NOTFOUND = -2147191286;
+
+		// Token: 0x04000E64 RID: 3684
+		public const int PP_E_PST_SEARCH_BADRESULTS = -2147191285;
+
+		// Token: 0x04000E65 RID: 3685
+		public const int PP_E_PST_INVTICKET = -2147191284;
+
+		// Token: 0x04000E66 RID: 3686
+		public const int PP_E_PST_INVDUALINPUT = -2147191283;
+
+		// Token: 0x04000E67 RID: 3687
+		public const int PP_E_PST_INVDUALEMPTY = -2147191282;
+
+		// Token: 0x04000E68 RID: 3688
+		public const int PP_E_PST_DECLERR = -2147191281;
+
+		// Token: 0x04000E69 RID: 3689
+		public const int PP_E_PST_INVNAME = -2147191280;
+
+		// Token: 0x04000E6A RID: 3690
+		public const int PP_E_PST_CSRSEARCH_BADRESULTS = -2147191279;
+
+		// Token: 0x04000E6B RID: 3691
+		public const int PP_E_PST_FINDCSR_EMPTY = -2147191278;
+
+		// Token: 0x04000E6C RID: 3692
+		public const int PP_E_PST_NOHEADERFORCALL = -2147191277;
+
+		// Token: 0x04000E6D RID: 3693
+		public const int PP_E_PST_NOEXTPROF = -2147191276;
+
+		// Token: 0x04000E6E RID: 3694
+		public const int PP_E_PST_NOROLE = -2147191275;
+
+		// Token: 0x04000E6F RID: 3695
+		public const int PP_E_PST_INVCSRXML = -2147191274;
+
+		// Token: 0x04000E70 RID: 3696
+		public const int PP_E_PST_INVMENUXML = -2147191273;
+
+		// Token: 0x04000E71 RID: 3697
+		public const int PP_E_PST_INVPROFXML = -2147191272;
+
+		// Token: 0x04000E72 RID: 3698
+		public const int PP_E_PST_INVEXTPROFXML = -2147191271;
+
+		// Token: 0x04000E73 RID: 3699
+		public const int PP_E_PST_INVCREDXML = -2147191270;
+
+		// Token: 0x04000E74 RID: 3700
+		public const int PP_E_PST_INVRELSXML = -2147191269;
+
+		// Token: 0x04000E75 RID: 3701
+		public const int PP_E_PST_INVKCONSXML = -2147191268;
+
+		// Token: 0x04000E76 RID: 3702
+		public const int PP_E_PST_INVFTCONSXML = -2147191267;
+
+		// Token: 0x04000E77 RID: 3703
+		public const int PP_E_PST_INVINTXML = -2147191266;
+
+		// Token: 0x04000E78 RID: 3704
+		public const int PP_E_PST_INVAUTHZXML = -2147191265;
+
+		// Token: 0x04000E79 RID: 3705
+		public const int PP_E_PST_INVEVALAUTHZXML = -2147191264;
+
+		// Token: 0x04000E7A RID: 3706
+		public const int PP_E_PST_INVROLELISTXML = -2147191263;
+
+		// Token: 0x04000E7B RID: 3707
+		public const int PP_E_PST_INVFIELDONLYREPORTXML = -2147191262;
+
+		// Token: 0x04000E7C RID: 3708
+		public const int PP_E_PST_INVCREDRENAMEREPORTXML = -2147191261;
+
+		// Token: 0x04000E7D RID: 3709
+		public const int PP_E_PST_INVATTRONLYREPORTXML = -2147191260;
+
+		// Token: 0x04000E7E RID: 3710
+		public const int PP_E_PST_INVCERTXML = -2147191259;
+
+		// Token: 0x04000E7F RID: 3711
+		public const int PP_E_PST_INVCLOGREPORTXML = -2147191258;
+
+		// Token: 0x04000E80 RID: 3712
+		public const int PP_E_PST_INVPUID2SIXML = -2147191257;
+
+		// Token: 0x04000E81 RID: 3713
+		public const int PP_E_PST_INVPROFFAILXML = -2147191256;
+
+		// Token: 0x04000E82 RID: 3714
+		public const int PP_E_PST_INVSOAPFAILXML = -2147191255;
+
+		// Token: 0x04000E83 RID: 3715
+		public const int PP_E_PST_PARTNERXMLLOOKUPFAILED = -2147191254;
+
+		// Token: 0x04000E84 RID: 3716
+		public const int PP_E_PST_NOPPTICKET = -2147191253;
+
+		// Token: 0x04000E85 RID: 3717
+		public const int PP_E_PST_INVLINKEDIDXML = -2147191252;
+
+		// Token: 0x04000E86 RID: 3718
+		public const int PP_E_PST_BADLINKID = -2147191251;
+
+		// Token: 0x04000E87 RID: 3719
+		public const int PP_E_PST_NOSUPPORTLINKEDIDS = -2147191250;
+
+		// Token: 0x04000E88 RID: 3720
+		public const int PP_E_MSPPEXT_GETEXTVERSION_FAILED = -2147213568;
+
+		// Token: 0x04000E89 RID: 3721
+		public const int PP_E_MSPPEXT_GETENV_FAILED = -2147213567;
+
+		// Token: 0x04000E8A RID: 3722
+		public const int PP_E_MSPPEXT_SET_EVENT_FAILED = -2147213566;
+
+		// Token: 0x04000E8B RID: 3723
+		public const int PP_E_MSPPEXT_INIT_UPDATEMGR_FAILED = -2147213565;
+
+		// Token: 0x04000E8C RID: 3724
+		public const int PP_E_MSPPEXT_INIT_EVENT_FAILED = -2147213564;
+
+		// Token: 0x04000E8D RID: 3725
+		public const int PP_E_MSPPEXT_CREATE_THREAD_FAILED = -2147213563;
+
+		// Token: 0x04000E8E RID: 3726
+		public const int PP_E_MSPPEXT_WAIT_EVENT_FAILED = -2147213562;
+
+		// Token: 0x04000E8F RID: 3727
+		public const int PP_E_MSPPEXT_SERVICE_NOT_LOADED = -2147213560;
+
+		// Token: 0x04000E90 RID: 3728
+		public const int PP_E_MSPPEXT_SERVICEMGR_PATH_NOTFOUND = -2147213556;
+
+		// Token: 0x04000E91 RID: 3729
+		public const int PP_E_REQUEST_THROTTLED = -2147213555;
+
+		// Token: 0x04000E92 RID: 3730
+		public const int PP_E_MEMMGR_HEAPCREATE = -2147212800;
+
+		// Token: 0x04000E93 RID: 3731
+		public const int PP_E_MEMMGR_SETTLSVALUE = -2147212798;
+
+		// Token: 0x04000E94 RID: 3732
+		public const int PP_E_MEMMGR_BADTLS = -2147212797;
+
+		// Token: 0x04000E95 RID: 3733
+		public const int PP_E_MEMMGR_INIT_ALREADY = -2147212796;
+
+		// Token: 0x04000E96 RID: 3734
+		public const int PP_E_MEMMGR_THREADHEAPCREATE = -2147212795;
+
+		// Token: 0x04000E97 RID: 3735
+		public const int PP_E_MEMMGR_INIT_SETTLS = -2147212794;
+
+		// Token: 0x04000E98 RID: 3736
+		public const int PP_E_MEMMGR_PPHEAPCREATE = -2147212793;
+
+		// Token: 0x04000E99 RID: 3737
+		public const int PP_E_MEMMGR_FINISH_TLS = -2147212789;
+
+		// Token: 0x04000E9A RID: 3738
+		public const int PP_E_MEMMGR_NOTINITIALIZED = -2147212788;
+
+		// Token: 0x04000E9B RID: 3739
+		public const int PP_E_MEMMGR_FINISH = -2147212787;
+
+		// Token: 0x04000E9C RID: 3740
+		public const int PP_E_MEMMGR_FINISH_NOTLS = -2147212786;
+
+		// Token: 0x04000E9D RID: 3741
+		public const int PP_E_SOAP_XMLDOC = -2147212032;
+
+		// Token: 0x04000E9E RID: 3742
+		public const int PP_E_SOAP_ENV = -2147212031;
+
+		// Token: 0x04000E9F RID: 3743
+		public const int PP_E_SOAP_BODY = -2147212030;
+
+		// Token: 0x04000EA0 RID: 3744
+		public const int PP_E_SOAP_METHOD = -2147212029;
+
+		// Token: 0x04000EA1 RID: 3745
+		public const int PP_E_SOAP_FAULT = -2147212028;
+
+		// Token: 0x04000EA2 RID: 3746
+		public const int PP_E_SCHEMA_ELE = -2147211776;
+
+		// Token: 0x04000EA3 RID: 3747
+		public const int PP_E_SCHEMA_DATATYPE = -2147211775;
+
+		// Token: 0x04000EA4 RID: 3748
+		public const int PP_E_CRYPT_DECRYPT = -2147211008;
+
+		// Token: 0x04000EA5 RID: 3749
+		public const int PP_E_CRYPT_KEYSIZE = -2147211007;
+
+		// Token: 0x04000EA6 RID: 3750
+		public const int PP_E_KEYINSTALL_NODCOM = -2147211006;
+
+		// Token: 0x04000EA7 RID: 3751
+		public const int PP_E_CRYPT_ENCRYPT = -2147211005;
+
+		// Token: 0x04000EA8 RID: 3752
+		public const int PP_E_CRYPT_DATATOOLARGE = -2147211004;
+
+		// Token: 0x04000EA9 RID: 3753
+		public const int PP_E_CRYPT_BADKV = -2147211003;
+
+		// Token: 0x04000EAA RID: 3754
+		public const int PP_E_CRYPT_NOKEY = -2147211002;
+
+		// Token: 0x04000EAB RID: 3755
+		public const int PP_E_PPCRYPT_FAILED = -2147208960;
+
+		// Token: 0x04000EAC RID: 3756
+		public const int PP_E_DBCRYPTO_INVALID_KV = -2147208959;
+
+		// Token: 0x04000EAD RID: 3757
+		public const int PP_E_DBCRYPTO_INVALID_CIPHERLEN = -2147208958;
+
+		// Token: 0x04000EAE RID: 3758
+		public const int PP_E_DBCRYPTO_INVALID_CIPHER = -2147208957;
+
+		// Token: 0x04000EAF RID: 3759
+		public const int PP_E_DBCRYPTO_DATA_TOO_LARGE = -2147208955;
+
+		// Token: 0x04000EB0 RID: 3760
+		public const int PP_E_DBCRYPTO_INVALID_SCHEME = -2147208954;
+
+		// Token: 0x04000EB1 RID: 3761
+		public const int PP_E_DBCRYPTO_KEY_ALREADY_ADDED = -2147208953;
+
+		// Token: 0x04000EB2 RID: 3762
+		public const int PP_E_DBCRYPTO_NOT_INITED = -2147208952;
+
+		// Token: 0x04000EB3 RID: 3763
+		public const int PP_E_DBCRYPTO_FAILED_TO_DUPLICATE_KEY = -2147208951;
+
+		// Token: 0x04000EB4 RID: 3764
+		public const int PP_E_DBCRYPTO_ALREADY_INITED = -2147208950;
+
+		// Token: 0x04000EB5 RID: 3765
+		public const int PP_E_DBCRYPTO_NULL_CRYPTO = -2147208949;
+
+		// Token: 0x04000EB6 RID: 3766
+		public const int PP_E_DBCRYPTO_SAME_VERSION = -2147208948;
+
+		// Token: 0x04000EB7 RID: 3767
+		public const int PP_E_DBCRYPTO_KEYSCOUNT_INVALID = -2147208947;
+
+		// Token: 0x04000EB8 RID: 3768
+		public const int PP_E_DBCRYPTO_ADNOTSUPPORTED = -2147208946;
+
+		// Token: 0x04000EB9 RID: 3769
+		public const int PP_E_DBCRYPTO_ADBADVALUE = -2147208945;
+
+		// Token: 0x04000EBA RID: 3770
+		public const int PP_E_DBCRYPTO_EMPTYDN = -2147208944;
+
+		// Token: 0x04000EBB RID: 3771
+		public const int PP_E_DBCRYPTO_NULL_KEYCONTAINER = -2147208943;
+
+		// Token: 0x04000EBC RID: 3772
+		public const int PP_E_DBCRYPTO_ENUM_ALREADYINITIALIZED = -2147208942;
+
+		// Token: 0x04000EBD RID: 3773
+		public const int PP_E_DBCRYPTO_ENUM_NOTINITIALIZED = -2147208941;
+
+		// Token: 0x04000EBE RID: 3774
+		public const int PP_E_DBCRYPTO_NULL_KEYOBJECT = -2147208940;
+
+		// Token: 0x04000EBF RID: 3775
+		public const int PP_E_DBCRYPTO_BOTHKEYS_NEW = -2147208939;
+
+		// Token: 0x04000EC0 RID: 3776
+		public const int PP_E_DBCRYPTO_ADKEY_BADENCODING = -2147208938;
+
+		// Token: 0x04000EC1 RID: 3777
+		public const int PP_E_DBCRYPTO_SYSPROVIDER_NULL = -2147208937;
+
+		// Token: 0x04000EC2 RID: 3778
+		public const int PP_E_DBCRYPTO_CCM_BADVALUE = -2147208936;
+
+		// Token: 0x04000EC3 RID: 3779
+		public const int PP_E_DBCRYPTO_CCM_NOOBJECT = -2147208935;
+
+		// Token: 0x04000EC4 RID: 3780
+		public const int PP_E_DBCRYPTO_CCM_BADKEYSTRING = -2147208934;
+
+		// Token: 0x04000EC5 RID: 3781
+		public const int PP_E_DBCRYPTO_CCM_UNEXPECTEDVALUE = -2147208933;
+
+		// Token: 0x04000EC6 RID: 3782
+		public const int PP_E_DBCRYPTO_BUFFERLEN_INVALID = -2147208932;
+
+		// Token: 0x04000EC7 RID: 3783
+		public const int PP_E_DBCRYPTO_ENCODINGERROR = -2147208931;
+
+		// Token: 0x04000EC8 RID: 3784
+		public const int PP_E_DBCRYPTO_CANNOTDELETEKEY = -2147208930;
+
+		// Token: 0x04000EC9 RID: 3785
+		public const int PP_E_DBCRYPTO_NONEWKEYS = -2147208929;
+
+		// Token: 0x04000ECA RID: 3786
+		public const int PP_E_DBCRYPTO_AD_NOKEYS = -2147208928;
+
+		// Token: 0x04000ECB RID: 3787
+		public const int PP_E_DBKEYCACHE_INVALIDKEYDATA = -2147208927;
+
+		// Token: 0x04000ECC RID: 3788
+		public const int PP_E_DBKEYCACHE_NOKEY = -2147208926;
+
+		// Token: 0x04000ECD RID: 3789
+		public const int PP_E_DBCRYPTO_KEYMATERIAL_TOO_LONG = -2147208925;
+
+		// Token: 0x04000ECE RID: 3790
+		public const int PP_E_DBCRYPTO_BAD_MKEY_SERVER_NAME = -2147208924;
+
+		// Token: 0x04000ECF RID: 3791
+		public const int PP_E_DBCRYPTO_MKEY_PROXY_TIMEOUT = -2147208923;
+
+		// Token: 0x04000ED0 RID: 3792
+		public const int PP_E_DBCRYPTO_BADKEYS = -2147208922;
+
+		// Token: 0x04000ED1 RID: 3793
+		public const int PP_E_DBCRYPTO_EXPIREDKEYS = -2147208921;
+
+		// Token: 0x04000ED2 RID: 3794
+		public const int PP_E_DBKEYCACHE_NEW_KEY_EXISTS = -2147208920;
+
+		// Token: 0x04000ED3 RID: 3795
+		public const int PP_E_DBKEYCACHE_KEY_DEL_NOT_FOUND = -2147208919;
+
+		// Token: 0x04000ED4 RID: 3796
+		public const int PP_E_DBCRYPTO_MKEY_PROXY_CREATEINSTANCEEX = -2147208912;
+
+		// Token: 0x04000ED5 RID: 3797
+		public const int PP_E_WSTORE_CheckOLEDBVersion = -2147208703;
+
+		// Token: 0x04000ED6 RID: 3798
+		public const int PP_E_WSTORE_GetNewAccountIDByPadding = -2147208702;
+
+		// Token: 0x04000ED7 RID: 3799
+		public const int PP_E_WSTORE__FetchNewBlock = -2147208701;
+
+		// Token: 0x04000ED8 RID: 3800
+		public const int PP_E_WST_E_CONNECTIONTIMEOUT = -805308369;
+
+		// Token: 0x04000ED9 RID: 3801
+		public const int PP_E_WST_E_NOCONNECTIONAVAIL = -805308370;
+
+		// Token: 0x04000EDA RID: 3802
+		public const int PP_E_WST_E_MARKEDOFFLINE = -805308373;
+
+		// Token: 0x04000EDB RID: 3803
+		public const int PP_E_WST_E_MARKEDREADONLY = -805308374;
+
+		// Token: 0x04000EDC RID: 3804
+		public const int PP_E_kErrorWstTimeOutNoFailover = -805308376;
+
+		// Token: 0x04000EDD RID: 3805
+		public const int PP_E_kErrorWstCmdOrConnectionFailed = -805308377;
+
+		// Token: 0x04000EDE RID: 3806
+		public const int PP_E_WST_E_SERVERNOTREGISTERED = -805308395;
+
+		// Token: 0x04000EDF RID: 3807
+		public const int PP_E_WST_E_APPLICATIONNOTEXIST = -805309369;
+
+		// Token: 0x04000EE0 RID: 3808
+		public const int PP_E_WST_E_TRANCOUNTEXIST = -805309370;
+
+		// Token: 0x04000EE1 RID: 3809
+		public const int PP_E_WST_E_ADMINCONSOLENOTEXIST = -805309371;
+
+		// Token: 0x04000EE2 RID: 3810
+		public const int PP_E_WST_E_MISMATCHVERSION = -805309372;
+
+		// Token: 0x04000EE3 RID: 3811
+		public const int PP_E_WST_E_NOSERVICEAVAIL = -805309373;
+
+		// Token: 0x04000EE4 RID: 3812
+		public const int PP_E_WST_E_NOREGISTRY = -805309374;
+
+		// Token: 0x04000EE5 RID: 3813
+		public const int PP_E_WST_E_APPCONFIGCHANGED = -805309375;
+
+		// Token: 0x04000EE6 RID: 3814
+		public const int PP_E_WST_E_NAMEDPIPE = -805309376;
+
+		// Token: 0x04000EE7 RID: 3815
+		public const int PP_E_WST_E_NOTINITIALIZED = -805309377;
+
+		// Token: 0x04000EE8 RID: 3816
+		public const int PP_E_WST_E_BADTICKET = -805309378;
+
+		// Token: 0x04000EE9 RID: 3817
+		public const int PP_E_WST_E_ALREADYINITIALIZED = -805309379;
+
+		// Token: 0x04000EEA RID: 3818
+		public const int PP_E_WST_E_CONFIGEXPIRED = -805309380;
+
+		// Token: 0x04000EEB RID: 3819
+		public const int PP_E_WST_E_CONFIGPOLLINCONSISTENT = -805309381;
+
+		// Token: 0x04000EEC RID: 3820
+		public const int PP_E_WST_E_CONNDENIEDMAXLIMIT = -805309382;
+
+		// Token: 0x04000EED RID: 3821
+		public const int PP_E_SETUP_KEYMIG_ERROR = -2147207548;
+
+		// Token: 0x04000EEE RID: 3822
+		public const int PP_E_KEYMIG_MAPREAD = -2147207167;
+
+		// Token: 0x04000EEF RID: 3823
+		public const int PP_E_KEYMIG_DECRYPTKEY = -2147207166;
+
+		// Token: 0x04000EF0 RID: 3824
+		public const int PP_E_KEYMIG_LOADDOC = -2147207165;
+
+		// Token: 0x04000EF1 RID: 3825
+		public const int PP_E_KEYMIG_SITELIST = -2147207164;
+
+		// Token: 0x04000EF2 RID: 3826
+		public const int PP_E_LOADNAMESPACE = -2147207163;
+
+		// Token: 0x04000EF3 RID: 3827
+		public const int PP_E_SITEMGR = -2147207162;
+
+		// Token: 0x04000EF4 RID: 3828
+		public const int PP_E_MODIFYANTIHACKPARAM = -2147207159;
+
+		// Token: 0x04000EF5 RID: 3829
+		public const int PP_E_SITEMGR_SITE_EXCLUDED = -2147207158;
+
+		// Token: 0x04000EF6 RID: 3830
+		public const int PP_E_SITEMGR_SITE_NOT_EXIST = -2147207157;
+
+		// Token: 0x04000EF7 RID: 3831
+		public const int PP_E_SITEMGR_NESTED_ROOT = -2147207156;
+
+		// Token: 0x04000EF8 RID: 3832
+		public const int PP_E_SITEMGR_UNSHARED_ROOT = -2147207155;
+
+		// Token: 0x04000EF9 RID: 3833
+		public const int PP_E_SITEMGR_SITE_HAS_ROOT = -2147207154;
+
+		// Token: 0x04000EFA RID: 3834
+		public const int PP_E_LOADSERVERFROMFILE_GENERAL_ERROR = -2147207153;
+
+		// Token: 0x04000EFB RID: 3835
+		public const int PP_E_LOADCONFIG_GENERAL_ERROR = -2147207152;
+
+		// Token: 0x04000EFC RID: 3836
+		public const int PP_E_LOADXML_GENERAL_ERROR = -2147207151;
+
+		// Token: 0x04000EFD RID: 3837
+		public const int PP_E_LOADREFRESHCONFIG_GENERAL_ERROR = -2147207150;
+
+		// Token: 0x04000EFE RID: 3838
+		public const int PP_E_MD_INVALIDLOCATION = -2147206911;
+
+		// Token: 0x04000EFF RID: 3839
+		public const int PP_E_MD_INVALIDPREFIX = -2147206910;
+
+		// Token: 0x04000F00 RID: 3840
+		public const int PP_E_MD_INVALIDDUMPTYPE = -2147206909;
+
+		// Token: 0x04000F01 RID: 3841
+		public const int PP_E_MD_FAILTOCREATEFILE = -2147206908;
+
+		// Token: 0x04000F02 RID: 3842
+		public const int PP_E_MD_FAILTOWRITEDUMP = -2147206907;
+
+		// Token: 0x04000F03 RID: 3843
+		public const int PP_E_MD_LOADLIB = -2147206906;
+
+		// Token: 0x04000F04 RID: 3844
+		public const int PP_E_MD_GETPROC = -2147206905;
+
+		// Token: 0x04000F05 RID: 3845
+		public const int PP_E_MD_NOTINIT = -2147206904;
+
+		// Token: 0x04000F06 RID: 3846
+		public const int PP_E_RADIUS_INVALIDCONFIG = -2147206654;
+
+		// Token: 0x04000F07 RID: 3847
+		public const int PP_E_RADIUS_GETENV_FAILED = -2147206653;
+
+		// Token: 0x04000F08 RID: 3848
+		public const int PP_E_RADIUS_ATTRNOTFOUND = -2147206647;
+
+		// Token: 0x04000F09 RID: 3849
+		public const int PP_E_RADIUS_ATTRTYPEMISMATCH = -2147206646;
+
+		// Token: 0x04000F0A RID: 3850
+		public const int PP_E_RADIUS_PSAINITFAILED = -2147206645;
+
+		// Token: 0x04000F0B RID: 3851
+		public const int PP_E_RADIUS_UNINITIALIZE = -2147206644;
+
+		// Token: 0x04000F0C RID: 3852
+		public const int PP_E_RADIUS_INVALID_DOMAIN = -2147206642;
+
+		// Token: 0x04000F0D RID: 3853
+		public const int PP_E_RADIUS_INVALID_ATTRIBUTE_SIZE = -2147206641;
+
+		// Token: 0x04000F0E RID: 3854
+		public const int PP_E_RADIUS_INVALID_ATTRIBUTE = -2147206640;
+
+		// Token: 0x04000F0F RID: 3855
+		public const int PP_E_RADIUS_INVALID_AUTHMETHOD = -2147206638;
+
+		// Token: 0x04000F10 RID: 3856
+		public const int PP_E_RADIUS_INVALID_PACKET = -2147206637;
+
+		// Token: 0x04000F11 RID: 3857
+		public const int PP_E_RADIUS_CRP_NULL_SERVICE = -2147206636;
+
+		// Token: 0x04000F12 RID: 3858
+		public const int PP_E_RADIUS_CRP_NULL_DICTIONARY = -2147206635;
+
+		// Token: 0x04000F13 RID: 3859
+		public const int PP_E_RADIUS_CREATEATTR_BADARG = -2147206634;
+
+		// Token: 0x04000F14 RID: 3860
+		public const int PP_E_RADIUS_CCM_NOTIFY_SINK_ALREADY_SET = -2147206631;
+
+		// Token: 0x04000F15 RID: 3861
+		public const int PP_E_RADIUS_CCM_NOTIFY_SINK_NOT_SET = -2147206630;
+
+		// Token: 0x04000F16 RID: 3862
+		public const int PP_E_CERTPROV_INSTALLSTS_NO_CONTEXT = -2147205114;
+
+		// Token: 0x04000F17 RID: 3863
+		public const int PP_E_SS_INVALIDSCHEMA = -2147205113;
+
+		// Token: 0x04000F18 RID: 3864
+		public const int PP_E_SS_SCHEMA_NOTFOUND = -2147205112;
+
+		// Token: 0x04000F19 RID: 3865
+		public const int PP_E_SS_SCHEMA_NOTINITIALISED = -2147205111;
+
+		// Token: 0x04000F1A RID: 3866
+		public const int PP_E_SS_NODATA = -2147205110;
+
+		// Token: 0x04000F1B RID: 3867
+		public const int PP_E_SS_MISCONFIGURED = -2147205107;
+
+		// Token: 0x04000F1C RID: 3868
+		public const int PP_E_SS_TICKETFIELDMISSING = -2147205106;
+
+		// Token: 0x04000F1D RID: 3869
+		public const int PP_E_SS_CRYPTOBJECTEMPTY = -2147205105;
+
+		// Token: 0x04000F1E RID: 3870
+		public const int PP_E_SS_INVALIDPUID = -2147205104;
+
+		// Token: 0x04000F1F RID: 3871
+		public const int PP_E_SS_INVALIDNAMESPACE = -2147205103;
+
+		// Token: 0x04000F20 RID: 3872
+		public const int PP_E_SS_HEADERTOOLARGE = -2147205102;
+
+		// Token: 0x04000F21 RID: 3873
+		public const int PP_E_SS_INVALIDHEADERVERSION = -2147205101;
+
+		// Token: 0x04000F22 RID: 3874
+		public const int PP_E_SS_INVALIDHEADERNAMESPACE = -2147205100;
+
+		// Token: 0x04000F23 RID: 3875
+		public const int PP_E_SS_REQUIREDNODEMISSING = -2147205098;
+
+		// Token: 0x04000F24 RID: 3876
+		public const int PP_E_SS_NAMESPACEMISSING = -2147205097;
+
+		// Token: 0x04000F25 RID: 3877
+		public const int PP_E_SS_INVALIDNUMERIC = -2147205096;
+
+		// Token: 0x04000F26 RID: 3878
+		public const int PP_E_SS_INVALIDSITEID = -2147205095;
+
+		// Token: 0x04000F27 RID: 3879
+		public const int PP_E_SS_INVALIDSTATUS = -2147205094;
+
+		// Token: 0x04000F28 RID: 3880
+		public const int PP_E_SS_INVALIDCLIENTPARAMS = -2147205092;
+
+		// Token: 0x04000F29 RID: 3881
+		public const int PP_E_SS_HTTPS_REQUIRED = -2147205090;
+
+		// Token: 0x04000F2A RID: 3882
+		public const int PP_W_SS_SENDMAILFAILED = -2147205088;
+
+		// Token: 0x04000F2B RID: 3883
+		public const int PP_E_SS_SITE_NOTAUTHENTICATED = -2147205087;
+
+		// Token: 0x04000F2C RID: 3884
+		public const int PP_E_SS_SITE_NOTAUTHORIZED = -2147205086;
+
+		// Token: 0x04000F2D RID: 3885
+		public const int PP_E_SS_NOCRYPTPROV = -2147205085;
+
+		// Token: 0x04000F2E RID: 3886
+		public const int PP_E_SS_CLIENTCERT_INVALID = -2147205084;
+
+		// Token: 0x04000F2F RID: 3887
+		public const int PP_E_SS_CERTCN_INVALID = -2147205083;
+
+		// Token: 0x04000F30 RID: 3888
+		public const int PP_E_SS_INVALIDPGROUP = -2147205082;
+
+		// Token: 0x04000F31 RID: 3889
+		public const int PP_E_NO_KEY_FOUND = -2147205081;
+
+		// Token: 0x04000F32 RID: 3890
+		public const int PP_E_SS_INVALIDHEADERXML = -2147205080;
+
+		// Token: 0x04000F33 RID: 3891
+		public const int PP_E_EMAIL_LIMITED_ACCT = -2147205079;
+
+		// Token: 0x04000F34 RID: 3892
+		public const int PP_E_EMAIL_MISSINGDATA = -2147205078;
+
+		// Token: 0x04000F35 RID: 3893
+		public const int PP_E_SS_INVALIDSOAPMETHOD = -2147205077;
+
+		// Token: 0x04000F36 RID: 3894
+		public const int PP_E_SS_AUDITINFO_TOOLARGE = -2147205076;
+
+		// Token: 0x04000F37 RID: 3895
+		public const int PP_E_SS_URL_BUFFERTOOSMALL = -2147205075;
+
+		// Token: 0x04000F38 RID: 3896
+		public const int PP_E_SS_SITETOKEN_INVALID = -2147205074;
+
+		// Token: 0x04000F39 RID: 3897
+		public const int PP_E_SS_ISSUER_NOTSUPPORTED = -2147205073;
+
+		// Token: 0x04000F3A RID: 3898
+		public const int PP_E_SS_SENDEMAIL_EFAIL = -2147205072;
+
+		// Token: 0x04000F3B RID: 3899
+		public const int PP_E_SS_SITEAUTH_TICKET_SITEIDMISMATCH = -2147205071;
+
+		// Token: 0x04000F3C RID: 3900
+		public const int PP_E_SS_CERTREQUIRED = -2147205070;
+
+		// Token: 0x04000F3D RID: 3901
+		public const int PP_E_PPSA_BATCH_TOOBIG = -2147205069;
+
+		// Token: 0x04000F3E RID: 3902
+		public const int PP_E_SS_THROTTLED = -2147205068;
+
+		// Token: 0x04000F3F RID: 3903
+		public const int PP_E_SS_SAX_NOTINITIALIZED = -2147205035;
+
+		// Token: 0x04000F40 RID: 3904
+		public const int PP_E_SS_SAX_INVALIDMAPENTRY = -2147205034;
+
+		// Token: 0x04000F41 RID: 3905
+		public const int PP_E_SS_SAX_INVALIDSAXNODE = -2147205033;
+
+		// Token: 0x04000F42 RID: 3906
+		public const int PP_E_SS_SAX_BADSTACK = -2147205032;
+
+		// Token: 0x04000F43 RID: 3907
+		public const int PP_E_SS_SAX_BADCALLBACK = -2147205031;
+
+		// Token: 0x04000F44 RID: 3908
+		public const int PP_E_SS_SAX_INVALIDNUMERIC = -2147205030;
+
+		// Token: 0x04000F45 RID: 3909
+		public const int PP_E_SS_SAX_INVALIDPUID = -2147205029;
+
+		// Token: 0x04000F46 RID: 3910
+		public const int PP_E_SS_SAX_INVALIDGUID = -2147205028;
+
+		// Token: 0x04000F47 RID: 3911
+		public const int PP_E_SS_SAX_INVALIDDATE = -2147205027;
+
+		// Token: 0x04000F48 RID: 3912
+		public const int PP_E_SS_SAX_INVALIDBOOL = -2147205026;
+
+		// Token: 0x04000F49 RID: 3913
+		public const int PP_E_SS_SAX_INVALIDHANDLER = -2147205025;
+
+		// Token: 0x04000F4A RID: 3914
+		public const int PP_E_SS_SAX_INVALIDSAXREADER = -2147205024;
+
+		// Token: 0x04000F4B RID: 3915
+		public const int PP_E_SS_SAX_NONODEPARSED = -2147205023;
+
+		// Token: 0x04000F4C RID: 3916
+		public const int PP_E_SS_SAX_BADINDEX = -2147205022;
+
+		// Token: 0x04000F4D RID: 3917
+		public const int PP_E_SS_SAX_BADVARIANT = -2147205021;
+
+		// Token: 0x04000F4E RID: 3918
+		public const int PP_E_SS_SAX_PARSER_ERROR = -2147205020;
+
+		// Token: 0x04000F4F RID: 3919
+		public const int PP_E_SS_SAX_WRITER_ERROR = -2147205019;
+
+		// Token: 0x04000F50 RID: 3920
+		public const int PP_E_SS_SAX_NODEINVALID = -2147205018;
+
+		// Token: 0x04000F51 RID: 3921
+		public const int PP_E_SS_SAX_ESCAPEXMLFAILED = -2147205017;
+
+		// Token: 0x04000F52 RID: 3922
+		public const int PP_E_RS_RELATIONSHIPID_NULL = -2147204991;
+
+		// Token: 0x04000F53 RID: 3923
+		public const int PP_E_RS_INVALIDRESOLVEPENDING = -2147204987;
+
+		// Token: 0x04000F54 RID: 3924
+		public const int PP_E_RS_ORIGINATORUNDEFINED = -2147204986;
+
+		// Token: 0x04000F55 RID: 3925
+		public const int PP_E_RS_SOURCEANDTARGETNULL = -2147204985;
+
+		// Token: 0x04000F56 RID: 3926
+		public const int PP_E_RS_SOURCEANDTARGETEQUAL = -2147204984;
+
+		// Token: 0x04000F57 RID: 3927
+		public const int PP_E_RS_ORIGNOTMANAGER = -2147204982;
+
+		// Token: 0x04000F58 RID: 3928
+		public const int PP_E_RS_INVALIDRELATIONSHIPID = -2147204981;
+
+		// Token: 0x04000F59 RID: 3929
+		public const int PP_E_RS_INVALIDPOLICYID = -2147204980;
+
+		// Token: 0x04000F5A RID: 3930
+		public const int PP_E_RS_INVALIDPASSID = -2147204979;
+
+		// Token: 0x04000F5B RID: 3931
+		public const int PP_E_RS_INVALIDGUID = -2147204978;
+
+		// Token: 0x04000F5C RID: 3932
+		public const int PP_E_RS_QUERYRESULTERROR = -2147204977;
+
+		// Token: 0x04000F5D RID: 3933
+		public const int PP_E_RS_RELIDNOTFOUND = -2147204976;
+
+		// Token: 0x04000F5E RID: 3934
+		public const int PP_E_RS_ROWNOTFOUND = -2147204975;
+
+		// Token: 0x04000F5F RID: 3935
+		public const int PP_E_RS_UPDATEFAILED = -2147204974;
+
+		// Token: 0x04000F60 RID: 3936
+		public const int PP_E_RS_VALIDATIONFAILED = -2147204972;
+
+		// Token: 0x04000F61 RID: 3937
+		public const int PP_E_RS_PROPOSERELFAILED = -2147204971;
+
+		// Token: 0x04000F62 RID: 3938
+		public const int PP_E_RS_RESOLVERELFAILED = -2147204970;
+
+		// Token: 0x04000F63 RID: 3939
+		public const int PP_E_RS_QUERYRELFAILED = -2147204969;
+
+		// Token: 0x04000F64 RID: 3940
+		public const int PP_E_RS_INVALIDTARGETARRAY = -2147204968;
+
+		// Token: 0x04000F65 RID: 3941
+		public const int PP_E_RS_ORIGINRESOLVEAPPROVE = -2147204967;
+
+		// Token: 0x04000F66 RID: 3942
+		public const int PP_W_RS_VALIDATIONFAILED = -2147204965;
+
+		// Token: 0x04000F67 RID: 3943
+		public const int PP_E_RS_NOVALIDATIONDATA = -2147204963;
+
+		// Token: 0x04000F68 RID: 3944
+		public const int PP_E_RS_NOPUIDORMEMBERNAME = -2147204962;
+
+		// Token: 0x04000F69 RID: 3945
+		public const int PP_E_RS_GETRELTICKETFAILED = -2147204960;
+
+		// Token: 0x04000F6A RID: 3946
+		public const int PP_E_RS_PACKRELTICKETERROR = -2147204959;
+
+		// Token: 0x04000F6B RID: 3947
+		public const int PP_E_RS_KIDDENYREL_NOTALLOWED = -2147204958;
+
+		// Token: 0x04000F6C RID: 3948
+		public const int PP_E_RS_BDBVALIDATIONFAILED = -2147204957;
+
+		// Token: 0x04000F6D RID: 3949
+		public const int PP_E_RS_UNKNOWNVALIDATIONTYPE = -2147204956;
+
+		// Token: 0x04000F6E RID: 3950
+		public const int PP_E_RS_PVSITEID_MUST_MATCH_MASSL_SITEID = -2147204955;
+
+		// Token: 0x04000F6F RID: 3951
+		public const int PP_E_CS_QUERYDATA_TOOLARGE = -2147204608;
+
+		// Token: 0x04000F70 RID: 3952
+		public const int PP_E_CS_INVALIDCONSENTLEVEL = -2147204607;
+
+		// Token: 0x04000F71 RID: 3953
+		public const int PP_E_CS_MAXPARAMSIZEEXCEEDED = -2147204606;
+
+		// Token: 0x04000F72 RID: 3954
+		public const int PP_E_CS_REQPARAMSMISSING = -2147204605;
+
+		// Token: 0x04000F73 RID: 3955
+		public const int PP_E_CS_TSNOTSUPPORTED = -2147204604;
+
+		// Token: 0x04000F74 RID: 3956
+		public const int PP_E_CS_CSNOTSUPPORTED = -2147204603;
+
+		// Token: 0x04000F75 RID: 3957
+		public const int PP_E_CS_INVALIDTASKTYPE = -2147204602;
+
+		// Token: 0x04000F76 RID: 3958
+		public const int PP_E_CS_INVALIDTASKMANIFEST = -2147204601;
+
+		// Token: 0x04000F77 RID: 3959
+		public const int PP_E_CS_INVALIDTASKID = -2147204600;
+
+		// Token: 0x04000F78 RID: 3960
+		public const int PP_E_CS_MAXAGEBASEDSETTINGSITEIDSEXCEEDED = -2147204597;
+
+		// Token: 0x04000F79 RID: 3961
+		public const int PP_E_CS_INVALIDSITEORPOLICYGROUP = -2147204596;
+
+		// Token: 0x04000F7A RID: 3962
+		public const int PP_E_MC_KPPVCINVALID = -2147204480;
+
+		// Token: 0x04000F7B RID: 3963
+		public const int PP_E_MC_KPPVCMISSING = -2147204479;
+
+		// Token: 0x04000F7C RID: 3964
+		public const int PP_E_MC_PARENT_INVALID = -2147204478;
+
+		// Token: 0x04000F7D RID: 3965
+		public const int PP_E_MC_FLOW_INVALID = -2147204477;
+
+		// Token: 0x04000F7E RID: 3966
+		public const int PP_E_MC_CONSENT_INVALID = -2147204476;
+
+		// Token: 0x04000F7F RID: 3967
+		public const int PP_E_MC_REQUIRED_INPUTFIELD_MISSING = -2147214066;
+
+		// Token: 0x04000F80 RID: 3968
+		public const int PP_E_PPS_INVALIDQUERY = -2147204352;
+
+		// Token: 0x04000F81 RID: 3969
+		public const int PP_E_PPS_INVALIDVERSIONTOKEN = -2147204351;
+
+		// Token: 0x04000F82 RID: 3970
+		public const int PP_E_PPS_SAME_SETTINGS = -2147204350;
+
+		// Token: 0x04000F83 RID: 3971
+		public const int PP_E_PPS_NO_SETTINGS = -2147204349;
+
+		// Token: 0x04000F84 RID: 3972
+		public const int PP_E_PPS_SITE_REQUIRES_FULL_CONSENT = -2147204348;
+
+		// Token: 0x04000F85 RID: 3973
+		public const int PP_E_PPS_MAXAGEBASEDSETTINGSITEIDSEXCEEDED = -2147204347;
+
+		// Token: 0x04000F86 RID: 3974
+		public const int PP_E_PPS_INVALIDQUERYCONDITION = -2147204346;
+
+		// Token: 0x04000F87 RID: 3975
+		public const int PP_E_PPS_MAXAGEBASEDSETTINGPGIDSEXCEEDED = -2147204345;
+
+		// Token: 0x04000F88 RID: 3976
+		public const int PP_E_PPS_USERMUSTBEKID = -2147204344;
+
+		// Token: 0x04000F89 RID: 3977
+		public const int PP_E_VE_ICS_EXCEPTION = -2147204224;
+
+		// Token: 0x04000F8A RID: 3978
+		public const int PP_E_VE_INVALID_ICSCONFIG = -2147204223;
+
+		// Token: 0x04000F8B RID: 3979
+		public const int PP_E_VE_INVALID_CCNUMBER = -2147204222;
+
+		// Token: 0x04000F8C RID: 3980
+		public const int PP_E_VE_INVALID_CCMONTH = -2147204221;
+
+		// Token: 0x04000F8D RID: 3981
+		public const int PP_E_VE_INVALID_CCYEAR = -2147204220;
+
+		// Token: 0x04000F8E RID: 3982
+		public const int PP_E_VE_INVALID_CCFIRSTNAME = -2147204219;
+
+		// Token: 0x04000F8F RID: 3983
+		public const int PP_E_VE_INVALID_CCLASTNAME = -2147204218;
+
+		// Token: 0x04000F90 RID: 3984
+		public const int PP_E_VE_INVALID_POLICYID = -2147204217;
+
+		// Token: 0x04000F91 RID: 3985
+		public const int PP_E_VE_ICS_SENDFAILED = -2147204216;
+
+		// Token: 0x04000F92 RID: 3986
+		public const int PP_E_VE_INVALID_XMLDATA = -2147204215;
+
+		// Token: 0x04000F93 RID: 3987
+		public const int PP_E_VE_XMLNODE_NOTFOUND = -2147204214;
+
+		// Token: 0x04000F94 RID: 3988
+		public const int PP_E_VE_INCOMPATIBLE_DATA = -2147204213;
+
+		// Token: 0x04000F95 RID: 3989
+		public const int PP_E_VE_INVALID_PUID = -2147204212;
+
+		// Token: 0x04000F96 RID: 3990
+		public const int PP_E_VE_INVALID_HANDLER = -2147204211;
+
+		// Token: 0x04000F97 RID: 3991
+		public const int PP_E_VE_INVALID_SITEID = -2147204210;
+
+		// Token: 0x04000F98 RID: 3992
+		public const int PP_E_VE_INVALID_CCMSETTINGS = -2147204209;
+
+		// Token: 0x04000F99 RID: 3993
+		public const int PP_E_VE_INVALID_CCTYPE = -2147204208;
+
+		// Token: 0x04000F9A RID: 3994
+		public const int PP_E_VE_INVALID_MEMBERNAME = -2147204207;
+
+		// Token: 0x04000F9B RID: 3995
+		public const int PP_E_VE_KOREAN_INVALID_RESULT = -2147204206;
+
+		// Token: 0x04000F9C RID: 3996
+		public const int PP_E_VE_KOREAN_INVALID_NRRN = -2147204205;
+
+		// Token: 0x04000F9D RID: 3997
+		public const int PP_E_VE_KOREAN_INVALID_NAME = -2147204204;
+
+		// Token: 0x04000F9E RID: 3998
+		public const int PP_E_VE_KOREAN_INVALID_RESPONSE = -2147204203;
+
+		// Token: 0x04000F9F RID: 3999
+		public const int PP_E_VE_KOREAN_HTTP_STATUS_CODE = -2147204202;
+
+		// Token: 0x04000FA0 RID: 4000
+		public const int PP_E_VE_KOREAN_INVALID_ID = -2147204201;
+
+		// Token: 0x04000FA1 RID: 4001
+		public const int PP_E_VE_KOREAN_INVALID_PASSWORD = -2147204200;
+
+		// Token: 0x04000FA2 RID: 4002
+		public const int PP_E_VE_KOREAN_INVALID_URL = -2147204199;
+
+		// Token: 0x04000FA3 RID: 4003
+		public const int PP_E_VE_KOREAN_INVALID_NONCE = -2147204198;
+
+		// Token: 0x04000FA4 RID: 4004
+		public const int PP_E_VE_KOREAN_NEEDINIT = -2147204197;
+
+		// Token: 0x04000FA5 RID: 4005
+		public const int PP_E_VE_KOREAN_INVALID_KEY = -2147204196;
+
+		// Token: 0x04000FA6 RID: 4006
+		public const int PP_E_VE_KOREAN_KIS_RETURN_OVER_LIMIT = -2147204195;
+
+		// Token: 0x04000FA7 RID: 4007
+		public const int PP_E_VE_KOREAN_ALREADY_INIT = -2147204194;
+
+		// Token: 0x04000FA8 RID: 4008
+		public const int PP_E_VE_KOREAN_POLICYCHECK_FAIL = -2147204193;
+
+		// Token: 0x04000FA9 RID: 4009
+		public const int PP_E_VE_NOT_TRUSTED_SITE = -2147204192;
+
+		// Token: 0x04000FAA RID: 4010
+		public const int PP_E_VE_VALIDATION_FAIL = -2147204191;
+
+		// Token: 0x04000FAB RID: 4011
+		public const int PP_E_VE_KOREAN_HTTP_TIMEOUT = -2147204190;
+
+		// Token: 0x04000FAC RID: 4012
+		public const int PP_E_VE_UNABLE_TO_GET_VALIDATOROBJECT = -2147204189;
+
+		// Token: 0x04000FAD RID: 4013
+		public const int PP_E_UNABLETOMAPLCID = -2147204188;
+
+		// Token: 0x04000FAE RID: 4014
+		public const int PP_E_VE_KOREAN_KIS_RETURN_BASE = -2147204148;
+
+		// Token: 0x04000FAF RID: 4015
+		public const int PP_E_VE_KOREAN_KIS_NOT_MATCH = -2147204146;
+
+		// Token: 0x04000FB0 RID: 4016
+		public const int PP_E_VE_KOREAN_KIS_NO_DATA = -2147204145;
+
+		// Token: 0x04000FB1 RID: 4017
+		public const int PP_E_VE_KOREAN_KIS_INVALID_NRRN_CHECKSUM = -2147204143;
+
+		// Token: 0x04000FB2 RID: 4018
+		public const int PP_E_VE_KOREAN_KIS_RETURN_LIMIT = -2147204097;
+
+		// Token: 0x04000FB3 RID: 4019
+		public const int PP_E_CA_NO_CLIENTCERT = -2147204095;
+
+		// Token: 0x04000FB4 RID: 4020
+		public const int PP_E_CA_INITHANDLER = -2147204094;
+
+		// Token: 0x04000FB5 RID: 4021
+		public const int PP_E_CA_NULL_CERTINFOPTR = -2147204093;
+
+		// Token: 0x04000FB6 RID: 4022
+		public const int PP_E_CA_BAD_EXTENSION = -2147204092;
+
+		// Token: 0x04000FB7 RID: 4023
+		public const int PP_E_CA_PKCS10_CERTINFO = -2147204091;
+
+		// Token: 0x04000FB8 RID: 4024
+		public const int PP_E_PK_GETCERT = -2147203872;
+
+		// Token: 0x04000FB9 RID: 4025
+		public const int PP_E_PK_CLIENTCERT = -2147203871;
+
+		// Token: 0x04000FBA RID: 4026
+		public const int PP_E_PK_INVALIDCLIENTCERT = -2147203870;
+
+		// Token: 0x04000FBB RID: 4027
+		public const int PP_E_PK_CACERT = -2147203869;
+
+		// Token: 0x04000FBC RID: 4028
+		public const int PP_E_NEED_CERT = -2147203868;
+
+		// Token: 0x04000FBD RID: 4029
+		public const int PP_E_NO_CLIENT_CERT = -2147203867;
+
+		// Token: 0x04000FBE RID: 4030
+		public const int PP_E_PK_CERT_UNBOUND_REQUIRE_NONE = -2147203866;
+
+		// Token: 0x04000FBF RID: 4031
+		public const int PP_E_PK_UI_MANAGECERT_BADARG = -2147203856;
+
+		// Token: 0x04000FC0 RID: 4032
+		public const int PP_E_UI_GETASSOC_INVALIDNAME = -2147203855;
+
+		// Token: 0x04000FC1 RID: 4033
+		public const int PP_E_UI_GETASSOC_INVALIDPURPOSE = -2147203854;
+
+		// Token: 0x04000FC2 RID: 4034
+		public const int PP_E_UI_GETASSOC_TOOMANY_PURPOSES = -2147203853;
+
+		// Token: 0x04000FC3 RID: 4035
+		public const int PP_E_UPO_PROPERTY_NOTVALIDATED = -2147203840;
+
+		// Token: 0x04000FC4 RID: 4036
+		public const int PP_E_UPO_BAG_NOTSET = -2147203839;
+
+		// Token: 0x04000FC5 RID: 4037
+		public const int PP_E_UPO_FILTER_NOTSET = -2147203838;
+
+		// Token: 0x04000FC6 RID: 4038
+		public const int PP_E_UPO_PROPERTY_ASSOC_SET = -2147203837;
+
+		// Token: 0x04000FC7 RID: 4039
+		public const int PP_E_UPO_PROPERTY_ASSOC_NOTSET = -2147203836;
+
+		// Token: 0x04000FC8 RID: 4040
+		public const int PP_E_UPO_PROPERTYBAG_PROPERTYNOTPRESENT = -2147203835;
+
+		// Token: 0x04000FC9 RID: 4041
+		public const int PP_E_UPO_PROPERTY_IDSET = -2147203834;
+
+		// Token: 0x04000FCA RID: 4042
+		public const int PP_E_UPO_PROPERTY_IDNOTSET = -2147203833;
+
+		// Token: 0x04000FCB RID: 4043
+		public const int PP_E_UPO_PROPERTYBAG_PUIDSET = -2147203832;
+
+		// Token: 0x04000FCC RID: 4044
+		public const int PP_E_UPO_PROPERTYBAG_PUIDNOTSET = -2147203831;
+
+		// Token: 0x04000FCD RID: 4045
+		public const int PP_E_UPO_PROPERTYBAG_CREDNAMESET = -2147203830;
+
+		// Token: 0x04000FCE RID: 4046
+		public const int PP_E_UPO_CREDDB_ATTRITNOTSET = -2147203829;
+
+		// Token: 0x04000FCF RID: 4047
+		public const int PP_E_UPO_PROPERTY_INVALIDCREDID = -2147203828;
+
+		// Token: 0x04000FD0 RID: 4048
+		public const int PP_E_UPO_PROPERTY_INVALIDCREDNAME = -2147203827;
+
+		// Token: 0x04000FD1 RID: 4049
+		public const int PP_E_UPO_PROPERTY_INVALIDPUID = -2147203826;
+
+		// Token: 0x04000FD2 RID: 4050
+		public const int PP_E_UPO_PROPERTY_INVALIDCREDFIELD = -2147203825;
+
+		// Token: 0x04000FD3 RID: 4051
+		public const int PP_E_UPO_PROPERTY_INVALIDCREDTYPE = -2147203824;
+
+		// Token: 0x04000FD4 RID: 4052
+		public const int PP_E_UPO_MULTICREDPERTYPE = -2147203823;
+
+		// Token: 0x04000FD5 RID: 4053
+		public const int PP_E_UPO_INTERNAL = -2147203822;
+
+		// Token: 0x04000FD6 RID: 4054
+		public const int PP_E_UPO_PROPERTYBAG_INVALID = -2147203821;
+
+		// Token: 0x04000FD7 RID: 4055
+		public const int PP_E_UPO_GETPOLICYGROUP_FAILED = -2147203820;
+
+		// Token: 0x04000FD8 RID: 4056
+		public const int PP_E_UPO_PROPERTY_MISSING = -2147203819;
+
+		// Token: 0x04000FD9 RID: 4057
+		public const int PP_E_UPO_DSPROPERTYBAG_INSERTFAILED = -2147203818;
+
+		// Token: 0x04000FDA RID: 4058
+		public const int PP_E_UPO_DATASET_NOTFOUND = -2147203817;
+
+		// Token: 0x04000FDB RID: 4059
+		public const int PP_E_LCID_NOT_FOUND = -2147203816;
+
+		// Token: 0x04000FDC RID: 4060
+		public const int PP_E_MEMBERNAME_NOT_FOUND = -2147203815;
+
+		// Token: 0x04000FDD RID: 4061
+		public const int PP_E_CB_INVALIDCONSENTTYPE = -2147203814;
+
+		// Token: 0x04000FDE RID: 4062
+		public const int PP_E_CB_CONSENTMISSING = -2147203813;
+
+		// Token: 0x04000FDF RID: 4063
+		public const int PP_E_CB_DATASOURCENULL = -2147203812;
+
+		// Token: 0x04000FE0 RID: 4064
+		public const int PP_E_CB_PROPERTYNOTFOUND = -2147203811;
+
+		// Token: 0x04000FE1 RID: 4065
+		public const int PP_E_CB_INVALIDPUID = -2147203810;
+
+		// Token: 0x04000FE2 RID: 4066
+		public const int PP_E_CB_INVALIDGID = -2147203809;
+
+		// Token: 0x04000FE3 RID: 4067
+		public const int PP_E_CB_GCBNOTFOUND = -2147203808;
+
+		// Token: 0x04000FE4 RID: 4068
+		public const int PP_E_CB_NOTINITIALIZED = -2147203807;
+
+		// Token: 0x04000FE5 RID: 4069
+		public const int PP_E_DATASOURCE_MAXSIZEXCEEDED = -2147203806;
+
+		// Token: 0x04000FE6 RID: 4070
+		public const int PP_E_JITGRADUATION_EFAIL = -2147203805;
+
+		// Token: 0x04000FE7 RID: 4071
+		public const int PP_E_UPO_PROPERTY_INVALIDCREDINSTANCE = -2147203804;
+
+		// Token: 0x04000FE8 RID: 4072
+		public const int PP_E_CERTBIND_INVALID_MEMBERNAME = -2147203579;
+
+		// Token: 0x04000FE9 RID: 4073
+		public const int PP_E_CERTBIND_NONMATCHING = -2147203569;
+
+		// Token: 0x04000FEA RID: 4074
+		public const int PP_E_CERTBIND_DETAIL_CN_BAD_DN = -2147203566;
+
+		// Token: 0x04000FEB RID: 4075
+		public const int PP_E_CERTBIND_GETFIELD_NOCERT = -2147203563;
+
+		// Token: 0x04000FEC RID: 4076
+		public const int PP_E_CERTBIND_BAD_CERTINFO = -2147203556;
+
+		// Token: 0x04000FED RID: 4077
+		public const int PP_E_CERTBIND_ASSOC_CONFLICT = -2147203554;
+
+		// Token: 0x04000FEE RID: 4078
+		public const int PP_E_CERTBIND_FLOWTOKEN_EMPTY = -2147203553;
+
+		// Token: 0x04000FEF RID: 4079
+		public const int PP_E_CERTINFO_SET_INVALIDARG = -2147203488;
+
+		// Token: 0x04000FF0 RID: 4080
+		public const int PP_E_CERTINFO_SET_BADHEADER = -2147203487;
+
+		// Token: 0x04000FF1 RID: 4081
+		public const int PP_E_CERTINFO_SET_BADCERTFIELD = -2147203486;
+
+		// Token: 0x04000FF2 RID: 4082
+		public const int PP_E_CERTINFO_SET_BADCERT_SUBJECT = -2147203485;
+
+		// Token: 0x04000FF3 RID: 4083
+		public const int PP_E_CERTINFO_SET_BADCERT_ISSUER = -2147203484;
+
+		// Token: 0x04000FF4 RID: 4084
+		public const int PP_E_CERTINFO_SET_BADCERT_SERIALNO = -2147203483;
+
+		// Token: 0x04000FF5 RID: 4085
+		public const int PP_E_CERTINFO_SET_BADCERT_PURPOSES = -2147203482;
+
+		// Token: 0x04000FF6 RID: 4086
+		public const int PP_E_CERTINFO_SET_BADCERT_USAGE = -2147203481;
+
+		// Token: 0x04000FF7 RID: 4087
+		public const int PP_E_CERTINFO_SET_BADCERT_EXPIRY_LOW = -2147203479;
+
+		// Token: 0x04000FF8 RID: 4088
+		public const int PP_E_CERTINFO_SET_BADCERT_EXPIRY_HIGH = -2147203478;
+
+		// Token: 0x04000FF9 RID: 4089
+		public const int PP_E_CERTINFO_SET_BADCERT_BADUSAGE = -2147203477;
+
+		// Token: 0x04000FFA RID: 4090
+		public const int PP_E_CERTINFO_SET_BADCERT_BADPURPOSES = -2147203476;
+
+		// Token: 0x04000FFB RID: 4091
+		public const int PP_E_CERTINFO_SET_BADHEADER_PURPOSECOUNT = -2147203475;
+
+		// Token: 0x04000FFC RID: 4092
+		public const int PP_E_CERTINFO_SET_BADHEADER_ACTIONS = -2147203474;
+
+		// Token: 0x04000FFD RID: 4093
+		public const int PP_E_CERTINFO_SET_BADHEADER_CURRENTTIME = -2147203473;
+
+		// Token: 0x04000FFE RID: 4094
+		public const int PP_E_CERTINFO_SET_BADHEADER_PUID = -2147203472;
+
+		// Token: 0x04000FFF RID: 4095
+		public const int PP_E_CERTINFO_STR2CERTELEM_NO_ISSUER = -2147203471;
+
+		// Token: 0x04001000 RID: 4096
+		public const int PP_E_CERTINFO_STR2CERTELEM_NO_SUBJECT = -2147203470;
+
+		// Token: 0x04001001 RID: 4097
+		public const int PP_E_CERTINFO_STR2CERTELEM_NO_SERIALNO = -2147203469;
+
+		// Token: 0x04001002 RID: 4098
+		public const int PP_E_CERTINFO_STR2CERTELEM_NO_EXPIRY = -2147203468;
+
+		// Token: 0x04001003 RID: 4099
+		public const int PP_E_CERTINFO_STR2CERTELEM_NO_CALOGO = -2147203467;
+
+		// Token: 0x04001004 RID: 4100
+		public const int PP_E_CERTINFO_STR2CERTELEM_NO_X509 = -2147203466;
+
+		// Token: 0x04001005 RID: 4101
+		public const int PP_E_CERTINFO_STR2CERTELEM_BAD_USAGE = -2147203465;
+
+		// Token: 0x04001006 RID: 4102
+		public const int PP_E_CERTINFO_STR2CERTELEM_BAD_PURPOSES = -2147203464;
+
+		// Token: 0x04001007 RID: 4103
+		public const int PP_E_CERTINFO_STR2CERTELEM_INCONSISTENT_USAGE = -2147203463;
+
+		// Token: 0x04001008 RID: 4104
+		public const int PP_E_CERTINFO_SET_BAD_COUNT = -2147203462;
+
+		// Token: 0x04001009 RID: 4105
+		public const int PP_E_CERTINFO_SETHEADER_BAD_PUID = -2147203461;
+
+		// Token: 0x0400100A RID: 4106
+		public const int PP_E_CERTINFO_SETHEADER_BAD_ACTION = -2147203460;
+
+		// Token: 0x0400100B RID: 4107
+		public const int PP_E_CERTINFO_GETCERT_INVALID_INDEX = -2147203459;
+
+		// Token: 0x0400100C RID: 4108
+		public const int PP_E_CERTINFO_SET_INVALID_STRING = -2147203457;
+
+		// Token: 0x0400100D RID: 4109
+		public const int PP_E_CERTINFO_CONSTRUCT_BAD_COUNT = -2147203456;
+
+		// Token: 0x0400100E RID: 4110
+		public const int PP_E_CERTINFO_CONSTRUCT_NO_ISSUER = -2147203455;
+
+		// Token: 0x0400100F RID: 4111
+		public const int PP_E_CERTINFO_CONSTRUCT_NO_SUBJECT = -2147203454;
+
+		// Token: 0x04001010 RID: 4112
+		public const int PP_E_CERTINFO_CONSTRUCT_NO_SERIALNO = -2147203453;
+
+		// Token: 0x04001011 RID: 4113
+		public const int PP_E_CERTINFO_CONSTRUCT_INVALID_USAGE = -2147203452;
+
+		// Token: 0x04001012 RID: 4114
+		public const int PP_E_CERTINFO_CONSTRUCT_INVALID_PURPOSES = -2147203451;
+
+		// Token: 0x04001013 RID: 4115
+		public const int PP_E_CERTINFO_GETSINGLECERT_BAD_COUNT = -2147203449;
+
+		// Token: 0x04001014 RID: 4116
+		public const int PP_E_CERTINFO_GETSINGLECERT_BAD_INDEX = -2147203448;
+
+		// Token: 0x04001015 RID: 4117
+		public const int PP_E_CERTINFO_GETCERT_NOT_SIGNLE = -2147203447;
+
+		// Token: 0x04001016 RID: 4118
+		public const int PP_E_CERTINFO_MAX_REACHED = -2147203446;
+
+		// Token: 0x04001017 RID: 4119
+		public const int PP_E_CERTINFO_STR2CERTELEM_NO_THUMBPRINT = -2147203445;
+
+		// Token: 0x04001018 RID: 4120
+		public const int PP_E_CERTINFO_STR2CERTELEM_NO_EMAIL = -2147203444;
+
+		// Token: 0x04001019 RID: 4121
+		public const int PP_E_CERTINFO_SET_BADCERT_HR = -2147203443;
+
+		// Token: 0x0400101A RID: 4122
+		public const int PP_E_BAD_BASE_URL = -2147203422;
+
+		// Token: 0x0400101B RID: 4123
+		public const int PP_E_CERTINFO_BAD_ALGORITHM = -2147203421;
+
+		// Token: 0x0400101C RID: 4124
+		public const int PP_E_RSAUTIL_MISSING_CERT_FROM_CERTSTORE = -2147203420;
+
+		// Token: 0x0400101D RID: 4125
+		public const int PP_E_PK_CERTINFO_INVALID_FIELD_ = -2147203408;
+
+		// Token: 0x0400101E RID: 4126
+		public const int PP_E_RA_INIT_EVTLOGGER = -2147203327;
+
+		// Token: 0x0400101F RID: 4127
+		public const int PP_E_RA_INVALID_BLOB_SIZE = -2147203326;
+
+		// Token: 0x04001020 RID: 4128
+		public const int PP_E_RA_INVALID_CRYPT_ALGOID_SIZE = -2147203325;
+
+		// Token: 0x04001021 RID: 4129
+		public const int PP_E_RA_INVALID_CERT_EXT_SIZE = -2147203324;
+
+		// Token: 0x04001022 RID: 4130
+		public const int PP_E_RA_INVALID_PKI_BLOB_SIZE = -2147203323;
+
+		// Token: 0x04001023 RID: 4131
+		public const int PP_E_RA_BAD_MEMBERNAME = -2147203322;
+
+		// Token: 0x04001024 RID: 4132
+		public const int PP_E_RA_GET_DOMAIN = -2147203320;
+
+		// Token: 0x04001025 RID: 4133
+		public const int PP_E_RA_INIT_CA_BAD_CONFIG = -2147203319;
+
+		// Token: 0x04001026 RID: 4134
+		public const int PP_E_RA_BAD_PUID = -2147203318;
+
+		// Token: 0x04001027 RID: 4135
+		public const int PP_E_CERTREQUEST_TOOMANY_ATTRIBUTES = -2147203317;
+
+		// Token: 0x04001028 RID: 4136
+		public const int PP_E_CERTREQUEST_TOOMANY_ATTRIBBLOBS = -2147203316;
+
+		// Token: 0x04001029 RID: 4137
+		public const int PP_E_RAAPI_INIT_NO_CAMACHINE_UP = -2147203312;
+
+		// Token: 0x0400102A RID: 4138
+		public const int PP_E_RAAPI_INIT_NO_CAMACHINE = -2147203311;
+
+		// Token: 0x0400102B RID: 4139
+		public const int PP_E_RAAPI_INIT_GETCOMPUTERNAME = -2147203310;
+
+		// Token: 0x0400102C RID: 4140
+		public const int PP_E_RAAPI_PROV_INVALID_PURPOSE_ARG = -2147203307;
+
+		// Token: 0x0400102D RID: 4141
+		public const int PP_E_RAAPI_PROV_BAD_KEYSPEC = -2147203303;
+
+		// Token: 0x0400102E RID: 4142
+		public const int PP_E_RAAPI_PARTNERCA_NOTFOUND = -2147203297;
+
+		// Token: 0x0400102F RID: 4143
+		public const int PP_E_RAAPI_SETCERT_BADEMAIL = -2147203273;
+
+		// Token: 0x04001030 RID: 4144
+		public const int PP_E_RAAPI_SETCERT_NO_AKI = -2147203268;
+
+		// Token: 0x04001031 RID: 4145
+		public const int PP_E_CERT_BAD_X509_LEN = -2147203264;
+
+		// Token: 0x04001032 RID: 4146
+		public const int PP_E_CERT_BAD_X509_ENCODING = -2147203263;
+
+		// Token: 0x04001033 RID: 4147
+		public const int PP_E_CERT_BAD_BASE64_LEN = -2147203262;
+
+		// Token: 0x04001034 RID: 4148
+		public const int PP_E_CERT_BAD_BASE64_ENCODING = -2147203261;
+
+		// Token: 0x04001035 RID: 4149
+		public const int PP_E_CERT_BAD_CERTCONTEXT_ARG = -2147203260;
+
+		// Token: 0x04001036 RID: 4150
+		public const int PP_E_CERT_GET_SERIALNO_NOTFOUND = -2147203259;
+
+		// Token: 0x04001037 RID: 4151
+		public const int PP_E_CERT_GET_NOTAFTER_NOTFOUND = -2147203258;
+
+		// Token: 0x04001038 RID: 4152
+		public const int PP_E_CERT_GET_NOTBEFORE_NOTFOUND = -2147203257;
+
+		// Token: 0x04001039 RID: 4153
+		public const int PP_E_CERT_GET_ENCODINGTYPE_NOTFOUND = -2147203256;
+
+		// Token: 0x0400103A RID: 4154
+		public const int PP_E_CERT_NO_CERT_CONTEXT_EX = -2147203255;
+
+		// Token: 0x0400103B RID: 4155
+		public const int PP_E_CERT_BAD_FROM_CCM = -2147203252;
+
+		// Token: 0x0400103C RID: 4156
+		public const int PP_E_CERTDB_NO_EMAIL = -2147203248;
+
+		// Token: 0x0400103D RID: 4157
+		public const int PP_E_CERTDB_GETCERTSERNO_BAD_PURPOSE = -2147203241;
+
+		// Token: 0x0400103E RID: 4158
+		public const int PP_E_CERTDB_GETCERTSERNO_MEMBERNAME_TOOLONG = -2147203240;
+
+		// Token: 0x0400103F RID: 4159
+		public const int PP_E_CERTDB_GETCERTSERNO_ISSUER_TOOLONG = -2147203239;
+
+		// Token: 0x04001040 RID: 4160
+		public const int PP_E_CERTDB_GETCERTSERNO_SERIALNO_TOOLONG = -2147203238;
+
+		// Token: 0x04001041 RID: 4161
+		public const int PP_E_CERTDB_INSERTUPDATE_BAD_MEMBERNAME = -2147203232;
+
+		// Token: 0x04001042 RID: 4162
+		public const int PP_E_CERTDB_INSERTUPDATE_BAD_PURPOSE = -2147203231;
+
+		// Token: 0x04001043 RID: 4163
+		public const int PP_E_CERTDB_INSERTUPDATE_BAD_STATUS = -2147203230;
+
+		// Token: 0x04001044 RID: 4164
+		public const int PP_E_CERTDB_INSERTUPDATE_BAD_NUM_PURPOSES = -2147203228;
+
+		// Token: 0x04001045 RID: 4165
+		public const int PP_E_CERTDB_INSERTUPDATE_BAD_PURPOSEPTR = -2147203227;
+
+		// Token: 0x04001046 RID: 4166
+		public const int PP_E_CERTDB_INSERTUPDATE_BAD_PRIVATEKEY = -2147203226;
+
+		// Token: 0x04001047 RID: 4167
+		public const int PP_E_CERTDB_GETCERT_NOTFOUND = -2147203223;
+
+		// Token: 0x04001048 RID: 4168
+		public const int PP_E_CERTDB_GETCERTSERNO_BAD_MEMBERNAME = -2147203221;
+
+		// Token: 0x04001049 RID: 4169
+		public const int PP_E_CERTDB_INVALID_EMAIL = -2147203218;
+
+		// Token: 0x0400104A RID: 4170
+		public const int PP_E_DBCERT_NO_CERTBLOB = -2147203213;
+
+		// Token: 0x0400104B RID: 4171
+		public const int PP_E_DBCERT_NO_PRIVATEKEY = -2147203209;
+
+		// Token: 0x0400104C RID: 4172
+		public const int PP_E_DBCERT_MEMBERNAME_LONG = -2147203202;
+
+		// Token: 0x0400104D RID: 4173
+		public const int PP_E_DBCERT_ISSUER_LONG = -2147203201;
+
+		// Token: 0x0400104E RID: 4174
+		public const int PP_E_DBCERT_SUBJECT_LONG = -2147203200;
+
+		// Token: 0x0400104F RID: 4175
+		public const int PP_E_DBCERT_SERIALNO_LONG = -2147203199;
+
+		// Token: 0x04001050 RID: 4176
+		public const int PP_E_DBCERT_PRIVATEKEY_LONG = -2147203198;
+
+		// Token: 0x04001051 RID: 4177
+		public const int PP_E_DBCERT_NO_CERTPURPOSES = -2147203197;
+
+		// Token: 0x04001052 RID: 4178
+		public const int PP_E_DBCERT_INVALIDPURPOSES = -2147203196;
+
+		// Token: 0x04001053 RID: 4179
+		public const int PP_E_CERTDB_CERTPRESENT_BADPURPOSE = -2147203195;
+
+		// Token: 0x04001054 RID: 4180
+		public const int PP_E_CERT_NULL_CONTEXT = -2147203194;
+
+		// Token: 0x04001055 RID: 4181
+		public const int PP_E_CERT_BAD_CERTBLOB = -2147203193;
+
+		// Token: 0x04001056 RID: 4182
+		public const int PP_E_CERT_BAD_CONTEXT = -2147203191;
+
+		// Token: 0x04001057 RID: 4183
+		public const int PP_E_DBCERT_BAD_CONTEXT = -2147203190;
+
+		// Token: 0x04001058 RID: 4184
+		public const int PP_CERTDIRDB_NO_PPSTS = -2147203188;
+
+		// Token: 0x04001059 RID: 4185
+		public const int PP_E_CERT_BASE64X509_LENGTH = -2147203185;
+
+		// Token: 0x0400105A RID: 4186
+		public const int PP_E_CERT_BASE64X509_LENGTH2 = -2147203184;
+
+		// Token: 0x0400105B RID: 4187
+		public const int PP_E_DBCERT_MAXNUMCERT_REACHED = -2147203183;
+
+		// Token: 0x0400105C RID: 4188
+		public const int PP_E_CERTDB_CERTPRESENT_NULLCERT = -2147203178;
+
+		// Token: 0x0400105D RID: 4189
+		public const int PP_E_RAAPI_CERT_BAD_PURPOSES = -2147203161;
+
+		// Token: 0x0400105E RID: 4190
+		public const int PP_E_RAAPI_CERT_NOT_YET_VALID = -2147203159;
+
+		// Token: 0x0400105F RID: 4191
+		public const int PP_E_RAAPI_CERT_EXPIRED = -2147203158;
+
+		// Token: 0x04001060 RID: 4192
+		public const int PP_E_RAAPI_CERT_BAD_ENC_KEYUSAGE = -2147203156;
+
+		// Token: 0x04001061 RID: 4193
+		public const int PP_E_RAAPI_CERT_BAD_SIGN_KEYUSAGE = -2147203155;
+
+		// Token: 0x04001062 RID: 4194
+		public const int PP_E_RAAPI_CA_NOT_AVAILABLE = -2147203152;
+
+		// Token: 0x04001063 RID: 4195
+		public const int PP_E_RAAPI_GETCERT_EXPIRED = -2147203148;
+
+		// Token: 0x04001064 RID: 4196
+		public const int PP_E_CERT_GET_ISSUER_BADARG = -2147203136;
+
+		// Token: 0x04001065 RID: 4197
+		public const int PP_E_CERT_GET_ISSUER_BAD = -2147203135;
+
+		// Token: 0x04001066 RID: 4198
+		public const int PP_E_CERT_GETCERTNAME_BAD_CONTEXT = -2147203134;
+
+		// Token: 0x04001067 RID: 4199
+		public const int PP_E_CERT_GETCERTNAME_BAD_NAMETYPE = -2147203133;
+
+		// Token: 0x04001068 RID: 4200
+		public const int PP_E_CERT_GETCERTNAME_BAD_NAMETYPE_2 = -2147203132;
+
+		// Token: 0x04001069 RID: 4201
+		public const int PP_E_CERT_GETCERTNAME_BAD_NAMETYPE_3 = -2147203131;
+
+		// Token: 0x0400106A RID: 4202
+		public const int PP_E_CERT_GET_SUBJECT_BADARG = -2147203130;
+
+		// Token: 0x0400106B RID: 4203
+		public const int PP_E_CERT_GET_SUBJECT_BAD = -2147203129;
+
+		// Token: 0x0400106C RID: 4204
+		public const int PP_E_CERT_GET_SERIALNO_BADARG = -2147203128;
+
+		// Token: 0x0400106D RID: 4205
+		public const int PP_E_CERT_GET_SERIALNO_BAD = -2147203127;
+
+		// Token: 0x0400106E RID: 4206
+		public const int PP_E_CERT_GET_CERTBLOB_BAD_COUNTPTR = -2147203126;
+
+		// Token: 0x0400106F RID: 4207
+		public const int PP_E_CERT_GET_CERTBLOB_BAD_BYTEPTR = -2147203125;
+
+		// Token: 0x04001070 RID: 4208
+		public const int PP_E_CERT_GET_THUMBPRINT_NOTINIT = -2147203124;
+
+		// Token: 0x04001071 RID: 4209
+		public const int PP_E_CERT_GET_KEYUSAGE_NOTINIT = -2147203123;
+
+		// Token: 0x04001072 RID: 4210
+		public const int PP_E_CERT_GET_NOTBEFORE_BAD = -2147203122;
+
+		// Token: 0x04001073 RID: 4211
+		public const int PP_E_CERT_BAD_HASHLENGTH = -2147203121;
+
+		// Token: 0x04001074 RID: 4212
+		public const int PP_E_CERT_GET_NOTAFTER_BAD = -2147203120;
+
+		// Token: 0x04001075 RID: 4213
+		public const int PP_E_CERT_GET_ENCODINGTYPE_BAD = -2147203118;
+
+		// Token: 0x04001076 RID: 4214
+		public const int PP_E_CERT_GET_CERTBLOB_NOTFOUND = -2147203117;
+
+		// Token: 0x04001077 RID: 4215
+		public const int PP_E_CERT_GET_EMAIL_BADARG = -2147203116;
+
+		// Token: 0x04001078 RID: 4216
+		public const int PP_E_CERT_GET_EMAIL_BAD = -2147203115;
+
+		// Token: 0x04001079 RID: 4217
+		public const int PP_E_CERT_GET_NAMESTRING_NOTFOUND = -2147203114;
+
+		// Token: 0x0400107A RID: 4218
+		public const int PP_E_CERT_GET_NAMESTRING_BAD = -2147203113;
+
+		// Token: 0x0400107B RID: 4219
+		public const int PP_E_CERT_GET_PKI_BADARG = -2147203112;
+
+		// Token: 0x0400107C RID: 4220
+		public const int PP_E_CERT_GET_PKI_NOTFOUND = -2147203111;
+
+		// Token: 0x0400107D RID: 4221
+		public const int PP_E_CERT_GET_PKI_BAD = -2147203110;
+
+		// Token: 0x0400107E RID: 4222
+		public const int PP_E_RAAPI_CERT_BAD_CERTINFO2 = -2147203109;
+
+		// Token: 0x0400107F RID: 4223
+		public const int PP_E_CERT_ISCA_NOTFOUND = -2147203108;
+
+		// Token: 0x04001080 RID: 4224
+		public const int PP_E_CERT_ISCA_BAD_EXT = -2147203107;
+
+		// Token: 0x04001081 RID: 4225
+		public const int PP_E_CERT_ISCA_NOEXT = -2147203106;
+
+		// Token: 0x04001082 RID: 4226
+		public const int PP_E_CERT_ISCA_BAD_DECODE = -2147203104;
+
+		// Token: 0x04001083 RID: 4227
+		public const int PP_E_CERT_ISCA_NOTCA = -2147203103;
+
+		// Token: 0x04001084 RID: 4228
+		public const int PP_E_CERT_GETEXT_BADARG = -2147203102;
+
+		// Token: 0x04001085 RID: 4229
+		public const int PP_E_CERT_GETEXT_TOOMANY_EXTENSIONS = -2147203101;
+
+		// Token: 0x04001086 RID: 4230
+		public const int PP_E_CERT_GETEXT_BAD_EXTENSION = -2147203100;
+
+		// Token: 0x04001087 RID: 4231
+		public const int PP_E_CERT_GETEXT_NOTFOUND = -2147203099;
+
+		// Token: 0x04001088 RID: 4232
+		public const int PP_E_PKCS10_DECODE = -2147203098;
+
+		// Token: 0x04001089 RID: 4233
+		public const int PP_E_NOT_FOUND = -2147203097;
+
+		// Token: 0x0400108A RID: 4234
+		public const int PP_E_CERT_GETKI_BADLENGTH = -2147203096;
+
+		// Token: 0x0400108B RID: 4235
+		public const int PP_E_CERTDIRDB_BADSKI = -2147203095;
+
+		// Token: 0x0400108C RID: 4236
+		public const int PP_E_CERTDIRDB_HEXDECODE = -2147203094;
+
+		// Token: 0x0400108D RID: 4237
+		public const int PP_E_RA_BAD_AUTHTIME = -2147203074;
+
+		// Token: 0x0400108E RID: 4238
+		public const int PP_E_PKI_NONUNIQUE_CERT = -2147203073;
+
+		// Token: 0x0400108F RID: 4239
+		public const int PP_E_CERTPOLICY_USE_DEFAULT = -2147203072;
+
+		// Token: 0x04001090 RID: 4240
+		public const int PP_E_CA_POLICYCOMMON_BADHASH = -2147203071;
+
+		// Token: 0x04001091 RID: 4241
+		public const int PP_E_CA_POLICYCOMMON_UNSUPPORTED_PUBALGID = -2147203070;
+
+		// Token: 0x04001092 RID: 4242
+		public const int PP_E_CA_POLICYCOMMON_INVALID_KEYLENGTH = -2147203069;
+
+		// Token: 0x04001093 RID: 4243
+		public const int PP_E_CA_FAIL_CREATECERTEXT = -2147203068;
+
+		// Token: 0x04001094 RID: 4244
+		public const int PP_E_CA_ZERO_CERTENCODE_LENGTH = -2147203067;
+
+		// Token: 0x04001095 RID: 4245
+		public const int PP_E_STDCERTPOLICY_INIT_BAD_CONFIG = -2147203066;
+
+		// Token: 0x04001096 RID: 4246
+		public const int PP_E_CA_CERTPOLICY_INIT_BAD_CONFIG = -2147203065;
+
+		// Token: 0x04001097 RID: 4247
+		public const int PP_E_RA_CERTPOLICY_INIT_BAD_CONFIG = -2147203064;
+
+		// Token: 0x04001098 RID: 4248
+		public const int PP_E_CA_KEYUSAGE_ZEROENCODE = -2147203063;
+
+		// Token: 0x04001099 RID: 4249
+		public const int PP_E_CA_SETCPS_ZEROENCODE = -2147203062;
+
+		// Token: 0x0400109A RID: 4250
+		public const int PP_E_CA_SETUSERNOTICE_ZEROENCODE = -2147203061;
+
+		// Token: 0x0400109B RID: 4251
+		public const int PP_E_CA_GETCA_NULLCERTINFO = -2147203060;
+
+		// Token: 0x0400109C RID: 4252
+		public const int PP_E_CA_AKI2_ZEROENCODE = -2147203059;
+
+		// Token: 0x0400109D RID: 4253
+		public const int PP_E_CA_SKI_ZEROENCODE = -2147203058;
+
+		// Token: 0x0400109E RID: 4254
+		public const int PP_E_CA_POLICY_BADCONFIG_DEFAULTLIFE = -2147203057;
+
+		// Token: 0x0400109F RID: 4255
+		public const int PP_E_CA_POLICY_GETCA_NULLCERTINFO = -2147203056;
+
+		// Token: 0x040010A0 RID: 4256
+		public const int PP_E_CA_GENSUBJECT_ZEROENCODE = -2147203055;
+
+		// Token: 0x040010A1 RID: 4257
+		public const int PP_E_CA_GETPK_NULLCERTINFO = -2147203054;
+
+		// Token: 0x040010A2 RID: 4258
+		public const int PP_E_CA_GETPK_FALSECRYPTACQUIRE = -2147203053;
+
+		// Token: 0x040010A3 RID: 4259
+		public const int PP_E_CA_INVALID_DECRYPTEDCSTOKEN = -2147203052;
+
+		// Token: 0x040010A4 RID: 4260
+		public const int PP_E_PE_NOCOMMAND = -2147202816;
+
+		// Token: 0x040010A5 RID: 4261
+		public const int PP_E_PE_NOACTION = -2147202815;
+
+		// Token: 0x040010A6 RID: 4262
+		public const int PP_E_PE_INVALIDRULE = -2147202814;
+
+		// Token: 0x040010A7 RID: 4263
+		public const int PP_E_PE_BADPOLICY = -2147202813;
+
+		// Token: 0x040010A8 RID: 4264
+		public const int PP_E_PE_INVALIDINPUT_COUNT = -2147202812;
+
+		// Token: 0x040010A9 RID: 4265
+		public const int PP_E_PE_INVALIDPOLICYINFO = -2147202811;
+
+		// Token: 0x040010AA RID: 4266
+		public const int PP_E_PE_INVALIDINPUT_PIPE = -2147202810;
+
+		// Token: 0x040010AB RID: 4267
+		public const int PP_E_PE_TOOMANYINPUTS = -2147202809;
+
+		// Token: 0x040010AC RID: 4268
+		public const int PP_E_PE_INVALIDPREDICATEINDEX = -2147202808;
+
+		// Token: 0x040010AD RID: 4269
+		public const int PP_E_PE_RULESTACKOVERFLOW = -2147202807;
+
+		// Token: 0x040010AE RID: 4270
+		public const int PP_E_PE_RULESTACKUNDERFLOW = -2147202806;
+
+		// Token: 0x040010AF RID: 4271
+		public const int PP_E_PE_INVALIDRULESYNTAX = -2147202805;
+
+		// Token: 0x040010B0 RID: 4272
+		public const int PP_E_PE_RULEFALSE = -2147202804;
+
+		// Token: 0x040010B1 RID: 4273
+		public const int PP_E_PE_DLLHASNOINITFUNC = -2147202803;
+
+		// Token: 0x040010B2 RID: 4274
+		public const int PP_E_PE_DLLHASNOSHUTDOWNFUNC = -2147202802;
+
+		// Token: 0x040010B3 RID: 4275
+		public const int PP_E_PE_DLLHASNOINVOKEFUNC = -2147202801;
+
+		// Token: 0x040010B4 RID: 4276
+		public const int PP_E_PE_DLLNOTLOADED = -2147202800;
+
+		// Token: 0x040010B5 RID: 4277
+		public const int PP_E_PE_INVALIDCONSTANTTYPE = -2147202799;
+
+		// Token: 0x040010B6 RID: 4278
+		public const int PP_E_PE_DUPLICATEPOLICY = -2147202798;
+
+		// Token: 0x040010B7 RID: 4279
+		public const int PP_E_PE_NOPOLICY = -2147202797;
+
+		// Token: 0x040010B8 RID: 4280
+		public const int PP_E_PE_NOPREDICATE = -2147202796;
+
+		// Token: 0x040010B9 RID: 4281
+		public const int PP_E_PE_TYPEMISMATCH = -2147202795;
+
+		// Token: 0x040010BA RID: 4282
+		public const int PP_E_PE_MODIFYROWSETCOLUMN = -2147202794;
+
+		// Token: 0x040010BB RID: 4283
+		public const int PP_E_PE_REQUIREDPROPSNOTPRESENT = -2147202793;
+
+		// Token: 0x040010BC RID: 4284
+		public const int PP_E_PE_TOOMANYACTIONS = -2147202792;
+
+		// Token: 0x040010BD RID: 4285
+		public const int PP_E_PE_POLICYASACTIONALREADYSET = -2147202791;
+
+		// Token: 0x040010BE RID: 4286
+		public const int PP_E_PE_POLICYNOTBSTR = -2147202790;
+
+		// Token: 0x040010BF RID: 4287
+		public const int PP_E_PE_EMPTYPOLICY = -2147202789;
+
+		// Token: 0x040010C0 RID: 4288
+		public const int PP_E_CHECKCRL_EARLY_THAN_NOTBEFORE = -2147201792;
+
+		// Token: 0x040010C1 RID: 4289
+		public const int PP_E_CHECKCRL_LATER_THAN_NOTAFTER = -2147201791;
+
+		// Token: 0x040010C2 RID: 4290
+		public const int PP_E_CHECKCRL_NO_CDP = -2147201790;
+
+		// Token: 0x040010C3 RID: 4291
+		public const int PP_E_CHECKCRL_CANNOT_GET_CRL = -2147201789;
+
+		// Token: 0x040010C4 RID: 4292
+		public const int PP_E_CHECKCRL_CANNOT_GET_DELTA_CRL = -2147201788;
+
+		// Token: 0x040010C5 RID: 4293
+		public const int PP_E_CHECKCRL_CANNOT_GET_LATEST_CRL = -2147201787;
+
+		// Token: 0x040010C6 RID: 4294
+		public const int PP_E_CHECKCRL_CERT_REVOKED = -2147201782;
+
+		// Token: 0x040010C7 RID: 4295
+		public const int PP_E_CHECKCRL_INVALID_ENCODING = -2147201781;
+
+		// Token: 0x040010C8 RID: 4296
+		public const int PP_E_CHECKCRL_INVALID_REVTYPE = -2147201780;
+
+		// Token: 0x040010C9 RID: 4297
+		public const int PP_E_CHECKCRL_NO_CONTEXT = -2147201779;
+
+		// Token: 0x040010CA RID: 4298
+		public const int PP_E_CHECKCRL_NO_REVSTATUS = -2147201778;
+
+		// Token: 0x040010CB RID: 4299
+		public const int PP_E_CHECKCRL_INVALID_ISSUER_NOBCE = -2147201777;
+
+		// Token: 0x040010CC RID: 4300
+		public const int PP_E_CHECKCRL_INVALID_ISSUER_BADBCE = -2147201776;
+
+		// Token: 0x040010CD RID: 4301
+		public const int PP_E_CHECKCRL_INVALID_ISSUER_BADBCE_PATH = -2147201775;
+
+		// Token: 0x040010CE RID: 4302
+		public const int PP_E_CHECKCRL_CRLAGENT_NOT_INIT = -2147201773;
+
+		// Token: 0x040010CF RID: 4303
+		public const int PP_E_CHECKCRL_UNSUPPORTED_CRITICAL_EXT = -2147201772;
+
+		// Token: 0x040010D0 RID: 4304
+		public const int PP_E_CHECKCRL_BASECRL_FAILED_TIMECHECK = -2147201771;
+
+		// Token: 0x040010D1 RID: 4305
+		public const int PP_E_CHECKCRL_BASECRL_NUMBER_ERROR = -2147201769;
+
+		// Token: 0x040010D2 RID: 4306
+		public const int PP_E_CHECKCRL_DELTACRL_INDICATOREXT_ERROR = -2147201768;
+
+		// Token: 0x040010D3 RID: 4307
+		public const int PP_E_CHECKCRL_DELTACRL_INDICATOR_ERROR = -2147201767;
+
+		// Token: 0x040010D4 RID: 4308
+		public const int PP_E_CHECKCRL_CANNOT_FIND_ISSUER = -2147201765;
+
+		// Token: 0x040010D5 RID: 4309
+		public const int PP_E_POPUPATECA_ALREADY_INITED = -2147201744;
+
+		// Token: 0x040010D6 RID: 4310
+		public const int PP_E_POPUPATECA_NOT_INITED = -2147201743;
+
+		// Token: 0x040010D7 RID: 4311
+		public const int PP_E_POPUPATECA_FAILED = -2147201742;
+
+		// Token: 0x040010D8 RID: 4312
+		public const int PP_E_CDP_NOTFOUND_IN_DB = -2147201535;
+
+		// Token: 0x040010D9 RID: 4313
+		public const int PP_E_CRL_NOTFOUND_IN_DB = -2147201534;
+
+		// Token: 0x040010DA RID: 4314
+		public const int PP_E__BLOB_TOO_LARGE = -2147201533;
+
+		// Token: 0x040010DB RID: 4315
+		public const int PP_E_CRL_BLOB_TOO_LARGE = -2147201532;
+
+		// Token: 0x040010DC RID: 4316
+		public const int PP_E_CDP_WITHNO_KEY = -2147201531;
+
+		// Token: 0x040010DD RID: 4317
+		public const int PP_E_CDP_INIT_CDPINFO_ZERO = -2147201529;
+
+		// Token: 0x040010DE RID: 4318
+		public const int PP_E_CERTPROV_ADDCDP_INVALID_ARG = -2147201528;
+
+		// Token: 0x040010DF RID: 4319
+		public const int PP_E_CERTPROV_ADDCDP_NOKEY = -2147201527;
+
+		// Token: 0x040010E0 RID: 4320
+		public const int PP_E_CERTPROV_ADDCDP_ISSUER_LONG = -2147201526;
+
+		// Token: 0x040010E1 RID: 4321
+		public const int PP_E_CDP_NO_CCMCACHE_POINTER = -2147201520;
+
+		// Token: 0x040010E2 RID: 4322
+		public const int PP_E_CRL_INVALID_SIGNATURE = -2147201519;
+
+		// Token: 0x040010E3 RID: 4323
+		public const int PP_E_CRL_MISSING_AKI_EXTENSION = -2147201518;
+
+		// Token: 0x040010E4 RID: 4324
+		public const int PP_E_MSNT_TAGINX_OUTOFBOUND = -2147201275;
+
+		// Token: 0x040010E5 RID: 4325
+		public const int PP_E_MSNT_PID_NOTPRESENT = -2147201274;
+
+		// Token: 0x040010E6 RID: 4326
+		public const int PP_E_MSNT_TRACE_DISABLED = -2147201272;
+
+		// Token: 0x040010E7 RID: 4327
+		public const int PP_E_MSNT_TRACE_NOT_INITIALIZED = -2147201271;
+
+		// Token: 0x040010E8 RID: 4328
+		public const int PP_E_MSNT_CRITICAL_ERROR = -2147201270;
+
+		// Token: 0x040010E9 RID: 4329
+		public const int PP_E_NS_HTTPSESSIONCREATE = -2147201199;
+
+		// Token: 0x040010EA RID: 4330
+		public const int PP_E_NS_HTTPCRACKURL = -2147201198;
+
+		// Token: 0x040010EB RID: 4331
+		public const int PP_E_NS_HTTPCONNECT = -2147201197;
+
+		// Token: 0x040010EC RID: 4332
+		public const int PP_E_NS_HTTPOPENREQUEST = -2147201196;
+
+		// Token: 0x040010ED RID: 4333
+		public const int PP_E_NS_HTTPSETCREDENTIALS = -2147201195;
+
+		// Token: 0x040010EE RID: 4334
+		public const int PP_E_NS_HTTPSENDREQUEST = -2147201194;
+
+		// Token: 0x040010EF RID: 4335
+		public const int PP_E_NS_HTTPASYNCCREATE = -2147201189;
+
+		// Token: 0x040010F0 RID: 4336
+		public const int PP_E_NS_SHUTDOWNPENDING = -2147201188;
+
+		// Token: 0x040010F1 RID: 4337
+		public const int PP_E_NS_NOTSNDRCREATEFAILED = -2147201186;
+
+		// Token: 0x040010F2 RID: 4338
+		public const int PP_E_NS_EXCEEDEDMAX = -2147201182;
+
+		// Token: 0x040010F3 RID: 4339
+		public const int PP_E_NS_SUBSCRIBERNAME = -2147201181;
+
+		// Token: 0x040010F4 RID: 4340
+		public const int PP_E_NS_TRANSPORTPARAMS = -2147201180;
+
+		// Token: 0x040010F5 RID: 4341
+		public const int PP_E_NS_PACKETS = -2147201179;
+
+		// Token: 0x040010F6 RID: 4342
+		public const int PP_E_NS_PACKETSIZE = -2147201178;
+
+		// Token: 0x040010F7 RID: 4343
+		public const int PP_E_NS_EMPTYNOTIFICATION = -2147201177;
+
+		// Token: 0x040010F8 RID: 4344
+		public const int PP_E_NS_MACHINENAMENOTUNIQUE = -2147201176;
+
+		// Token: 0x040010F9 RID: 4345
+		public const int PP_E_NS_MACHINENOTRELATEDTODATACENTER = -2147201175;
+
+		// Token: 0x040010FA RID: 4346
+		public const int PP_E_NS_MACHINENOTINDB = -2147201173;
+
+		// Token: 0x040010FB RID: 4347
+		public const int PP_E_NOTSVC_PARSER_MISSING_TRANSPORT_ELEMENT = -2147201167;
+
+		// Token: 0x040010FC RID: 4348
+		public const int PP_E_NOTSVC_PARSER_MISSING_CREDENTIAL_ELEMENT = -2147201166;
+
+		// Token: 0x040010FD RID: 4349
+		public const int PP_E_NOTSVC_FAILED_LOAD_XSLT = -2147201165;
+
+		// Token: 0x040010FE RID: 4350
+		public const int PP_E_NOTSVC_FAILED_COCREATE_MSXML4 = -2147201164;
+
+		// Token: 0x040010FF RID: 4351
+		public const int PP_E_NOTSVC_MISSING_DATACENTER = -2147201163;
+
+		// Token: 0x04001100 RID: 4352
+		public const int PP_E_NOTSVC_INVALID_MANIFEST_DATATYPE = -2147201162;
+
+		// Token: 0x04001101 RID: 4353
+		public const int PP_E_NOTSVC_NO_TRIGGER_MANIFEST = -2147201161;
+
+		// Token: 0x04001102 RID: 4354
+		public const int PP_E_NOTSVC_INVALID_MANIFEST_BLOB_TYPE = -2147201160;
+
+		// Token: 0x04001103 RID: 4355
+		public const int PP_E_AZ_RESOURCEINDEX_INVALID = -2147201024;
+
+		// Token: 0x04001104 RID: 4356
+		public const int PP_E_AZ_PROPPAIRINDEX_INVALID = -2147201023;
+
+		// Token: 0x04001105 RID: 4357
+		public const int PP_E_AZ_PROPNAME_NOTFOUND = -2147201022;
+
+		// Token: 0x04001106 RID: 4358
+		public const int PP_E_AZ_PROPIDINDEX_INVALID = -2147201021;
+
+		// Token: 0x04001107 RID: 4359
+		public const int PP_E_AZ_RESOURCETYPE_NOTFOUND = -2147201020;
+
+		// Token: 0x04001108 RID: 4360
+		public const int PP_E_AZ_RESOURCENAME_NOTFOUND = -2147201019;
+
+		// Token: 0x04001109 RID: 4361
+		public const int PP_E_AZ_RESTYPEENTRY_INVALID = -2147201018;
+
+		// Token: 0x0400110A RID: 4362
+		public const int PP_E_AZ_RESSCHEMA_INVALIDSTRING = -2147201017;
+
+		// Token: 0x0400110B RID: 4363
+		public const int PP_E_AZ_RESSCHEMA_INVALIDTYPE = -2147201016;
+
+		// Token: 0x0400110C RID: 4364
+		public const int PP_E_AZ_RESSCHEMA_INVALIDNAME = -2147201015;
+
+		// Token: 0x0400110D RID: 4365
+		public const int PP_E_AZ_RESOURCETYPE_INVALID = -2147201014;
+
+		// Token: 0x0400110E RID: 4366
+		public const int PP_E_AZ_CLAIMMAPINDEX_INVALID = -2147201013;
+
+		// Token: 0x0400110F RID: 4367
+		public const int PP_E_AZ_PROPNAME_INVALID = -2147201012;
+
+		// Token: 0x04001110 RID: 4368
+		public const int PP_E_AZ_PROPVALUE_INVALID = -2147201011;
+
+		// Token: 0x04001111 RID: 4369
+		public const int PP_E_AZ_PROPID_INVALID = -2147201010;
+
+		// Token: 0x04001112 RID: 4370
+		public const int PP_E_AZ_NORESOURCE = -2147201009;
+
+		// Token: 0x04001113 RID: 4371
+		public const int PP_E_AZ_CLAIMINDEX_INVALID = -2147201008;
+
+		// Token: 0x04001114 RID: 4372
+		public const int PP_E_AZ_SCOPEINDEX_INVALID = -2147201007;
+
+		// Token: 0x04001115 RID: 4373
+		public const int PP_E_AZ_ROLEMAPINDEX_INVALID = -2147201006;
+
+		// Token: 0x04001116 RID: 4374
+		public const int PP_E_AZ_CLAIM_INVALID = -2147201005;
+
+		// Token: 0x04001117 RID: 4375
+		public const int PP_E_AZ_SCOPE_INVALID = -2147201004;
+
+		// Token: 0x04001118 RID: 4376
+		public const int PP_E_AZ_SCOPETYPE_INVALID = -2147201003;
+
+		// Token: 0x04001119 RID: 4377
+		public const int PP_E_AZ_CLAIMNAME_NOTFOUND = -2147201002;
+
+		// Token: 0x0400111A RID: 4378
+		public const int PP_E_AZ_CLAIMID_NOTFOUND = -2147201001;
+
+		// Token: 0x0400111B RID: 4379
+		public const int PP_E_AZ_CLAIMSCHEMA_INVALIDNAME = -2147201000;
+
+		// Token: 0x0400111C RID: 4380
+		public const int PP_E_AZ_CLAIMSCHEMA_INVALIDID = -2147200999;
+
+		// Token: 0x0400111D RID: 4381
+		public const int PP_E_AZ_CLAIMENTRY_INVALID = -2147200998;
+
+		// Token: 0x0400111E RID: 4382
+		public const int PP_E_AZ_EVALUATOR_NOTFOUND = -2147200997;
+
+		// Token: 0x0400111F RID: 4383
+		public const int PP_E_AZ_NOTINSCOPE = -2147200996;
+
+		// Token: 0x04001120 RID: 4384
+		public const int PP_E_AZ_SCOPEEXPR_MISSINGSLASH = -2147200995;
+
+		// Token: 0x04001121 RID: 4385
+		public const int PP_E_AZ_RESOURCENAME_INVALID = -2147200994;
+
+		// Token: 0x04001122 RID: 4386
+		public const int PP_E_AZ_SCOPEEXPR_MISSINGEQUAL = -2147200993;
+
+		// Token: 0x04001123 RID: 4387
+		public const int PP_E_AZ_TOKENCLAIMMAP_INVALID = -2147200992;
+
+		// Token: 0x04001124 RID: 4388
+		public const int PP_E_AZ_TOKEN_NOROLEMAP = -2147200991;
+
+		// Token: 0x04001125 RID: 4389
+		public const int PP_E_AZ_TOKENSCOPE_INVALID = -2147200990;
+
+		// Token: 0x04001126 RID: 4390
+		public const int PP_E_AZ_AUTHZTOKEN_INVALID = -2147200989;
+
+		// Token: 0x04001127 RID: 4391
+		public const int PP_E_AZ_NOT_AUTHORIZED = -2147200988;
+
+		// Token: 0x04001128 RID: 4392
+		public const int PP_E_AZ_AUTHZ_NOBINDING = -2147200987;
+
+		// Token: 0x04001129 RID: 4393
+		public const int PP_E_AZ_SOURCESCOPE_INVALID = -2147200986;
+
+		// Token: 0x0400112A RID: 4394
+		public const int PP_E_AZ_ROLETEMPLATE_NOTFOUND = -2147200985;
+
+		// Token: 0x0400112B RID: 4395
+		public const int PP_E_AZ_TEMPLATEENTRY_INVALID = -2147200984;
+
+		// Token: 0x0400112C RID: 4396
+		public const int PP_E_AZ_TEMPLATEID_INVALID = -2147200983;
+
+		// Token: 0x0400112D RID: 4397
+		public const int PP_E_AZ_TEMPLATEXML_INVALID = -2147200982;
+
+		// Token: 0x0400112E RID: 4398
+		public const int PP_E_AZ_EVALTYPE_INVALID = -2147200981;
+
+		// Token: 0x0400112F RID: 4399
+		public const int PP_E_AZ_BINDINGCLAIMMAP_INVALID = -2147200980;
+
+		// Token: 0x04001130 RID: 4400
+		public const int PP_E_AZ_BINDINGSCOPEEXPR_INVALID = -2147200979;
+
+		// Token: 0x04001131 RID: 4401
+		public const int PP_E_AZ_BINDINGSCOPE_INVALID = -2147200978;
+
+		// Token: 0x04001132 RID: 4402
+		public const int PP_E_AZ_PROPID_NOTFOUND = -2147200977;
+
+		// Token: 0x04001133 RID: 4403
+		public const int PP_E_AZ_AUTHZTOKEN_NOROLEMAP = -2147200976;
+
+		// Token: 0x04001134 RID: 4404
+		public const int PP_E_AZ_AUTHZTOKEN_NOROOTSCOPE = -2147200975;
+
+		// Token: 0x04001135 RID: 4405
+		public const int PP_E_AZ_BINDINGS_NOCLAIMMAP = -2147200974;
+
+		// Token: 0x04001136 RID: 4406
+		public const int PP_E_AZ_AUTHZTOKEN_NOCLAIMMAP = -2147200973;
+
+		// Token: 0x04001137 RID: 4407
+		public const int PP_E_AZ_CLAIMMAP_NOCLAIMS = -2147200972;
+
+		// Token: 0x04001138 RID: 4408
+		public const int PP_E_AZ_ROOTSCOPE_INVALIDTYPE = -2147200971;
+
+		// Token: 0x04001139 RID: 4409
+		public const int PP_E_AZ_SCOPEEVAL_NOTEVALUATED = -2147200970;
+
+		// Token: 0x0400113A RID: 4410
+		public const int PP_E_AZ_SCOPEEVAL_NOINIT = -2147200969;
+
+		// Token: 0x0400113B RID: 4411
+		public const int PP_E_AZ_CANNOT_NORMALIZE = -2147200968;
+
+		// Token: 0x0400113C RID: 4412
+		public const int PP_E_AZ_DBCONVERSION_FAIL = -2147200967;
+
+		// Token: 0x0400113D RID: 4413
+		public const int PP_E_AZ_NORMALIZEDSCOPE_INVALID = -2147200966;
+
+		// Token: 0x0400113E RID: 4414
+		public const int PP_E_AZ_CLAIMMAP_EMPTY = -2147200965;
+
+		// Token: 0x0400113F RID: 4415
+		public const int PP_E_AZ_SCOPESCHEMA_INVALIDTYPE = -2147200964;
+
+		// Token: 0x04001140 RID: 4416
+		public const int PP_E_AZ_SCOPESCHEMA_INVALIDNAME = -2147200963;
+
+		// Token: 0x04001141 RID: 4417
+		public const int PP_E_AZ_SCOPEMAPENTRY_INVALID = -2147200962;
+
+		// Token: 0x04001142 RID: 4418
+		public const int PP_E_AZ_SCOPEMAPPING_NOTFOUND = -2147200961;
+
+		// Token: 0x04001143 RID: 4419
+		public const int PP_E_AZ_SCOPELEN_TOOBIG = -2147200960;
+
+		// Token: 0x04001144 RID: 4420
+		public const int PP_E_AZ_SCOPECOUNT_TOOBIG = -2147200959;
+
+		// Token: 0x04001145 RID: 4421
+		public const int PP_E_AZ_CLAIMLEN_TOOBIG = -2147200958;
+
+		// Token: 0x04001146 RID: 4422
+		public const int PP_E_AZ_CLAIMCOUNT_TOOBIG = -2147200957;
+
+		// Token: 0x04001147 RID: 4423
+		public const int PP_E_AZ_TOKENLEN_TOOBIG = -2147200956;
+
+		// Token: 0x04001148 RID: 4424
+		public const int PP_E_AZ_BINDINGSLEN_TOOBIG = -2147200955;
+
+		// Token: 0x04001149 RID: 4425
+		public const int PP_E_AZ_ROLE_NOTFOUND = -2147200954;
+
+		// Token: 0x0400114A RID: 4426
+		public const int PP_E_AZ_ROLE_NAMEMISSING = -2147200953;
+
+		// Token: 0x0400114B RID: 4427
+		public const int PP_E_AZ_DA_ID_INVALID = -2147200952;
+
+		// Token: 0x0400114C RID: 4428
+		public const int PP_E_AZ_IDENTITY_INVALID = -2147200951;
+
+		// Token: 0x0400114D RID: 4429
+		public const int PP_E_AZ_QUOTA_SETTINGS_INVALID = -2147200950;
+
+		// Token: 0x0400114E RID: 4430
+		public const int PP_E_AZ_NAMESPACE_ID_INVALID = -2147200949;
+
+		// Token: 0x0400114F RID: 4431
+		public const int PP_E_AZ_ENUMSCOPE_ID_INVALID = -2147200948;
+
+		// Token: 0x04001150 RID: 4432
+		public const int PP_E_AZ_MEMBERID_INVALID = -2147200947;
+
+		// Token: 0x04001151 RID: 4433
+		public const int PP_E_AZ_ENUMSCOPE_NOTSUPPORTED = -2147200946;
+
+		// Token: 0x04001152 RID: 4434
+		public const int PP_E_AZ_OBJECT_ID_INVALID = -2147200945;
+
+		// Token: 0x04001153 RID: 4435
+		public const int PP_E_AZ_GENERATEXML_BADVARIANT = -2147200944;
+
+		// Token: 0x04001154 RID: 4436
+		public const int PP_E_AZ_SCOPE_NOTSUPPORTED = -2147200943;
+
+		// Token: 0x04001155 RID: 4437
+		public const int PP_E_AZ_NO_CLAIMS = -2147200942;
+
+		// Token: 0x04001156 RID: 4438
+		public const int PP_E_AZ_BINDINGS_EMPTY = -2147200941;
+
+		// Token: 0x04001157 RID: 4439
+		public const int PP_E_AZ_TOKENTYPE_INVALID = -2147200940;
+
+		// Token: 0x04001158 RID: 4440
+		public const int PP_E_AZ_SOURCETYPE_NOTSUPPORTED = -2147200939;
+
+		// Token: 0x04001159 RID: 4441
+		public const int PP_E_AZ_ROLEFILTER_INVALID = -2147200938;
+
+		// Token: 0x0400115A RID: 4442
+		public const int PP_E_AZ_SITECONFIG_INVALID = -2147200937;
+
+		// Token: 0x0400115B RID: 4443
+		public const int PP_E_AZ_TOKENHEADER_INVALID = -2147200936;
+
+		// Token: 0x0400115C RID: 4444
+		public const int PP_E_AZ_CALLCONTEXT_INVALID = -2147200935;
+
+		// Token: 0x0400115D RID: 4445
+		public const int PP_E_AZ_CACHEDTOKEN_INVALID = -2147200934;
+
+		// Token: 0x0400115E RID: 4446
+		public const int PP_E_AZ_CACHEDTOKEN_NOTFOUND = -2147200933;
+
+		// Token: 0x0400115F RID: 4447
+		public const int PP_E_AZ_CACHEDTYPE_INVALID = -2147200932;
+
+		// Token: 0x04001160 RID: 4448
+		public const int PP_E_AZ_STRINGINDEX_INVALID = -2147200931;
+
+		// Token: 0x04001161 RID: 4449
+		public const int PP_E_AZ_CLIENTCONTEXT_INVALID = -2147200930;
+
+		// Token: 0x04001162 RID: 4450
+		public const int PP_E_AZ_CLIENTTOKEN_ALREADYBOUND = -2147200929;
+
+		// Token: 0x04001163 RID: 4451
+		public const int PP_E_AZ_BUFFERLEN_INVALID = -2147200928;
+
+		// Token: 0x04001164 RID: 4452
+		public const int PP_E_AZ_CONVERSION_ERROR = -2147200927;
+
+		// Token: 0x04001165 RID: 4453
+		public const int PP_E_AZ_SERVERCERT_INVALID = -2147200926;
+
+		// Token: 0x04001166 RID: 4454
+		public const int PP_E_AZ_CLIENT_NOTINITIALIZED = -2147200925;
+
+		// Token: 0x04001167 RID: 4455
+		public const int PP_E_AZ_ENCRYPTIONERROR = -2147200924;
+
+		// Token: 0x04001168 RID: 4456
+		public const int PP_E_AZ_SESSIONKEYTOKEN_INVALID = -2147200923;
+
+		// Token: 0x04001169 RID: 4457
+		public const int PP_E_AZ_CLIENTKEYTOKEN_INVALID = -2147200922;
+
+		// Token: 0x0400116A RID: 4458
+		public const int PP_E_AZ_KEYTOKEN_INVALID = -2147200921;
+
+		// Token: 0x0400116B RID: 4459
+		public const int PP_E_AZ_CRYPTPROVIDER_INVALIDOP = -2147200920;
+
+		// Token: 0x0400116C RID: 4460
+		public const int PP_E_AZ_CRYPTHANDLE_INVALID = -2147200919;
+
+		// Token: 0x0400116D RID: 4461
+		public const int PP_E_AZ_NOTAUTHZOWNER = -2147200918;
+
+		// Token: 0x0400116E RID: 4462
+		public const int PP_E_AZ_DBVALUE_INVALID = -2147200917;
+
+		// Token: 0x0400116F RID: 4463
+		public const int PP_E_AZ_NAMESPACE_NOTFOUND = -2147200916;
+
+		// Token: 0x04001170 RID: 4464
+		public const int PP_E_AZ_RESSCHEMA_INVALID = -2147200915;
+
+		// Token: 0x04001171 RID: 4465
+		public const int PP_E_AZ_BINDINGTYPE_NOSCOPE = -2147200914;
+
+		// Token: 0x04001172 RID: 4466
+		public const int PP_E_AZ_AUTHZTOKEN_INVALIDXML = -2147200913;
+
+		// Token: 0x04001173 RID: 4467
+		public const int PP_E_AZ_BINDINGS_INVALIDXML = -2147200912;
+
+		// Token: 0x04001174 RID: 4468
+		public const int PP_E_AZ_CRYPTAPI_FAILURE = -2147200911;
+
+		// Token: 0x04001175 RID: 4469
+		public const int PP_E_AZ_NODELEGATEHEADERS = -2147200910;
+
+		// Token: 0x04001176 RID: 4470
+		public const int PP_E_AZ_DELEGATE_INVALIDXML = -2147200909;
+
+		// Token: 0x04001177 RID: 4471
+		public const int PP_E_AZ_DELEGATE_INVALIDPUID = -2147200908;
+
+		// Token: 0x04001178 RID: 4472
+		public const int PP_E_AZ_TOKEN_NODELEGATE = -2147200907;
+
+		// Token: 0x04001179 RID: 4473
+		public const int PP_E_AZ_DELEGATESCOPE_INVALID = -2147200906;
+
+		// Token: 0x0400117A RID: 4474
+		public const int PP_E_AZ_DELEGATESCOPE_NOMATCH = -2147200905;
+
+		// Token: 0x0400117B RID: 4475
+		public const int PP_E_AZ_ROLEFILTERXML_INVALID = -2147200904;
+
+		// Token: 0x0400117C RID: 4476
+		public const int PP_E_AZ_USERAUTHMETHOD_INVALID = -2147200903;
+
+		// Token: 0x0400117D RID: 4477
+		public const int PP_E_AZ_SITEAUTHFLAG_INVALID = -2147200902;
+
+		// Token: 0x0400117E RID: 4478
+		public const int PP_E_AZ_INVALIDFLAGS = -2147200901;
+
+		// Token: 0x0400117F RID: 4479
+		public const int PP_E_AZ_SCOPETYPELEN_TOOBIG = -2147200900;
+
+		// Token: 0x04001180 RID: 4480
+		public const int PP_E_AZ_HEADERDATE_INVALID = -2147200899;
+
+		// Token: 0x04001181 RID: 4481
+		public const int PP_E_AZ_AUTHZTOKEN_EXPIRED = -2147200898;
+
+		// Token: 0x04001182 RID: 4482
+		public const int PP_E_AZ_BINDINGINDEX_INVALID = -2147200897;
+
+		// Token: 0x04001183 RID: 4483
+		public const int PP_E_AZ_SITEID_INVALID = -2147200896;
+
+		// Token: 0x04001184 RID: 4484
+		public const int PP_E_AZ_EXPECTED_PROOF_DATA_MISSING = -2147200895;
+
+		// Token: 0x04001185 RID: 4485
+		public const int PP_E_AZ_PROOF_DATA_INVALID = -2147200894;
+
+		// Token: 0x04001186 RID: 4486
+		public const int PP_E_AZ_PROOF_DATA_BILLINGMONTHINVALID = -2147200893;
+
+		// Token: 0x04001187 RID: 4487
+		public const int PP_E_AZ_PROOF_DATA_BILLINGYEARINVALID = -2147200892;
+
+		// Token: 0x04001188 RID: 4488
+		public const int PP_E_AZ_PROOF_DATA_INVALIDMEMBERNAME = -2147200891;
+
+		// Token: 0x04001189 RID: 4489
+		public const int PP_E_AZ_PROOF_DATA_INVALIDPUID = -2147200890;
+
+		// Token: 0x0400118A RID: 4490
+		public const int PP_E_AZ_PROOF_DATA_INCORRECT = -2147200889;
+
+		// Token: 0x0400118B RID: 4491
+		public const int PP_E_AZ_PROOF_DATA_USER_BLOCKED = -2147200888;
+
+		// Token: 0x0400118C RID: 4492
+		public const int PP_E_AZ_PROOF_DISABLED = -2147200887;
+
+		// Token: 0x0400118D RID: 4493
+		public const int PP_E_AZ_PROOF_TOKEN_EXPIRED = -2147200880;
+
+		// Token: 0x0400118E RID: 4494
+		public const int PP_E_AZ_PROVISIONING_ERRORS = -2147200879;
+
+		// Token: 0x0400118F RID: 4495
+		public const int PP_E_AZ_ROLEBINDINGS_TOOBIG = -2147200878;
+
+		// Token: 0x04001190 RID: 4496
+		public const int PP_E_AZ_CACHEDTOKEN_CACHEFULL = -2147200877;
+
+		// Token: 0x04001191 RID: 4497
+		public const int PP_E_AZ_CERTTYPE_LEN_TOOBIG = -2147200876;
+
+		// Token: 0x04001192 RID: 4498
+		public const int PP_E_AZ_NETID_LEN_TOOBIG = -2147200875;
+
+		// Token: 0x04001193 RID: 4499
+		public const int PP_E_AZ_CERTTOKEN_LEN_TOOBIG = -2147200874;
+
+		// Token: 0x04001194 RID: 4500
+		public const int PP_E_ES_SENDTRDPL_MISSINGHOSTNAME = -2147200768;
+
+		// Token: 0x04001195 RID: 4501
+		public const int PP_E_ES_SENDTRDPL_COULD_NOT_OPEN_SMPT_CONNECTION = -2147200766;
+
+		// Token: 0x04001196 RID: 4502
+		public const int PP_E_ES_PARTITIONKEEPER_NOT_INITIALIZED = -2147200762;
+
+		// Token: 0x04001197 RID: 4503
+		public const int PP_E_ES_INVALID_PARTITIONINFO_SUPPLIED = -2147200761;
+
+		// Token: 0x04001198 RID: 4504
+		public const int PP_E_ES_DEPOSITORY_ALREADY_INITIALIZED = -2147200758;
+
+		// Token: 0x04001199 RID: 4505
+		public const int PP_E_ES_INVALID_DEPOZITORY_SIZE_SUPPLIED = -2147200757;
+
+		// Token: 0x0400119A RID: 4506
+		public const int PP_E_ES_SENDTRDPL_CONFIG_NOT_INITIALIZED = -2147200755;
+
+		// Token: 0x0400119B RID: 4507
+		public const int PP_E_ES_SENDTRDPL_COULD_NOT_CLOSE_SMPT_CONNECTION = -2147200754;
+
+		// Token: 0x0400119C RID: 4508
+		public const int PP_E_ES_GETTRDPL_INVALID_DEPOSITORY_SUPPLIED = -2147200753;
+
+		// Token: 0x0400119D RID: 4509
+		public const int PP_E_ES_DEPOSITORY_NOT_INITIALIZED = -2147200752;
+
+		// Token: 0x0400119E RID: 4510
+		public const int PP_E_ES_CONFIG_ALREADY_INITIALIZED = -2147200741;
+
+		// Token: 0x0400119F RID: 4511
+		public const int PP_E_ES_CONFIG_EMPTY = -2147200740;
+
+		// Token: 0x040011A0 RID: 4512
+		public const int PP_E_ES_CONFIG_SECTIONNAME_EMPTY = -2147200739;
+
+		// Token: 0x040011A1 RID: 4513
+		public const int PP_E_ES_CONFIG_INVALID_INIFILE_NAME = -2147200738;
+
+		// Token: 0x040011A2 RID: 4514
+		public const int PP_E_ES_CONFIG_SECTION_BUFFER_TOO_SMALL = -2147200737;
+
+		// Token: 0x040011A3 RID: 4515
+		public const int PP_E_ES_CONFIG_EMPTY_ITEM_NAME = -2147200736;
+
+		// Token: 0x040011A4 RID: 4516
+		public const int PP_E_ES_CONFIG_NO_SUCH_ITEM = -2147200735;
+
+		// Token: 0x040011A5 RID: 4517
+		public const int PP_E_ES_CONFIG_CAN_NOT_CHANGE_ITEM_TYPE = -2147200734;
+
+		// Token: 0x040011A6 RID: 4518
+		public const int PP_E_ES_CONFIG_NOT_INITIALIZED = -2147200732;
+
+		// Token: 0x040011A7 RID: 4519
+		public const int PP_E_ES_EIDEPOSITORY_INVALID_THREADPOOL_POINTER = -2147200731;
+
+		// Token: 0x040011A8 RID: 4520
+		public const int PP_E_ES_EIDEPOSITORY_INVALID_SIZE = -2147200730;
+
+		// Token: 0x040011A9 RID: 4521
+		public const int PP_E_ES_TEMPLATECACHE_NOT_INITIALIZED = -2147200727;
+
+		// Token: 0x040011AA RID: 4522
+		public const int PP_E_ES_TEMPLATECACHE_SIZE_IS_ZERO = -2147200726;
+
+		// Token: 0x040011AB RID: 4523
+		public const int PP_E_ES_TEMPLATECACHE_INVALID_LCID = -2147200723;
+
+		// Token: 0x040011AC RID: 4524
+		public const int PP_E_ES_TEMPLATECACHE_INVALID_TEMPLATEID = -2147200722;
+
+		// Token: 0x040011AD RID: 4525
+		public const int PP_E_ES_SENDTRDPL_NO_TAGS_TO_REPLACE = -2147200721;
+
+		// Token: 0x040011AE RID: 4526
+		public const int PP_E_ES_SENDTRDPL_FAILED_TO_SETUP_MSG = -2147200720;
+
+		// Token: 0x040011AF RID: 4527
+		public const int PP_E_ES_STATISTICS_INVALID_LOAD_LEVEL = -2147200719;
+
+		// Token: 0x040011B0 RID: 4528
+		public const int PP_E_ES_STATISTICS_INVALID_MINIMAL_TIME = -2147200717;
+
+		// Token: 0x040011B1 RID: 4529
+		public const int PP_E_ES_STATISTICS_INVALID_TRIGGER_VALUE = -2147200716;
+
+		// Token: 0x040011B2 RID: 4530
+		public const int PP_E_ES_GETTRDPL_INVALID_STATISTICS_SUPPLIED = -2147200715;
+
+		// Token: 0x040011B3 RID: 4531
+		public const int PP_E_ES_STATISTICS_NOT_INITIALIZED = -2147200714;
+
+		// Token: 0x040011B4 RID: 4532
+		public const int PP_E_ES_SENDTRDPL_SMTPRECONNECTTIMEOUT_INCORRECT = -2147200712;
+
+		// Token: 0x040011B5 RID: 4533
+		public const int PP_E_ES_STATISTICS_INVALID_THROTTLEPERNUMBEROFCALLS_VALUE = -2147200711;
+
+		// Token: 0x040011B6 RID: 4534
+		public const int PP_E_ES_STATISTICS_INVALID_MAXIMUM_TIME = -2147200710;
+
+		// Token: 0x040011B7 RID: 4535
+		public const int PP_E_ES_CONFIG_INVALID_RESPONSE_URL = -2147200709;
+
+		// Token: 0x040011B8 RID: 4536
+		public const int PP_E_ES_CONFIG_NO_SUCH_LCID = -2147200708;
+
+		// Token: 0x040011B9 RID: 4537
+		public const int PP_E_ES_SENDTRDPL_HASH_FAILED = -2147200707;
+
+		// Token: 0x040011BA RID: 4538
+		public const int PP_E_ES_EVENTLOGGER_COULD_NOT_CREATE = -2147200706;
+
+		// Token: 0x040011BB RID: 4539
+		public const int PP_E_ES_EVENTLOGGER_NOT_INITIALIZED = -2147200705;
+
+		// Token: 0x040011BC RID: 4540
+		public const int PP_E_ES_SENDTRDPL_DICSONNECT_FAILED = -2147200704;
+
+		// Token: 0x040011BD RID: 4541
+		public const int PP_E_ES_STATISTICS_LOADLEVELTRIGGERCOMBO_OUTSIDE_LEGAL_RANGE = -2147200703;
+
+		// Token: 0x040011BE RID: 4542
+		public const int PP_E_ES_EMAILINFODEPOT_SIZE_INVALID = -2147200702;
+
+		// Token: 0x040011BF RID: 4543
+		public const int PP_E_ES_SENDTRDPL_DUMPPATH_MISSING = -2147200701;
+
+		// Token: 0x040011C0 RID: 4544
+		public const int PP_E_ES_SENDTRDPL_UNREPLACED_TAGS = -2147200700;
+
+		// Token: 0x040011C1 RID: 4545
+		public const int PP_E_ES_UNKNOWN_SMTP_ERROR = -2147200699;
+
+		// Token: 0x040011C2 RID: 4546
+		public const int PP_E_ES_EMAIL_TEMPLATE_LIB_INTERNAL_ERROR = -2147200698;
+
+		// Token: 0x040011C3 RID: 4547
+		public const int PP_E_ES_INVALID_EMAIL_TEMPLATE = -2147200697;
+
+		// Token: 0x040011C4 RID: 4548
+		public const int PP_E_ES_EMAIL_TEMPLATE_EXPRESSION_EVALUATE_ERROR = -2147200696;
+
+		// Token: 0x040011C5 RID: 4549
+		public const int PP_E_ES_INVALID_SEARCH_CRITERIA = -2147200695;
+
+		// Token: 0x040011C6 RID: 4550
+		public const int PP_E_ES_TEMPLATE_ALREADY_EXISTS = -2147200694;
+
+		// Token: 0x040011C7 RID: 4551
+		public const int PP_E_ES_TEMPLATE_DOES_NOT_EXIST = -2147200693;
+
+		// Token: 0x040011C8 RID: 4552
+		public const int PP_E_ES_MONTHLY_SEND_QUOTA_EXCEED = -2147200692;
+
+		// Token: 0x040011C9 RID: 4553
+		public const int PP_E_ES_DAILY_RECEIVE_QUOTA_EXCEED = -2147200691;
+
+		// Token: 0x040011CA RID: 4554
+		public const int PP_E_ES_MULTI_RECEIVER_NOT_ALLOWED = -2147200690;
+
+		// Token: 0x040011CB RID: 4555
+		public const int PP_E_ES_OPERATION_NOT_ALLOWED_BY_EMAIL_STATE = -2147200689;
+
+		// Token: 0x040011CC RID: 4556
+		public const int PP_E_ES_INVALID_EMAILID = -2147200688;
+
+		// Token: 0x040011CD RID: 4557
+		public const int PP_E_ES_EMAILADDRESS_INVALID = -2147200687;
+
+		// Token: 0x040011CE RID: 4558
+		public const int PP_E_ES_TEMPLATE_NAME_INVALID = -2147200686;
+
+		// Token: 0x040011CF RID: 4559
+		public const int PP_E_ES_INVALID_SITEID = -2147200685;
+
+		// Token: 0x040011D0 RID: 4560
+		public const int PP_E_ES_INVALID_PUID = -2147200684;
+
+		// Token: 0x040011D1 RID: 4561
+		public const int PP_E_ES_INVALID_LCID = -2147200683;
+
+		// Token: 0x040011D2 RID: 4562
+		public const int PP_E_ES_EMAIL_TEXT_EVALUATE_ERROR = -2147200682;
+
+		// Token: 0x040011D3 RID: 4563
+		public const int PP_E_ES_INVALID_CONFIRMATION_CODE = -2147200681;
+
+		// Token: 0x040011D4 RID: 4564
+		public const int PP_E_ES_INVALID_EMAIL = -2147200680;
+
+		// Token: 0x040011D5 RID: 4565
+		public const int PP_E_ES_EMAIL_DOES_NOT_EXIST = -2147200679;
+
+		// Token: 0x040011D6 RID: 4566
+		public const int PP_E_ES_INVALID_VERSION = -2147200678;
+
+		// Token: 0x040011D7 RID: 4567
+		public const int PP_E_ES_EMAIL_WILL_NOT_SEND = -2147200677;
+
+		// Token: 0x040011D8 RID: 4568
+		public const int PP_E_ES_EMAIL_PROCESSING = -2147200676;
+
+		// Token: 0x040011D9 RID: 4569
+		public const int PP_E_ES_VERSION_MAX_REACHED = -2147200675;
+
+		// Token: 0x040011DA RID: 4570
+		public const int PP_E_UILP_INVALIDPARAM = -2147200511;
+
+		// Token: 0x040011DB RID: 4571
+		public const int PP_E_CPO_INDEXOUTOFRANGE = -2147200256;
+
+		// Token: 0x040011DC RID: 4572
+		public const int PP_E_CPO_CANTGETCCMCACHE = -2147200255;
+
+		// Token: 0x040011DD RID: 4573
+		public const int PP_E_CPO_OBJECTNOTFOUND = -2147200254;
+
+		// Token: 0x040011DE RID: 4574
+		public const int PP_E_CPO_CANTGETDATASOURCE = -2147200253;
+
+		// Token: 0x040011DF RID: 4575
+		public const int PP_E_CPO_OBJECTIDMISMATCH = -2147200252;
+
+		// Token: 0x040011E0 RID: 4576
+		public const int PP_E_CPO_RELEASEMISMATCH = -2147200251;
+
+		// Token: 0x040011E1 RID: 4577
+		public const int PP_E_CPO_INCORRECTDATASOURCE = -2147200250;
+
+		// Token: 0x040011E2 RID: 4578
+		public const int PP_E_CPO_CANTGETOBJECT = -2147200249;
+
+		// Token: 0x040011E3 RID: 4579
+		public const int PP_E_CPO_INVALIDOBJECTID = -2147200248;
+
+		// Token: 0x040011E4 RID: 4580
+		public const int PP_E_CPO_BADPATH = -2147200247;
+
+		// Token: 0x040011E5 RID: 4581
+		public const int PP_E_CPO_VARSUBST_ATTR_REPL_NOTFOUND = -2147200246;
+
+		// Token: 0x040011E6 RID: 4582
+		public const int PP_E_CPO_VARSUBST_REPL_ATTR_PARSEERR = -2147200245;
+
+		// Token: 0x040011E7 RID: 4583
+		public const int PP_E_CPO_VARSUBST_ENV_PARSEERR = -2147200244;
+
+		// Token: 0x040011E8 RID: 4584
+		public const int PP_E_CPO_XML_PARSE_ERR = -2147200243;
+
+		// Token: 0x040011E9 RID: 4585
+		public const int PP_E_CPO_LOADFROMXML_FAILED = -2147200242;
+
+		// Token: 0x040011EA RID: 4586
+		public const int PP_E_CPO_OBJECTNOTCPO = -2147200241;
+
+		// Token: 0x040011EB RID: 4587
+		public const int PP_E_CPO_UNEXPECTED_DOM_NODE_TYPE = -2147200240;
+
+		// Token: 0x040011EC RID: 4588
+		public const int PP_E_CPO_UNEXPECTED_VARIANT_TYPE = -2147200239;
+
+		// Token: 0x040011ED RID: 4589
+		public const int PP_E_CPO_PROPERTYNOTEXIST = -2147200238;
+
+		// Token: 0x040011EE RID: 4590
+		public const int PP_E_CPO_OBJECTNOTEXIST = -2147200237;
+
+		// Token: 0x040011EF RID: 4591
+		public const int PP_E_CPO_XML_SCHEMA_PARSE_ERR = -2147200236;
+
+		// Token: 0x040011F0 RID: 4592
+		public const int PP_E_CPO_XML_ATTR_MISSING = -2147200235;
+
+		// Token: 0x040011F1 RID: 4593
+		public const int PP_E_CPO_EXPECTING_SINGLE_INSTANCE = -2147200234;
+
+		// Token: 0x040011F2 RID: 4594
+		public const int PP_E_CPO_PERSISTBLOCKED = -2147200233;
+
+		// Token: 0x040011F3 RID: 4595
+		public const int PP_E_CPO_DELETEBLOCKED = -2147200232;
+
+		// Token: 0x040011F4 RID: 4596
+		public const int PP_E_CPO_VALIDATION_FAILED = -2147200231;
+
+		// Token: 0x040011F5 RID: 4597
+		public const int PP_E_CPO_INVALID_CATEGORY = -2147200230;
+
+		// Token: 0x040011F6 RID: 4598
+		public const int PP_E_CPO_PROPERTY_MARKED_FOR_DELETE = -2147200229;
+
+		// Token: 0x040011F7 RID: 4599
+		public const int PP_E_PROVENT_XMLERR_ATTR_NOT_FOUND = -2147200176;
+
+		// Token: 0x040011F8 RID: 4600
+		public const int PP_E_PROVENT_SITE_NAME_NOT_VALID_ID = -2147200175;
+
+		// Token: 0x040011F9 RID: 4601
+		public const int PP_E_PROVENT_POLICYGROUP_NOT_PRESENT = -2147200174;
+
+		// Token: 0x040011FA RID: 4602
+		public const int PP_E_PROVENT_CANT_MERGE_PROPERTIES = -2147200173;
+
+		// Token: 0x040011FB RID: 4603
+		public const int PP_E_PROVENT_OBJ_UNEXPECTED_TYPE = -2147200172;
+
+		// Token: 0x040011FC RID: 4604
+		public const int PP_E_PROVENT_OBJ_NOT_STRINGTABLE = -2147200171;
+
+		// Token: 0x040011FD RID: 4605
+		public const int PP_E_PROVENT_OBJ_NOT_REQUIREDPROPS = -2147200170;
+
+		// Token: 0x040011FE RID: 4606
+		public const int PP_E_PROVENT_OBJ_NOT_SITE = -2147200169;
+
+		// Token: 0x040011FF RID: 4607
+		public const int PP_E_PROVENT_OBJ_NOT_POLICYGROUP = -2147200168;
+
+		// Token: 0x04001200 RID: 4608
+		public const int PP_E_PROVENT_PROPCOLLECTION_EMPTY = -2147200167;
+
+		// Token: 0x04001201 RID: 4609
+		public const int PP_E_PROVENT_PROPERTYDEF_NOTYPEDATANODE = -2147200166;
+
+		// Token: 0x04001202 RID: 4610
+		public const int PP_E_PROVENT_PROPERTYDEF_DATE_INVALIDDATE = -2147200165;
+
+		// Token: 0x04001203 RID: 4611
+		public const int PP_E_PROVENT_PROPERTYDEF_NUMCOMPONENTID_INCORRECT = -2147200164;
+
+		// Token: 0x04001204 RID: 4612
+		public const int PP_E_PROVENT_PROPERTYDEF_COMPONENTPROPID_INVALID = -2147200163;
+
+		// Token: 0x04001205 RID: 4613
+		public const int PP_E_PROVENT_PROPERTYDEF_NOTYPEDATA = -2147200162;
+
+		// Token: 0x04001206 RID: 4614
+		public const int PP_E_PROVENT_PROPERTYDEF_CANNOT_CHANGE_PROPID = -2147200161;
+
+		// Token: 0x04001207 RID: 4615
+		public const int PP_E_PROVENT_PROPERTYDEF_PROPID_USED = -2147200160;
+
+		// Token: 0x04001208 RID: 4616
+		public const int PP_E_PROVENT_PROPERTYDEF_INVALIDCOMPONENTINDEX = -2147200159;
+
+		// Token: 0x04001209 RID: 4617
+		public const int PP_E_PROVENT_PROPERTYDEF_NAMEINVALID = -2147200158;
+
+		// Token: 0x0400120A RID: 4618
+		public const int PP_E_PROVENT_STRINGTABLE_NOT_PRESENT = -2147200157;
+
+		// Token: 0x0400120B RID: 4619
+		public const int PP_E_PROVENT_PROPERTY_ID_NOT_EXIST = -2147200156;
+
+		// Token: 0x0400120C RID: 4620
+		public const int PP_E_PROVENT_PROPERTY_UNKNOWN_TYPE = -2147200155;
+
+		// Token: 0x0400120D RID: 4621
+		public const int PP_E_PROVENT_OBJ_BADPOINTER = -2147200154;
+
+		// Token: 0x0400120E RID: 4622
+		public const int PP_E_PROVENT_OBJ_GETGLOBALCACHE = -2147200153;
+
+		// Token: 0x0400120F RID: 4623
+		public const int PP_E_PROVENT_NAMESPACE_NOT_PRESENT = -2147200152;
+
+		// Token: 0x04001210 RID: 4624
+		public const int PP_E_PROVENT_OBJ_GETPARENTID = -2147200151;
+
+		// Token: 0x04001211 RID: 4625
+		public const int PP_E_PROVENT_CACERT_NOTFOUND = -2147200150;
+
+		// Token: 0x04001212 RID: 4626
+		public const int PP_E_PROVENT_CANT_GENERATE_ID_FOR_NON_PROFILE = -2147200149;
+
+		// Token: 0x04001213 RID: 4627
+		public const int PP_E_PROVENT_XMLNS_CCM_NOTINITIALIZED = -2147200148;
+
+		// Token: 0x04001214 RID: 4628
+		public const int PP_E_PROVENT_XMLNS_CCMNAME_INVALID = -2147200147;
+
+		// Token: 0x04001215 RID: 4629
+		public const int PP_E_PROVENT_XMLNS_CCMSAFEARRAY_INVALID = -2147200146;
+
+		// Token: 0x04001216 RID: 4630
+		public const int PP_E_PROVENT_XMLNS_CCMVALUE_INVALID = -2147200145;
+
+		// Token: 0x04001217 RID: 4631
+		public const int PP_E_PROVENT_XMLNS_PROP_NOTFOUND = -2147200144;
+
+		// Token: 0x04001218 RID: 4632
+		public const int PP_E_PROVENT_XMLNS_CCMOBJECT_INVALID = -2147200143;
+
+		// Token: 0x04001219 RID: 4633
+		public const int PP_E_PROVENT_XMLNS_CCMCACHE_INVALID = -2147200142;
+
+		// Token: 0x0400121A RID: 4634
+		public const int PP_E_PROVENT_XMLNS_CCMID_INVALID = -2147200141;
+
+		// Token: 0x0400121B RID: 4635
+		public const int PP_E_PROVENT_XMLNS_EMPTYCOLLECTION = -2147200140;
+
+		// Token: 0x0400121C RID: 4636
+		public const int PP_E_PROVENT_XMLNS_INVALIDENTRY = -2147200139;
+
+		// Token: 0x0400121D RID: 4637
+		public const int PP_E_PROVENT_CLOGSUBSCRIPTION_NOTFOUND = -2147200138;
+
+		// Token: 0x0400121E RID: 4638
+		public const int PP_E_PROVENT_CLOGSUBSCRIPTION_NAMEINVALID = -2147200137;
+
+		// Token: 0x0400121F RID: 4639
+		public const int PP_E_PROVPROPERTY_RENDER_ITERATORNOTINIT = -2147200128;
+
+		// Token: 0x04001220 RID: 4640
+		public const int PP_E_PROVPROPERTY_RENDER_NOCOLL = -2147200127;
+
+		// Token: 0x04001221 RID: 4641
+		public const int PP_E_PROVPROPERTY_RENDER_BADFILTER = -2147200126;
+
+		// Token: 0x04001222 RID: 4642
+		public const int PP_E_PROVPROPERTY_RENDER_INCORRECT_FIELD_TYPE = -2147200125;
+
+		// Token: 0x04001223 RID: 4643
+		public const int PP_E_PROVPROPERTY_RENDER_TWOTOUACCEPTANCE = -2147200124;
+
+		// Token: 0x04001224 RID: 4644
+		public const int PP_E_PROVPROPERTY_RENDER_TWOPROPERTYSTAR = -2147200123;
+
+		// Token: 0x04001225 RID: 4645
+		public const int PP_E_PROVPROPERTY_VALIDATE_USE_SINGLE_VALIDATE = -2147200096;
+
+		// Token: 0x04001226 RID: 4646
+		public const int PP_E_PROVPROPERTY_VALIDATE_USE_COMPOUND_VALIDATE = -2147200095;
+
+		// Token: 0x04001227 RID: 4647
+		public const int PP_E_PROVPROPERTY_VALIDATE_INTEGER_NOTNUMERIC = -2147200094;
+
+		// Token: 0x04001228 RID: 4648
+		public const int PP_E_PROVPROPERTY_VALIDATE_INTEGER_NOTINT = -2147200093;
+
+		// Token: 0x04001229 RID: 4649
+		public const int PP_E_PROVPROPERTY_VALIDATE_INTEGER_TOOLOW = -2147200092;
+
+		// Token: 0x0400122A RID: 4650
+		public const int PP_E_PROVPROPERTY_VALIDATE_INTEGER_TOOHIGH = -2147200091;
+
+		// Token: 0x0400122B RID: 4651
+		public const int PP_E_PROVPROPERTY_VALIDATE_FLOAT_NOTNUMERIC = -2147200090;
+
+		// Token: 0x0400122C RID: 4652
+		public const int PP_E_PROVPROPERTY_VALIDATE_FLOAT_TOOLOW = -2147200089;
+
+		// Token: 0x0400122D RID: 4653
+		public const int PP_E_PROVPROPERTY_VALIDATE_FLOAT_TOOHIGH = -2147200088;
+
+		// Token: 0x0400122E RID: 4654
+		public const int PP_E_PROVPROPERTY_VALIDATE_STRING_TOOSHORT = -2147200087;
+
+		// Token: 0x0400122F RID: 4655
+		public const int PP_E_PROVPROPERTY_VALIDATE_STRING_TOOLONG = -2147200086;
+
+		// Token: 0x04001230 RID: 4656
+		public const int PP_E_PROVPROPERTY_VALIDATE_LIST_INVALID = -2147200085;
+
+		// Token: 0x04001231 RID: 4657
+		public const int PP_E_COMPONENT_NAME_MISSING = -2147200084;
+
+		// Token: 0x04001232 RID: 4658
+		public const int PP_E_PROVPROPERTY_VALIDATE_LOCATION_STREET_BLANK = -2147200083;
+
+		// Token: 0x04001233 RID: 4659
+		public const int PP_E_PROVPROPERTY_VALIDATE_LOCATION_COUNTY_BLANK = -2147200082;
+
+		// Token: 0x04001234 RID: 4660
+		public const int PP_E_PROVPROPERTY_VALIDATE_LOCATION_CITY_BLANK = -2147200081;
+
+		// Token: 0x04001235 RID: 4661
+		public const int PP_E_PROVPROPERTY_VALIDATE_LOCATION_COUNTY_INVALID = -2147200080;
+
+		// Token: 0x04001236 RID: 4662
+		public const int PP_E_PROVPROPERTY_VALIDATE_LOCATION_NICKNAME_NOT_ALLOWED = -2147200079;
+
+		// Token: 0x04001237 RID: 4663
+		public const int PP_E_PROVPROPERTY_VALIDATE_STRING_REGEX_INVALID = -2147200078;
+
+		// Token: 0x04001238 RID: 4664
+		public const int PP_E_PROVPROPERTY_VALIDATE_DATE_MISSING = -2147200077;
+
+		// Token: 0x04001239 RID: 4665
+		public const int PP_E_PROVPROPERTY_VALIDATE_DATE_YEAR_MISSING = -2147200076;
+
+		// Token: 0x0400123A RID: 4666
+		public const int PP_E_PROVPROPERTY_VALIDATE_DATE_YEAR_INVALID_CHARS = -2147200075;
+
+		// Token: 0x0400123B RID: 4667
+		public const int PP_E_PROVPROPERTY_VALIDATE_DATE_YEAR_NOT_4DIGIT = -2147200074;
+
+		// Token: 0x0400123C RID: 4668
+		public const int PP_E_PROVPROPERTY_VALIDATE_DATE_MONTH_MISSING = -2147200073;
+
+		// Token: 0x0400123D RID: 4669
+		public const int PP_E_PROVPROPERTY_VALIDATE_DATE_MONTH_INVALID = -2147200072;
+
+		// Token: 0x0400123E RID: 4670
+		public const int PP_E_PROVPROPERTY_VALIDATE_DATE_DAY_MISSING = -2147200071;
+
+		// Token: 0x0400123F RID: 4671
+		public const int PP_E_PROVPROPERTY_VALIDATE_DATE_DAY_INVALID = -2147200070;
+
+		// Token: 0x04001240 RID: 4672
+		public const int PP_E_PROVPROPERTY_VALIDATE_DATE_INVALID = -2147200069;
+
+		// Token: 0x04001241 RID: 4673
+		public const int PP_E_PROVPROPERTY_VALIDATE_DATE_TOOLOW = -2147200068;
+
+		// Token: 0x04001242 RID: 4674
+		public const int PP_E_PROVPROPERTY_VALIDATE_DATE_TOOHIGH = -2147200067;
+
+		// Token: 0x04001243 RID: 4675
+		public const int PP_E_PROVPROPERTY_VALIDATE_DATE_IN_FUTURE = -2147200066;
+
+		// Token: 0x04001244 RID: 4676
+		public const int PP_E_PROVPROPERTY_VALIDATE_DATE_IN_PAST = -2147200065;
+
+		// Token: 0x04001245 RID: 4677
+		public const int PP_E_PROVPROPERTY_VALIDATE_CHECKBOX_INVALID = -2147200064;
+
+		// Token: 0x04001246 RID: 4678
+		public const int PP_E_PROVPROPERTY_LOCATION_MISSINGVALIDATION = -2147200063;
+
+		// Token: 0x04001247 RID: 4679
+		public const int PP_E_PROVPROPERTY_LONGITUDEOUTOFRANGE = -2147200062;
+
+		// Token: 0x04001248 RID: 4680
+		public const int PP_E_PROVPROPERTY_LATITUDEOUTOFRANGE = -2147200061;
+
+		// Token: 0x04001249 RID: 4681
+		public const int PP_E_PROVPROPERTY_TRIGGER_ACTIVATED = -2147200060;
+
+		// Token: 0x0400124A RID: 4682
+		public const int PP_E_PROVPROPERTY_UNEXPECTED_VT = -2147200059;
+
+		// Token: 0x0400124B RID: 4683
+		public const int PP_E_PROVENT_CCMCERT_BADFMT = -2147200048;
+
+		// Token: 0x0400124C RID: 4684
+		public const int PP_E_PROVENT_CCMCERT_NULLSITENAME = -2147200047;
+
+		// Token: 0x0400124D RID: 4685
+		public const int PP_E_PROVENT_CCMCERT_NODATA = -2147200046;
+
+		// Token: 0x0400124E RID: 4686
+		public const int PP_E_PROVENT_CCMCERT_ADDPROP_BADARG = -2147200045;
+
+		// Token: 0x0400124F RID: 4687
+		public const int PP_E_PROVENT_CCMCERT_FMT_NULLDOMNODE = -2147200044;
+
+		// Token: 0x04001250 RID: 4688
+		public const int PP_E_PROVENT_CCMCERT_NO_SITENAME = -2147200043;
+
+		// Token: 0x04001251 RID: 4689
+		public const int PP_E_PROVENT_SITECERT_VALIDATE_UNEXPECTED = -2147200042;
+
+		// Token: 0x04001252 RID: 4690
+		public const int PP_E_PROVENT_CCMCERT_GET_EMPTYPROP = -2147200041;
+
+		// Token: 0x04001253 RID: 4691
+		public const int PP_E_PROVENT_SITECERT_UNEXPECTED = -2147200040;
+
+		// Token: 0x04001254 RID: 4692
+		public const int PP_E_PROVENT_CCMCERT_GETPROP_UNEXPECTED = -2147200039;
+
+		// Token: 0x04001255 RID: 4693
+		public const int PP_E_PROVENT_CCMCERT_NOPROPNODE = -2147200038;
+
+		// Token: 0x04001256 RID: 4694
+		public const int PP_E_PROVENT_CCMCERT_BAD_ENCODING = -2147200037;
+
+		// Token: 0x04001257 RID: 4695
+		public const int PP_E_PROVENT_CCMCERT_ADD_CERTNAME = -2147200036;
+
+		// Token: 0x04001258 RID: 4696
+		public const int PP_E_PROVENT_CCMCERT_BAD_CERTDATA = -2147200035;
+
+		// Token: 0x04001259 RID: 4697
+		public const int PP_E_PROVENT_CCMCERT_PROPUNINIT = -2147200034;
+
+		// Token: 0x0400125A RID: 4698
+		public const int PP_E_PROVENT_CACERT_MISSINGPROPS = -2147200033;
+
+		// Token: 0x0400125B RID: 4699
+		public const int PP_E_PROVENT_SITECERT_MISSINGPROPS = -2147200032;
+
+		// Token: 0x0400125C RID: 4700
+		public const int PP_E_PROVENT_CACERT_BADISSUEDCERT = -2147200031;
+
+		// Token: 0x0400125D RID: 4701
+		public const int PP_E_PROVENT_CACERT_EMPTYCDP = -2147200030;
+
+		// Token: 0x0400125E RID: 4702
+		public const int PP_E_PROVENT_CACERT_BADCDP = -2147200029;
+
+		// Token: 0x0400125F RID: 4703
+		public const int PP_E_PROVENT_CACERT_EMPTYFRESHESTCRL = -2147200028;
+
+		// Token: 0x04001260 RID: 4704
+		public const int PP_E_PROVENT_CACERT_ISSUEDCERTNODE = -2147200027;
+
+		// Token: 0x04001261 RID: 4705
+		public const int PP_E_PROVENT_CCMCERT_NO_AKI = -2147200026;
+
+		// Token: 0x04001262 RID: 4706
+		public const int PP_E_SITECERTS_BADSITENAMELENGTH = -2147200015;
+
+		// Token: 0x04001263 RID: 4707
+		public const int PP_E_SITECERTS_BADCERTID = -2147200014;
+
+		// Token: 0x04001264 RID: 4708
+		public const int PP_E_SITECERTS_BADCERTNAMELENGTH = -2147200013;
+
+		// Token: 0x04001265 RID: 4709
+		public const int PP_E_SITECERTS_REPLACEMENT_CERT = -2147200012;
+
+		// Token: 0x04001266 RID: 4710
+		public const int PP_E_SITECERTS_REPLACEMENT_CERT_NOTFOUND = -2147200011;
+
+		// Token: 0x04001267 RID: 4711
+		public const int PP_E_SITECERTS_SEARCH_CRITERIA = -2147200010;
+
+		// Token: 0x04001268 RID: 4712
+		public const int PP_E_SITECERT_NOTFOUND = -2147200009;
+
+		// Token: 0x04001269 RID: 4713
+		public const int PP_E_SITECERTS_TOOMANY_SUBOBJECTS = -2147200008;
+
+		// Token: 0x0400126A RID: 4714
+		public const int PP_W_SITECERTS_REMOVE_INCOMPLETE = -2147200007;
+
+		// Token: 0x0400126B RID: 4715
+		public const int PP_E_SITECERTS_CURRENT_CERT_EXISTS = -2147200006;
+
+		// Token: 0x0400126C RID: 4716
+		public const int PP_E_SITECERTS_TOO_MANY_CURRENT_CERTS = -2147200005;
+
+		// Token: 0x0400126D RID: 4717
+		public const int PP_E_SITECERTS_EXISTING_CERT_WITH_SAME_NAME = -2147200004;
+
+		// Token: 0x0400126E RID: 4718
+		public const int PP_E_SITECERTS_CANNOT_RENAME_CERT = -2147200003;
+
+		// Token: 0x0400126F RID: 4719
+		public const int PP_E_PROVENT_CRL_NOPROP = -2147200000;
+
+		// Token: 0x04001270 RID: 4720
+		public const int PP_E_PROVENT_CRL_NOCACERT = -2147199999;
+
+		// Token: 0x04001271 RID: 4721
+		public const int PP_E_PROVENT_CRL_EMPTYVALUE = -2147199998;
+
+		// Token: 0x04001272 RID: 4722
+		public const int PP_E_PROVENT_CRL_TYPE_UNEXPECTED = -2147199997;
+
+		// Token: 0x04001273 RID: 4723
+		public const int PP_E_PROVENT_CRLINFO_BADLENGTH = -2147199996;
+
+		// Token: 0x04001274 RID: 4724
+		public const int PP_E_PROVENT_CRLINFO_BADTIME = -2147199995;
+
+		// Token: 0x04001275 RID: 4725
+		public const int PP_E_PROVENT_CRLINFO_NUMBER = -2147199994;
+
+		// Token: 0x04001276 RID: 4726
+		public const int PP_E_PROVENT_CRL_NOKEY = -2147199993;
+
+		// Token: 0x04001277 RID: 4727
+		public const int PP_E_PROVENT_CRL_NODERIVEDPROP = -2147199992;
+
+		// Token: 0x04001278 RID: 4728
+		public const int PP_E_PROVENT_CRL_HASDERIVEDPROP = -2147199991;
+
+		// Token: 0x04001279 RID: 4729
+		public const int PP_E_PROVENT_CRL_XML = -2147199990;
+
+		// Token: 0x0400127A RID: 4730
+		public const int PP_E_PROVENT_CRL_NOCACERTNAME = -2147199989;
+
+		// Token: 0x0400127B RID: 4731
+		public const int PP_E_PROVENT_CRL_BADID = -2147199988;
+
+		// Token: 0x0400127C RID: 4732
+		public const int PP_E_PROVENT_CRL_NOTFOUND = -2147199987;
+
+		// Token: 0x0400127D RID: 4733
+		public const int PP_E_PROVENT_CRL_TOOMANY = -2147199986;
+
+		// Token: 0x0400127E RID: 4734
+		public const int PP_E_PROVENT_CAPARTNER_GET_EMPTYPROP = -2147199984;
+
+		// Token: 0x0400127F RID: 4735
+		public const int PP_E_COMPONENT_NAME_NOT_SPECIFIED = -2147199983;
+
+		// Token: 0x04001280 RID: 4736
+		public const int PP_E_PROVPROPERTY_REGEX_INVALID = -2147199982;
+
+		// Token: 0x04001281 RID: 4737
+		public const int PP_E_HIP_INVALID_CONFIG = -2147199744;
+
+		// Token: 0x04001282 RID: 4738
+		public const int PP_E_HIP_IMAGE_CONFIGSTR_PARSE_ERR = -2147199743;
+
+		// Token: 0x04001283 RID: 4739
+		public const int PP_E_HIP_CACHE_MISSING = -2147199742;
+
+		// Token: 0x04001284 RID: 4740
+		public const int PP_E_HIP_CACHE_ERROR = -2147199741;
+
+		// Token: 0x04001285 RID: 4741
+		public const int PP_E_HIP_VALIDATION_ERROR = -2147199740;
+
+		// Token: 0x04001286 RID: 4742
+		public const int PP_E_HIP_VALIDATION_WRONG = -2147199739;
+
+		// Token: 0x04001287 RID: 4743
+		public const int PP_E_HIP_NOAUDIO = -2147199738;
+
+		// Token: 0x04001288 RID: 4744
+		public const int PP_E_HIP_AUDIO_NOTINIT = -2147199737;
+
+		// Token: 0x04001289 RID: 4745
+		public const int PP_E_HIP_MINIMAL_COOKIE = -2147199736;
+
+		// Token: 0x0400128A RID: 4746
+		public const int PP_E_HIP_AUDIO_BAD_REVERBLEN = -2147199735;
+
+		// Token: 0x0400128B RID: 4747
+		public const int PP_E_HIP_AUDIO_BAD_SNR = -2147199734;
+
+		// Token: 0x0400128C RID: 4748
+		public const int PP_E_HIP_GDIPLUS_ERROR = -2147199733;
+
+		// Token: 0x0400128D RID: 4749
+		public const int PP_E_HIP_IMAGE_VALIDCHARS_TOO_LONG = -2147199732;
+
+		// Token: 0x0400128E RID: 4750
+		public const int PP_E_HIP_IMAGE_VALIDCHARS_TOO_SHORT = -2147199731;
+
+		// Token: 0x0400128F RID: 4751
+		public const int PP_E_HIP_SIGNATURE_BASE64FAIL = -2147199730;
+
+		// Token: 0x04001290 RID: 4752
+		public const int PP_E_HIP_DISABLED_UNKNOWN = -2147199729;
+
+		// Token: 0x04001291 RID: 4753
+		public const int PP_E_HIP_DISABLED_SERVER = -2147199728;
+
+		// Token: 0x04001292 RID: 4754
+		public const int PP_E_HIP_DISABLED_APPLICATION = -2147199727;
+
+		// Token: 0x04001293 RID: 4755
+		public const int PP_E_HIP_TEST_INJECTED_ERROR = -2147199726;
+
+		// Token: 0x04001294 RID: 4756
+		public const int PP_E_HIP_FORCEHIP_NOT_ENABLED = -2147199725;
+
+		// Token: 0x04001295 RID: 4757
+		public const int PP_E_HIP_SOAP_NOT_ENABLED = -2147199724;
+
+		// Token: 0x04001296 RID: 4758
+		public const int PP_E_HIP_SOAP_SITE_ID_MISMATCH = -2147199723;
+
+		// Token: 0x04001297 RID: 4759
+		public const int PP_E_HIP_INVALID_CONFIG_NAME = -2147199722;
+
+		// Token: 0x04001298 RID: 4760
+		public const int PP_E_HIP_INFO_INCOMPLETE = -2147199721;
+
+		// Token: 0x04001299 RID: 4761
+		public const int PP_E_SOFTAUTH_FAILED = -2147199487;
+
+		// Token: 0x0400129A RID: 4762
+		public const int PP_E_CURRENTRELEASETOOLONG = -2147199232;
+
+		// Token: 0x0400129B RID: 4763
+		public const int PP_E_NEWRELEASETOOLONG = -2147199231;
+
+		// Token: 0x0400129C RID: 4764
+		public const int PP_E_NOROLUP_SETTINGS = -2147199229;
+
+		// Token: 0x0400129D RID: 4765
+		public const int PP_E_WRONG_MACHINESTATE = -2147199228;
+
+		// Token: 0x0400129E RID: 4766
+		public const int PP_E_CURRENTRELEASE_MUSTBEDIGITS = -2147199227;
+
+		// Token: 0x0400129F RID: 4767
+		public const int PP_E_NEWRELEASE_MUSTBEDIGITS = -2147199226;
+
+		// Token: 0x040012A0 RID: 4768
+		public const int PP_E_NO_PERFCOUNTER = -2147199223;
+
+		// Token: 0x040012A1 RID: 4769
+		public const int PP_E_NO_OSFILEMALFORMED = -2147199222;
+
+		// Token: 0x040012A2 RID: 4770
+		public const int PP_E_NO_CURRENTRELEASE = -2147199221;
+
+		// Token: 0x040012A3 RID: 4771
+		public const int PP_E_NO_NEWRELEASE = -2147199220;
+
+		// Token: 0x040012A4 RID: 4772
+		public const int PP_E_RU_INVALIDURLMAPPING = -2147199219;
+
+		// Token: 0x040012A5 RID: 4773
+		public const int PP_E_RU_INVALIDTHRESHOLD = -2147199218;
+
+		// Token: 0x040012A6 RID: 4774
+		public const int PP_E_MOBILE_KEY_GEN_FAIL = -2147199152;
+
+		// Token: 0x040012A7 RID: 4775
+		public const int PP_E_MOBILE_KEY_INVALID_KEY_DATA = -2147199151;
+
+		// Token: 0x040012A8 RID: 4776
+		public const int PP_E_MOBILE_KEY_DECRYPT_FAIL = -2147199150;
+
+		// Token: 0x040012A9 RID: 4777
+		public const int PP_E_MOBILE_KEY_EXISTING_KEY_WITH_SAME_NAME = -2147199149;
+
+		// Token: 0x040012AA RID: 4778
+		public const int PP_E_MOBILE_KEY_CANNOT_RENAME = -2147199148;
+
+		// Token: 0x040012AB RID: 4779
+		public const int PP_E_MOBILE_KEY_BAD_KEY_NAME_LENGTH = -2147199147;
+
+		// Token: 0x040012AC RID: 4780
+		public const int PP_E_MOBILE_KEY_CURRENT_KEY_EXISTS = -2147199146;
+
+		// Token: 0x040012AD RID: 4781
+		public const int PP_E_MOBILE_KEY_NOTFOUND = -2147199145;
+
+		// Token: 0x040012AE RID: 4782
+		public const int PP_E_MOBILE_KEY_REPLACEMENT_NOTFOUND = -2147199144;
+
+		// Token: 0x040012AF RID: 4783
+		public const int PP_E_MOBIL_KEY_BAD_CCMID = -2147199143;
+
+		// Token: 0x040012B0 RID: 4784
+		public const int PP_W_MOBILE_KEY_REMOVE_INCOMPLETE = -2147199142;
+
+		// Token: 0x040012B1 RID: 4785
+		public const int PP_E_MOBILE_KEY_MISSING = -2147199141;
+
+		// Token: 0x040012B2 RID: 4786
+		public const int PP_E_MOBILE_TICKET_AUTH_POLICY_NOT_SUPPORTED = -2147199140;
+
+		// Token: 0x040012B3 RID: 4787
+		public const int PP_E_MOBILE_KEY_INVALID_KEY_NAME = -2147199139;
+
+		// Token: 0x040012B4 RID: 4788
+		public const int PP_E_MOBILECREDS_PHONENUMBER_INVALID = -2147198976;
+
+		// Token: 0x040012B5 RID: 4789
+		public const int PP_E_MOBILECREDS_PHONENUMBER_BLANK = -2147198975;
+
+		// Token: 0x040012B6 RID: 4790
+		public const int PP_E_MOBILECREDS_PHONENUMBER_EXIST = -2147198974;
+
+		// Token: 0x040012B7 RID: 4791
+		public const int PP_E_MOBILECREDS_PIN_BLANK = -2147198973;
+
+		// Token: 0x040012B8 RID: 4792
+		public const int PP_E_MOBILECREDS_PIN_MISMATCH = -2147198972;
+
+		// Token: 0x040012B9 RID: 4793
+		public const int PP_E_MOBILECREDS_PIN_INVALID = -2147198971;
+
+		// Token: 0x040012BA RID: 4794
+		public const int PP_E_MOBILECREDS_PHONENUMBER_TOOSHORT = -2147198970;
+
+		// Token: 0x040012BB RID: 4795
+		public const int PP_E_MOBILECREDS_PHONENUMBER_TOOLONG = -2147198969;
+
+		// Token: 0x040012BC RID: 4796
+		public const int PP_E_PHONE_CONTAINS_PIN = -2147198968;
+
+		// Token: 0x040012BD RID: 4797
+		public const int PP_E_MOBILEREG_INVALID_SITEID = -2147198896;
+
+		// Token: 0x040012BE RID: 4798
+		public const int PP_E_MOBILEREG_ALREADY_LOGGED_IN = -2147198895;
+
+		// Token: 0x040012BF RID: 4799
+		public const int PP_E_MOBILEREG_MISSING_HIPDATA = -2147198894;
+
+		// Token: 0x040012C0 RID: 4800
+		public const int PP_E_MOBILEREG_MISSING_TOU_VERSION = -2147198891;
+
+		// Token: 0x040012C1 RID: 4801
+		public const int PP_E_MOBILEREG_INVALID_DOMAIN = -2147198890;
+
+		// Token: 0x040012C2 RID: 4802
+		public const int PP_E_MOBILEREG_INVALID_ALT_EMAIL = -2147198889;
+
+		// Token: 0x040012C3 RID: 4803
+		public const int PP_E_MOBILEREG_INVALID_HIPDATA = -2147198888;
+
+		// Token: 0x040012C4 RID: 4804
+		public const int PP_E_MOBILEREG_MISSING_HIPTIME = -2147198887;
+
+		// Token: 0x040012C5 RID: 4805
+		public const int PP_E_MOBILEREG_HIP_TIMEOUT = -2147198880;
+
+		// Token: 0x040012C6 RID: 4806
+		public const int PP_E_MOBILEREG_INVALIDREGFLAG = -2147198879;
+
+		// Token: 0x040012C7 RID: 4807
+		public const int PP_E_MOBILEREG_INVALID_HIPID = -2147198878;
+
+		// Token: 0x040012C8 RID: 4808
+		public const int PP_E_MOBILEREG_MISSING_HIPID = -2147198877;
+
+		// Token: 0x040012C9 RID: 4809
+		public const int PP_E_MOBILEREG_USED_HIPID = -2147198876;
+
+		// Token: 0x040012CA RID: 4810
+		public const int PP_E_INTERNALTOKEN_MALFORMED_ISSUE_TIME = -2147198720;
+
+		// Token: 0x040012CB RID: 4811
+		public const int PP_E_INTERNALTOKEN_UNEXPECTED_LENGTH = -2147198719;
+
+		// Token: 0x040012CC RID: 4812
+		public const int PP_E_INTERNALTOKEN_MISSING_FIELD = -2147198718;
+
+		// Token: 0x040012CD RID: 4813
+		public const int PP_E_INTERNALTOKEN_EXPIRED = -2147198717;
+
+		// Token: 0x040012CE RID: 4814
+		public const int PP_E_OFFER_FIRST = -2147198592;
+
+		// Token: 0x040012CF RID: 4815
+		public const int PP_E_OFFER_CACHE_REFRESH_FAILED = -2147198591;
+
+		// Token: 0x040012D0 RID: 4816
+		public const int PP_E_APPCONSENT_INVALID_DB_CONSENT_BLOB = -2147198590;
+
+		// Token: 0x040012D1 RID: 4817
+		public const int PP_E_OFFER_DB_INCONSISTENT = -2147198589;
+
+		// Token: 0x040012D2 RID: 4818
+		public const int PP_E_OFFER_LAST = -2147198561;
+
+		// Token: 0x040012D3 RID: 4819
+		public const int PP_E_AP_FIRST = -2147198368;
+
+		// Token: 0x040012D4 RID: 4820
+		public const int PP_E_AP_INVALID_APPLICATIONDOMAIN = -2147198367;
+
+		// Token: 0x040012D5 RID: 4821
+		public const int PP_E_AP_APPLICATIONDOMAIN_EXIST = -2147198366;
+
+		// Token: 0x040012D6 RID: 4822
+		public const int PP_E_AP_INVALID_APPLICATION_SEARCH_CRITERIA = -2147198365;
+
+		// Token: 0x040012D7 RID: 4823
+		public const int PP_E_AP_APPLICATION_SEARCHED_NOT_FOUND = -2147198364;
+
+		// Token: 0x040012D8 RID: 4824
+		public const int PP_E_AP_FAIL_UPDATE_APPLICATION_DOMAIN_LIST = -2147198363;
+
+		// Token: 0x040012D9 RID: 4825
+		public const int PP_E_AP_FAIL_UPDATE_APPLICATION_DEVELOPER = -2147198362;
+
+		// Token: 0x040012DA RID: 4826
+		public const int PP_E_AP_INVALID_DEVELOPER = -2147198358;
+
+		// Token: 0x040012DB RID: 4827
+		public const int PP_E_AP_INVALID_DEVELOPER_STATUS = -2147198357;
+
+		// Token: 0x040012DC RID: 4828
+		public const int PP_E_AP_DEVELOPER_NOT_AUTHORIZED = -2147198356;
+
+		// Token: 0x040012DD RID: 4829
+		public const int PP_E_AP_DEVELOPER_DOES_NOT_EXIST = -2147198355;
+
+		// Token: 0x040012DE RID: 4830
+		public const int PP_E_AP_ENTITY_INSERTUPDATE_FAILED = -2147198354;
+
+		// Token: 0x040012DF RID: 4831
+		public const int PP_E_AP_INVALID_DEVELOPERID = -2147198353;
+
+		// Token: 0x040012E0 RID: 4832
+		public const int PP_E_AP_INVALID_APPLICATION = -2147198352;
+
+		// Token: 0x040012E1 RID: 4833
+		public const int PP_E_AP_INVALID_APPLICATION_STATUS = -2147198351;
+
+		// Token: 0x040012E2 RID: 4834
+		public const int PP_E_AP_APPLICATION_NOT_AUTHORIZED = -2147198350;
+
+		// Token: 0x040012E3 RID: 4835
+		public const int PP_E_AP_APPLICATION_DOES_NOT_EXIST = -2147198349;
+
+		// Token: 0x040012E4 RID: 4836
+		public const int PP_E_AP_MAX_APP_PER_DEVELOPER_REACHED = -2147198348;
+
+		// Token: 0x040012E5 RID: 4837
+		public const int PP_E_AP_MAX_CERT_PER_APPLICATION_REACHED = -2147198347;
+
+		// Token: 0x040012E6 RID: 4838
+		public const int PP_E_AP_INVALID_CERTIFICATE_NAME = -2147198346;
+
+		// Token: 0x040012E7 RID: 4839
+		public const int PP_E_AP_INVALID_CERTIFICATE = -2147198345;
+
+		// Token: 0x040012E8 RID: 4840
+		public const int PP_E_AP_INVALID_APPLICATIONID = -2147198344;
+
+		// Token: 0x040012E9 RID: 4841
+		public const int PP_E_AP_INVALID_SERVICE = -2147198336;
+
+		// Token: 0x040012EA RID: 4842
+		public const int PP_E_AP_INVALID_SERVICE_STATUS = -2147198335;
+
+		// Token: 0x040012EB RID: 4843
+		public const int PP_E_AP_SERVICE_DOES_NOT_EXIST = -2147198334;
+
+		// Token: 0x040012EC RID: 4844
+		public const int PP_E_AP_SERVICEXMLARRAYEMPTY = -2147198331;
+
+		// Token: 0x040012ED RID: 4845
+		public const int PP_E_AP_SERVICEXMLARRAYTOOBIG = -2147198330;
+
+		// Token: 0x040012EE RID: 4846
+		public const int PP_E_AP_INVALID_ENTITY = -2147198329;
+
+		// Token: 0x040012EF RID: 4847
+		public const int PP_E_AP_INVALID_PROPERTY = -2147198328;
+
+		// Token: 0x040012F0 RID: 4848
+		public const int PP_E_AP_XML_SCHEMA_PARSE_ERR = -2147198327;
+
+		// Token: 0x040012F1 RID: 4849
+		public const int PP_E_AP_INVALID_ENTITY_STATUS = -2147198326;
+
+		// Token: 0x040012F2 RID: 4850
+		public const int PP_E_AP_EMPTY_RELATIONSHIP = -2147198325;
+
+		// Token: 0x040012F3 RID: 4851
+		public const int PP_E_AP_ENTITY_DOES_NOT_EXIST = -2147198324;
+
+		// Token: 0x040012F4 RID: 4852
+		public const int PP_E_AP_DUPLICATE_ENTITY = -2147198323;
+
+		// Token: 0x040012F5 RID: 4853
+		public const int PP_E_AP_DUPLICATE_SERVICE = -2147198322;
+
+		// Token: 0x040012F6 RID: 4854
+		public const int PP_E_AP_INVALID_SERVICEID = -2147198321;
+
+		// Token: 0x040012F7 RID: 4855
+		public const int PP_E_AP_LW_FEDERATION_DISABLED = -2147198320;
+
+		// Token: 0x040012F8 RID: 4856
+		public const int PP_E_AP_EMPTY_ENTITY = -2147198319;
+
+		// Token: 0x040012F9 RID: 4857
+		public const int PP_E_AP_INVALID_APPLICATION_TOKEN = -2147198318;
+
+		// Token: 0x040012FA RID: 4858
+		public const int PP_E_AP_INVALID_DNS_HOSTNAME = -2147198317;
+
+		// Token: 0x040012FB RID: 4859
+		public const int PP_E_AP_DNS_TOOLONG = -2147198316;
+
+		// Token: 0x040012FC RID: 4860
+		public const int PP_E_AP_URL_TOOLONG = -2147198315;
+
+		// Token: 0x040012FD RID: 4861
+		public const int PP_E_AP_KEY_TOOLONG = -2147198314;
+
+		// Token: 0x040012FE RID: 4862
+		public const int PP_E_AP_KEY_TOOSHORT = -2147198313;
+
+		// Token: 0x040012FF RID: 4863
+		public const int PP_E_AP_TOKEN_DNS_MISMATCH = -2147198312;
+
+		// Token: 0x04001300 RID: 4864
+		public const int PP_E_AP_INVALID_PWID = -2147198311;
+
+		// Token: 0x04001301 RID: 4865
+		public const int PP_E_AP_CONSENT_APPVERIFIER_MISSING = -2147198310;
+
+		// Token: 0x04001302 RID: 4866
+		public const int PP_E_AP_CONSENT_REFRESHTOKEN_EXPIRED = -2147198309;
+
+		// Token: 0x04001303 RID: 4867
+		public const int PP_E_AP_CONSENT_REFRESHTOKEN_INVALID = -2147198308;
+
+		// Token: 0x04001304 RID: 4868
+		public const int PP_E_AP_CONSENT_KID_NOT_ALLOWED = -2147198307;
+
+		// Token: 0x04001305 RID: 4869
+		public const int PP_E_AP_INVALID_APPLICATION_IMAGEURL = -2147198306;
+
+		// Token: 0x04001306 RID: 4870
+		public const int PP_E_AP_INVALID_WLTEMPLATE = -2147198305;
+
+		// Token: 0x04001307 RID: 4871
+		public const int PP_E_AP_LAST = -2147198209;
+
+		// Token: 0x04001308 RID: 4872
+		public const int PP_E_AUTHPOLICY_NOTFOUND = -2147198208;
+
+		// Token: 0x04001309 RID: 4873
+		public const int PP_E_INVALID_AUTHPOLICY = -2147198207;
+
+		// Token: 0x0400130A RID: 4874
+		public const int PP_E_INVALID_SITE_DNS = -2147198206;
+
+		// Token: 0x0400130B RID: 4875
+		public const int PP_E_WL_ROOT_AUTHPOLICY_NOTFOUND = -2147198205;
+
+		// Token: 0x0400130C RID: 4876
+		public const int PP_E_STS_REQUEST_NOTSUPPORTED = -2147197952;
+
+		// Token: 0x0400130D RID: 4877
+		public const int PP_E_STS_INVALID_REQUEST = -2147197951;
+
+		// Token: 0x0400130E RID: 4878
+		public const int PP_E_WEBSSO_SERVICE_REFERRAL = -2147197950;
+
+		// Token: 0x0400130F RID: 4879
+		public const int PP_E_WEBSSO_INVALID_REQUEST = -2147197949;
+
+		// Token: 0x04001310 RID: 4880
+		public const int PP_E_WEBSSO_REQUEST_BADXML = -2147197948;
+
+		// Token: 0x04001311 RID: 4881
+		public const int PP_E_WEBSSO_ASSERTION_MISMATCH = -2147197947;
+
+		// Token: 0x04001312 RID: 4882
+		public const int PP_E_WEBSSO_EXPIRED_TOKEN = -2147197946;
+
+		// Token: 0x04001313 RID: 4883
+		public const int PP_E_WEBSSO_FORCEDSIGNIN_NEEDED = -2147197945;
+
+		// Token: 0x04001314 RID: 4884
+		public const int PP_E_WEBSSO_PASSWORDAUTH_NEEDED = -2147197944;
+
+		// Token: 0x04001315 RID: 4885
+		public const int PP_E_WEBSSO_PINAUTH_NEEDED = -2147197943;
+
+		// Token: 0x04001316 RID: 4886
+		public const int PP_E_WEBSSO_CERTAUTH_NEEDED = -2147197942;
+
+		// Token: 0x04001317 RID: 4887
+		public const int PP_E_WEBSSO_STONGERCREDS_NEEDED = -2147197941;
+
+		// Token: 0x04001318 RID: 4888
+		public const int PP_E_STS_SIGALGORITHM_NOTSUPPORTED = -2147197940;
+
+		// Token: 0x04001319 RID: 4889
+		public const int PP_E_WEBSSO_TOKENTYPE_MISMATCH = -2147197939;
+
+		// Token: 0x0400131A RID: 4890
+		public const int PP_E_BASE64ENCODE_FAILED = -2147197938;
+
+		// Token: 0x0400131B RID: 4891
+		public const int PP_E_BASE64DECODE_FAILED = -2147197937;
+
+		// Token: 0x0400131C RID: 4892
+		public const int PP_E_WEBSSO_INVALID_TIME = -2147197936;
+
+		// Token: 0x0400131D RID: 4893
+		public const int PP_E_WEBSSO_REQUEST_TOOLARGE = -2147197935;
+
+		// Token: 0x0400131E RID: 4894
+		public const int PP_E_WEBSSO_CORRUPTED_ASSERTION = -2147197934;
+
+		// Token: 0x0400131F RID: 4895
+		public const int PP_E_STS_INVALID_SECONDARY_CREDTYPE = -2147197933;
+
+		// Token: 0x04001320 RID: 4896
+		public const int PP_E_STS_BAD_SECONDARY_CRED = -2147197932;
+
+		// Token: 0x04001321 RID: 4897
+		public const int PP_E_WEBSSO_CORRUPTED_SESSION_KEY = -2147197931;
+
+		// Token: 0x04001322 RID: 4898
+		public const int PP_E_INVALID_ASSERTION = -2147197929;
+
+		// Token: 0x04001323 RID: 4899
+		public const int PP_E_STS_PARTNER_NOT_FOUND = -2147197928;
+
+		// Token: 0x04001324 RID: 4900
+		public const int PP_E_STS_PARTNER_DOES_NOT_HAVE_CERT = -2147197927;
+
+		// Token: 0x04001325 RID: 4901
+		public const int PP_E_STS_INVALID_POLICY = -2147197926;
+
+		// Token: 0x04001326 RID: 4902
+		public const int PP_E_STS_PROFILE_ACCRUE_REDIR = -2147197925;
+
+		// Token: 0x04001327 RID: 4903
+		public const int PP_E_PROXYSTS_INVALID_REQ_TIMEWINDOW = -2147197924;
+
+		// Token: 0x04001328 RID: 4904
+		public const int PP_E_PROXYSTS_INVALID_PASSWORD_HASH = -2147197923;
+
+		// Token: 0x04001329 RID: 4905
+		public const int PP_E_PROXYSTS_INVALID_REQUEST = -2147197922;
+
+		// Token: 0x0400132A RID: 4906
+		public const int PP_E_PROXYSTS_EXCEEDED_REQUEST_LIMIT = -2147197921;
+
+		// Token: 0x0400132B RID: 4907
+		public const int PP_E_PROXYSTS_INVALID_RSA_ENCRYPTION_KEY = -2147197920;
+
+		// Token: 0x0400132C RID: 4908
+		public const int PP_E_PROXYSTS_UNEXPECTED_FAILURE = -2147197919;
+
+		// Token: 0x0400132D RID: 4909
+		public const int PP_E_PARTNERPUBLICKEY_JSCRIPT_HEADERERROR = -2147197918;
+
+		// Token: 0x0400132E RID: 4910
+		public const int PP_E_SLCA_PKCS10_PUBLICKEY_BADLENGTH = -2147197917;
+
+		// Token: 0x0400132F RID: 4911
+		public const int PP_E_SLCA_PKCS10_SIGNINGTIME_INVALID = -2147197916;
+
+		// Token: 0x04001330 RID: 4912
+		public const int PP_E_SLCA_PKCS10_REQUESTVERSION_INVALID = -2147197915;
+
+		// Token: 0x04001331 RID: 4913
+		public const int PP_E_STS_REQUEST_TS_INVALID = -2147197914;
+
+		// Token: 0x04001332 RID: 4914
+		public const int PP_E_SLCA_INVALID_PKCS10_BLOB = -2147197913;
+
+		// Token: 0x04001333 RID: 4915
+		public const int PP_E_MISSING_CERT = -2147197912;
+
+		// Token: 0x04001334 RID: 4916
+		public const int PP_E_STS_BINVERSION_INVALID = -2147197911;
+
+		// Token: 0x04001335 RID: 4917
+		public const int PP_E_PUBLICKEYBLOB_BASE64DECODE_FAILED = -2147197910;
+
+		// Token: 0x04001336 RID: 4918
+		public const int PP_E_PK_EXPONENT_TOO_LONG = -2147197909;
+
+		// Token: 0x04001337 RID: 4919
+		public const int PP_E_WEBSSO_INVALID_AUDIENCE = -2147197908;
+
+		// Token: 0x04001338 RID: 4920
+		public const int PP_E_DELEGATION_TOKENTYPE_INVALID = -2147197907;
+
+		// Token: 0x04001339 RID: 4921
+		public const int PP_E_CCM_INSTANCENOTEXIST = -2147197440;
+
+		// Token: 0x0400133A RID: 4922
+		public const int PP_E_CCM_PROPERTYNOTEXIST = -2147197439;
+
+		// Token: 0x0400133B RID: 4923
+		public const int PP_E_CCM_OBJECTTYPENOTEXIST = -2147197438;
+
+		// Token: 0x0400133C RID: 4924
+		public const int PP_E_CCM_CACHEITEMNOTEXIST = -2147197437;
+
+		// Token: 0x0400133D RID: 4925
+		public const int PP_E_CCM_ENTITYNAMENOTEXIST = -2147197436;
+
+		// Token: 0x0400133E RID: 4926
+		public const int PP_E_CCM_INSTANCENOTINITIALIZED = -2147197435;
+
+		// Token: 0x0400133F RID: 4927
+		public const int PP_E_CCM_PROPERTYNOTINITIALIZED = -2147197434;
+
+		// Token: 0x04001340 RID: 4928
+		public const int PP_E_CCM_PROPERTYTYPENOTEXIST = -2147197433;
+
+		// Token: 0x04001341 RID: 4929
+		public const int PP_E_CCM_PROPERTYTYPEINVALID = -2147197432;
+
+		// Token: 0x04001342 RID: 4930
+		public const int PP_E_CCM_PROPERTYVALUEINVALID = -2147197431;
+
+		// Token: 0x04001343 RID: 4931
+		public const int PP_E_CCM_RELATIONSHIPVALUEINVALID = -2147197430;
+
+		// Token: 0x04001344 RID: 4932
+		public const int PP_E_CCM_OBJTYPEID_NOT_FOUND = -2147197429;
+
+		// Token: 0x04001345 RID: 4933
+		public const int PP_E_CCM_INSTANCECACHE_NULL = -2147197428;
+
+		// Token: 0x04001346 RID: 4934
+		public const int PP_E_CCM_INSTANCE_NULL = -2147197427;
+
+		// Token: 0x04001347 RID: 4935
+		public const int PP_E_CCM_NOTINITIALIZED = -2147197426;
+
+		// Token: 0x04001348 RID: 4936
+		public const int PP_E_CCM_PROPERTYBAGINVALID = -2147197425;
+
+		// Token: 0x04001349 RID: 4937
+		public const int PP_E_CCM_INVALIDPROGID = -2147197424;
+
+		// Token: 0x0400134A RID: 4938
+		public const int PP_E_CCM_RELEASEENTRY = -2147197423;
+
+		// Token: 0x0400134B RID: 4939
+		public const int PP_E_CCM_ADDREFENTRY = -2147197422;
+
+		// Token: 0x0400134C RID: 4940
+		public const int PP_E_CCM_OBJINSTANCEEXISTS = -2147197421;
+
+		// Token: 0x0400134D RID: 4941
+		public const int PP_E_CCM_OBJINSTANCECONFLICT = -2147197420;
+
+		// Token: 0x0400134E RID: 4942
+		public const int PP_E_CCM_ENTITYIDNOTEXIST = -2147197419;
+
+		// Token: 0x0400134F RID: 4943
+		public const int PP_E_CCM_RENAMEINSTANCENOTEFFECTIVE = -2147197418;
+
+		// Token: 0x04001350 RID: 4944
+		public const int PP_E_CCM_INVALIDOBJTYPEXML = -2147197417;
+
+		// Token: 0x04001351 RID: 4945
+		public const int PP_E_CCM_INVALIDBLOB = -2147197416;
+
+		// Token: 0x04001352 RID: 4946
+		public const int PP_E_CCM_INVALIDDATE = -2147197415;
+
+		// Token: 0x04001353 RID: 4947
+		public const int PP_E_CCMINVALIDRELATIONSHIPVALUE = -2147197414;
+
+		// Token: 0x04001354 RID: 4948
+		public const int PP_E_CCM_PROPERTYVALUENULL = -2147197413;
+
+		// Token: 0x04001355 RID: 4949
+		public const int PP_E_CCM_SERVICENAMENOTEXIST = -2147197412;
+
+		// Token: 0x04001356 RID: 4950
+		public const int PP_E_CCM_INVALIDMACHINEID = -2147197411;
+
+		// Token: 0x04001357 RID: 4951
+		public const int PP_E_CCM_FILETRNOTFOUND = -2147197410;
+
+		// Token: 0x04001358 RID: 4952
+		public const int PP_E_CCM_MAXFILTERSEXCEEDED = -2147197409;
+
+		// Token: 0x04001359 RID: 4953
+		public const int PP_E_CCM_FILTERNOTINITIALIZED = -2147197408;
+
+		// Token: 0x0400135A RID: 4954
+		public const int PP_E_CCM_FILTERAREADYEXIST = -2147197407;
+
+		// Token: 0x0400135B RID: 4955
+		public const int PP_E_CCM_INVALIDFILTERPROPID = -2147197406;
+
+		// Token: 0x0400135C RID: 4956
+		public const int PP_E_CCM_FILTER_NULL = -2147197405;
+
+		// Token: 0x0400135D RID: 4957
+		public const int PP_E_CCM_RELEASE_SET = -2147197404;
+
+		// Token: 0x0400135E RID: 4958
+		public const int PP_E_CCM_MACHINEID_SET = -2147197403;
+
+		// Token: 0x0400135F RID: 4959
+		public const int PP_E_CCM_INVALIDNOTIFICATION = -2147197402;
+
+		// Token: 0x04001360 RID: 4960
+		public const int PP_E_VCACHE_FIRST = -2147197312;
+
+		// Token: 0x04001361 RID: 4961
+		public const int PP_E_VCACHE_NOT_INITIALIZED = -2147197311;
+
+		// Token: 0x04001362 RID: 4962
+		public const int PP_E_VCACHE_LAST = -2147197310;
+
+		// Token: 0x04001363 RID: 4963
+		public const int PP_E_SCHED_NAMEBUFFER_TOOSMALL = -2147197184;
+
+		// Token: 0x04001364 RID: 4964
+		public const int PP_E_SCHED_NOCONFIG_PROPS = -2147197183;
+
+		// Token: 0x04001365 RID: 4965
+		public const int PP_E_SCHED_TIMESERVER_INVALIDPROP = -2147197182;
+
+		// Token: 0x04001366 RID: 4966
+		public const int PP_E_SCHED_WORKITEM_EXISTS = -2147197181;
+
+		// Token: 0x04001367 RID: 4967
+		public const int PP_E_SCHED_TASKID_INVALID = -2147197180;
+
+		// Token: 0x04001368 RID: 4968
+		public const int PP_E_SCHED_TASKSTARTTIME_INVALID = -2147197179;
+
+		// Token: 0x04001369 RID: 4969
+		public const int PP_E_SCHED_TASKENDTIME_INVALID = -2147197178;
+
+		// Token: 0x0400136A RID: 4970
+		public const int PP_E_SCHED_TASKTIMEOFDAY_INVALID = -2147197177;
+
+		// Token: 0x0400136B RID: 4971
+		public const int PP_E_SCHED_TASKLASTRUN_INVALID = -2147197176;
+
+		// Token: 0x0400136C RID: 4972
+		public const int PP_E_SCHED_TASKCOMMANDXML_INVALID = -2147197175;
+
+		// Token: 0x0400136D RID: 4973
+		public const int PP_E_SCHED_TASKPROGID_INVALID = -2147197174;
+
+		// Token: 0x0400136E RID: 4974
+		public const int PP_E_SCHED_TASKMAXOCCUR_EXCEEDED = -2147197172;
+
+		// Token: 0x0400136F RID: 4975
+		public const int PP_E_SCHED_TASK_EXPIRED = -2147197171;
+
+		// Token: 0x04001370 RID: 4976
+		public const int PP_E_SCHED_TASKRECURRINGTIME_INVALID = -2147197170;
+
+		// Token: 0x04001371 RID: 4977
+		public const int PP_E_SCHED_WORKITEM_NOTFOUND = -2147197169;
+
+		// Token: 0x04001372 RID: 4978
+		public const int PP_E_SCHED_SHUTTINGDOWN = -2147197168;
+
+		// Token: 0x04001373 RID: 4979
+		public const int PP_E_SCHED_TASK_NOTPENDING = -2147197167;
+
+		// Token: 0x04001374 RID: 4980
+		public const int PP_E_SCHED_SCHEDULER_NOT_INITIALIZED = -2147197166;
+
+		// Token: 0x04001375 RID: 4981
+		public const int PP_E_SCHED_DISPATCHER_NOT_INITIALIZED = -2147197165;
+
+		// Token: 0x04001376 RID: 4982
+		public const int PP_E_SCHED_COMMANDID_INVALID = -2147197164;
+
+		// Token: 0x04001377 RID: 4983
+		public const int PP_E_SCHED_COMMANDID_NOTFOUND = -2147197163;
+
+		// Token: 0x04001378 RID: 4984
+		public const int PP_E_SCHED_COMMANDTYPE_INVALID = -2147197162;
+
+		// Token: 0x04001379 RID: 4985
+		public const int PP_E_SCHED_COMMANDPROGID_INVALID = -2147197161;
+
+		// Token: 0x0400137A RID: 4986
+		public const int PP_E_SCHED_TASKEXECUTE_EXCEPTION = -2147197160;
+
+		// Token: 0x0400137B RID: 4987
+		public const int PP_E_SCHED_TASK_REMOVE = -2147197159;
+
+		// Token: 0x0400137C RID: 4988
+		public const int PP_E_SCHED_COMMANDXML_INVALID = -2147197158;
+
+		// Token: 0x0400137D RID: 4989
+		public const int PP_E_SCHED_DISPVARTYPE_INVALID = -2147197157;
+
+		// Token: 0x0400137E RID: 4990
+		public const int PP_E_SCHED_DISPPROGID_INVALID = -2147197156;
+
+		// Token: 0x0400137F RID: 4991
+		public const int PP_E_SCHED_DISPMETHOD_INVALID = -2147197155;
+
+		// Token: 0x04001380 RID: 4992
+		public const int PP_E_SCHED_COMMANDLINE_INVALID = -2147197154;
+
+		// Token: 0x04001381 RID: 4993
+		public const int PP_E_SCHED_POLICYPATH_INVALID = -2147197153;
+
+		// Token: 0x04001382 RID: 4994
+		public const int PP_E_SCHED_CCMOBJECT_NOTFOUND = -2147197151;
+
+		// Token: 0x04001383 RID: 4995
+		public const int PP_E_SCHED_W32TIMESYNC_NOTAVAILABLE = -2147197150;
+
+		// Token: 0x04001384 RID: 4996
+		public const int PP_E_SCHED_W32TIMESYNC_EXCEPTION = -2147197149;
+
+		// Token: 0x04001385 RID: 4997
+		public const int PP_E_SCHED_DATACENTER_NOTFOUND = -2147197148;
+
+		// Token: 0x04001386 RID: 4998
+		public const int PP_E_SCHED_POLICYNAME_INVALID = -2147197147;
+
+		// Token: 0x04001387 RID: 4999
+		public const int PP_E_SCHED_POLICYINPUT_INVALID = -2147197146;
+
+		// Token: 0x04001388 RID: 5000
+		public const int PP_E_UPSCON_SHUTTINGDOWN = -2147197104;
+
+		// Token: 0x04001389 RID: 5001
+		public const int PP_E_UPSCON_CLOSETIMEOUT = -2147197103;
+
+		// Token: 0x0400138A RID: 5002
+		public const int PP_E_UPSCON_ALREADYSENDING = -2147197102;
+
+		// Token: 0x0400138B RID: 5003
+		public const int PP_E_UPSCON_INVALIDRESPONSEPTR = -2147197101;
+
+		// Token: 0x0400138C RID: 5004
+		public const int PP_E_UPSCON_INVALIDMETHOD = -2147197100;
+
+		// Token: 0x0400138D RID: 5005
+		public const int PP_E_UPSCON_HTTPREQUESTERROR = -2147197099;
+
+		// Token: 0x0400138E RID: 5006
+		public const int PP_E_UPSCON_SOAPFAULT = -2147197098;
+
+		// Token: 0x0400138F RID: 5007
+		public const int PP_E_UPSCON_INVALIDASYNCOBJ = -2147197097;
+
+		// Token: 0x04001390 RID: 5008
+		public const int PP_E_UPSCON_RETRYREQUEST = -2147197096;
+
+		// Token: 0x04001391 RID: 5009
+		public const int PP_E_UPSCON_INVALIDHANDLE = -2147197095;
+
+		// Token: 0x04001392 RID: 5010
+		public const int PP_E_UPSCON_EMPTYQUEUE = -2147197094;
+
+		// Token: 0x04001393 RID: 5011
+		public const int PP_E_UPSCON_EMPTYPOOL = -2147197093;
+
+		// Token: 0x04001394 RID: 5012
+		public const int PP_E_UPSCON_INVALIDPUID = -2147197092;
+
+		// Token: 0x04001395 RID: 5013
+		public const int PP_E_UPSCON_INVALIDDATASET = -2147197091;
+
+		// Token: 0x04001396 RID: 5014
+		public const int PP_E_UPSCON_UNKSOAPFAULTERROR = -2147197090;
+
+		// Token: 0x04001397 RID: 5015
+		public const int PP_E_UPSCON_CCMCACHE_INVALID = -2147197089;
+
+		// Token: 0x04001398 RID: 5016
+		public const int PP_E_UPSCON_INVALIDURL = -2147197088;
+
+		// Token: 0x04001399 RID: 5017
+		public const int PP_E_UPSCON_INVALIDMAPPING = -2147197087;
+
+		// Token: 0x0400139A RID: 5018
+		public const int PP_E_UPSCON_INVALIDPROPNAME = -2147197086;
+
+		// Token: 0x0400139B RID: 5019
+		public const int PP_E_UPSCON_VERSIONMISSING = -2147197085;
+
+		// Token: 0x0400139C RID: 5020
+		public const int PP_E_UPSCON_INVALIDCLOGPUID = -2147197084;
+
+		// Token: 0x0400139D RID: 5021
+		public const int PP_E_UPSCON_NOTINITIALIZED = -2147197083;
+
+		// Token: 0x0400139E RID: 5022
+		public const int PP_E_UPSCON_SLEEPNODATA = -2147197082;
+
+		// Token: 0x0400139F RID: 5023
+		public const int PP_E_UPSCON_ENDOFROWSET = -2147197081;
+
+		// Token: 0x040013A0 RID: 5024
+		public const int PP_E_UPSCON_WORKERINVALIDARRAY = -2147197080;
+
+		// Token: 0x040013A1 RID: 5025
+		public const int PP_E_UPSCON_BATCHMAXSIZE_EXCEEDED = -2147197079;
+
+		// Token: 0x040013A2 RID: 5026
+		public const int PP_E_UPSCON_EMPTYBATCH = -2147197078;
+
+		// Token: 0x040013A3 RID: 5027
+		public const int PP_E_UPSCON_BADBATCHENTRY = -2147197077;
+
+		// Token: 0x040013A4 RID: 5028
+		public const int PP_E_UPSCON_CLOGPUIDNOTFOUND = -2147197076;
+
+		// Token: 0x040013A5 RID: 5029
+		public const int PP_E_UPSCON_INVALIDCLOGSUBSCRIPTION = -2147197075;
+
+		// Token: 0x040013A6 RID: 5030
+		public const int PP_E_UPSCON_SUBSCRIPTIONNOTFOUND = -2147197074;
+
+		// Token: 0x040013A7 RID: 5031
+		public const int PP_E_UPSCON_INVALIDSUBSCRIPTIONTYPE = -2147197073;
+
+		// Token: 0x040013A8 RID: 5032
+		public const int PP_E_UPSCON_POOLMAXSIZE_EXCEEDED = -2147197072;
+
+		// Token: 0x040013A9 RID: 5033
+		public const int PP_E_UPSCON_EVENTLOGGER_INVALID = -2147197071;
+
+		// Token: 0x040013AA RID: 5034
+		public const int PP_E_UPSCON_CLOGACTION_NOTSUPPORTED = -2147197070;
+
+		// Token: 0x040013AB RID: 5035
+		public const int PP_E_UPSCON_UPSCONNECTOROBJECT_INVALID = -2147197069;
+
+		// Token: 0x040013AC RID: 5036
+		public const int PP_E_UPSCON_INVALIDCLOGACTION = -2147197068;
+
+		// Token: 0x040013AD RID: 5037
+		public const int PP_E_UPSCON_CCMOBJECT_INVALID = -2147197067;
+
+		// Token: 0x040013AE RID: 5038
+		public const int PP_E_UPSCON_INVALID_MEMBERNAME = -2147197066;
+
+		// Token: 0x040013AF RID: 5039
+		public const int PP_E_UPSCON_INVALID_PASSPORTID = -2147197065;
+
+		// Token: 0x040013B0 RID: 5040
+		public const int PP_E_UPSCON_CLOGCREDNAME_INVALID = -2147197064;
+
+		// Token: 0x040013B1 RID: 5041
+		public const int PP_E_UPSCON_CLOGENTRY_NOOP = -2147197063;
+
+		// Token: 0x040013B2 RID: 5042
+		public const int PP_E_UPSCON_CLOGENTRY_FATALERROR = -2147197062;
+
+		// Token: 0x040013B3 RID: 5043
+		public const int PP_E_UPSCON_CCMID_INVALID = -2147197061;
+
+		// Token: 0x040013B4 RID: 5044
+		public const int PP_E_UPSCON_CCMSAFEARRAY_INVALID = -2147197060;
+
+		// Token: 0x040013B5 RID: 5045
+		public const int PP_E_UPSCON_PROPERTYMSNUSER_INVALID = -2147197059;
+
+		// Token: 0x040013B6 RID: 5046
+		public const int PP_E_UPSCON_ASYNCCALL_FAILED = -2147197058;
+
+		// Token: 0x040013B7 RID: 5047
+		public const int PP_E_UPSCON_CREDFLAGSPROP_INVALID = -2147197057;
+
+		// Token: 0x040013B8 RID: 5048
+		public const int PP_E_UPSCON_PROPERTYMSNUSER_NOTFOUND = -2147197056;
+
+		// Token: 0x040013B9 RID: 5049
+		public const int PP_E_UPSCON_PROPERTYID_INVALID = -2147197055;
+
+		// Token: 0x040013BA RID: 5050
+		public const int PP_E_UPSCON_PROFILEPUIDNOTFOUND = -2147197054;
+
+		// Token: 0x040013BB RID: 5051
+		public const int PP_E_UPSCON_CREDENTIALPUIDNOTFOUND = -2147197053;
+
+		// Token: 0x040013BC RID: 5052
+		public const int PP_E_UPSCON_INVALIDMIGTYPE = -2147197052;
+
+		// Token: 0x040013BD RID: 5053
+		public const int PP_E_UPSCON_INVALIDMODULEPATH = -2147197051;
+
+		// Token: 0x040013BE RID: 5054
+		public const int PP_E_UPSCON_INTERFACE_NOTSUPPORTED = -2147197050;
+
+		// Token: 0x040013BF RID: 5055
+		public const int PP_E_UPSCON_INVALID_VERSION = -2147197049;
+
+		// Token: 0x040013C0 RID: 5056
+		public const int PP_E_UPSCON_MAX_ERRORS_EXCEEDED = -2147197048;
+
+		// Token: 0x040013C1 RID: 5057
+		public const int PP_E_SEEDING_USER_IS_KID = -2147197047;
+
+		// Token: 0x040013C2 RID: 5058
+		public const int PP_E_UPSCON_POOL_NEWCONNECTION = -2147197046;
+
+		// Token: 0x040013C3 RID: 5059
+		public const int PP_E_UPSCON_INVALID_CLOGDATAPARTITIONING = -2147197045;
+
+		// Token: 0x040013C4 RID: 5060
+		public const int PP_E_CCMMGR_SERVICENOTFOUND = -2147196906;
+
+		// Token: 0x040013C5 RID: 5061
+		public const int PP_E_CCMMGR_INAVLID_ACTION = -2147196905;
+
+		// Token: 0x040013C6 RID: 5062
+		public const int PP_E_CCMMGR_CMD_THREADCOUNT = -2147196891;
+
+		// Token: 0x040013C7 RID: 5063
+		public const int PP_E_CCMMGR_CMD_BADCMDTHREAD_DECCOUNT = -2147196889;
+
+		// Token: 0x040013C8 RID: 5064
+		public const int PP_E_CCMMGR_CMD_BADCMDTHREAD_INCCOUNT = -2147196888;
+
+		// Token: 0x040013C9 RID: 5065
+		public const int PP_E_CCMMGR_SVC_DOMAIN_LENGTH = -2147196887;
+
+		// Token: 0x040013CA RID: 5066
+		public const int PP_E_CCMMGR_SVC_SID_LENGTH = -2147196880;
+
+		// Token: 0x040013CB RID: 5067
+		public const int PP_E_CCMMGR_DBSERVER_GETCOMPUTERNAME = -2147196879;
+
+		// Token: 0x040013CC RID: 5068
+		public const int PP_E_CCMMGR_DBSERVER_BADSTATE = -2147196878;
+
+		// Token: 0x040013CD RID: 5069
+		public const int PP_E_CCMMGR_DBSERVER_BADMACHINENAME = -2147196877;
+
+		// Token: 0x040013CE RID: 5070
+		public const int PP_E_CCMMGR_DBSERVER_MACHINENOTFOUND = -2147196876;
+
+		// Token: 0x040013CF RID: 5071
+		public const int PP_E_CCMMGR_DBSERVER_MACHINETOOMANY = -2147196875;
+
+		// Token: 0x040013D0 RID: 5072
+		public const int PP_E_CCMMGR_DBSERVER_DATACENTERNOTFOUND = -2147196874;
+
+		// Token: 0x040013D1 RID: 5073
+		public const int PP_E_CCMMGR_DBSERVER_DATACENTERTOOMANY = -2147196873;
+
+		// Token: 0x040013D2 RID: 5074
+		public const int PP_E_CCMMGR_DBSERVER_SERVICESNOTFOUND = -2147196872;
+
+		// Token: 0x040013D3 RID: 5075
+		public const int PP_E_CCMMGR_DBSERVER_HEARTBEAT_BADTYPE = -2147196863;
+
+		// Token: 0x040013D4 RID: 5076
+		public const int PP_E_CCMMGR_DBSERVER_ACCESSGROUP_BADTYPE = -2147196862;
+
+		// Token: 0x040013D5 RID: 5077
+		public const int PP_E_CCMMGR_DBSERVER_ACCESSGROUP_EMPTY = -2147196861;
+
+		// Token: 0x040013D6 RID: 5078
+		public const int PP_E_CCMMGR_DBSERVER_NOTIFICATIONSETTING_TIMEOUT = -2147196860;
+
+		// Token: 0x040013D7 RID: 5079
+		public const int PP_E_CCMMGR_DBSERVER_NOTIFICATIONSETTING_NOHEARTBEAT = -2147196859;
+
+		// Token: 0x040013D8 RID: 5080
+		public const int PP_E_CCMMGR_DBSERVER_NOTIFICATIONSETTING_THREADCOUNT = -2147196858;
+
+		// Token: 0x040013D9 RID: 5081
+		public const int PP_E_CCMMGR_DBSERVER_NOTIFICATIONSETTING_HEARTBEAT = -2147196857;
+
+		// Token: 0x040013DA RID: 5082
+		public const int PP_E_CCMMGRSVC_DCOM_DATACENTERID = -2147196856;
+
+		// Token: 0x040013DB RID: 5083
+		public const int PP_E_CCMMGRSVC_DCOM_SERVERID = -2147196855;
+
+		// Token: 0x040013DC RID: 5084
+		public const int PP_E_CCMMGRSVC_DCOM_TRIGGERID = -2147196854;
+
+		// Token: 0x040013DD RID: 5085
+		public const int PP_E_CCMMGR_CMD_TRIGGERID_MISMATCH = -2147196848;
+
+		// Token: 0x040013DE RID: 5086
+		public const int PP_E_CCMMGR_CMD_SERVERID_MISMATCH = -2147196847;
+
+		// Token: 0x040013DF RID: 5087
+		public const int PP_E_CCMMGR_CMD_INVALID_COMMAND_COUNT = -2147196846;
+
+		// Token: 0x040013E0 RID: 5088
+		public const int PP_E_CCMMGR_DBSERVER_NOTIFICATIONSETTING_NOTFOUND = -2147196845;
+
+		// Token: 0x040013E1 RID: 5089
+		public const int PP_E_CCMMGR_DBSERVER_NOTIFICATIONSETTING_NOMAXTHREAD = -2147196844;
+
+		// Token: 0x040013E2 RID: 5090
+		public const int PP_E_CCMMGR_DBSERVER_NOTIFICATIONSETTING_NODOMGROUP = -2147196843;
+
+		// Token: 0x040013E3 RID: 5091
+		public const int PP_E_CCMMGR_DBSERVER_MAXTIMEOUT_BADTYPE = -2147196842;
+
+		// Token: 0x040013E4 RID: 5092
+		public const int PP_E_CCMMGR_ADDSERVICE_NOT_FOUND = -2147196841;
+
+		// Token: 0x040013E5 RID: 5093
+		public const int PP_E_CCMMGR_DELSERVICE_NOT_FOUND = -2147196840;
+
+		// Token: 0x040013E6 RID: 5094
+		public const int PP_E_CCMMGR_DELSERVICE_NOT_REGISTERED = -2147196839;
+
+		// Token: 0x040013E7 RID: 5095
+		public const int PP_E_CCMMGR_CMD_NULLSVCPTR = -2147196832;
+
+		// Token: 0x040013E8 RID: 5096
+		public const int PP_E_CCMMGR_CMD_NULLNOTIFYPTR = -2147196831;
+
+		// Token: 0x040013E9 RID: 5097
+		public const int PP_E_CCMMGRSVC_LONG_MODULE_PATH = -2147196830;
+
+		// Token: 0x040013EA RID: 5098
+		public const int PP_E_CCMMGRSVC_REMOVE_FILESPEC = -2147196829;
+
+		// Token: 0x040013EB RID: 5099
+		public const int PP_E_CCMMGR_CMD_SERVERSTART_FAILED = -2147196828;
+
+		// Token: 0x040013EC RID: 5100
+		public const int PP_E_CCMMGR_CMD_NOTFOUND = -2147196827;
+
+		// Token: 0x040013ED RID: 5101
+		public const int PP_E_CCMMGR_SVC_BADCCMSVC_PTR = -2147196826;
+
+		// Token: 0x040013EE RID: 5102
+		public const int PP_E_CCMMGR_SVC_TIMEOUT = -2147196825;
+
+		// Token: 0x040013EF RID: 5103
+		public const int PP_E_CCMMGR_SVC_ABANDONED = -2147196824;
+
+		// Token: 0x040013F0 RID: 5104
+		public const int PP_E_CCMMGR_SVC_NONE_REGISTERED = -2147196823;
+
+		// Token: 0x040013F1 RID: 5105
+		public const int PP_E_CCMMGR_SVC_BADSTATE_REG = -2147196822;
+
+		// Token: 0x040013F2 RID: 5106
+		public const int PP_E_CCMMGR_SVC_BADSTATE_UNREG = -2147196816;
+
+		// Token: 0x040013F3 RID: 5107
+		public const int PP_E_CCMMGR_SVC_BADSTATE_NOTIFEXECUTE = -2147196815;
+
+		// Token: 0x040013F4 RID: 5108
+		public const int PP_E_CCMMGR_DBSERVER_MAXTHREAD_BADTYPE = -2147196814;
+
+		// Token: 0x040013F5 RID: 5109
+		public const int PP_E_CCMMGR_INAVLID_DATEFORMAT = -2147196813;
+
+		// Token: 0x040013F6 RID: 5110
+		public const int PP_E_CCMMGR_INAVLID_NTSVC_NO_ARGS = -2147196812;
+
+		// Token: 0x040013F7 RID: 5111
+		public const int PP_E_CCMMGR_INAVLID_NTSVC_ACTION = -2147196811;
+
+		// Token: 0x040013F8 RID: 5112
+		public const int PP_E_CCMMGR_CMD_GETSTATUS_INVALIDARG = -2147196810;
+
+		// Token: 0x040013F9 RID: 5113
+		public const int PP_E_CCMMGR_CMD_CACHEUPDATE_BAD_STATE = -2147196809;
+
+		// Token: 0x040013FA RID: 5114
+		public const int PP_E_CCMMGR_CMD_SVCRESET_BAD_ADSI_CLASS = -2147196808;
+
+		// Token: 0x040013FB RID: 5115
+		public const int PP_E_CCMMGR_CMD_SVCRESET_BAD_ADSI_PATH = -2147196807;
+
+		// Token: 0x040013FC RID: 5116
+		public const int PP_E_CCMMGR_CMD_SVCRESET_BAD_ADSI_SERVERCOMMENT = -2147196806;
+
+		// Token: 0x040013FD RID: 5117
+		public const int PP_E_CCMMGR_CMD_SVCRESET_SVC_NOTFOUND = -2147196805;
+
+		// Token: 0x040013FE RID: 5118
+		public const int PP_E_CCMMGR_CMD_CACHEUPDATE_INVALID_RELTYPE = -2147196804;
+
+		// Token: 0x040013FF RID: 5119
+		public const int PP_E_CCMMGR_INVALID_SVC_TYPE = -2147196803;
+
+		// Token: 0x04001400 RID: 5120
+		public const int PP_E_CCMMGR_DBSERVER_POLLTIME_BADTYPE = -2147196802;
+
+		// Token: 0x04001401 RID: 5121
+		public const int PP_E_CCMMGR_DBSERVER_POLLSKEW_BADTYPE = -2147196801;
+
+		// Token: 0x04001402 RID: 5122
+		public const int PP_E_CCMMGR_DBSERVER_MAXBYTELEN_BADTYPE = -2147196800;
+
+		// Token: 0x04001403 RID: 5123
+		public const int PP_E_CCMMGR_DBSERVER_NOTIFICATIONSETTING_NOMAXBYTELEN = -2147196799;
+
+		// Token: 0x04001404 RID: 5124
+		public const int PP_E_CCMAZ_NOTAUTHORIZED = -2147196672;
+
+		// Token: 0x04001405 RID: 5125
+		public const int PP_E_CCMAZ_INVALIDCLAIM = -2147196671;
+
+		// Token: 0x04001406 RID: 5126
+		public const int PP_E_CCMAZ_INVALIDCLAIMCOUNT = -2147196670;
+
+		// Token: 0x04001407 RID: 5127
+		public const int PP_E_CCMAZ_INVALIDIMPFLAG = -2147196669;
+
+		// Token: 0x04001408 RID: 5128
+		public const int PP_E_CCMAZ_NOCONFIGKEY = -2147196668;
+
+		// Token: 0x04001409 RID: 5129
+		public const int PP_E_CCMAZ_STORENAME_NOTFOUND = -2147196667;
+
+		// Token: 0x0400140A RID: 5130
+		public const int PP_E_CCMAZ_BADVARIANT = -2147196666;
+
+		// Token: 0x0400140B RID: 5131
+		public const int PP_E_CCMAZ_INVALIDOBJECTCOUNT = -2147196665;
+
+		// Token: 0x0400140C RID: 5132
+		public const int PP_E_CCMAZ_INVALIDOBJECTTYPE = -2147196664;
+
+		// Token: 0x0400140D RID: 5133
+		public const int PP_E_CCMAZ_NOTINITIALIZED = -2147196663;
+
+		// Token: 0x0400140E RID: 5134
+		public const int PP_E_CCMAZ_AZAPPLICATION_INVALID = -2147196662;
+
+		// Token: 0x0400140F RID: 5135
+		public const int PP_E_PERF_ADDINSTANCE = -2147196080;
+
+		// Token: 0x04001410 RID: 5136
+		public const int PP_E_RWLOCK_NOTINITIALIZED = -2147195904;
+
+		// Token: 0x04001411 RID: 5137
+		public const int PP_E_RWLOCK_CLAIMFAILED = -2147195903;
+
+		// Token: 0x04001412 RID: 5138
+		public const int PP_E_MAPPATH_NOTINITIALIZED = -2147195902;
+
+		// Token: 0x04001413 RID: 5139
+		public const int PP_E_MAPPATH_BADPATH = -2147195901;
+
+		// Token: 0x04001414 RID: 5140
+		public const int PP_E_CODEFILES_BADINIPAIRS = -2147195900;
+
+		// Token: 0x04001415 RID: 5141
+		public const int PP_E_CDS_EVHELPER_INIT_FAILED = -2147195824;
+
+		// Token: 0x04001416 RID: 5142
+		public const int PP_E_SRVCRYPT_INVALID_PUID = -2147195648;
+
+		// Token: 0x04001417 RID: 5143
+		public const int PP_E_SRVCRYPT_EXPIRED_BLOB = -2147195647;
+
+		// Token: 0x04001418 RID: 5144
+		public const int PP_E_SRVCRYPT_INVALID_PURPOSE = -2147195646;
+
+		// Token: 0x04001419 RID: 5145
+		public const int PP_E_SRVCRYPT_HMAC_MISMATCH = -2147195645;
+
+		// Token: 0x0400141A RID: 5146
+		public const int PP_E_AS_PROCESSTRDPL_CONFIG_NOT_INITIALIZED = -2147195568;
+
+		// Token: 0x0400141B RID: 5147
+		public const int PP_E_AS_PIDEPOSITORY_INVALID_THREADPOOL_POINTER = -2147195567;
+
+		// Token: 0x0400141C RID: 5148
+		public const int PP_E_AS_PIDEPOSITORY_INVALID_SIZE = -2147195566;
+
+		// Token: 0x0400141D RID: 5149
+		public const int PP_E_AS_CONFIG_NOT_INITIALIZED = -2147195565;
+
+		// Token: 0x0400141E RID: 5150
+		public const int PP_E_AS_STATISTICS_NOT_INITIALIZED = -2147195564;
+
+		// Token: 0x0400141F RID: 5151
+		public const int PP_E_AS_DEPOSITORY_NOT_INITIALIZED = -2147195563;
+
+		// Token: 0x04001420 RID: 5152
+		public const int PP_E_AS_EVENTLOGGER_NOT_INITIALIZED = -2147195562;
+
+		// Token: 0x04001421 RID: 5153
+		public const int PP_E_AS_EVENTLOGGER_COULD_NOT_CREATE = -2147195559;
+
+		// Token: 0x04001422 RID: 5154
+		public const int PP_E_AS_CONFIG_ALREADY_INITIALIZED = -2147195558;
+
+		// Token: 0x04001423 RID: 5155
+		public const int PP_E_AS_CONFIG_INVALID_INIFILE_NAME = -2147195557;
+
+		// Token: 0x04001424 RID: 5156
+		public const int PP_E_AS_CONFIG_SECTIONNAME_EMPTY = -2147195556;
+
+		// Token: 0x04001425 RID: 5157
+		public const int PP_E_AS_CONFIG_SECTION_BUFFER_TOO_SMALL = -2147195555;
+
+		// Token: 0x04001426 RID: 5158
+		public const int PP_E_AS_CONFIG_EMPTY_ITEM_NAME = -2147195554;
+
+		// Token: 0x04001427 RID: 5159
+		public const int PP_E_AS_CONFIG_NO_SUCH_ITEM = -2147195553;
+
+		// Token: 0x04001428 RID: 5160
+		public const int PP_E_AS_CONFIG_CAN_NOT_CHANGE_ITEM_TYPE = -2147195552;
+
+		// Token: 0x04001429 RID: 5161
+		public const int PP_E_AS_PUIDINFODEPOT_SIZE_INVALID = -2147195551;
+
+		// Token: 0x0400142A RID: 5162
+		public const int PP_E_AS_INVALID_PARTITIONINFO_SUPPLIED = -2147195550;
+
+		// Token: 0x0400142B RID: 5163
+		public const int PP_E_AS_STATISTICS_INVALID_LOAD_LEVEL = -2147195549;
+
+		// Token: 0x0400142C RID: 5164
+		public const int PP_E_AS_STATISTICS_INVALID_MINIMAL_TIME = -2147195548;
+
+		// Token: 0x0400142D RID: 5165
+		public const int PP_E_AS_STATISTICS_INVALID_MAXIMUM_TIME = -2147195547;
+
+		// Token: 0x0400142E RID: 5166
+		public const int PP_E_AS_STATISTICS_INVALID_TRIGGER_VALUE = -2147195546;
+
+		// Token: 0x0400142F RID: 5167
+		public const int PP_E_AS_STATISTICS_INVALID_THROTTLEPERNUMBEROFCALLS_VALUE = -2147195545;
+
+		// Token: 0x04001430 RID: 5168
+		public const int PP_E_AS_STATISTICS_LOADLEVELTRIGGERCOMBO_OUTSIDE_LEGAL_RANGE = -2147195544;
+
+		// Token: 0x04001431 RID: 5169
+		public const int PP_E_AS_EVENTLOGGER_IVALID_CONFIGPTR = -2147195543;
+
+		// Token: 0x04001432 RID: 5170
+		public const int PP_E_AS_IVALID_DOMAIN_INX = -2147195542;
+
+		// Token: 0x04001433 RID: 5171
+		public const int PP_E_AS_STATISTICS_CRITSEC_SHOTDOWN_FAILED = -2147195541;
+
+		// Token: 0x04001434 RID: 5172
+		public const int PP_E_AS_STATISTICS_FILEWRITE_FAILED = -2147195540;
+
+		// Token: 0x04001435 RID: 5173
+		public const int PP_E_AS_STATISTICS_LOGFILENAME_MISSING = -2147195539;
+
+		// Token: 0x04001436 RID: 5174
+		public const int PP_E_AS_STATISTICS_LOGFILE_OPEN_FAILED = -2147195538;
+
+		// Token: 0x04001437 RID: 5175
+		public const int PP_E_AS_GETPUIDS_INVALID_TIME_INTERVAL = -2147195535;
+
+		// Token: 0x04001438 RID: 5176
+		public const int PP_E_AS_STATISTICS_LOGFILEPATH_MISSING = -2147195534;
+
+		// Token: 0x04001439 RID: 5177
+		public const int PP_E_AS_GETPARTITIONCOUNT_FAILED = -2147195533;
+
+		// Token: 0x0400143A RID: 5178
+		public const int PP_E_AS_PUIDFILEPATH_MISSING = -2147195532;
+
+		// Token: 0x0400143B RID: 5179
+		public const int PP_E_AS_PUIDFILE_MISSING = -2147195531;
+
+		// Token: 0x0400143C RID: 5180
+		public const int PP_E_AS_NO_PERMISSION_TORUN_AGEOUT = -2147195530;
+
+		// Token: 0x0400143D RID: 5181
+		public const int PP_E_AS_DEFAULTAGEOUTDAYS_INVALID = -2147195529;
+
+		// Token: 0x0400143E RID: 5182
+		public const int PP_E_AS_PUIDSPERCALL_INVALID = -2147195528;
+
+		// Token: 0x0400143F RID: 5183
+		public const int PP_E_AS_POLICYHANDLER_NAME_MISSING = -2147195527;
+
+		// Token: 0x04001440 RID: 5184
+		public const int PP_E_AS_PUIDFILE_INVALID_POLICY_NAME = -2147195526;
+
+		// Token: 0x04001441 RID: 5185
+		public const int PP_E_AS_PUIDFILE_INVALID_CREDTYPE = -2147195525;
+
+		// Token: 0x04001442 RID: 5186
+		public const int PP_E_AS_PUIDFILE_INVALID_PUIDTYPE = -2147195524;
+
+		// Token: 0x04001443 RID: 5187
+		public const int PP_E_AS_PUIDFILE_LINE_INVALID = -2147195523;
+
+		// Token: 0x04001444 RID: 5188
+		public const int PP_E_AS_PUIDFILE_LINE_CREDENTIALTYPE_INVALID = -2147195522;
+
+		// Token: 0x04001445 RID: 5189
+		public const int PP_E_AS_GETPUIDTHRDPL_SUBMIT_FAILED = -2147195521;
+
+		// Token: 0x04001446 RID: 5190
+		public const int PP_E_AS_GETPUIDTHRDPL_INVALID_DOMAIN_ID = -2147195520;
+
+		// Token: 0x04001447 RID: 5191
+		public const int PP_E_RNG_INVALIDNODEINDEX = -2147195392;
+
+		// Token: 0x04001448 RID: 5192
+		public const int PP_E_RNG_EMPTYTREE = -2147195391;
+
+		// Token: 0x04001449 RID: 5193
+		public const int PP_E_RNG_INVALIDATTRIBUTE = -2147195390;
+
+		// Token: 0x0400144A RID: 5194
+		public const int PP_E_RNG_INVALIDNODETYPE = -2147195389;
+
+		// Token: 0x0400144B RID: 5195
+		public const int PP_E_RNG_INVALIDSTACKNODE = -2147195388;
+
+		// Token: 0x0400144C RID: 5196
+		public const int PP_E_RNG_INVALIDPARSINGSTACK = -2147195387;
+
+		// Token: 0x0400144D RID: 5197
+		public const int PP_E_RNG_INVALIDTREENODE = -2147195386;
+
+		// Token: 0x0400144E RID: 5198
+		public const int PP_E_RNG_XMLNODE_NOTALLOWED = -2147195385;
+
+		// Token: 0x0400144F RID: 5199
+		public const int PP_E_RNG_NOTINITIALIZED = -2147195384;
+
+		// Token: 0x04001450 RID: 5200
+		public const int PP_E_RNG_HANDLE_INVALID = -2147195383;
+
+		// Token: 0x04001451 RID: 5201
+		public const int PP_E_RNG_BAD_RENDENGINE = -2147195382;
+
+		// Token: 0x04001452 RID: 5202
+		public const int PP_E_RNG_CCMVALUE_INVALID = -2147195381;
+
+		// Token: 0x04001453 RID: 5203
+		public const int PP_E_RNG_PROP_NOTFOUND = -2147195380;
+
+		// Token: 0x04001454 RID: 5204
+		public const int PP_E_RNG_PAGETREE_NOTFOUND = -2147195379;
+
+		// Token: 0x04001455 RID: 5205
+		public const int PP_E_RNG_DUPLICATED_PAGENAME = -2147195378;
+
+		// Token: 0x04001456 RID: 5206
+		public const int PP_E_RNG_PAGE_CCMPROPID_NOTFOUND = -2147195377;
+
+		// Token: 0x04001457 RID: 5207
+		public const int PP_E_RNG_CCMSAFEARRAY_INVALID = -2147195376;
+
+		// Token: 0x04001458 RID: 5208
+		public const int PP_E_RNG_CCMNAME_INVALID = -2147195375;
+
+		// Token: 0x04001459 RID: 5209
+		public const int PP_E_RNG_CCMACTION_INVALID = -2147195374;
+
+		// Token: 0x0400145A RID: 5210
+		public const int PP_E_RNG_PAGEUIMAP_INVALID = -2147195373;
+
+		// Token: 0x0400145B RID: 5211
+		public const int PP_E_RNG_CCM_NOTINITIALIZED = -2147195372;
+
+		// Token: 0x0400145C RID: 5212
+		public const int PP_E_RNG_CCMTYPE_INVALID = -2147195371;
+
+		// Token: 0x0400145D RID: 5213
+		public const int PP_E_RNG_CCMOBJECT_INVALID = -2147195370;
+
+		// Token: 0x0400145E RID: 5214
+		public const int PP_E_RNG_UIPAGESINTF_INVALID = -2147195369;
+
+		// Token: 0x0400145F RID: 5215
+		public const int PP_E_RNG_CCMCACHE_INVALID = -2147195368;
+
+		// Token: 0x04001460 RID: 5216
+		public const int PP_E_RNG_EXPR_NULLINPUT = -2147195367;
+
+		// Token: 0x04001461 RID: 5217
+		public const int PP_E_RNG_EXPR_INVALID_NUMERIC = -2147195366;
+
+		// Token: 0x04001462 RID: 5218
+		public const int PP_E_RNG_EXPR_INVALID_STRING = -2147195365;
+
+		// Token: 0x04001463 RID: 5219
+		public const int PP_E_RNG_EXPR_INVALID_OPERATOR = -2147195364;
+
+		// Token: 0x04001464 RID: 5220
+		public const int PP_E_RNG_EXPR_NOMATCHINGPAR = -2147195363;
+
+		// Token: 0x04001465 RID: 5221
+		public const int PP_E_RNG_EXPR_INVALID_STACK = -2147195362;
+
+		// Token: 0x04001466 RID: 5222
+		public const int PP_E_RNG_EXPR_INVALID_ARGCOUNT = -2147195361;
+
+		// Token: 0x04001467 RID: 5223
+		public const int PP_E_RNG_EXPR_INVALID_COMMA = -2147195360;
+
+		// Token: 0x04001468 RID: 5224
+		public const int PP_E_RNG_EXPR_INVALID_TOKEN = -2147195359;
+
+		// Token: 0x04001469 RID: 5225
+		public const int PP_E_RNG_EXPR_NOADVANCE = -2147195358;
+
+		// Token: 0x0400146A RID: 5226
+		public const int PP_E_RNG_EXPR_EMPTY = -2147195357;
+
+		// Token: 0x0400146B RID: 5227
+		public const int PP_E_RNG_EXPR_INVALID_CALLBACK = -2147195356;
+
+		// Token: 0x0400146C RID: 5228
+		public const int PP_E_RNG_EXPR_INVALID_RPN = -2147195355;
+
+		// Token: 0x0400146D RID: 5229
+		public const int PP_E_RNG_EXPR_INVALID_RPNINDEX = -2147195354;
+
+		// Token: 0x0400146E RID: 5230
+		public const int PP_E_RNG_EXPR_TYPE_NOTSUPPORTED = -2147195353;
+
+		// Token: 0x0400146F RID: 5231
+		public const int PP_E_FLOWTOKEN_INVALID_PAGEID = -2147195136;
+
+		// Token: 0x04001470 RID: 5232
+		public const int PP_E_FLOWTOKEN_INVALID_FLOWID = -2147195135;
+
+		// Token: 0x04001471 RID: 5233
+		public const int PP_E_FLOWTOKEN_INVALID_PUID = -2147195134;
+
+		// Token: 0x04001472 RID: 5234
+		public const int PP_E_FLOWTOKEN_INVALID_OTHERDATA = -2147195133;
+
+		// Token: 0x04001473 RID: 5235
+		public const int PP_E_FLOWTOKEN_MISSING = -2147195132;
+
+		// Token: 0x04001474 RID: 5236
+		public const int PP_E_FLOWTOKEN_MISSING_PAGEID = -2147195131;
+
+		// Token: 0x04001475 RID: 5237
+		public const int PP_E_FLOWTOKEN_UNINITIALIZED = -2147195129;
+
+		// Token: 0x04001476 RID: 5238
+		public const int PP_E_FLOW_DISABLED = -2147195128;
+
+		// Token: 0x04001477 RID: 5239
+		public const int PP_E_AOP_ISFLAGSET_INVALID_FIELD = -2147194880;
+
+		// Token: 0x04001478 RID: 5240
+		public const int PP_E_AOP_ISNAMESPACEPRESENTINLIST_BAG_MISSING_NAMESPACE = -2147194879;
+
+		// Token: 0x04001479 RID: 5241
+		public const int PP_E_AOP_INVALID_CRED_NAME = -2147194878;
+
+		// Token: 0x0400147A RID: 5242
+		public const int PP_E_AOP_FAILED_TO_SEND_HM_POST = -2147194877;
+
+		// Token: 0x0400147B RID: 5243
+		public const int PP_E_AOP_HMPOST_RESPONSE_TOO_LARGE = -2147194876;
+
+		// Token: 0x0400147C RID: 5244
+		public const int PP_E_AOP_HMPOST_RESPONSE_FAIL = -2147194875;
+
+		// Token: 0x0400147D RID: 5245
+		public const int PP_E_AOP_EASIDELETEACTION_FAILED = -2147194874;
+
+		// Token: 0x0400147E RID: 5246
+		public const int PP_E_AOP_HMDELETEACTION_FAILED = -2147194873;
+
+		// Token: 0x0400147F RID: 5247
+		public const int PP_E_AOP_MSNDELETEACTION_FAILED = -2147194872;
+
+		// Token: 0x04001480 RID: 5248
+		public const int PP_E_AOP_LOADCREDBAG_FAILED = -2147194871;
+
+		// Token: 0x04001481 RID: 5249
+		public const int PP_E_AOP_ACCOUNT_HAS_LINKID = -2147194870;
+
+		// Token: 0x04001482 RID: 5250
+		public const int PP_E_PERFMON_INVALID_INSTANCECLASS = -2147194624;
+
+		// Token: 0x04001483 RID: 5251
+		public const int PP_E_PERFMON_INVALID_INSTANCEXML = -2147194623;
+
+		// Token: 0x04001484 RID: 5252
+		public const int PP_E_PERFMON_DUPINSTANCEID = -2147194622;
+
+		// Token: 0x04001485 RID: 5253
+		public const int PP_E_PERFMON_DUPINSTANCENAME = -2147194621;
+
+		// Token: 0x04001486 RID: 5254
+		public const int PP_E_PERFMON_INVALIDINSTANCEID = -2147194620;
+
+		// Token: 0x04001487 RID: 5255
+		public const int PP_E_PERFMON_INVALIDINSTANCENAME = -2147194619;
+
+		// Token: 0x04001488 RID: 5256
+		public const int PP_E_PERFMON_NOTOTAL = -2147194618;
+
+		// Token: 0x04001489 RID: 5257
+		public const int PP_E_CONFIGSERVER_BAD_FILEVERINFOSIZE = -2147192832;
+
+		// Token: 0x0400148A RID: 5258
+		public const int PP_E_CONFIGSERVER_BAD_FIXEDFILEVERINFOSIZE = -2147192831;
+
+		// Token: 0x0400148B RID: 5259
+		public const int PP_E_CONFIGSERVER_BAD_UILOCALPATH = -2147192815;
+
+		// Token: 0x0400148C RID: 5260
+		public const int PP_E_CONFIGSERVER_FILESIZE = -2147192814;
+
+		// Token: 0x0400148D RID: 5261
+		public const int PP_E_CONFIGSERVER_GETFILESIZE = -2147192813;
+
+		// Token: 0x0400148E RID: 5262
+		public const int PP_E_CONFIGSERVER_CANAME = -2147192811;
+
+		// Token: 0x0400148F RID: 5263
+		public const int PP_E_CONFIGSERVER_NO_CACERT = -2147192810;
+
+		// Token: 0x04001490 RID: 5264
+		public const int PP_E_CONFIGSERVER_CACERT_CONVERSION = -2147192809;
+
+		// Token: 0x04001491 RID: 5265
+		public const int PP_E_CCMCERT_NO_CERTSITENAME = -2147192320;
+
+		// Token: 0x04001492 RID: 5266
+		public const int PP_E_CCMCERT_MISMATCH_SITENAME = -2147192319;
+
+		// Token: 0x04001493 RID: 5267
+		public const int PP_E_CCMCERT_NO_PUBLICKEYINFO = -2147192318;
+
+		// Token: 0x04001494 RID: 5268
+		public const int PP_E_CCMCERT_MISMATCH_KEYALGO = -2147192317;
+
+		// Token: 0x04001495 RID: 5269
+		public const int PP_E_CCMCERT_BAD_KEYLEN = -2147192316;
+
+		// Token: 0x04001496 RID: 5270
+		public const int PP_E_CCMCERT_BAD_KEYUSAGE = -2147192315;
+
+		// Token: 0x04001497 RID: 5271
+		public const int PP_E_CCMCERT_BASIC_CONSTRAINT = -2147192313;
+
+		// Token: 0x04001498 RID: 5272
+		public const int PP_E_CCMCERT_UNIQUENAME_BADARG = -2147192312;
+
+		// Token: 0x04001499 RID: 5273
+		public const int PP_E_CCMCERT_SITECERT_CCMBLOBPTR = -2147192311;
+
+		// Token: 0x0400149A RID: 5274
+		public const int PP_E_CCMCERT_SITECERT_BADCERTTYPE = -2147192304;
+
+		// Token: 0x0400149B RID: 5275
+		public const int PP_E_CCMCERT_SITECERT_CCMBLOBCERTSIZE = -2147192303;
+
+		// Token: 0x0400149C RID: 5276
+		public const int PP_E_CCMCERT_SITECERT_CCMBLOBCERTPTR = -2147192302;
+
+		// Token: 0x0400149D RID: 5277
+		public const int PP_E_CCMCERTS_TOBASE64 = -2147192301;
+
+		// Token: 0x0400149E RID: 5278
+		public const int PP_E_CCMCERT_TOOMANY_PARENTOBJECTS = -2147192300;
+
+		// Token: 0x0400149F RID: 5279
+		public const int PP_E_CCMPRXY_MACHINE_NOT_CONNECTED_TO_NETWORK_DEVICE = -2147192064;
+
+		// Token: 0x040014A0 RID: 5280
+		public const int PP_E_PROVENT_COBRANDING_NOT_PRESENT = -2147191808;
+
+		// Token: 0x040014A1 RID: 5281
+		public const int PP_E_PROVENT_SS_COBRANDING_NOT_PRESENT = -2147191807;
+
+		// Token: 0x040014A2 RID: 5282
+		public const int PP_E_PROVENT_TC_COBRANDING_NOT_PRESENT = -2147191806;
+
+		// Token: 0x040014A3 RID: 5283
+		public const int PP_E_COBRANDING_SERVICESPONSOR_EMPTY = -2147191805;
+
+		// Token: 0x040014A4 RID: 5284
+		public const int PP_E_COBRANDING_INVALID_SITEID_PASSED = -2147191804;
+
+		// Token: 0x040014A5 RID: 5285
+		public const int PP_E_COBRANDING_VALIDATION_FAILED = -2147191803;
+
+		// Token: 0x040014A6 RID: 5286
+		public const int PP_E_COBRANDING_INVALID_ACTION = -2147191802;
+
+		// Token: 0x040014A7 RID: 5287
+		public const int PP_E_COBRANDING_INVALID_BRANDID = -2147191801;
+
+		// Token: 0x040014A8 RID: 5288
+		public const int PP_E_COBRANDING_INVALID_PRODUCTCLASS = -2147191800;
+
+		// Token: 0x040014A9 RID: 5289
+		public const int PP_E_EXTERNALPROPERTY_PERSIST_FAILED = -2147191552;
+
+		// Token: 0x040014AA RID: 5290
+		public const int PP_E_EXTERNALPROPERTY_SOAPVALIDATE_FAILED = -2147191551;
+
+		// Token: 0x040014AB RID: 5291
+		public const int PP_E_EXTERNALPROPERTY_REQUIREDNOTEXIST = -2147191550;
+
+		// Token: 0x040014AC RID: 5292
+		public const int PP_E_EXTERNALPROPERTY_NONCE_INVALID = -2147191549;
+
+		// Token: 0x040014AD RID: 5293
+		public const int PP_E_EXTERNALPROPERTY_NONCE_MISMATCH = -2147191548;
+
+		// Token: 0x040014AE RID: 5294
+		public const int PP_E_TMPREDICATE_FUNC_NOT_SUPPORTED = -2147191547;
+
+		// Token: 0x040014AF RID: 5295
+		public const int PP_E_TM_TMDATA_ATTRIBUTE_DOESNOTEXIST = -2147191546;
+
+		// Token: 0x040014B0 RID: 5296
+		public const int PP_E_TM_TMDATA_CUSTOMTAG_DOESNOTEXIST = -2147191545;
+
+		// Token: 0x040014B1 RID: 5297
+		public const int PP_E_TM_TMDATA_ARRAY_OUTOFBOUND = -2147191544;
+
+		// Token: 0x040014B2 RID: 5298
+		public const int PP_E_TM_TMDATA_CUSTOMTAG_ATTRIUBTE_NOTSUPPORTED = -2147191543;
+
+		// Token: 0x040014B3 RID: 5299
+		public const int PP_E_TM_PREDICATE_DLL_NOT_LOADED = -2147191542;
+
+		// Token: 0x040014B4 RID: 5300
+		public const int PP_E_TM_NAVIGATION_STACK_UNDERFLOW = -2147191541;
+
+		// Token: 0x040014B5 RID: 5301
+		public const int PP_E_TM_INVALIDARG = -2147191540;
+
+		// Token: 0x040014B6 RID: 5302
+		public const int E_TM_CANNOTPOPOFFPERSISTEDTASK = -2147191539;
+
+		// Token: 0x040014B7 RID: 5303
+		public const int E_TM_INVALIDTASKTYPE = -2147191538;
+
+		// Token: 0x040014B8 RID: 5304
+		public const int E_TM_NONNUMERICTASKTYPE = -2147191537;
+
+		// Token: 0x040014B9 RID: 5305
+		public const int E_TM_CORRUPTEDSTACK = -2147191536;
+
+		// Token: 0x040014BA RID: 5306
+		public const int E_TM_TASKFLOWISNOTACCMBLOB = -2147191535;
+
+		// Token: 0x040014BB RID: 5307
+		public const int E_TM_TASKFLOWCCMBLOBINVALID = -2147191534;
+
+		// Token: 0x040014BC RID: 5308
+		public const int PP_E_SPA_BASE64DECODE_FAILURE = -2147191039;
+
+		// Token: 0x040014BD RID: 5309
+		public const int PP_E_SPA_INVALID_AUTH_MESSAGE = -2147191038;
+
+		// Token: 0x040014BE RID: 5310
+		public const int PP_E_SPA_UNSUPPORTED_AUTH_MSG_TYPE = -2147191037;
+
+		// Token: 0x040014BF RID: 5311
+		public const int PP_E_SPA_INVALID_NONCE = -2147191036;
+
+		// Token: 0x040014C0 RID: 5312
+		public const int PP_E_SPA_INVALID_CHALLENGE_RESPONSE = -2147191035;
+
+		// Token: 0x040014C1 RID: 5313
+		public const int PP_E_SPA_USERBLOB_NOT_INIT = -2147191034;
+
+		// Token: 0x040014C2 RID: 5314
+		public const int PP_E_CCMPROXY_NODEVICE = -2147190784;
+
+		// Token: 0x040014C3 RID: 5315
+		public const int PP_E_CSMPROXY_SERVICE_NOIP = -2147190783;
+
+		// Token: 0x040014C4 RID: 5316
+		public const int PP_E_INVALID_IP = -2147190782;
+
+		// Token: 0x040014C5 RID: 5317
+		public const int PP_E_INVALID_IP_NOT_IN_CSM = -2147190781;
+
+		// Token: 0x040014C6 RID: 5318
+		public const int PP_E_INVALID_PENDING_ACTION = -2147190780;
+
+		// Token: 0x040014C7 RID: 5319
+		public const int PP_E_INVALID_DEVICE_DIP = -2147190779;
+
+		// Token: 0x040014C8 RID: 5320
+		public const int PP_E_CCM_CSM_MISMATCH = -2147190778;
+
+		// Token: 0x040014C9 RID: 5321
+		public const int PP_E_INVALID_IADMIN_INFO = -2147190777;
+
+		// Token: 0x040014CA RID: 5322
+		public const int PP_E_NO_MONAME = -2147190776;
+
+		// Token: 0x040014CB RID: 5323
+		public const int PP_E_UPDATE_COUNTRY = -2147190704;
+
+		// Token: 0x040014CC RID: 5324
+		public const int PP_E_STRONG_PASSWORD_TOO_SHORT = -2147190703;
+
+		// Token: 0x040014CD RID: 5325
+		public const int PP_E_BLANK_ALT_EMAIL = -2147190702;
+
+		// Token: 0x040014CE RID: 5326
+		public const int PP_E_BLANK_ALT_EMAILRETYPE = -2147190701;
+
+		// Token: 0x040014CF RID: 5327
+		public const int PP_E_ALT_EMAIL_MISMATCH = -2147190700;
+
+		// Token: 0x040014D0 RID: 5328
+		public const int PP_E_ALT_EMAIL_SAME_AS_MEMBERNAME = -2147190699;
+
+		// Token: 0x040014D1 RID: 5329
+		public const int PP_E_INVALID_UIPARAMS = -2147190698;
+
+		// Token: 0x040014D2 RID: 5330
+		public const int PP_E_PROFILE_ACCRUAL_REQUIRED = -2147190697;
+
+		// Token: 0x040014D3 RID: 5331
+		public const int PP_E_EMAIL_VALIDATION_REQUIRED_WARNING = -2147190696;
+
+		// Token: 0x040014D4 RID: 5332
+		public const int PP_E_EMAIL_VALIDATION_REQUIRED_BLOCKED = -2147190695;
+
+		// Token: 0x040014D5 RID: 5333
+		public const int PP_E_BAD_FEDERATED_NAMESPACE = -2147190694;
+
+		// Token: 0x040014D6 RID: 5334
+		public const int PP_E_ACCOUNT_VERIFY_CANCEL = -2147190693;
+
+		// Token: 0x040014D7 RID: 5335
+		public const int PP_E_ALT_EMAIL_TOO_LONG = -2147190692;
+
+		// Token: 0x040014D8 RID: 5336
+		public const int PP_E_ALT_EMAIL_INVALID = -2147190691;
+
+		// Token: 0x040014D9 RID: 5337
+		public const int PP_E_RESERVED_USERNAME = -2147190690;
+
+		// Token: 0x040014DA RID: 5338
+		public const int PP_E_FEDERATION_CONVERSION_NEEDED = -2147190689;
+
+		// Token: 0x040014DB RID: 5339
+		public const int PP_E_FEDERATION_WLIDLOGIN_DISALLOWED = -2147190688;
+
+		// Token: 0x040014DC RID: 5340
+		public const int PP_E_FEDERATION_INVALID_CONVERSIONSTATE = -2147190687;
+
+		// Token: 0x040014DD RID: 5341
+		public const int PP_E_FEDERATION_LINKING_NEEDED = -2147190686;
+
+		// Token: 0x040014DE RID: 5342
+		public const int PP_E_FEDERATION_NEED_WLID_PWDRESET_INFO = -2147190685;
+
+		// Token: 0x040014DF RID: 5343
+		public const int PP_E_FEDERATION_OT_NOT_SUPPORTED = -2147190684;
+
+		// Token: 0x040014E0 RID: 5344
+		public const int PP_E_MULTI_USER_CREDS_SIGNIN_REQUEST_NOT_ALLOWED = -2147190683;
+
+		// Token: 0x040014E1 RID: 5345
+		public const int PP_E_NAMESPACENOTACTIVE = -2147190682;
+
+		// Token: 0x040014E2 RID: 5346
+		public const int PP_E_ISSUER_NOT_FOUND = -2147190681;
+
+		// Token: 0x040014E3 RID: 5347
+		public const int PP_E_INVALID_NAMESPACE_OWNER = -2147190680;
+
+		// Token: 0x040014E4 RID: 5348
+		public const int PP_E_CERT_MISMATCHED = -2147190679;
+
+		// Token: 0x040014E5 RID: 5349
+		public const int PP_E_CERT_NOT_CHAIN_TO_TRUSTED_CA = -2147190678;
+
+		// Token: 0x040014E6 RID: 5350
+		public const int PP_E_CERT_INVALID_TIME = -2147190677;
+
+		// Token: 0x040014E7 RID: 5351
+		public const int PP_E_EMAIL_UPN_MISMATCHED = -2147190676;
+
+		// Token: 0x040014E8 RID: 5352
+		public const int PP_E_FWORDS_INVALID_VARIANTVALUE = -2147190527;
+
+		// Token: 0x040014E9 RID: 5353
+		public const int PP_E_FWORDS_EMPTY_STRING = -2147190526;
+
+		// Token: 0x040014EA RID: 5354
+		public const int PP_E_FWORDS_EMPTY_WORD = -2147190525;
+
+		// Token: 0x040014EB RID: 5355
+		public const int PP_E_CLS3RA_INVALIDARG = -2147190272;
+
+		// Token: 0x040014EC RID: 5356
+		public const int PP_E_CLS3RA_INVALIDTICKET = -2147190271;
+
+		// Token: 0x040014ED RID: 5357
+		public const int PP_E_CLS3RA_CERTAUTHREQUIRED = -2147190270;
+
+		// Token: 0x040014EE RID: 5358
+		public const int PP_E_CLS3RA_CLIENTCERTMISSING = -2147190269;
+
+		// Token: 0x040014EF RID: 5359
+		public const int PP_E_CLS3RA_CLIENTCERTMISMATCH = -2147190268;
+
+		// Token: 0x040014F0 RID: 5360
+		public const int PP_E_CLS3RA_NOTAUTHORIZED = -2147190267;
+
+		// Token: 0x040014F1 RID: 5361
+		public const int PP_E_CLS3RA_INVALIDSUBJECT = -2147190266;
+
+		// Token: 0x040014F2 RID: 5362
+		public const int PP_E_CLS3RA_APPROVALFAILED = -2147190265;
+
+		// Token: 0x040014F3 RID: 5363
+		public const int PP_E_CLS3RA_INVALIDPKCS10 = -2147190264;
+
+		// Token: 0x040014F4 RID: 5364
+		public const int PP_E_CLS3RA_INVALIDSENDER = -2147190263;
+
+		// Token: 0x040014F5 RID: 5365
+		public const int PP_E_CLS3RA_INVALIDSUBJECTINPKCS10 = -2147190262;
+
+		// Token: 0x040014F6 RID: 5366
+		public const int PP_E_CLS3RA_ICSMISSING = -2147190261;
+
+		// Token: 0x040014F7 RID: 5367
+		public const int PP_E_CLS3RA_ICSINVALID = -2147190260;
+
+		// Token: 0x040014F8 RID: 5368
+		public const int PP_E_CLS3RA_ICSSTALE = -2147190259;
+
+		// Token: 0x040014F9 RID: 5369
+		public const int PP_E_CLS3RA_PROVISIONFAILED = -2147190258;
+
+		// Token: 0x040014FA RID: 5370
+		public const int PP_E_CLS3RA_CAFAILED = -2147190257;
+
+		// Token: 0x040014FB RID: 5371
+		public const int PP_E_CLS3RA_MISSINGTHUMBPRINT = -2147190256;
+
+		// Token: 0x040014FC RID: 5372
+		public const int PP_E_CLS3RA_ASSOCFAILED = -2147190255;
+
+		// Token: 0x040014FD RID: 5373
+		public const int PP_E_CLS3RA_NOPENDINGASSOCS = -2147190254;
+
+		// Token: 0x040014FE RID: 5374
+		public const int PP_S_CLS3RA_MOREDATA = 293395;
+
+		// Token: 0x040014FF RID: 5375
+		public const int PP_E_CLS3RA_NOPARTNERSITEID = -2147190252;
+
+		// Token: 0x04001500 RID: 5376
+		public const int PP_E_CLS3RA_INVALIDDATE = -2147190251;
+
+		// Token: 0x04001501 RID: 5377
+		public const int PP_E_CLS3RA_HPROV_FAILED = -2147190250;
+
+		// Token: 0x04001502 RID: 5378
+		public const int EVT_E_INVALIDCAT = -2147188736;
+
+		// Token: 0x04001503 RID: 5379
+		public const int EVT_E_INVALIDXDR = -2147188735;
+
+		// Token: 0x04001504 RID: 5380
+		public const int EVT_E_XMLPATH = -2147188734;
+
+		// Token: 0x04001505 RID: 5381
+		public const int EVT_E_PARAMNUMBERINVALID = -2147188733;
+
+		// Token: 0x04001506 RID: 5382
+		public const int EVT_E_PARAMUNDEFINED = -2147188732;
+
+		// Token: 0x04001507 RID: 5383
+		public const int EVT_E_PARAMUNUSED = -2147188731;
+
+		// Token: 0x04001508 RID: 5384
+		public const int EVT_E_CATALREADYUSED = -2147188730;
+
+		// Token: 0x04001509 RID: 5385
+		public const int EVT_E_PROPERTYDIFFER = -2147188729;
+
+		// Token: 0x0400150A RID: 5386
+		public const int EVT_E_BASEIDDIFFER = -2147188728;
+
+		// Token: 0x0400150B RID: 5387
+		public const int PP_E_PPSA_FIRST = -2147188480;
+
+		// Token: 0x0400150C RID: 5388
+		public const int PP_E_PPSA_INVALIDHEADER = -2147188479;
+
+		// Token: 0x0400150D RID: 5389
+		public const int PP_E_PPSA_GENERIC = -2147188478;
+
+		// Token: 0x0400150E RID: 5390
+		public const int PP_E_PPSA_MEMBEREXIST = -2147188477;
+
+		// Token: 0x0400150F RID: 5391
+		public const int PP_E_PPSA_MEMBERNOTEXIST = -2147188476;
+
+		// Token: 0x04001510 RID: 5392
+		public const int PP_E_PPSA_NOTAUTHORIZED = -2147188475;
+
+		// Token: 0x04001511 RID: 5393
+		public const int PP_E_PPSA_NOSITENAME = -2147188474;
+
+		// Token: 0x04001512 RID: 5394
+		public const int PP_E_PPSA_NOATTLIST = -2147188473;
+
+		// Token: 0x04001513 RID: 5395
+		public const int PP_E_PPSA_NOXPATH = -2147188472;
+
+		// Token: 0x04001514 RID: 5396
+		public const int PP_E_PPSA_NOXML = -2147188471;
+
+		// Token: 0x04001515 RID: 5397
+		public const int PP_E_PPSA_BADNETID = -2147188470;
+
+		// Token: 0x04001516 RID: 5398
+		public const int PP_E_PPSA_BADADMINPUID = -2147188469;
+
+		// Token: 0x04001517 RID: 5399
+		public const int PP_E_PPSA_INVALIDXML = -2147188468;
+
+		// Token: 0x04001518 RID: 5400
+		public const int PP_E_PPSA_NOSITEID = -2147188467;
+
+		// Token: 0x04001519 RID: 5401
+		public const int PP_E_PPSA_PROFILEXMLARRAYEMPTY = -2147188466;
+
+		// Token: 0x0400151A RID: 5402
+		public const int PP_E_PPSA_PROFILEXMLARRAYTOOBIG = -2147188465;
+
+		// Token: 0x0400151B RID: 5403
+		public const int PP_E_PPSA_NETIDARRAYEMPTY = -2147188464;
+
+		// Token: 0x0400151C RID: 5404
+		public const int PP_E_PPSA_NETIDARRAYTOOBIG = -2147188463;
+
+		// Token: 0x0400151D RID: 5405
+		public const int PP_E_PPSA_MULTIPLEERRORS = -2147188462;
+
+		// Token: 0x0400151E RID: 5406
+		public const int PP_E_PPSA_XPATHARRAYEMPTY = -2147188461;
+
+		// Token: 0x0400151F RID: 5407
+		public const int PP_E_PPSA_NETIDXPATHMISMATCH = -2147188460;
+
+		// Token: 0x04001520 RID: 5408
+		public const int PP_E_PPSA_NONSNAME = -2147188459;
+
+		// Token: 0x04001521 RID: 5409
+		public const int PP_E_PPSA_NAMESPACENOTACTIVE = -2147188458;
+
+		// Token: 0x04001522 RID: 5410
+		public const int PP_E_PPSA_RPT_NOREQUEST = -2147188457;
+
+		// Token: 0x04001523 RID: 5411
+		public const int PP_E_PPSA_RPT_BADREQUEST = -2147188456;
+
+		// Token: 0x04001524 RID: 5412
+		public const int PP_E_PPSA_RPT_NOTYPE = -2147188455;
+
+		// Token: 0x04001525 RID: 5413
+		public const int PP_E_PPSA_RPT_BADTYPE = -2147188454;
+
+		// Token: 0x04001526 RID: 5414
+		public const int PP_E_PPSA_RPT_SIGNINSUM_BADVAL = -2147188453;
+
+		// Token: 0x04001527 RID: 5415
+		public const int PP_E_PPSA_RPT_BADEMAILID = -2147188452;
+
+		// Token: 0x04001528 RID: 5416
+		public const int PP_E_PPSA_RPT_BADSTATUSFORRESEND = -2147188451;
+
+		// Token: 0x04001529 RID: 5417
+		public const int PP_E_PPSA_RPT_BADSTATUSFORCANCEL = -2147188450;
+
+		// Token: 0x0400152A RID: 5418
+		public const int PP_E_PPSA_RPT_NOLCID = -2147188449;
+
+		// Token: 0x0400152B RID: 5419
+		public const int PP_E_PPSA_RPT_NOTOADDRESS = -2147188448;
+
+		// Token: 0x0400152C RID: 5420
+		public const int PP_E_PPSA_RPT_INVALIDDA = -2147188447;
+
+		// Token: 0x0400152D RID: 5421
+		public const int PP_E_PPSA_BADPASSID = -2147188446;
+
+		// Token: 0x0400152E RID: 5422
+		public const int PP_E_PPSA_RPT_NOTANEASI = -2147188445;
+
+		// Token: 0x0400152F RID: 5423
+		public const int PP_E_PPSA_BADATTRIBUTENAME = -2147188444;
+
+		// Token: 0x04001530 RID: 5424
+		public const int PP_E_PPSA_INVALIDPROPVALUE = -2147188443;
+
+		// Token: 0x04001531 RID: 5425
+		public const int PP_E_PPSA_NO_INPUT = -2147188442;
+
+		// Token: 0x04001532 RID: 5426
+		public const int PP_E_PPSA_MULTIPUID = -2147188441;
+
+		// Token: 0x04001533 RID: 5427
+		public const int PP_E_PPSA_INVALIDCATEGORY = -2147188440;
+
+		// Token: 0x04001534 RID: 5428
+		public const int PP_E_PPSA_MULTIPLEPUIDNOTALLOWED = -2147188439;
+
+		// Token: 0x04001535 RID: 5429
+		public const int PP_E_PPSA_MULTIACCOUNT = -2147188438;
+
+		// Token: 0x04001536 RID: 5430
+		public const int PP_E_PPSA_EMPTYCREDXML = -2147188437;
+
+		// Token: 0x04001537 RID: 5431
+		public const int PP_E_PPSA_INVALIDNAMESPACE = -2147188436;
+
+		// Token: 0x04001538 RID: 5432
+		public const int PP_E_PPSA_CANTBLOCKUNBLOCKSELF = -2147188435;
+
+		// Token: 0x04001539 RID: 5433
+		public const int PP_E_PPSA_NSDAOPERATIONUNSUPPORTED = -2147188434;
+
+		// Token: 0x0400153A RID: 5434
+		public const int PP_E_PPSA_PROFILENOTFOUND = -2147188433;
+
+		// Token: 0x0400153B RID: 5435
+		public const int PP_E_PPSA_NETIDMISMATCH = -2147188432;
+
+		// Token: 0x0400153C RID: 5436
+		public const int PP_E_PPSA_ALREADYGRANTED = -2147188431;
+
+		// Token: 0x0400153D RID: 5437
+		public const int PP_E_PPSA_PROFILEEXISTS = -2147188430;
+
+		// Token: 0x0400153E RID: 5438
+		public const int PP_E_PPSA_ROLETEMPLATE_EMPTY = -2147188429;
+
+		// Token: 0x0400153F RID: 5439
+		public const int PP_E_PPSA_ROLETEMPLATE_EMPTYSTRING = -2147188428;
+
+		// Token: 0x04001540 RID: 5440
+		public const int PP_E_PPSA_SOURCESCOPE_INVALID = -2147188427;
+
+		// Token: 0x04001541 RID: 5441
+		public const int PP_E_PPSA_SOURCESCOPETYPE_INVALID = -2147188426;
+
+		// Token: 0x04001542 RID: 5442
+		public const int PP_E_PPSA_TARGETSCOPE_MISMATCH = -2147188425;
+
+		// Token: 0x04001543 RID: 5443
+		public const int PP_E_PPSA_ROLEID_INVALID = -2147188424;
+
+		// Token: 0x04001544 RID: 5444
+		public const int PP_E_PPSA_PASSIDTYPE_INVALID = -2147188423;
+
+		// Token: 0x04001545 RID: 5445
+		public const int PP_E_PPSA_ROLEIDXML_EMPTY = -2147188422;
+
+		// Token: 0x04001546 RID: 5446
+		public const int PP_E_PPSA_SOURCESCOPE_NOTSUPPORTED = -2147188421;
+
+		// Token: 0x04001547 RID: 5447
+		public const int PP_E_PPSA_SOURCESCOPE_IDINVALID = -2147188420;
+
+		// Token: 0x04001548 RID: 5448
+		public const int PP_E_PPSA_ROLETEMPLATE_NOCLAIMS = -2147188419;
+
+		// Token: 0x04001549 RID: 5449
+		public const int PP_E_PPSA_CLAIMMAPS_TOOMANY = -2147188418;
+
+		// Token: 0x0400154A RID: 5450
+		public const int PP_E_PPSA_DENYCLAIMS_NOTSUPPORTED = -2147188417;
+
+		// Token: 0x0400154B RID: 5451
+		public const int PP_E_PPSA_SCOPEEXPR_INVALID = -2147188416;
+
+		// Token: 0x0400154C RID: 5452
+		public const int PP_E_PPSA_ROLENAME_TOOLONG = -2147188415;
+
+		// Token: 0x0400154D RID: 5453
+		public const int PP_E_PPSA_ROLENAME_INVALIDCHARS = -2147188414;
+
+		// Token: 0x0400154E RID: 5454
+		public const int PP_E_PPSA_ROLENAME_EMPTY = -2147188413;
+
+		// Token: 0x0400154F RID: 5455
+		public const int PP_E_PPSA_ROLE_NOTFOUND = -2147188412;
+
+		// Token: 0x04001550 RID: 5456
+		public const int PP_E_PPSA_ROLE_ALREADYEXISTS = -2147188411;
+
+		// Token: 0x04001551 RID: 5457
+		public const int PP_E_PPSA_MAXROWS_TOOBIG = -2147188410;
+
+		// Token: 0x04001552 RID: 5458
+		public const int PP_E_PPSA_MAXROWS_INVALID = -2147188409;
+
+		// Token: 0x04001553 RID: 5459
+		public const int PP_E_PPSA_TARGETSCOPE_INVALID = -2147188408;
+
+		// Token: 0x04001554 RID: 5460
+		public const int PP_E_PPSA_TARGETSCOPETYPE_INVALID = -2147188407;
+
+		// Token: 0x04001555 RID: 5461
+		public const int PP_E_PPSA_NAMESPACESCOPE_NOTFOUND = -2147188406;
+
+		// Token: 0x04001556 RID: 5462
+		public const int PP_E_PPSA_INVALID_DOMAIN_ROOT = -2147188405;
+
+		// Token: 0x04001557 RID: 5463
+		public const int PP_E_PPSA_EMPTY_SITEKEY = -2147188404;
+
+		// Token: 0x04001558 RID: 5464
+		public const int PP_E_PPSA_INTERNALCRYPT_INVALID = -2147188403;
+
+		// Token: 0x04001559 RID: 5465
+		public const int PP_E_PPSA_SITEENCRYPTION_ERROR = -2147188402;
+
+		// Token: 0x0400155A RID: 5466
+		public const int PP_E_PPSA_SITEKEY_NOTFOUND = -2147188401;
+
+		// Token: 0x0400155B RID: 5467
+		public const int PP_E_PPSA_NOT_IN_NAMESPACE = -2147188400;
+
+		// Token: 0x0400155C RID: 5468
+		public const int PP_E_PPSA_INVALIDCREDNAME = -2147188399;
+
+		// Token: 0x0400155D RID: 5469
+		public const int PP_E_PPSA_SAMECREDNAME = -2147188398;
+
+		// Token: 0x0400155E RID: 5470
+		public const int PP_E_PPSA_INVALIDCREDXML = -2147188397;
+
+		// Token: 0x0400155F RID: 5471
+		public const int PP_E_PPSA_INVALIDCREDTYPE = -2147188396;
+
+		// Token: 0x04001560 RID: 5472
+		public const int PP_E_PPSA_UNABLETOGETCRED = -2147188395;
+
+		// Token: 0x04001561 RID: 5473
+		public const int PP_E_PPSA_NAMESPACE_NOTMANAGED = -2147188394;
+
+		// Token: 0x04001562 RID: 5474
+		public const int PP_E_PPSA_NAMESPACEID_INVALID = -2147188393;
+
+		// Token: 0x04001563 RID: 5475
+		public const int PP_E_PPSA_NAMESPACEATTR_NOTFOUND = -2147188392;
+
+		// Token: 0x04001564 RID: 5476
+		public const int PP_E_PPSA_ADMINS_NOTALLOWED = -2147188391;
+
+		// Token: 0x04001565 RID: 5477
+		public const int PP_E_PPSA_NAMESPACEATTR_INVALIDTYPE = -2147188390;
+
+		// Token: 0x04001566 RID: 5478
+		public const int PP_E_PPSA_PASSID_INVALIDACCOUNT = -2147188389;
+
+		// Token: 0x04001567 RID: 5479
+		public const int PP_E_PPSA_NAMESPACE_SITEIDINVALID = -2147188388;
+
+		// Token: 0x04001568 RID: 5480
+		public const int PP_E_PPSA_ROLE_NOTGRANTED = -2147188387;
+
+		// Token: 0x04001569 RID: 5481
+		public const int PP_E_PPSA_NAMESPACE_LASTADMIN = -2147188386;
+
+		// Token: 0x0400156A RID: 5482
+		public const int PP_E_PPSA_NAMESPACE_NOTADMIN = -2147188385;
+
+		// Token: 0x0400156B RID: 5483
+		public const int PP_E_PPSA_TOOMANYROWS = -2147188384;
+
+		// Token: 0x0400156C RID: 5484
+		public const int PP_E_PPSA_NAMESPACE_INVALIDSIGNIN = -2147188383;
+
+		// Token: 0x0400156D RID: 5485
+		public const int PP_E_PPSA_NAMESPACE_DNSCHECKFAILED = -2147188382;
+
+		// Token: 0x0400156E RID: 5486
+		public const int PP_E_PPSA_NAMESPACE_NOTFOUND = -2147188381;
+
+		// Token: 0x0400156F RID: 5487
+		public const int PP_E_PPSA_NAMESPACE_ALREADYRESERVED = -2147188380;
+
+		// Token: 0x04001570 RID: 5488
+		public const int PP_E_PPSA_NAMESPACE_INVALIDATTRXML = -2147188379;
+
+		// Token: 0x04001571 RID: 5489
+		public const int PP_E_PPSA_NAMESPACE_FORBIDDENNAME = -2147188378;
+
+		// Token: 0x04001572 RID: 5490
+		public const int PP_E_PPSA_NAMESPACE_ALREADYADMIN = -2147188377;
+
+		// Token: 0x04001573 RID: 5491
+		public const int PP_E_PPSA_NAMESPACE_DELADMIN_NODOMAIN = -2147188376;
+
+		// Token: 0x04001574 RID: 5492
+		public const int PP_E_PPSA_NAMESPACE_DELADMIN_INVALIDNAME = -2147188375;
+
+		// Token: 0x04001575 RID: 5493
+		public const int PP_E_PPSA_NAMESPACE_DNSERROR = -2147188374;
+
+		// Token: 0x04001576 RID: 5494
+		public const int PP_E_PPSA_NOCREDENTIALNAME = -2147188373;
+
+		// Token: 0x04001577 RID: 5495
+		public const int PP_E_PPSA_NOMOBILEPHONENUM = -2147188372;
+
+		// Token: 0x04001578 RID: 5496
+		public const int PP_E_PPSA_NONETID = -2147188371;
+
+		// Token: 0x04001579 RID: 5497
+		public const int PP_E_PPSA_NONETIDFORSECURE = -2147188370;
+
+		// Token: 0x0400157A RID: 5498
+		public const int PP_E_PPSA_NOPASSWORD = -2147188369;
+
+		// Token: 0x0400157B RID: 5499
+		public const int PP_E_PPSA_NOMOBILEPIN = -2147188368;
+
+		// Token: 0x0400157C RID: 5500
+		public const int PP_E_PPSA_NOSECUREPIN = -2147188367;
+
+		// Token: 0x0400157D RID: 5501
+		public const int PP_E_PPSA_NOSQ = -2147188366;
+
+		// Token: 0x0400157E RID: 5502
+		public const int PP_E_PPSA_NOSA = -2147188365;
+
+		// Token: 0x0400157F RID: 5503
+		public const int PP_E_PPSA_CLAIMMAPINDEX_INVALID = -2147188364;
+
+		// Token: 0x04001580 RID: 5504
+		public const int PP_E_PPSA_CLAIMMAP_NOCLAIMS = -2147188363;
+
+		// Token: 0x04001581 RID: 5505
+		public const int PP_E_PPSA_CLAIMMAP_NOSCOPES = -2147188362;
+
+		// Token: 0x04001582 RID: 5506
+		public const int PP_E_PPSA_DUPLICATECLAIM = -2147188361;
+
+		// Token: 0x04001583 RID: 5507
+		public const int PP_E_PPSA_DUPLICATESCOPE = -2147188360;
+
+		// Token: 0x04001584 RID: 5508
+		public const int PP_E_PPSA_SCOPECONFLICT = -2147188359;
+
+		// Token: 0x04001585 RID: 5509
+		public const int PP_E_PPSA_SCOPETYPE_INVALID = -2147188358;
+
+		// Token: 0x04001586 RID: 5510
+		public const int PP_E_PPSA_SCOPETYPE_MISMATCH = -2147188357;
+
+		// Token: 0x04001587 RID: 5511
+		public const int PP_E_PPSA_CLAIMID_INVALID = -2147188356;
+
+		// Token: 0x04001588 RID: 5512
+		public const int PP_E_PPSA_DBCONVERSION_FAILED = -2147188355;
+
+		// Token: 0x04001589 RID: 5513
+		public const int PP_E_PPSA_SCOPEEXPR_TOOLONG = -2147188354;
+
+		// Token: 0x0400158A RID: 5514
+		public const int PP_E_PPSA_ROLETEMPLATE_INVALIDXML = -2147188353;
+
+		// Token: 0x0400158B RID: 5515
+		public const int PP_E_PPSA_CLAIMNAME_NOTDEFINED = -2147188352;
+
+		// Token: 0x0400158C RID: 5516
+		public const int PP_E_PPSA_SCOPEEXPR_BADSYNTAX = -2147188351;
+
+		// Token: 0x0400158D RID: 5517
+		public const int PP_E_PPSA_TARGETSCOPE_IDINVALID = -2147188350;
+
+		// Token: 0x0400158E RID: 5518
+		public const int PP_E_PPSA_ROLEID_INVALIDXML = -2147188349;
+
+		// Token: 0x0400158F RID: 5519
+		public const int PP_E_PPSA_TARGETPOLICY_NOTSUPPORTED = -2147188348;
+
+		// Token: 0x04001590 RID: 5520
+		public const int PP_E_PPSA_NAMESPACE_INVALIDNAME = -2147188347;
+
+		// Token: 0x04001591 RID: 5521
+		public const int PP_E_PPSA_NAMESPACE_PROPCONVERSIONERROR = -2147188346;
+
+		// Token: 0x04001592 RID: 5522
+		public const int PP_E_PPSA_NAMESPACE_ATTRXMLEMPTY = -2147188345;
+
+		// Token: 0x04001593 RID: 5523
+		public const int PP_E_PPSA_NAMESPACE_XMLNOATTRIBUTES = -2147188344;
+
+		// Token: 0x04001594 RID: 5524
+		public const int PP_E_PPSA_SITE_NOT_EXIST = -2147188343;
+
+		// Token: 0x04001595 RID: 5525
+		public const int PP_E_PPSA_NAMESPACE_INVALIDSITEID = -2147188342;
+
+		// Token: 0x04001596 RID: 5526
+		public const int PP_E_PPSA_NAMESPACE_USERNOTINDOMAIN = -2147188341;
+
+		// Token: 0x04001597 RID: 5527
+		public const int PP_E_PPSA_NAMESPACE_ALREADYSITEADMIN = -2147188340;
+
+		// Token: 0x04001598 RID: 5528
+		public const int PP_E_PPSA_NAMESPACE_NOTSITEADMIN = -2147188339;
+
+		// Token: 0x04001599 RID: 5529
+		public const int PP_E_PPSA_DELETEACCOUNTNOTALLOWED = -2147188338;
+
+		// Token: 0x0400159A RID: 5530
+		public const int PP_E_PPSA_NAMESPACE_EMPTYPROPNAME = -2147188337;
+
+		// Token: 0x0400159B RID: 5531
+		public const int PP_E_PPSA_NAMESPACE_PROPTYPEINVALID = -2147188336;
+
+		// Token: 0x0400159C RID: 5532
+		public const int PP_E_PPSA_NAMESPACE_PROPNAMEINVALID = -2147188335;
+
+		// Token: 0x0400159D RID: 5533
+		public const int PP_E_PPSA_NAMESPACE_WORDLISTINVALID = -2147188334;
+
+		// Token: 0x0400159E RID: 5534
+		public const int PP_E_PPSA_NAMESPACE_PROPNOTSUPPORTED = -2147188333;
+
+		// Token: 0x0400159F RID: 5535
+		public const int PP_E_PPSA_NAMESPACE_PROPIDINVALID = -2147188332;
+
+		// Token: 0x040015A0 RID: 5536
+		public const int PP_E_PPSA_NAMESPACE_PROPNAMETOOLONG = -2147188331;
+
+		// Token: 0x040015A1 RID: 5537
+		public const int PP_E_PPSA_NAMESPACE_PROPNOTFOUND = -2147188330;
+
+		// Token: 0x040015A2 RID: 5538
+		public const int PP_E_PPSA_NAMESPACE_PROPBADVARIANT = -2147188329;
+
+		// Token: 0x040015A3 RID: 5539
+		public const int PP_E_PPSA_NAMESPACE_STATUSINVALID = -2147188328;
+
+		// Token: 0x040015A4 RID: 5540
+		public const int PP_E_PPSA_NAMESPACE_PROPOBJECT_INVALID = -2147188327;
+
+		// Token: 0x040015A5 RID: 5541
+		public const int PP_E_PPSA_NAMESPACE_PROPNOTSET = -2147188326;
+
+		// Token: 0x040015A6 RID: 5542
+		public const int PP_E_PPSA_NAMESPACE_PROPVALUEINVALID = -2147188325;
+
+		// Token: 0x040015A7 RID: 5543
+		public const int PP_E_PPSA_NAMESPACE_PROPDEPRECATED = -2147188324;
+
+		// Token: 0x040015A8 RID: 5544
+		public const int PP_E_PPSA_ACCOUNTXMLARRAYEMPTY = -2147188323;
+
+		// Token: 0x040015A9 RID: 5545
+		public const int PP_E_PPSA_ACCOUNTXMLARRAYTOOBIG = -2147188322;
+
+		// Token: 0x040015AA RID: 5546
+		public const int PP_E_PPSA_INVALIDX509SKITYPE = -2147188321;
+
+		// Token: 0x040015AB RID: 5547
+		public const int PP_E_PPSA_INVALIDENCRYPTEDXMLVERSION = -2147188320;
+
+		// Token: 0x040015AC RID: 5548
+		public const int PP_E_PPSA_INVALIDENCRYPTEDDATAVERSION = -2147188319;
+
+		// Token: 0x040015AD RID: 5549
+		public const int PP_E_PPSA_INVALIDENCRYPTEDCREDENTIALFORMAT = -2147188318;
+
+		// Token: 0x040015AE RID: 5550
+		public const int PP_E_PPSA_INVALIDTRANSACTIONTYPE = -2147188317;
+
+		// Token: 0x040015AF RID: 5551
+		public const int PP_E_PPSA_CONFIG_OBJECT_NOT_EXIST = -2147188316;
+
+		// Token: 0x040015B0 RID: 5552
+		public const int PP_E_PPSA_EMAILADDRESS_INVALID = -2147188315;
+
+		// Token: 0x040015B1 RID: 5553
+		public const int PP_E_PPSA_EMAILTEMPLATE_INVALID = -2147188314;
+
+		// Token: 0x040015B2 RID: 5554
+		public const int PP_E_PPSA_USER_PARAMETER_INVALID = -2147188313;
+
+		// Token: 0x040015B3 RID: 5555
+		public const int PP_E_PPSA_EMAILFORWARDING_ONLYWEB = -2147188312;
+
+		// Token: 0x040015B4 RID: 5556
+		public const int PP_E_PPSA_EMAILFORWARDING_NOTALLOWED = -2147188311;
+
+		// Token: 0x040015B5 RID: 5557
+		public const int PP_E_PPSA_RENAME_NOTALLOWED = -2147188310;
+
+		// Token: 0x040015B6 RID: 5558
+		public const int PP_E_PPSA_WINLIVE_NS_NO_ADMIN_SUPPORTED = -2147188309;
+
+		// Token: 0x040015B7 RID: 5559
+		public const int PP_E_PPSA_WINLIVE_NS_NO_EVICTONRESERVE = -2147188308;
+
+		// Token: 0x040015B8 RID: 5560
+		public const int PP_E_PPSA_WINLIVE_NS_NO_EVICTONRELEASE = -2147188307;
+
+		// Token: 0x040015B9 RID: 5561
+		public const int PP_E_PPSA_BRANDDATA_INVALID = -2147188306;
+
+		// Token: 0x040015BA RID: 5562
+		public const int PP_E_PPSA_BRANDDATA_DUPLICATE = -2147188305;
+
+		// Token: 0x040015BB RID: 5563
+		public const int PP_E_PPSA_USER_ALREADY_INACTIVE = -2147188304;
+
+		// Token: 0x040015BC RID: 5564
+		public const int PP_E_PPSA_STRING_TOO_LONG = -2147188303;
+
+		// Token: 0x040015BD RID: 5565
+		public const int PP_E_PPSA_LIST_TOO_LONG = -2147188302;
+
+		// Token: 0x040015BE RID: 5566
+		public const int PP_E_PPSA_PROPERTYFORWLONLY = -2147188301;
+
+		// Token: 0x040015BF RID: 5567
+		public const int PP_E_PPSA_INVALID_DOMAINAUTHORITY = -2147188300;
+
+		// Token: 0x040015C0 RID: 5568
+		public const int PP_E_PPSA_INVALID_STARTAFTERCHANGEID = -2147188299;
+
+		// Token: 0x040015C1 RID: 5569
+		public const int PP_E_PPSA_DUPLICATE_COUNTRIES_NOT_ALLOWED = -2147188298;
+
+		// Token: 0x040015C2 RID: 5570
+		public const int PP_E_PPSA_COUNTRYLIST_CANNOT_BEGIN_OR_END_WITH_DELIM = -2147188297;
+
+		// Token: 0x040015C3 RID: 5571
+		public const int PP_E_PPSA_CredentialType_Not_Supported = -2147188296;
+
+		// Token: 0x040015C4 RID: 5572
+		public const int PP_E_PPSA_NOT_IN_WINDOWSLIVEDOMAIN = -2147188295;
+
+		// Token: 0x040015C5 RID: 5573
+		public const int PP_E_PPSA_TICKET_NOTCONTAINLINKID = -2147188294;
+
+		// Token: 0x040015C6 RID: 5574
+		public const int PP_E_PPSA_DELETE_NOT_ALLOWED_BY_NAMESPACE = -2147188293;
+
+		// Token: 0x040015C7 RID: 5575
+		public const int PP_E_PPSA_NAMESPACE_ADMINS_IN_SUBDOMAINS = -2147188292;
+
+		// Token: 0x040015C8 RID: 5576
+		public const int PP_E_PPSA_NAMESPACE_NAME_NOTFOUND = -2147188291;
+
+		// Token: 0x040015C9 RID: 5577
+		public const int PP_E_PPSA_RPT_INVALID_SEARCH_CRITERIA = -2147188289;
+
+		// Token: 0x040015CA RID: 5578
+		public const int PP_E_PPSA_RPT_TEMPLATE_ALREADY_EXISTS = -2147188288;
+
+		// Token: 0x040015CB RID: 5579
+		public const int PP_E_PPSA_RPT_TEMPLATE_DOES_NOT_EXIST = -2147188287;
+
+		// Token: 0x040015CC RID: 5580
+		public const int PP_E_PPSA_RPT_MONTHLY_SEND_QUOTA_EXCEED = -2147188286;
+
+		// Token: 0x040015CD RID: 5581
+		public const int PP_E_PPSA_RPT_DAILY_RECEIVE_QUOTA_EXCEED = -2147188285;
+
+		// Token: 0x040015CE RID: 5582
+		public const int PP_E_PPSA_RPT_MULTI_RECEIVER_NOT_ALLOWED = -2147188284;
+
+		// Token: 0x040015CF RID: 5583
+		public const int PP_E_PPSA_RPT_INVALID_EMAIL_PARAMETER = -2147188283;
+
+		// Token: 0x040015D0 RID: 5584
+		public const int PP_E_PPSA_RPT_TEMPLATE_EXPRESSION_EVALUATE_ERROR = -2147188282;
+
+		// Token: 0x040015D1 RID: 5585
+		public const int PP_E_PPSA_RPT_EMAIL_PROCESSING = -2147188281;
+
+		// Token: 0x040015D2 RID: 5586
+		public const int PP_E_PPSA_RPT_EMAIL_API_30_DISABLED = -2147188280;
+
+		// Token: 0x040015D3 RID: 5587
+		public const int PP_E_PPSA_VERSION_MAX_REACHED = -2147188279;
+
+		// Token: 0x040015D4 RID: 5588
+		public const int PP_E_PPSA_DELINK_INVALIDPOLICY = -2147188224;
+
+		// Token: 0x040015D5 RID: 5589
+		public const int PP_E_PPSA_LINK_KIDACCTNOTALLOWED = -2147188223;
+
+		// Token: 0x040015D6 RID: 5590
+		public const int PP_E_PPSA_LINK_ACCTSTATUSNOTALLOWED = -2147188222;
+
+		// Token: 0x040015D7 RID: 5591
+		public const int PP_E_PPSA_LINKDATA_PROCESSERROR = -2147188221;
+
+		// Token: 0x040015D8 RID: 5592
+		public const int PP_E_PPSA_LINK_SISDBACCESSFAILURE = -2147188220;
+
+		// Token: 0x040015D9 RID: 5593
+		public const int PP_E_PPSA_LINK_DELINKPOLICYNOTINIT = -2147188219;
+
+		// Token: 0x040015DA RID: 5594
+		public const int PP_E_PPSA_DEVICEID_DISABLED = -2147188218;
+
+		// Token: 0x040015DB RID: 5595
+		public const int PP_E_PPSA_INVALID_CERT_TYPE = -2147188217;
+
+		// Token: 0x040015DC RID: 5596
+		public const int PP_E_PPSA_LIST_EMPTY = -2147188216;
+
+		// Token: 0x040015DD RID: 5597
+		public const int PP_E_PPSA_INVALID_OBJECT_TYPE = -2147188215;
+
+		// Token: 0x040015DE RID: 5598
+		public const int PP_E_PPSA_FED_NOTALLOWEDLINKOTHER = -2147188214;
+
+		// Token: 0x040015DF RID: 5599
+		public const int PP_E_PPSA_FED_NOTALLOWEDTOBELINKED = -2147188213;
+
+		// Token: 0x040015E0 RID: 5600
+		public const int PP_E_PPSA_SITE_SAMEMSMOBJECTFOUNDFORCREATE = -2147188212;
+
+		// Token: 0x040015E1 RID: 5601
+		public const int PP_E_PPSA_SITE_MSMOBJECTNOTFOUNDFORUPDATE = -2147188211;
+
+		// Token: 0x040015E2 RID: 5602
+		public const int PP_E_PPSA_SITE_MSMOBJECTNOTFOUND = -2147188210;
+
+		// Token: 0x040015E3 RID: 5603
+		public const int PP_E_MEMBER_LOCKED_MINUTES = -2147188209;
+
+		// Token: 0x040015E4 RID: 5604
+		public const int PP_E_PPSA_ACTION_BLOCKED = -2147188208;
+
+		// Token: 0x040015E5 RID: 5605
+		public const int PP_E_PPSA_FED_CRED_ALREADY_EXISTS = -2147188207;
+
+		// Token: 0x040015E6 RID: 5606
+		public const int PP_E_PPSA_NS_NOT_FEDERATED = -2147188206;
+
+		// Token: 0x040015E7 RID: 5607
+		public const int PP_E_PPSA_FED_ACCOUNT_ALREADYEXISTS = -2147188205;
+
+		// Token: 0x040015E8 RID: 5608
+		public const int PP_E_PPSA_FED_NOACTIVECREDEXIST = -2147188204;
+
+		// Token: 0x040015E9 RID: 5609
+		public const int PP_PPSA_FED_MEMBERNAME_EXISTS = -2147188203;
+
+		// Token: 0x040015EA RID: 5610
+		public const int PP_E_PPSA_FEDCRED_NOT_DELETED = -2147188202;
+
+		// Token: 0x040015EB RID: 5611
+		public const int PP_E_PPSA_FED_UPN_CREDNAME_DOMAIN_MISMATCH = -2147188201;
+
+		// Token: 0x040015EC RID: 5612
+		public const int PP_E_PPSA_FED_CRED_IN_BAD_STATE = -2147188200;
+
+		// Token: 0x040015ED RID: 5613
+		public const int PP_E_PPSA_FED_MISSINGURI = -2147188199;
+
+		// Token: 0x040015EE RID: 5614
+		public const int PP_E_PPSA_FED_MISSINGCERT = -2147188198;
+
+		// Token: 0x040015EF RID: 5615
+		public const int PP_E_PPSA_FED_MISSINGAUTHURL = -2147188197;
+
+		// Token: 0x040015F0 RID: 5616
+		public const int PP_E_PPSA_FED_NS_INVALIDSTATE = -2147188196;
+
+		// Token: 0x040015F1 RID: 5617
+		public const int PP_E_PPSA_INVALID_ACCOUNTTYPE_FOR_NS = -2147188195;
+
+		// Token: 0x040015F2 RID: 5618
+		public const int PP_E_PPSA_MISMATCHNAMESPACE = -2147188194;
+
+		// Token: 0x040015F3 RID: 5619
+		public const int PP_E_FED_CONVERTBEFORELINKING = -2147188193;
+
+		// Token: 0x040015F4 RID: 5620
+		public const int PP_E_PPSA_FED_CONVERSION_NOT_AUTHORIZED = -2147188192;
+
+		// Token: 0x040015F5 RID: 5621
+		public const int PP_E_PPSA_NAMESPACE_ALREADY_FEDERATED = -2147188191;
+
+		// Token: 0x040015F6 RID: 5622
+		public const int PP_E_PPSA_PERMISSIONXML_EMPTY = -2147188190;
+
+		// Token: 0x040015F7 RID: 5623
+		public const int PP_E_PPSA_PUID_MISMATCH = -2147188189;
+
+		// Token: 0x040015F8 RID: 5624
+		public const int PP_E_PPSA_CS_FRIENDLY_NAME_DUPLICATE = -2147188188;
+
+		// Token: 0x040015F9 RID: 5625
+		public const int PP_E_PPSA_MAX_CARDSPACE_INSTANCE_REACHED = -2147188187;
+
+		// Token: 0x040015FA RID: 5626
+		public const int PP_E_PPSA_CARDSPACE_ALREADY_ASSOCIATED = -2147188186;
+
+		// Token: 0x040015FB RID: 5627
+		public const int PP_E_PPSA_CS_FRIENDLY_NAME_TOO_LONG = -2147188185;
+
+		// Token: 0x040015FC RID: 5628
+		public const int PP_E_PPSA_CS_MULTIPLE_SLOT_NUMS = -2147188184;
+
+		// Token: 0x040015FD RID: 5629
+		public const int PP_E_PPSA_CS_MULTIPLE_FRIENDLY_NAMES = -2147188183;
+
+		// Token: 0x040015FE RID: 5630
+		public const int PP_E_PPSA_CS_INVALID_SAML_TOKEN = -2147188182;
+
+		// Token: 0x040015FF RID: 5631
+		public const int PP_E_PPSA_CS_MULTIPLE_SAML_TOKENS = -2147188181;
+
+		// Token: 0x04001600 RID: 5632
+		public const int PP_E_PPSA_CS_INVALID_SLOT_NUM = -2147188180;
+
+		// Token: 0x04001601 RID: 5633
+		public const int PP_E_PPSA_CS_SLOT_NUM_TOO_BIG = -2147188179;
+
+		// Token: 0x04001602 RID: 5634
+		public const int PP_E_PPSA_EMPTY_OFFER_OR_ACTION = -2147188177;
+
+		// Token: 0x04001603 RID: 5635
+		public const int PP_E_PPSA_INVALID_APP_PERMISSION = -2147188176;
+
+		// Token: 0x04001604 RID: 5636
+		public const int PP_E_PPSA_NODATA = -2147188175;
+
+		// Token: 0x04001605 RID: 5637
+		public const int PP_E_PPSA_RENAME_AND_FORCERENAME = -2147188174;
+
+		// Token: 0x04001606 RID: 5638
+		public const int PP_E_PPSA_FED_PROPERTY_IN_NON_FED_NS = -2147188173;
+
+		// Token: 0x04001607 RID: 5639
+		public const int PP_E_PPSA_NAMESPACE_CONVERSION_NOT_SUPPORTED = -2147188172;
+
+		// Token: 0x04001608 RID: 5640
+		public const int PP_E_PPSA_NAMESPACE_FEDERATIONBRANDNAME_FORBIDDEN = -2147188171;
+
+		// Token: 0x04001609 RID: 5641
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_OPENREGISTRATION_READ_ONLY = -2147188104;
+
+		// Token: 0x0400160A RID: 5642
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_MESSENGERCONNECT_READ_ONLY = -2147188103;
+
+		// Token: 0x0400160B RID: 5643
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_COUNTRY_READ_ONLY = -2147188102;
+
+		// Token: 0x0400160C RID: 5644
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_CHANGEPWDURL_READ_ONLY = -2147188101;
+
+		// Token: 0x0400160D RID: 5645
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_BLOCKPASSWORDRESET_READ_ONLY = -2147188100;
+
+		// Token: 0x0400160E RID: 5646
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_ALLOWRENAMEWITHINDOMAIN_READ_ONLY = -2147188099;
+
+		// Token: 0x0400160F RID: 5647
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_ALLOWRENAMEINTODOMAIN_READ_ONLY = -2147188098;
+
+		// Token: 0x04001610 RID: 5648
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_ALLOWDELETE_READ_ONLY = -2147188097;
+
+		// Token: 0x04001611 RID: 5649
+		public const int PP_E_PPSA_NAMESPACE_VE_SCOPEPROP_INVALID = -2147188096;
+
+		// Token: 0x04001612 RID: 5650
+		public const int PP_E_PPSA_NAMESPACE_VE_SCOPE_NOT_DEFINED = -2147188095;
+
+		// Token: 0x04001613 RID: 5651
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_NOT_FOUND = -2147188094;
+
+		// Token: 0x04001614 RID: 5652
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_INVALID = -2147188093;
+
+		// Token: 0x04001615 RID: 5653
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_TYPE_MISMATCH = -2147188092;
+
+		// Token: 0x04001616 RID: 5654
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_NOT_DEFINED = -2147188091;
+
+		// Token: 0x04001617 RID: 5655
+		public const int PP_E_PPSA_NAMESPACE_VE_REQUIRED_PROPERTY_NOT_FOUND = -2147188090;
+
+		// Token: 0x04001618 RID: 5656
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_READ_ONLY = -2147188089;
+
+		// Token: 0x04001619 RID: 5657
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_NOT_READ = -2147188088;
+
+		// Token: 0x0400161A RID: 5658
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_INVALID_VALUE = -2147188087;
+
+		// Token: 0x0400161B RID: 5659
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_URI_INVALID_VALUE = -2147188085;
+
+		// Token: 0x0400161C RID: 5660
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_CERTIFICATE_INVALID_VALUE = -2147188083;
+
+		// Token: 0x0400161D RID: 5661
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_AUTHURL_INVALID_VALUE = -2147188081;
+
+		// Token: 0x0400161E RID: 5662
+		public const int PP_E_PPSA_NAMESPACE_VE_REQUIRED_PROPERTY_LOGOUTURL_NOT_FOUND = -2147188080;
+
+		// Token: 0x0400161F RID: 5663
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_LOGOUTURL_INVALID_VALUE = -2147188079;
+
+		// Token: 0x04001620 RID: 5664
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_ISFEDERATEDNS_READ_ONLY = -2147188078;
+
+		// Token: 0x04001621 RID: 5665
+		public const int PP_E_PPSA_NAMESPACE_VE_REQUIRED_PROPERTY_HONORNOTAFTER_NOT_FOUND = -2147188077;
+
+		// Token: 0x04001622 RID: 5666
+		public const int PP_E_PPSA_NAMESPACE_VE_REQUIRED_PROPERTY_FEDERATIONBRANDNAME_NOT_FOUND = -2147188076;
+
+		// Token: 0x04001623 RID: 5667
+		public const int PP_E_PPSA_NAMESPACE_VE_REQUIRED_PROPERTY_STSAUTHURL_NOT_FOUND = -2147188075;
+
+		// Token: 0x04001624 RID: 5668
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_STSAUTHURL_INVALID_VALUE = -2147188074;
+
+		// Token: 0x04001625 RID: 5669
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_EVICTONRESERVE_READ_ONLY = -2147188073;
+
+		// Token: 0x04001626 RID: 5670
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_THROTTLEPWDRESETINFOACCRUAL_READ_ONLY = -2147188072;
+
+		// Token: 0x04001627 RID: 5671
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_ALLOWFEDUSERSWLIDSIGNIN_READ_ONLY = -2147188071;
+
+		// Token: 0x04001628 RID: 5672
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_FEDERATIONSTATE_READ_ONLY = -2147188070;
+
+		// Token: 0x04001629 RID: 5673
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_FEDERATIONTIER_READ_ONLY = -2147188069;
+
+		// Token: 0x0400162A RID: 5674
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_EVICTONRELEASE_READ_ONLY = -2147188068;
+
+		// Token: 0x0400162B RID: 5675
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_PROFILEFLAGS_INVALID_VALUE = -2147188067;
+
+		// Token: 0x0400162C RID: 5676
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_CREDFLAGS_INVALID_VALUE = -2147188066;
+
+		// Token: 0x0400162D RID: 5677
+		public const int PP_E_PPSA_NAMESPACE_VE_PROPERTY_NEXTCERTIFICATE_INVALID_VALUE = -2147188065;
+
+		// Token: 0x0400162E RID: 5678
+		public const int PP_E_PPSA_OFFER_FIRST = -2147188064;
+
+		// Token: 0x0400162F RID: 5679
+		public const int PP_E_PPSA_OFFER_INVALID_OFFER = -2147188063;
+
+		// Token: 0x04001630 RID: 5680
+		public const int PP_E_PPSA_OFFER_DUPLICATE_ACTION_HASH = -2147188062;
+
+		// Token: 0x04001631 RID: 5681
+		public const int PP_E_PPSA_OFFER_INVALID_OFFER_ID = -2147188061;
+
+		// Token: 0x04001632 RID: 5682
+		public const int PP_E_PPSA_OFFER_INVALID_OFFER_NAME = -2147188060;
+
+		// Token: 0x04001633 RID: 5683
+		public const int PP_E_PPSA_OFFER_INVALID_OFFER_ACTION_NAME = -2147188059;
+
+		// Token: 0x04001634 RID: 5684
+		public const int PP_E_PPSA_APPCONSENT_INVALID_APP_PERMISSION = -2147188058;
+
+		// Token: 0x04001635 RID: 5685
+		public const int PP_E_PPSA_APPCONSENT_OFFER_LIST_DIFFERENT_TAGET = -2147188057;
+
+		// Token: 0x04001636 RID: 5686
+		public const int PP_E_PPSA_APPCONSENT_OFFER_LIST_NO_TARGET = -2147188056;
+
+		// Token: 0x04001637 RID: 5687
+		public const int PP_E_PPSA_APPCONSENT_NOT_NAMESPACE_OWNER = -2147188055;
+
+		// Token: 0x04001638 RID: 5688
+		public const int PP_E_PPSA_OFFER_INVALID_ACTION_ID = -2147188054;
+
+		// Token: 0x04001639 RID: 5689
+		public const int PP_E_PPSA_APPCONSENT_NOT_INTERNAL_SITE = -2147188053;
+
+		// Token: 0x0400163A RID: 5690
+		public const int PP_E_PPSA_APPCONSENT_NOT_PROVISIONED_APP = -2147188052;
+
+		// Token: 0x0400163B RID: 5691
+		public const int PP_E_PPSA_APPCONSENT_REQUEST_NOT_ENOUGH_PERMISSION = -2147188051;
+
+		// Token: 0x0400163C RID: 5692
+		public const int PP_E_PPSA_APPCONSENT_NOT_ALLOWED_TO_ADD_CONSENT = -2147188050;
+
+		// Token: 0x0400163D RID: 5693
+		public const int PP_E_PPSA_OFFER_INVALID_SITEID = -2147188049;
+
+		// Token: 0x0400163E RID: 5694
+		public const int PP_E_PPSA_OFFER_INVALID_SEARCH_CRITERIA = -2147188048;
+
+		// Token: 0x0400163F RID: 5695
+		public const int PP_E_PPSA_OFFER_INVALID_OFFER_ACTION_HASH = -2147188047;
+
+		// Token: 0x04001640 RID: 5696
+		public const int PP_E_PPSA_APPCONSENT_CANNOT_GET_APPDNS_FROM_APPID = -2147188046;
+
+		// Token: 0x04001641 RID: 5697
+		public const int PP_E_PPSA_OFFER_LAST = -2147188016;
+
+		// Token: 0x04001642 RID: 5698
+		public const int PP_E_PPSA_FED_RANDOMPWD = -2147188015;
+
+		// Token: 0x04001643 RID: 5699
+		public const int PP_E_PPSA_INVALID_WL_WHITELABEL_TEMPLATE_NAME = -2147188014;
+
+		// Token: 0x04001644 RID: 5700
+		public const int PP_E_KGS_INVALID_TIME_INTERVAL = -2147184384;
+
+		// Token: 0x04001645 RID: 5701
+		public const int PP_E_KGS_INVALID_LOCATION = -2147184383;
+
+		// Token: 0x04001646 RID: 5702
+		public const int PP_E_KGS_INVALID_LOG_FILE_NAME = -2147184382;
+
+		// Token: 0x04001647 RID: 5703
+		public const int PP_E_KGS_INVALID_REQUIRED_LOAD_LEVEL = -2147184381;
+
+		// Token: 0x04001648 RID: 5704
+		public const int PP_E_KGS_INVALID_MIN_TIME_INTERVAL = -2147184380;
+
+		// Token: 0x04001649 RID: 5705
+		public const int PP_E_KGS_INVALID_MAX_TIME_INTERVAL = -2147184379;
+
+		// Token: 0x0400164A RID: 5706
+		public const int PP_E_KGS_INVALID_TRIGGER_VALUE = -2147184378;
+
+		// Token: 0x0400164B RID: 5707
+		public const int PP_E_KGS_INVALID_THROTTLE_PER_CALLS = -2147184377;
+
+		// Token: 0x0400164C RID: 5708
+		public const int PP_E_KGS_INVALID_DOMAIN = -2147184376;
+
+		// Token: 0x0400164D RID: 5709
+		public const int PP_E_KGS_INVALID_NUMBER_GET_THREADS = -2147184375;
+
+		// Token: 0x0400164E RID: 5710
+		public const int PP_E_KGS_INVALID_NUMBER_PROCESS_THREADS = -2147184374;
+
+		// Token: 0x0400164F RID: 5711
+		public const int PP_E_RPS_NOT_INITIALIZED = -2147184128;
+
+		// Token: 0x04001650 RID: 5712
+		public const int PP_E_RPS_FAILED_TO_CREATE_DOM = -2147184127;
+
+		// Token: 0x04001651 RID: 5713
+		public const int PP_E_RPS_INTERNAL_ERROR = -2147184126;
+
+		// Token: 0x04001652 RID: 5714
+		public const int PP_E_RPS_INVALID_OBJECT_ID = -2147184125;
+
+		// Token: 0x04001653 RID: 5715
+		public const int PP_E_RPS_OBJECT_ID_CANNOT_OVERWRITE = -2147184124;
+
+		// Token: 0x04001654 RID: 5716
+		public const int PP_E_RPS_FAILED_TO_TLS = -2147184123;
+
+		// Token: 0x04001655 RID: 5717
+		public const int PP_E_RPS_XML_FILE_ERROR = -2147184122;
+
+		// Token: 0x04001656 RID: 5718
+		public const int PP_E_RPS_READ_ONLY = -2147184121;
+
+		// Token: 0x04001657 RID: 5719
+		public const int PP_E_RPS_SERVER_CONFIG_ALREADY_INITTED = -2147184120;
+
+		// Token: 0x04001658 RID: 5720
+		public const int PP_E_RPS_INVALIDCONFIG = -2147184119;
+
+		// Token: 0x04001659 RID: 5721
+		public const int PP_E_RPS_CERT_NOT_FOUND = -2147184118;
+
+		// Token: 0x0400165A RID: 5722
+		public const int PP_E_RPS_SKIBUFFER_TOO_SMALL = -2147184117;
+
+		// Token: 0x0400165B RID: 5723
+		public const int PP_E_RPS_FILE_TOO_LARGE = -2147184116;
+
+		// Token: 0x0400165C RID: 5724
+		public const int PP_E_RPS_INVALID_DATATYPE = -2147184115;
+
+		// Token: 0x0400165D RID: 5725
+		public const int PP_E_RPS_MORE_DATA = -2147184114;
+
+		// Token: 0x0400165E RID: 5726
+		public const int PP_E_RPS_INVALID_SIGNATURE = -2147184113;
+
+		// Token: 0x0400165F RID: 5727
+		public const int PP_E_RPS_WRONG_SIGNER = -2147184112;
+
+		// Token: 0x04001660 RID: 5728
+		public const int PP_E_RPS_DATA_TOO_LARGE = -2147184111;
+
+		// Token: 0x04001661 RID: 5729
+		public const int PP_E_RPS_DATA_INTEGRITY_CHECK_FAILED = -2147184110;
+
+		// Token: 0x04001662 RID: 5730
+		public const int PP_E_RPS_WRONG_RECIPIENT = -2147184109;
+
+		// Token: 0x04001663 RID: 5731
+		public const int PP_E_RPS_INVALID_CERT = -2147184108;
+
+		// Token: 0x04001664 RID: 5732
+		public const int PP_E_RPS_NET_CONFIG_CACHE_ALREADY_INITTED = -2147184107;
+
+		// Token: 0x04001665 RID: 5733
+		public const int PP_E_RPS_ATTRIBUTE_NOT_FOUND = -2147184106;
+
+		// Token: 0x04001666 RID: 5734
+		public const int PP_E_RPS_INVALIDDATA = -2147184105;
+
+		// Token: 0x04001667 RID: 5735
+		public const int PP_E_RPS_TICKET_NOT_INITIALIZED = -2147184104;
+
+		// Token: 0x04001668 RID: 5736
+		public const int PP_E_RPS_TICKET_CANNOT_BE_INITIALIZED_MORE_THAN_ONCE = -2147184103;
+
+		// Token: 0x04001669 RID: 5737
+		public const int PP_E_RPS_INVALID_ASSERTION = -2147184102;
+
+		// Token: 0x0400166A RID: 5738
+		public const int PP_E_RPS_INVALID_TIMEWINDOW = -2147184101;
+
+		// Token: 0x0400166B RID: 5739
+		public const int PP_E_RPS_TICKET_MISSING_CRITICAL_PROPERTY = -2147184100;
+
+		// Token: 0x0400166C RID: 5740
+		public const int PP_E_RPS_HTTP_BODY_REQUIRED = -2147184099;
+
+		// Token: 0x0400166D RID: 5741
+		public const int PP_E_RPS_INVALID_TICKET_TYPE = -2147184098;
+
+		// Token: 0x0400166E RID: 5742
+		public const int PP_E_RPS_INVALID_SLIDINGWINDOW = -2147184097;
+
+		// Token: 0x0400166F RID: 5743
+		public const int PP_E_RPS_INVALID_SECLEVEL = -2147184096;
+
+		// Token: 0x04001670 RID: 5744
+		public const int PP_E_RPS_PERFCOUNTER_ABORT = -2147184095;
+
+		// Token: 0x04001671 RID: 5745
+		public const int PP_E_RPS_NO_SUCH_ATTRIBUTE = -2147184094;
+
+		// Token: 0x04001672 RID: 5746
+		public const int PP_E_RPS_INVALID_PROFILESCHEMA_TYPE = -2147184093;
+
+		// Token: 0x04001673 RID: 5747
+		public const int PP_E_RPS_FAILED_DOWNLOAD = -2147184092;
+
+		// Token: 0x04001674 RID: 5748
+		public const int PP_E_RPSDATA_DATA_TOO_LARGE = -2147183616;
+
+		// Token: 0x04001675 RID: 5749
+		public const int PP_E_RPSDATA_INVALID_DATATYPE = -2147183615;
+
+		// Token: 0x04001676 RID: 5750
+		public const int PP_E_RPSDATA_MORE_DATA = -2147183614;
+
+		// Token: 0x04001677 RID: 5751
+		public const int PP_E_RPSDATA_INVALID_DATAOFFSET = -2147183613;
+
+		// Token: 0x04001678 RID: 5752
+		public const int PP_E_RPSDATA_INVALIDDATA = -2147183612;
+
+		// Token: 0x04001679 RID: 5753
+		public const int PP_E_PPMT_INVALIDSERVICEDA = -2147183104;
+
+		// Token: 0x0400167A RID: 5754
+		public const int PP_E_MKP_INVALID_DOMAIN_SIZE = -2147182848;
+
+		// Token: 0x0400167B RID: 5755
+		public const int PP_E_MKP_INVALID_KEY_TYPE = -2147182847;
+
+		// Token: 0x0400167C RID: 5756
+		public const int PP_E_MKP_KEY_DEL_NOT_FOUND = -2147182846;
+
+		// Token: 0x0400167D RID: 5757
+		public const int PP_E_MKP_NEW_KEY_EXISTS = -2147182845;
+
+		// Token: 0x0400167E RID: 5758
+		public const int PP_E_MKP_TOO_MANY_KEYS = -2147182844;
+
+		// Token: 0x0400167F RID: 5759
+		public const int PP_E_MKP_INVALID_KEY_COUNT = -2147182843;
+
+		// Token: 0x04001680 RID: 5760
+		public const int PP_E_MKP_KEY_ALREADY_EXISTS = -2147182842;
+
+		// Token: 0x04001681 RID: 5761
+		public const int PP_E_MKP_MULTIPLE_DC = -2147182841;
+
+		// Token: 0x04001682 RID: 5762
+		public const int PP_E_MKP_DISABLED = -2147182840;
+
+		// Token: 0x04001683 RID: 5763
+		public const int PP_E_MKP_KEY_DEL_FAILED = -2147182839;
+
+		// Token: 0x04001684 RID: 5764
+		public const int PP_E_MKP_ACCESS_DENIED = -2147182838;
+
+		// Token: 0x04001685 RID: 5765
+		public const int PP_E_MKP_INVALID_HANDLE = -2147182837;
+
+		// Token: 0x04001686 RID: 5766
+		public const int PP_E_MKP_INVALID_ADSGROUP = -2147182836;
+
+		// Token: 0x04001687 RID: 5767
+		public const int PP_E_MKP_INVALID_KEY_DATA = -2147182835;
+
+		// Token: 0x04001688 RID: 5768
+		public const int PP_E_MKP_BUFFER_OVERFLOW = -2147182834;
+
+		// Token: 0x04001689 RID: 5769
+		public const int PP_E_MKP_INVALID_CCM_ID = -2147182833;
+
+		// Token: 0x0400168A RID: 5770
+		public const int PP_E_MKP_INVALID_SERVER_NAME = -2147182832;
+
+		// Token: 0x0400168B RID: 5771
+		public const int CCM_E_DEF_IN_USE = -2147160064;
+
+		// Token: 0x0400168C RID: 5772
+		public const int CCM_E_VARCONVERTFAILED = -2147160063;
+
+		// Token: 0x0400168D RID: 5773
+		public const int CCM_E_DATATYPENOTSUPPORTED = -2147160062;
+
+		// Token: 0x0400168E RID: 5774
+		public const int CCM_E_INVALIDOTAVALUE = -2147160061;
+
+		// Token: 0x0400168F RID: 5775
+		public const int CCM_E_OTANOTHONORED = -2147160060;
+
+		// Token: 0x04001690 RID: 5776
+		public const int CCM_E_PROPANOTHONORED = -2147160059;
+
+		// Token: 0x04001691 RID: 5777
+		public const int CCM_E_RELNOTHONORED = -2147160058;
+
+		// Token: 0x04001692 RID: 5778
+		public const int CCM_E_DATATYPEREQUIRED = -2147160057;
+
+		// Token: 0x04001693 RID: 5779
+		public const int CCM_E_PROPANOUPDATE = -2147160056;
+
+		// Token: 0x04001694 RID: 5780
+		public const int CCM_E_PROPAMULTIINSTANCE = -2147160055;
+
+		// Token: 0x04001695 RID: 5781
+		public const int CCM_E_OTANOCREATE = -2147160054;
+
+		// Token: 0x04001696 RID: 5782
+		public const int CCM_E_OTANODELETE = -2147160053;
+
+		// Token: 0x04001697 RID: 5783
+		public const int CCM_E_OTASINGLEOBJECT = -2147160052;
+
+		// Token: 0x04001698 RID: 5784
+		public const int CCM_E_OTASINGLEINSTANCEPEROBJECT = -2147160051;
+
+		// Token: 0x04001699 RID: 5785
+		public const int CCM_E_OTASINGLEINSTANCE = -2147160050;
+
+		// Token: 0x0400169A RID: 5786
+		public const int CCM_E_OTANOUPDATE = -2147160049;
+
+		// Token: 0x0400169B RID: 5787
+		public const int CCM_E_INVALIDACTION = -2147160048;
+
+		// Token: 0x0400169C RID: 5788
+		public const int CCM_E_OTA_CATEGORY_REQUIRED = -2147160047;
+
+		// Token: 0x0400169D RID: 5789
+		public const int CCM_E_CANNOT_DEFINE_BUILTIN_TYPE = -2147160046;
+
+		// Token: 0x0400169E RID: 5790
+		public const int CCM_E_CANNOT_DEFINE_BUILTIN_PROPERTY = -2147160045;
+
+		// Token: 0x0400169F RID: 5791
+		public const int CCM_E_CANNOT_UPDATE_BUILTIN_TYPE = -2147160044;
+
+		// Token: 0x040016A0 RID: 5792
+		public const int CCM_E_CANNOT_UPDATE_BUILTIN_PROPERTY = -2147160043;
+
+		// Token: 0x040016A1 RID: 5793
+		public const int CCM_E_CANNOT_USE_BUILTIN_PROPERTY = -2147160042;
+
+		// Token: 0x040016A2 RID: 5794
+		public const int CCM_E_COULD_NOT_GET_CURRENTUTC_DBTIMESTAMP = -2147183103;
+
+		// Token: 0x040016A3 RID: 5795
+		public const int CCM_E_INVALIDTYPEFORBLOB = -2147183102;
+
+		// Token: 0x040016A4 RID: 5796
+		public const int CCM_E_CANTREADBLOBTYPE = -2147183101;
+
+		// Token: 0x040016A5 RID: 5797
+		public const int CCM_E_CANTREADBLOBLEN = -2147183100;
+
+		// Token: 0x040016A6 RID: 5798
+		public const int CCM_E_CANTREADBLOBBSTR = -2147183099;
+
+		// Token: 0x040016A7 RID: 5799
+		public const int CCM_E_CANTREADBLOBARRAY = -2147183098;
+
+		// Token: 0x040016A8 RID: 5800
+		public const int CCM_E_CMDNOTALLOWED = -2147160041;
+
+		// Token: 0x040016A9 RID: 5801
+		public const int CCM_E_NULLBLOBPTR = -2147183097;
+
+		// Token: 0x040016AA RID: 5802
+		public const int CCM_E_MANIFESTMISMATCHWITHIMPACTS = -2147183096;
+
+		// Token: 0x040016AB RID: 5803
+		public const int CCM_E_OTCNOTROLLABLE = -2147160040;
+
+		// Token: 0x040016AC RID: 5804
+		public const int CCM_E_PROPAUSEBLOBINVALIDDATATYPE = -2147160039;
+
+		// Token: 0x040016AD RID: 5805
+		public const int CCM_E_OTAWRONGNOTIFICATIONTARGET = -2147160038;
+
+		// Token: 0x040016AE RID: 5806
+		public const int CCM_E_CMDNOTFOUNDORMULTIDEF = -2147183095;
+
+		// Token: 0x040016AF RID: 5807
+		public const int CCM_E_EMPTYTARGETMACHINESSET = -2147160037;
+
+		// Token: 0x040016B0 RID: 5808
+		public const int CCM_E_NOPROPERTIES = -2147183094;
+
+		// Token: 0x040016B1 RID: 5809
+		public const int CCM_E_NORELATIONSHIPS = -2147183093;
+
+		// Token: 0x040016B2 RID: 5810
+		public const int CCM_E_NOENTITIES = -2147183092;
+
+		// Token: 0x040016B3 RID: 5811
+		public const int CCM_E_EMPTYINPUTXML = -2147160036;
+
+		// Token: 0x040016B4 RID: 5812
+		public const int CCM_E_REQUIREDINPUTISEMPTY = -2147160035;
+
+		// Token: 0x040016B5 RID: 5813
+		public const int CCM_E_CONVERSIONFAILEDFORINPUT = -2147183091;
+
+		// Token: 0x040016B6 RID: 5814
+		public const int CCM_E_INVALIDSCHEMA = -2147183090;
+
+		// Token: 0x040016B7 RID: 5815
+		public const int CCM_E_INVALIDFID = -2147160034;
+
+		// Token: 0x040016B8 RID: 5816
+		public const int CCM_E_OTNOTFOUND = -2147160033;
+
+		// Token: 0x040016B9 RID: 5817
+		public const int CCM_E_OTANOTFOUND = -2147160032;
+
+		// Token: 0x040016BA RID: 5818
+		public const int CCM_E_PROPNOTFOUND = -2147160031;
+
+		// Token: 0x040016BB RID: 5819
+		public const int CCM_E_PROPANOTFOUND = -2147160030;
+
+		// Token: 0x040016BC RID: 5820
+		public const int CCM_E_IDALREADYUSED = -2147160029;
+
+		// Token: 0x040016BD RID: 5821
+		public const int CCM_E_DANGLINGFAKEID = -2147160028;
+
+		// Token: 0x040016BE RID: 5822
+		public const int CCM_E_MULTICATEGORYNOTSUPPORTED = -2147160027;
+
+		// Token: 0x040016BF RID: 5823
+		public const int CCM_E_ESCAPEXMLFAILED = -2147183089;
+
+		// Token: 0x040016C0 RID: 5824
+		public const int CCM_E_INVALIDCMD = -2147160026;
+
+		// Token: 0x040016C1 RID: 5825
+		public const int CCM_E_CONFLICTINGIDS = -2147160025;
+
+		// Token: 0x040016C2 RID: 5826
+		public const int CCM_E_CMDCREATENOOBJECTNAME = -2147160024;
+
+		// Token: 0x040016C3 RID: 5827
+		public const int CCM_E_CMDNOCREATEFAKEID = -2147160023;
+
+		// Token: 0x040016C4 RID: 5828
+		public const int CCM_E_INVALIDENTITYTYPE = -2147160022;
+
+		// Token: 0x040016C5 RID: 5829
+		public const int CCM_E_CONTRADDICTINGCMD = -2147160021;
+
+		// Token: 0x040016C6 RID: 5830
+		public const int CCM_E_IDREQUIRED = -2147160020;
+
+		// Token: 0x040016C7 RID: 5831
+		public const int CCM_E_INVALIDRELTYPE = -2147160019;
+
+		// Token: 0x040016C8 RID: 5832
+		public const int CCM_E_INVALIDRELEASE = -2147160018;
+
+		// Token: 0x040016C9 RID: 5833
+		public const int CCM_E_OTCNOTFOUNDORMULTIDEF = -2147160017;
+
+		// Token: 0x040016CA RID: 5834
+		public const int CCM_E_ALLOWEDRELALREADYPRESENTBUTDIFFER = -2147160016;
+
+		// Token: 0x040016CB RID: 5835
+		public const int CCM_E_RELTARGETANDSOURCEPRESENT = -2147160015;
+
+		// Token: 0x040016CC RID: 5836
+		public const int CCM_E_RELSOURCEWITHTARGETINFO = -2147160014;
+
+		// Token: 0x040016CD RID: 5837
+		public const int CCM_E_RELTARGETWITHSOURCEINFO = -2147160013;
+
+		// Token: 0x040016CE RID: 5838
+		public const int CCM_E_RELSOURCEANDCMD = -2147160012;
+
+		// Token: 0x040016CF RID: 5839
+		public const int CCM_E_INVALIDSEARCHTYPEANDINPUT = -2147160011;
+
+		// Token: 0x040016D0 RID: 5840
+		public const int CCM_E_NOTANOBJECT = -2147160010;
+
+		// Token: 0x040016D1 RID: 5841
+		public const int CCM_E_OTALREADYDEFINED = -2147160009;
+
+		// Token: 0x040016D2 RID: 5842
+		public const int CCM_E_OTAALREADYDEFINED = -2147160008;
+
+		// Token: 0x040016D3 RID: 5843
+		public const int CCM_E_PROPALREADYDEFINED = -2147160007;
+
+		// Token: 0x040016D4 RID: 5844
+		public const int CCM_E_PROPAALREADYDEFINED = -2147160006;
+
+		// Token: 0x040016D5 RID: 5845
+		public const int CCM_E_ALLOWEDRELINVALIDVALUE = -2147160005;
+
+		// Token: 0x040016D6 RID: 5846
+		public const int CCM_E_OTABUILTINPREFIXNOTPERMITTED = -2147160004;
+
+		// Token: 0x040016D7 RID: 5847
+		public const int CCM_E_PROPABUILTINPREFIXNOTPERMITTED = -2147160003;
+
+		// Token: 0x040016D8 RID: 5848
+		public const int CCM_E_CANNOTDELETEBUILTINOTA = -2147160002;
+
+		// Token: 0x040016D9 RID: 5849
+		public const int CCM_E_CANNOTDELETEBUILTINPROPA = -2147160001;
+
+		// Token: 0x040016DA RID: 5850
+		public const int CCM_E_NONZERO_INSTANCE_IN_BOOTSTRAP = -2147160000;
+
+		// Token: 0x040016DB RID: 5851
+		public const int CCM_E_PROPBUILTINPREFIXNOTPERMITTED = -2147159999;
+
+		// Token: 0x040016DC RID: 5852
+		public const int CCM_E_OTA_DESCRIPTION_REQUIRED = -2147159998;
+
+		// Token: 0x040016DD RID: 5853
+		public const int CCM_E_OTA_OWNER_REQUIRED = -2147159997;
+
+		// Token: 0x040016DE RID: 5854
+		public const int CCM_E_PROPA_DESCRIPTION_REQUIRED = -2147159996;
+
+		// Token: 0x040016DF RID: 5855
+		public const int CCM_E_LOCKFAILURE = -2147183088;
+
+		// Token: 0x040016E0 RID: 5856
+		public const int CCM_E_CANTCLAIMREADLOCK = -2147183087;
+
+		// Token: 0x040016E1 RID: 5857
+		public const int CCM_E_CANTCLAIMWRITELOCK = -2147183086;
+
+		// Token: 0x040016E2 RID: 5858
+		public const int CCM_E_EXPECTEDONEFOUNDMULTIPLE = -2147183085;
+
+		// Token: 0x040016E3 RID: 5859
+		public const int CCM_E_INVALIDATTRIBUTETTYPE = -2147159995;
+
+		// Token: 0x040016E4 RID: 5860
+		public const int CCM_E_DATAVANISHED = -2147183084;
+
+		// Token: 0x040016E5 RID: 5861
+		public const int CCM_E_INTERNALSCHEMALOADFAILURE = -2147183083;
+
+		// Token: 0x040016E6 RID: 5862
+		public const int CCM_E_NOCATEGORY = -2147183082;
+
+		// Token: 0x040016E7 RID: 5863
+		public const int CCM_E_CMDNOSERVICES = -2147159994;
+
+		// Token: 0x040016E8 RID: 5864
+		public const int CCM_E_CMDNOARGS = -2147159993;
+
+		// Token: 0x040016E9 RID: 5865
+		public const int CCM_E_CMDBLOCKED = -2147159992;
+
+		// Token: 0x040016EA RID: 5866
+		public const int CCM_E_CMDREQUIRESERVICES = -2147159991;
+
+		// Token: 0x040016EB RID: 5867
+		public const int CCM_E_CMDREQUIREARGS = -2147159990;
+
+		// Token: 0x040016EC RID: 5868
+		public const int CCM_E_UNABLETOGETTHISMACHINENAME = -2147183081;
+
+		// Token: 0x040016ED RID: 5869
+		public const int CCM_E_THISMACHINENOTINCCM = -2147183080;
+
+		// Token: 0x040016EE RID: 5870
+		public const int CCM_E_THISMACHINENODC = -2147183079;
+
+		// Token: 0x040016EF RID: 5871
+		public const int CCM_E_THISMACHINEMULTIDC = -2147183078;
+
+		// Token: 0x040016F0 RID: 5872
+		public const int CCM_E_EXECUTENOTAUTHORIZED = -2147159989;
+
+		// Token: 0x040016F1 RID: 5873
+		public const int CCM_E_OBJECTTYPEOPERATIONNOTAUTHORIZED = -2147159988;
+
+		// Token: 0x040016F2 RID: 5874
+		public const int CCM_E_EXECUTENOTAUTHORIZEDONCOMMAND = -2147159987;
+
+		// Token: 0x040016F3 RID: 5875
+		public const int CCM_E_RELATIONSHIPOPERATIONNOTAUTHORIZED = -2147159986;
+
+		// Token: 0x040016F4 RID: 5876
+		public const int CCM_E_MACHINEMULTIDEFNODEF = -2147183077;
+
+		// Token: 0x040016F5 RID: 5877
+		public const int CCM_E_SERVICEMULTIDEFNODEF = -2147183076;
+
+		// Token: 0x040016F6 RID: 5878
+		public const int CCM_E_DCMULTIDEFNODEF = -2147183075;
+
+		// Token: 0x040016F7 RID: 5879
+		public const int PP_E_MFSTGEN_NON_CREATE_TRANSACT = -2147183074;
+
+		// Token: 0x040016F8 RID: 5880
+		public const int PP_E_MFSTGEN_NON_NOTIFY_TRANSACT = -2147183073;
+
+		// Token: 0x040016F9 RID: 5881
+		public const int PP_E_MFSTGEN_NON_UPDATE_TRANSACT = -2147183072;
+
+		// Token: 0x040016FA RID: 5882
+		public const int PP_E_MFSTGEN_INVALID_TRANSACT_TARGET = -2147183071;
+
+		// Token: 0x040016FB RID: 5883
+		public const int PP_E_MFSTGEN_OBJ_DOESNOT_EXIST = -2147183070;
+
+		// Token: 0x040016FC RID: 5884
+		public const int PP_E_MFSTGEN_AFNTYOBJ_DOESNOT_EXIST = -2147183069;
+
+		// Token: 0x040016FD RID: 5885
+		public const int PP_E_MFSTGEN_MULTIPLE_OVERWRITES = -2147183068;
+
+		// Token: 0x040016FE RID: 5886
+		public const int PP_E_MFSTGEN_NON_DELETE_TRANSACT = -2147183067;
+
+		// Token: 0x040016FF RID: 5887
+		public const int PP_E_MFSTGEN_NON_MASHINE_OR_GROUP_OBJ = -2147183066;
+
+		// Token: 0x04001700 RID: 5888
+		public const int PP_E_MFSTGEN_IMPACTS_DO_NOT_MATCH = -2147183065;
+
+		// Token: 0x04001701 RID: 5889
+		public const int PP_E_MFSTGEN_INVALID_OBJ_TYPE = -2147183064;
+
+		// Token: 0x04001702 RID: 5890
+		public const int PP_E_MFSTGEN_NO_TRANSACTS = -2147183063;
+
+		// Token: 0x04001703 RID: 5891
+		public const int PP_E_MFSTGEN_MISSING_NOTIFICATION_SETTINGS = -2147183062;
+
+		// Token: 0x04001704 RID: 5892
+		public const int PP_E_MFSTGEN_TRANSPORTGUID_IS_MULTIINSTANCE_OR_MISSING = -2147183061;
+
+		// Token: 0x04001705 RID: 5893
+		public const int PP_E_MFSTGEN_TRANSPORTTYPE_IS_MULTIINSTANCE_OR_MISSING = -2147183060;
+
+		// Token: 0x04001706 RID: 5894
+		public const int PP_E_MFSTGEN_CMDPROGID_IS_MULTIINSTANCE_OR_MISSING = -2147183059;
+
+		// Token: 0x04001707 RID: 5895
+		public const int PP_E_MFSTGEN_MISSING_DATACENTER = -2147183058;
+
+		// Token: 0x04001708 RID: 5896
+		public const int PP_E_MFSTGEN_MISSING_SERVICE = -2147183057;
+
+		// Token: 0x04001709 RID: 5897
+		public const int PP_E_MFSTGEN_MISSING_COMMAND = -2147183056;
+
+		// Token: 0x0400170A RID: 5898
+		public const int PP_E_MFSTGEN_WEBSERVICENAME_IS_MULTIINSTANCE_OR_MISSING = -2147183055;
+
+		// Token: 0x0400170B RID: 5899
+		public const int PP_E_MFSTGEN_SERVICETYPE_IS_MULTIINSTANCE_OR_MISSING = -2147183054;
+
+		// Token: 0x0400170C RID: 5900
+		public const int PP_E_CCMOCT_BAD_DEPLOYMENT_HIERARCHY = -2147183053;
+
+		// Token: 0x0400170D RID: 5901
+		public const int PP_E_CCMOCT_NO_MACHINE_OVERRIDE = -2147183052;
+
+		// Token: 0x0400170E RID: 5902
+		public const int PP_E_CCMOCT_NO_INSTANCE_FOR_PROP = -2147183051;
+
+		// Token: 0x0400170F RID: 5903
+		public const int PP_E_CCMOCT_NO_MATCHING_INSTANCE_FOR_PROP = -2147183050;
+
+		// Token: 0x04001710 RID: 5904
+		public const int PP_E_CCMOCT_NO_PROP = -2147183049;
+
+		// Token: 0x04001711 RID: 5905
+		public const int PP_E_CCMOCT_NO_OBJECT = -2147183048;
+
+		// Token: 0x04001712 RID: 5906
+		public const int PP_E_CCMOCT_MULTIPLE_OBJECTS = -2147183047;
+
+		// Token: 0x04001713 RID: 5907
+		public const int PP_E_CCMOCT_NODATACENTER = -2147183046;
+
+		// Token: 0x04001714 RID: 5908
+		public const int CCM_E_INVALIDTRANSACTIONID = -2147183045;
+
+		// Token: 0x04001715 RID: 5909
+		public const int CCM_E_NOCMDTRIGGER = -2147183044;
+
+		// Token: 0x04001716 RID: 5910
+		public const int CCM_E_INVCMDTRIGGER = -2147183043;
+
+		// Token: 0x04001717 RID: 5911
+		public const int CCM_E_FAILEDUPDATEMACHINESTATUS = -2147183042;
+
+		// Token: 0x04001718 RID: 5912
+		public const int CCM_E_FAILEDTHL = -2147183041;
+
+		// Token: 0x04001719 RID: 5913
+		public const int CCM_E_FAILEDTHLANDUPDATEMACHINESTATUS = -2147183040;
+
+		// Token: 0x0400171A RID: 5914
+		public const int CCM_E_FAILEDTRIGGERCREATE = -2147183039;
+
+		// Token: 0x0400171B RID: 5915
+		public const int CCM_E_FAILEDTRIGGERCREATEDANDUPDATEMACHINESTATUS = -2147183038;
+
+		// Token: 0x0400171C RID: 5916
+		public const int CCM_E_FAILEDTRIGGERCREATEDANDTHL = -2147183037;
+
+		// Token: 0x0400171D RID: 5917
+		public const int CCM_E_FAILEDTRIGGERCREATEDANDTHLANDUPDATEMACHINESTATUS = -2147183036;
+
+		// Token: 0x0400171E RID: 5918
+		public const int CCM_E_SAMEINSTANCE = -2147159985;
+
+		// Token: 0x0400171F RID: 5919
+		public const int CCM_E_THLEXPIREDTOOLONG = -2147159984;
+
+		// Token: 0x04001720 RID: 5920
+		public const int PP_E_CCMOCT_RESULTXML_INVALID = -2147159983;
+
+		// Token: 0x04001721 RID: 5921
+		public const int CCM_E_INVALIDINSTANCE = -2147159982;
+
+		// Token: 0x04001722 RID: 5922
+		public const int CCM_E_OBJECTDOESNOTEXIST = -2147159981;
+
+		// Token: 0x04001723 RID: 5923
+		public const int CCM_E_ENTITYNAME_INVALID = -2147159980;
+
+		// Token: 0x04001724 RID: 5924
+		public const int CCM_E_VALUETYPE_INVALID = -2147159979;
+
+		// Token: 0x04001725 RID: 5925
+		public const int CCM_E_ITEMTYPE_INVALID = -2147159978;
+
+		// Token: 0x04001726 RID: 5926
+		public const int CCM_E_ITEMINDEX_INVALID = -2147159977;
+
+		// Token: 0x04001727 RID: 5927
+		public const int CCM_E_ITEM_NOTFOUND = -2147159976;
+
+		// Token: 0x04001728 RID: 5928
+		public const int CCM_E_OBJECTTYPE_INVALID = -2147159975;
+
+		// Token: 0x04001729 RID: 5929
+		public const int CCM_E_INSTANCE_INVALID = -2147159974;
+
+		// Token: 0x0400172A RID: 5930
+		public const int CCM_E_RELARITY_INVALID = -2147159973;
+
+		// Token: 0x0400172B RID: 5931
+		public const int CCM_E_ITEMPOINTER_INVALID = -2147159972;
+
+		// Token: 0x0400172C RID: 5932
+		public const int CCM_E_TYPENAME_INVALID = -2147159971;
+
+		// Token: 0x0400172D RID: 5933
+		public const int CCM_E_INVALIDFILENAME = -2147159970;
+
+		// Token: 0x0400172E RID: 5934
+		public const int CCM_E_NOMOREFILES = -2147159969;
+
+		// Token: 0x0400172F RID: 5935
+		public const int CCM_E_INVALID_CCMID = -2147159968;
+
+		// Token: 0x04001730 RID: 5936
+		public const int PP_E_CCMOCT_GETIPFORSERVICE = -2147159967;
+
+		// Token: 0x04001731 RID: 5937
+		public const int PP_E_CCMOCT_INVALID_CALCULATEDPROPERTY = -2147159966;
+
+		// Token: 0x04001732 RID: 5938
+		public const int PP_E_CCMOCT_UNK_PROPERTYVALUETYPE = -2147159965;
+
+		// Token: 0x04001733 RID: 5939
+		public const int PP_E_CCMOCT_INVALID_CCMSERVERPROPERTY = -2147159964;
+
+		// Token: 0x04001734 RID: 5940
+		public const int CCM_E_INVAPIMODE = -2147159963;
+
+		// Token: 0x04001735 RID: 5941
+		public const int CCM_E_ROAPIMODE = -2147159962;
+
+		// Token: 0x04001736 RID: 5942
+		public const int CCM_E_INVAPIMETADATAMODE = -2147159961;
+
+		// Token: 0x04001737 RID: 5943
+		public const int CCM_E_INVALIDBUFFER = -2147159960;
+
+		// Token: 0x04001738 RID: 5944
+		public const int CCM_E_CONVERSIONERROR = -2147159959;
+
+		// Token: 0x04001739 RID: 5945
+		public const int CCM_E_TRXINPUT_INVALID = -2147159958;
+
+		// Token: 0x0400173A RID: 5946
+		public const int CCM_E_PROPA_OWNER_REQUIRED = -2147159957;
+
+		// Token: 0x0400173B RID: 5947
+		public const int CCM_E_FORBIDDENOT = -2147159956;
+
+		// Token: 0x0400173C RID: 5948
+		public const int PP_E_MFSTGEN_WEBSERVICENAME_IS_MISSING = -2147159955;
+
+		// Token: 0x0400173D RID: 5949
+		public const int CCM_E_INVALIDOTAVALUEFORCACHETYPE = -2147159954;
+
+		// Token: 0x0400173E RID: 5950
+		public const int CCM_E_INVALIDOTAVALUEFORCATEGROY = -2147159953;
+
+		// Token: 0x0400173F RID: 5951
+		public const int CCM_E_INVALIDOTAVALUEFORINDEX = -2147159952;
+
+		// Token: 0x04001740 RID: 5952
+		public const int CCM_E_PROPBLEMSWITHCONSTRAINTS = -2147159951;
+
+		// Token: 0x04001741 RID: 5953
+		public const int CCM_E_INVALIDOPINCONSTRAINTS = -2147159950;
+
+		// Token: 0x04001742 RID: 5954
+		public const int CCM_E_ATTRINCONSTRAINTSOP = -2147159949;
+
+		// Token: 0x04001743 RID: 5955
+		public const int CCM_E_UNKNODETYPEINCONSTRAINTSOP = -2147159948;
+
+		// Token: 0x04001744 RID: 5956
+		public const int CCM_E_MIXNODECONTENTINCONSTRAINTS = -2147159947;
+
+		// Token: 0x04001745 RID: 5957
+		public const int CCM_E_TERMINALNODEHASCHILDRENINCONSTRAINTS = -2147159946;
+
+		// Token: 0x04001746 RID: 5958
+		public const int CCM_E_NONTERMINALNODEMINARITYINCONSTRAINTS = -2147159945;
+
+		// Token: 0x04001747 RID: 5959
+		public const int CCM_E_NONTERMINALNODEMAXARITYINCONSTRAINTS = -2147159944;
+
+		// Token: 0x04001748 RID: 5960
+		public const int CCM_E_CONTENTNODEINCONSTRAINTS = -2147159943;
+
+		// Token: 0x04001749 RID: 5961
+		public const int CCM_E_OPERANDCONVERSIONFAILEDINCONSTRAINTS = -2147159942;
+
+		// Token: 0x0400174A RID: 5962
+		public const int CCM_E_OPERANDBSTRINCONSTRAINTS = -2147159941;
+
+		// Token: 0x0400174B RID: 5963
+		public const int CCM_E_OPERANDMUSTBEBSTRINCONSTRAINTS = -2147159940;
+
+		// Token: 0x0400174C RID: 5964
+		public const int CCM_E_OPERANDMUSTBEUI4INCONSTRAINTS = -2147159939;
+
+		// Token: 0x0400174D RID: 5965
+		public const int CCM_E_INVALIDCONSTRAINTSXML = -2147159938;
+
+		// Token: 0x0400174E RID: 5966
+		public const int CCM_E_TOPLEVELNODEONLY1CHILDINCONSTRAINTSXML = -2147159937;
+
+		// Token: 0x0400174F RID: 5967
+		public const int CCM_E_UNSUPPDATATYPECONSTRAINTS = -2147159936;
+
+		// Token: 0x04001750 RID: 5968
+		public const int CCM_E_VALUECANNOTBECOERCEDTOREQUIREDDATATYPE = -2147159935;
+
+		// Token: 0x04001751 RID: 5969
+		public const int CCM_E_PROBLEMSWITHCONSTRAINTSINOPERATOR = -2147159934;
+
+		// Token: 0x04001752 RID: 5970
+		public const int CCM_E_CONSTRAINTSINOPERATORSETERROR = -2147159933;
+
+		// Token: 0x04001753 RID: 5971
+		public const int CCM_E_CONSTRAINTSINOPERATORNULL = -2147159932;
+
+		// Token: 0x04001754 RID: 5972
+		public const int CCM_E_CONSTRAINTSINOPERATORTOOLONG = -2147159931;
+
+		// Token: 0x04001755 RID: 5973
+		public const int CCM_E_CONSTRAINTSINOPERATORINVEXPR = -2147159930;
+
+		// Token: 0x04001756 RID: 5974
+		public const int CCM_E_CONSTRAINTSVIOLATION = -2147159929;
+
+		// Token: 0x04001757 RID: 5975
+		public const int CCM_E_PROPADEFAULTVARCONVERTFAILED = -2147159928;
+
+		// Token: 0x04001758 RID: 5976
+		public const int CCM_E_PROPADEFAULTCONSTRAINTSVIOLATION = -2147159927;
+
+		// Token: 0x04001759 RID: 5977
+		public const int CCM_E_CONSTRAINTSREOPERATORINVEXPR = -2147159926;
+
+		// Token: 0x0400175A RID: 5978
+		public const int CCM_E_PROBLEMSWITHCONSTRAINTSURLOPERATOR = -2147159925;
+
+		// Token: 0x0400175B RID: 5979
+		public const int CCM_E_CONSTRAINTSURLOPERATORNULL = -2147159924;
+
+		// Token: 0x0400175C RID: 5980
+		public const int CCM_E_CONSTRAINTSURLOPERATORTOOLONG = -2147159923;
+
+		// Token: 0x0400175D RID: 5981
+		public const int CCM_E_CONSTRAINTSURLOPERATORINVEXPR = -2147159922;
+
+		// Token: 0x0400175E RID: 5982
+		public const int CCM_E_CONSTRAINTSURLOPERATORTOOMANYWILDCARDS = -2147159921;
+
+		// Token: 0x0400175F RID: 5983
+		public const int CCM_E_CONSTRAINTSURLOPERATORINVALIDWILDCARDUSAGE = -2147159920;
+
+		// Token: 0x04001760 RID: 5984
+		public const int CCM_E_CONSTRAINTSURLOPERATORINVPROTOCOL = -2147159919;
+
+		// Token: 0x04001761 RID: 5985
+		public const int PP_E_kErrorStringTooLong = -805306468;
+
+		// Token: 0x04001762 RID: 5986
+		public const int PP_E_kErrorStringTooShort = -805306469;
+
+		// Token: 0x04001763 RID: 5987
+		public const int PP_E_kErrorInvalidPassword = -805306470;
+
+		// Token: 0x04001764 RID: 5988
+		public const int PP_E_kErrorInvalidEMail = -805306471;
+
+		// Token: 0x04001765 RID: 5989
+		public const int PP_E_kErrorInvalidMemberName = -805306472;
+
+		// Token: 0x04001766 RID: 5990
+		public const int PP_E_kErrorMissingParameters = -805306473;
+
+		// Token: 0x04001767 RID: 5991
+		public const int PP_E_kErrorForbiddenWord = -805306474;
+
+		// Token: 0x04001768 RID: 5992
+		public const int PP_E_kErrorInvalidDomainName = -805306475;
+
+		// Token: 0x04001769 RID: 5993
+		public const int PP_E_kErrorInvalidDomainAuthority = -805306476;
+
+		// Token: 0x0400176A RID: 5994
+		public const int PP_E_kErrorInvalidDatetime = -805306477;
+
+		// Token: 0x0400176B RID: 5995
+		public const int PP_E_kErrorIDGenNotAvailable = -805306478;
+
+		// Token: 0x0400176C RID: 5996
+		public const int PP_E_kErrorDbAddressReferencedByCard = -805306479;
+
+		// Token: 0x0400176D RID: 5997
+		public const int PP_E_kErrorDbSprocDoesNotExist = -805306480;
+
+		// Token: 0x0400176E RID: 5998
+		public const int PP_E_kErrorDbCriticalError = -805307368;
+
+		// Token: 0x0400176F RID: 5999
+		public const int PP_E_kErrorDbError = -805307369;
+
+		// Token: 0x04001770 RID: 6000
+		public const int PP_E_kErrorDbMemberExists = -805307370;
+
+		// Token: 0x04001771 RID: 6001
+		public const int PP_E_kErrorDbMemberDoesNotExist = -805307371;
+
+		// Token: 0x04001772 RID: 6002
+		public const int PP_E_kErrorDbNoData = -805307372;
+
+		// Token: 0x04001773 RID: 6003
+		public const int PP_E_kErrorDbDuplicateFriendlyName = -805307373;
+
+		// Token: 0x04001774 RID: 6004
+		public const int PP_E_kErrorDbAddressDoesNotExist = -805307374;
+
+		// Token: 0x04001775 RID: 6005
+		public const int PP_E_kErrorDbCardDoesNotExist = -805307375;
+
+		// Token: 0x04001776 RID: 6006
+		public const int PP_E_kErrorDbURLDoesNotExist = -805307377;
+
+		// Token: 0x04001777 RID: 6007
+		public const int PP_E_kErrorKidsSiteNotListed = -805307379;
+
+		// Token: 0x04001778 RID: 6008
+		public const int PP_E_kErrorKidsSiteAlreadyRequested = -805307380;
+
+		// Token: 0x04001779 RID: 6009
+		public const int PP_E_kErrorDbTooManyCards = -805307381;
+
+		// Token: 0x0400177A RID: 6010
+		public const int PP_E_kErrorDbTooManyAddresses = -805307382;
+
+		// Token: 0x0400177B RID: 6011
+		public const int PP_E_kErrorKidsIdentityDoesNotExist = -805307383;
+
+		// Token: 0x0400177C RID: 6012
+		public const int PP_E_kErrorKidsCannotUpdateMoreThanOnce = -805307384;
+
+		// Token: 0x0400177D RID: 6013
+		public const int PP_E_kErrorDbNotListedAsParent = -805307385;
+
+		// Token: 0x0400177E RID: 6014
+		public const int PP_E_kErrorBadArgument = -805307386;
+
+		// Token: 0x0400177F RID: 6015
+		public const int PP_E_kErrorIDGenTranCountExist = -805307387;
+
+		// Token: 0x04001780 RID: 6016
+		public const int PP_E_kErrorIDGenDepleted = -805307388;
+
+		// Token: 0x04001781 RID: 6017
+		public const int PP_E_kErrorDbMemberIsNotActive = -805307389;
+
+		// Token: 0x04001782 RID: 6018
+		public const int PP_E_kErrorManagedCredsMustBeActive = -805307390;
+
+		// Token: 0x04001783 RID: 6019
+		public const int PP_E_kErrorCredentialTypeAlreadyExists = -805307391;
+
+		// Token: 0x04001784 RID: 6020
+		public const int PP_E_kErrorDbMultipleCredsSameType = -805307392;
+
+		// Token: 0x04001785 RID: 6021
+		public const int PP_E_kErrorTooManyUsersWithThisName = -805307393;
+
+		// Token: 0x04001786 RID: 6022
+		public const int PP_E_kErrorPPBKDANotSupported = -805307394;
+
+		// Token: 0x04001787 RID: 6023
+		public const int PP_E_kErrorDbReplicationTimeout = -805307395;
+
+		// Token: 0x04001788 RID: 6024
+		public const int PP_E_kErrorCredentialTypeDoesNotExist = -805307396;
+
+		// Token: 0x04001789 RID: 6025
+		public const int PP_E_kErrorRecordDoesNotExist = -805307397;
+
+		// Token: 0x0400178A RID: 6026
+		public const int PP_E_kErrorDbRowNotUpdated = -805307398;
+
+		// Token: 0x0400178B RID: 6027
+		public const int PP_E_kErrorDbAccessDenied = -805307399;
+
+		// Token: 0x0400178C RID: 6028
+		public const int PP_E_kErrorDbRecordExists2 = -805307400;
+
+		// Token: 0x0400178D RID: 6029
+		public const int PP_E_kErrorDbUpdateCausesDuplicateRow = -805307402;
+
+		// Token: 0x0400178E RID: 6030
+		public const int PP_E_kErrorDbManagedCredNoNamespace = -805307403;
+
+		// Token: 0x0400178F RID: 6031
+		public const int PP_E_kErrorDbNamespaceIsManaged = -805307404;
+
+		// Token: 0x04001790 RID: 6032
+		public const int PP_E_kErrorDbManagedNoOverflowRow = -805307405;
+
+		// Token: 0x04001791 RID: 6033
+		public const int PP_E_kErrorDbManagedUpdateDisallowed = -805307406;
+
+		// Token: 0x04001792 RID: 6034
+		public const int PP_E_kErrorDbOverWriteDisallowed = -805307407;
+
+		// Token: 0x04001793 RID: 6035
+		public const int PP_E_kErrorBadApplicationMapData = -805307408;
+
+		// Token: 0x04001794 RID: 6036
+		public const int PP_E_kErrorTooManyEmailservers = -805307409;
+
+		// Token: 0x04001795 RID: 6037
+		public const int PP_E_kErrorDbInvalidEntityType = -805307410;
+
+		// Token: 0x04001796 RID: 6038
+		public const int PP_E_kErrorDbCyclicRelationship = -805307412;
+
+		// Token: 0x04001797 RID: 6039
+		public const int PP_E_kErrorDbInvalidRelationship = -805307413;
+
+		// Token: 0x04001798 RID: 6040
+		public const int PP_E_kErrorDbOneToManyRelationship = -805307414;
+
+		// Token: 0x04001799 RID: 6041
+		public const int PP_E_kErrorDbManyToOneRelationship = -805307415;
+
+		// Token: 0x0400179A RID: 6042
+		public const int PP_E_kErrorDbInvalidParameters = -805307416;
+
+		// Token: 0x0400179B RID: 6043
+		public const int PP_E_kErrorDbNotSupportedYet = -805307417;
+
+		// Token: 0x0400179C RID: 6044
+		public const int PP_E_kErrorDbCertificateDoesNotExist = -805307418;
+
+		// Token: 0x0400179D RID: 6045
+		public const int PP_E_kErrorDbEntityIdNameMismatch = -805307419;
+
+		// Token: 0x0400179E RID: 6046
+		public const int PP_E_kErrorDbMaxPropIDExceeded = -805307420;
+
+		// Token: 0x0400179F RID: 6047
+		public const int PP_E_kErrorDBTooManyCertificates = -805307421;
+
+		// Token: 0x040017A0 RID: 6048
+		public const int PP_E_kErrorDbCSHashedIDDoesNotExist = -805307422;
+
+		// Token: 0x040017A1 RID: 6049
+		public const int PP_E_kErrorDbCSHashedIDMismatch = -805307423;
+
+		// Token: 0x040017A2 RID: 6050
+		public const int PP_E_kErrorDbEmailBitWrongCredType = -805307428;
+
+		// Token: 0x040017A3 RID: 6051
+		public const int PP_E_kErrorDBMissingPrimaryRow = -805307429;
+
+		// Token: 0x040017A4 RID: 6052
+		public const int PP_E_kErrorMemberInBlockedState = -805307468;
+
+		// Token: 0x040017A5 RID: 6053
+		public const int PP_E_kErrorMemberInUnBlockedState = -805307469;
+
+		// Token: 0x040017A6 RID: 6054
+		public const int PP_E_kErrorDbMemberInDelayedRecycle = -805307470;
+
+		// Token: 0x040017A7 RID: 6055
+		public const int PP_E_kErrorNullRowset = -805307471;
+
+		// Token: 0x040017A8 RID: 6056
+		public const int PP_E_kErrorDbMemberSoftDeleted = -805307868;
+
+		// Token: 0x040017A9 RID: 6057
+		public const int PP_E_kErrorMSNIAError = -805308371;
+
+		// Token: 0x040017AA RID: 6058
+		public const int PP_E_kErrorNoBinding = -805308372;
+
+		// Token: 0x040017AB RID: 6059
+		public const int PP_E_kErrorHMserverDownState0 = -805308396;
+
+		// Token: 0x040017AC RID: 6060
+		public const int PP_E_kErrorHMserverDownState1 = -805308397;
+
+		// Token: 0x040017AD RID: 6061
+		public const int PP_E_kErrorHMserverDownState2 = -805308398;
+
+		// Token: 0x040017AE RID: 6062
+		public const int PP_E_kErrorPCLCriticalError = -805308399;
+
+		// Token: 0x040017AF RID: 6063
+		public const int PP_E_kErrorSSOCommCriticalError = -805308400;
+
+		// Token: 0x040017B0 RID: 6064
+		public const int PP_E_kErrorSSOHMCriticalError = -805308401;
+
+		// Token: 0x040017B1 RID: 6065
+		public const int PP_E_kErrorSSOSettingsNotFound = -805309368;
+
+		// Token: 0x040017B2 RID: 6066
+		public const int PP_E_kErrorUpdateNotRequired = -805310368;
+
+		// Token: 0x040017B3 RID: 6067
+		public const int PP_E_kErrorInvalidDAId = -805310369;
+
+		// Token: 0x040017B4 RID: 6068
+		public const int PP_E_kErrorDualDAMigrationFail = -805310370;
+
+		// Token: 0x040017B5 RID: 6069
+		public const int PP_E_kInvalidPhysicalPartition = -805310371;
+
+		// Token: 0x040017B6 RID: 6070
+		public const int PP_E_kInvalidLogicalPartition = -805310372;
+
+		// Token: 0x040017B7 RID: 6071
+		public const int PP_E_kErrorTooManyBatchElements = -805310373;
+
+		// Token: 0x040017B8 RID: 6072
+		public const int PP_E_kErrorDbMissingNamespaceName = -805307969;
+
+		// Token: 0x040017B9 RID: 6073
+		public const int PP_E_kErrorDbInvalidNamespaceID = -805311370;
+
+		// Token: 0x040017BA RID: 6074
+		public const int PP_E_kErrorDbDuplicateNamespaceName = -805311371;
+
+		// Token: 0x040017BB RID: 6075
+		public const int PP_E_kErrorDbMissingERTName = -805307972;
+
+		// Token: 0x040017BC RID: 6076
+		public const int PP_E_kErrorDbInvalidERT = -805307411;
+
+		// Token: 0x040017BD RID: 6077
+		public const int PP_E_kErrorDbDuplicateERTName = -805307974;
+
+		// Token: 0x040017BE RID: 6078
+		public const int PP_E_kErrorDbInvalidTargetType = -805307376;
+
+		// Token: 0x040017BF RID: 6079
+		public const int PP_E_kErrorDbNullKeyValue = -805307378;
+
+		// Token: 0x040017C0 RID: 6080
+		public const int PP_E_kErrorDbUpdateNotSupported = -805307982;
+
+		// Token: 0x040017C1 RID: 6081
+		public const int PP_E_kErrorDbDuplicateEntity = -805307984;
+
+		// Token: 0x040017C2 RID: 6082
+		public const int PP_E_kErrorDbInvalidEntityID = -805307986;
+
+		// Token: 0x040017C3 RID: 6083
+		public const int PP_E_kErrorDbRollbackNotAllowed = -805311388;
+
+		// Token: 0x040017C4 RID: 6084
+		public const int PP_E_kErrorDbMissingTrxIndex = -805311389;
+
+		// Token: 0x040017C5 RID: 6085
+		public const int PP_E_kCCMErrorDbOutOfRange = -805307990;
+
+		// Token: 0x040017C6 RID: 6086
+		public const int PP_E_kErrorDbCCMTransactionExists = -805311392;
+
+		// Token: 0x040017C7 RID: 6087
+		public const int PP_E_kErrorDbBadData = -805307994;
+
+		// Token: 0x040017C8 RID: 6088
+		public const int PP_E_kErrorDbEmptyTrxStack = -805311395;
+
+		// Token: 0x040017C9 RID: 6089
+		public const int PP_E_kErrorDbInvalidTrxID = -805311396;
+
+		// Token: 0x040017CA RID: 6090
+		public const int PP_E_kErrorDbLKGSNotFound = -805311397;
+
+		// Token: 0x040017CB RID: 6091
+		public const int PP_E_kErrorDbRollForwardNotAllowed = -805311398;
+
+		// Token: 0x040017CC RID: 6092
+		public const int PP_E_kErrorDbInvalidName = -805307999;
+
+		// Token: 0x040017CD RID: 6093
+		public const int PP_E_kErrorDbOnlyOneInstanceAllowed = -805308000;
+
+		// Token: 0x040017CE RID: 6094
+		public const int PP_E_kErrorDbConstraintViolation = -805308001;
+
+		// Token: 0x040017CF RID: 6095
+		public const int PP_E_kErrorDbInvalidInstance = -805308002;
+
+		// Token: 0x040017D0 RID: 6096
+		public const int PP_E_kErrorDbInvalidAction = -805308003;
+
+		// Token: 0x040017D1 RID: 6097
+		public const int PP_E_kErrorDbInvalidRelease = -805311404;
+
+		// Token: 0x040017D2 RID: 6098
+		public const int PP_E_kErrorDbNoAllowInsertBuiltInObj = -805308006;
+
+		// Token: 0x040017D3 RID: 6099
+		public const int PP_E_kErrorDbNoAllowDeleteBuiltInObj = -805308007;
+
+		// Token: 0x040017D4 RID: 6100
+		public const int PP_E_kErrorDbInvalidScopeID = -805307970;
+
+		// Token: 0x040017D5 RID: 6101
+		public const int PP_E_kErrorDbDuplicateScopeName = -805307971;
+
+		// Token: 0x040017D6 RID: 6102
+		public const int PP_E_kErrorDbCantUpdateScope = -805307985;
+
+		// Token: 0x040017D7 RID: 6103
+		public const int PP_E_kErrorDbEntityExistsAsScope = -805308005;
+
+		// Token: 0x040017D8 RID: 6104
+		public const int PP_E_kErrorDbMemberTypeNotAllowed = -805308008;
+
+		// Token: 0x040017D9 RID: 6105
+		public const int PP_E_kErrorDbPropertyExists = -805308009;
+
+		// Token: 0x040017DA RID: 6106
+		public const int PP_E_kErrorDbPropertyFailsInsertConditions = -805308010;
+
+		// Token: 0x040017DB RID: 6107
+		public const int PP_E_kErrorDbRelationshipExists = -805308011;
+
+		// Token: 0x040017DC RID: 6108
+		public const int PP_E_kErrorDbEntityExists = -805308012;
+
+		// Token: 0x040017DD RID: 6109
+		public const int PP_E_kErrorDbNamespaceIsNotActive = -805308013;
+
+		// Token: 0x040017DE RID: 6110
+		public const int PP_E_kErrorDbInvalidTargetID = -805308014;
+
+		// Token: 0x040017DF RID: 6111
+		public const int PP_E_kErrorDbInvalidSourceID = -805308015;
+
+		// Token: 0x040017E0 RID: 6112
+		public const int PP_E_kErrorDbPropertyDoesNotExist = -805308016;
+
+		// Token: 0x040017E1 RID: 6113
+		public const int PP_E_kErrorDbGroupPropertyDatatypeMismatch = -805308017;
+
+		// Token: 0x040017E2 RID: 6114
+		public const int PP_E_kErrorDbTooManyLinkedCredentials = -805308018;
+
+		// Token: 0x040017E3 RID: 6115
+		public const int PP_E_kErrorDbEntityDoesNotExist = -805311418;
+
+		// Token: 0x040017E4 RID: 6116
+		public const int PP_E_kErrorGroupInvalidActionType = -805308045;
+
+		// Token: 0x040017E5 RID: 6117
+		public const int PP_E_kErrorGroupPropertyValueCannotChange = -805308046;
+
+		// Token: 0x040017E6 RID: 6118
+		public const int PP_E_kErrorGroupInvalidInstance = -805308047;
+
+		// Token: 0x040017E7 RID: 6119
+		public const int PP_E_kErrorGroupNamespaceReleaseInternalError = -805308048;
+
+		// Token: 0x040017E8 RID: 6120
+		public const int PP_E_kErrorGroupNamespaceReserveInternalError = -805308049;
+
+		// Token: 0x040017E9 RID: 6121
+		public const int PP_E_kErrorGroupNamespaceIDAndNameMismatch = -805308050;
+
+		// Token: 0x040017EA RID: 6122
+		public const int PP_E_kErrorGroupNamespaceNotManaged = -805308051;
+
+		// Token: 0x040017EB RID: 6123
+		public const int PP_E_kErrorGroupPropertyIDAndNameMismatch = -805308052;
+
+		// Token: 0x040017EC RID: 6124
+		public const int PP_E_kErrorGroupInvalidPropertyID = -805308053;
+
+		// Token: 0x040017ED RID: 6125
+		public const int PP_E_kErrorGroupInvalidPropertyName = -805308054;
+
+		// Token: 0x040017EE RID: 6126
+		public const int PP_E_kErrorGroupTooManyPropertiesInFilter = -805308055;
+
+		// Token: 0x040017EF RID: 6127
+		public const int PP_E_kErrorGroupSiteDeleteFailedInNSRelease = -805308056;
+
+		// Token: 0x040017F0 RID: 6128
+		public const int PP_E_kErrorGroupNSExistsAsInternallyManaged = -805308057;
+
+		// Token: 0x040017F1 RID: 6129
+		public const int PP_E_kErrorGroupInvalidSiteID = -805308058;
+
+		// Token: 0x040017F2 RID: 6130
+		public const int PP_E_kErrorGroupInvalidScopeID = -805308059;
+
+		// Token: 0x040017F3 RID: 6131
+		public const int PP_E_kErrorGroupSiteInsertFailedInNSReserve = -805308060;
+
+		// Token: 0x040017F4 RID: 6132
+		public const int PP_E_kErrorGroupInvalidNamespaceName = -805308061;
+
+		// Token: 0x040017F5 RID: 6133
+		public const int PP_E_kErrorGroupInvalidHashError = -805308062;
+
+		// Token: 0x040017F6 RID: 6134
+		public const int PP_E_kErrorNoNamespaceInCredName = -805308063;
+
+		// Token: 0x040017F7 RID: 6135
+		public const int PP_E_kErrorGroupCacheInvalidInput = -805308064;
+
+		// Token: 0x040017F8 RID: 6136
+		public const int PP_E_kErrorGroupCacheInternalError = -805308065;
+
+		// Token: 0x040017F9 RID: 6137
+		public const int PP_E_kErrorGroupCacheFetchError = -805308066;
+
+		// Token: 0x040017FA RID: 6138
+		public const int PP_E_kErrorGroupCacheLoadError = -805308067;
+
+		// Token: 0x040017FB RID: 6139
+		public const int PP_E_kErrorDbValidationFailure = -805308068;
+
+		// Token: 0x040017FC RID: 6140
+		public const int PP_E_kErrorInternalNamespaceNotFound = -805308069;
+
+		// Token: 0x040017FD RID: 6141
+		public const int PP_E_kErrorDbNamespaceIsNotFederated = -805308070;
+
+		// Token: 0x040017FE RID: 6142
+		public const int PP_E_kErrorDbPropertyIsReadOnly = -805308071;
+
+		// Token: 0x040017FF RID: 6143
+		public const int PP_E_kErrorGroupNSExistsAsWinLiveManaged = -805308072;
+
+		// Token: 0x04001800 RID: 6144
+		public const int PP_E_kErrorGroupNSExistsAsExternallyManaged = -805308073;
+
+		// Token: 0x04001801 RID: 6145
+		public const int PP_E_kErrorGroupInvalidAttributeID = -805308081;
+
+		// Token: 0x04001802 RID: 6146
+		public const int PP_E_kErrorDbDuplicatedID = -805308082;
+
+		// Token: 0x04001803 RID: 6147
+		public const int PP_E_kErrorDbMonthlySendQuotaExceeded = -805308083;
+
+		// Token: 0x04001804 RID: 6148
+		public const int PP_E_kErrorDbDailyReceiveQuotaExceeded = -805308084;
+
+		// Token: 0x04001805 RID: 6149
+		public const int PP_E_kErrorDbCannotSendToMultiReceiver = -805308085;
+
+		// Token: 0x04001806 RID: 6150
+		public const int PP_E_kErrorDbInvalidEmailState = -805308086;
+
+		// Token: 0x04001807 RID: 6151
+		public const int PP_E_kErrorDbEmailLocked = -805308087;
+
+		// Token: 0x04001808 RID: 6152
+		public const int PP_E_kErrorDbInvalidCredentialPropertyID = -805312368;
+
+		// Token: 0x04001809 RID: 6153
+		public const int PP_E_kErrorDbInvalidCredentialSubPropertyID = -805312369;
+
+		// Token: 0x0400180A RID: 6154
+		public const int PP_E_kErrorDbInvalidCredentialTypeAndPropertyIDCombination = -805312370;
+
+		// Token: 0x0400180B RID: 6155
+		public const int PP_E_kErrorDbBadPropertyReturnedFromDB = -805312371;
+
+		// Token: 0x0400180C RID: 6156
+		public const int PP_E_kErrorDbVariantTypePropertyIDMismatch = -805312372;
+
+		// Token: 0x0400180D RID: 6157
+		public const int PP_E_kErrorDbStringExceedsMaxEncryptionLength = -805312373;
+
+		// Token: 0x0400180E RID: 6158
+		public const int PP_E_kErrorDbCredentialAlreadyLinked = -805312374;
+
+		// Token: 0x0400180F RID: 6159
+		public const int PP_E_kErrorWebCredentialAlreadyExist = -805312375;
+	}
+}
